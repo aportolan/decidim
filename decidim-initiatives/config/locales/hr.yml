@@ -1,1 +1,715 @@
+---
 hr:
+  decidim:
+    admin:
+      models:
+        initiatives_types:
+          fields:
+            title: Vrste inicijativa
+            created_at: Stvoreno
+          name: Vrsta inicijative
+        initiatives:
+          fields:
+            created_at: Stvoreno
+            published_at: Objavljeno
+            title: Inicijative
+            id: ID
+            supports_count: Potpisi
+            state: Status
+        initiatives_votes:
+          fields:
+            document_number: Broj dokumenta
+            initiative_start_date: Datum početka
+            hash: Hash
+            initiative_id: ID inicijative
+            signature_count: Broj potpisa
+            name_and_surname: Ime i prezime
+            initiative_title: Naslov inicijative
+            nickname: Nadimak
+            initiative_signatures_count: Broj potpisa
+            initiative_end_date: Datum završetka
+            initiative_scope: Opseg
+            postal_code: Poštanski broj
+            date_of_birth: Datum rođenja
+            date_and_time: Datum i vrijeme
+            timestamp: Vremenska oznaka
+        initiatives_type_scope:
+          fields:
+            supports_required: Potrebni potpisi
+            actions: Radnje
+            scope: Opseg
+          name: Opseg vrste inicijative
+        initiatives_committee_member:
+          fields:
+            actions: Radnje
+      menu:
+        initiative_type_scopes: Opsezi vrsta inicijativa
+        initiatives_settings: Postavke
+        information: Informacije
+        initiatives: Inicijative
+        initiatives_menu:
+          see_initiative: Pogledaj inicijativu
+        attachments: Privici
+        initiatives_types: Vrste inicijativa
+        committee_members: Članovi odbora
+        moderations: Moderacije
+        initiatives_submenu:
+          info: O ovoj inicijativi
+      filters:
+        initiatives:
+          state_eq:
+            values:
+              rejected: Nedovoljno potpisa
+              open: Otvorena
+              discarded: Odbijena
+              validating: Tehnička provjera
+              accepted: Dovoljno potpisa
+              created: Nacrt
+            label: Stanje
+          type_id_eq:
+            label: Vrsta
+          decidim_area_id_eq:
+            label: Područje
+        search_placeholder:
+          title_or_description_or_id_string_or_author_name_or_author_nickname_cont: Pretraži %{collection} po naslovu, opisu, ID-u ili imenu autora
+      initiatives_settings:
+        update:
+          error: Došlo je do problema prilikom ažuriranja postavki inicijativa.
+          success: Postavke inicijativa uspješno ažurirane.
+      titles:
+        initiatives: Inicijative
+        initiatives_types: Vrste inicijativa
+      actions:
+        new_initiative_type: Nova vrsta inicijative
+        new_initiative_type_scope: Novi opseg vrste inicijative
+        cannot_answer: Nije moguće odgovoriti na ovu inicijativu
+      taxonomy_filters:
+        space_filter_for:
+          initiatives: Sve inicijative
+    initiatives:
+      initiative_signatures:
+        sms_phone_number:
+          receive_code: Primi kod
+          your_confirmation_code: Vaš kod za potvrdu
+          resend_code_html: Niste primili kod? <a href="%{new_code_path}">Pokušajte ponovno</a>
+          continue: Potpiši inicijativu
+          your_code_is_incorrect: Kod nije točan. Provjerite ga ili <a href="%{new_code_path}">pokušajte ponovno</a>.
+          help_enter_your_number: Unesite broj mobitela. Primit ćete SMS s kodom za potvrdu.
+          confirmed_data: Potvrdili ste svoje podatke.
+          your_code_is_correct: Vaš kod je točan.
+        dummy_signature:
+          form:
+            fields:
+              date_of_birth:
+                label: Datum rođenja
+              gender:
+                options:
+                  non_binary: Nebinarno
+                  man: Muškarac
+                  woman: Žena
+              document_number:
+                placeholder: Broj dokumenta
+              document_type_and_number:
+                label: Vrsta i broj dokumenta
+                help_text: Broj dokumenta odgovara dokumentu korištenom u provjeri popisa.
+              document_type:
+                prompt: Vrsta dokumenta
+        fill_personal_data:
+          continue: Potvrdite svoje podatke
+          invalid_data: Neki osobni podaci nisu valjani.
+          help: Ispunite sljedeća polja osobnim podacima za potpis inicijative.
+          invalid_authorization: Podaci nisu kompatibilni s vašim autorizacijama.
+        finish:
+          back_to_initiative: Natrag na inicijativu
+          title: Potpisali ste inicijativu
+      modal:
+        not_authorized:
+          explanation: Morate biti provjereni za stvaranje nove inicijative.
+          authorizations_page: Pogledaj autorizacije
+          title: Potrebna autorizacija
+      admin:
+        initiatives_settings:
+          form:
+            date: Najnovije
+            signatures: Najviše potpisa
+            title: Postavke za inicijative
+            publication_date: Nedavno objavljeno
+            random: Nasumično
+            comments: Najviše komentara
+          edit:
+            update: Ažuriraj
+        initiatives_types:
+          new:
+            title: Nova vrsta inicijative
+            create: Stvori
+          form:
+            only_global_scope_enabled_help_html: Označite ako ste omogućili "Potpis podopsega" i konfigurirali globalni opseg kao roditeljski.
+            child_scope_threshold_enabled_help_html: Ova opcija ne podržava potpise uživo. Omogućuje podopsege i radi s handlerom autorizacije koji pridružuje opseg korisniku.
+            options: Opcije
+            signature_workflow_settings: Postavke tijeka potpisa
+          update:
+            error: Došlo je do problema prilikom ažuriranja vrste inicijative.
+            success: Vrsta inicijative uspješno ažurirana.
+          destroy:
+            success: Vrsta inicijative uspješno uklonjena.
+          create:
+            success: Nova vrsta inicijative uspješno stvorena.
+            error: Došlo je do problema prilikom stvaranja vrste inicijative.
+          initiative_type_scopes:
+            title: Opsezi za vrstu inicijative
+          edit:
+            update: Ažuriraj
+        answers:
+          info_initiative:
+            initiatives: Inicijative
+            initiative_votes_count: Broj glasova
+            created_at: Stvoreno
+            description: Opis
+            state: Stanje
+          edit:
+            title: Odgovor za %{title}
+            answer: Odgovor
+        initiatives:
+          accept:
+            success: Inicijativa uspješno prihvaćena.
+          discard:
+            success: Inicijativa uspješno odbačena.
+          edit:
+            discard: Odbaci inicijativu
+            update: Ažuriraj
+            confirm: Jeste li sigurni?
+            export_votes: Izvezi potpise
+            accept: Prihvati inicijativu
+            confirm_send_to_technical_validation: Jeste li sigurni?
+            export_pdf_signatures: Izvezi PDF potpisa
+            reject: Odbij inicijativu
+            success: Inicijativa poslana u tehničku provjeru.
+            send_to_technical_validation: Pošalji u tehničku provjeru
+          index:
+            print: Ispis
+            preview: Pregled
+            actions_title: Radnja
+          form:
+            title: Opće informacije
+            attachments_title: Privici
+            settings: Postavke
+          reject:
+            success: Inicijativa uspješno odbijena.
+          initiative_attachments:
+            documents: Dokumenti
+            new: Novo
+            edit: Uredi
+            photos: Fotografije
+          unpublish:
+            success: Objava inicijative uspješno povučena.
+          update:
+            error: Došlo je do problema prilikom ažuriranja inicijative.
+            success: Inicijativa uspješno ažurirana.
+          publish:
+            success: Inicijativa uspješno objavljena.
+        initiatives_type_scopes:
+          new:
+            title: Stvori opseg vrste inicijative
+            create: Stvori
+          edit:
+            update: Ažuriraj
+            title: Uredi opseg vrste inicijative
+          create:
+            error: Došlo je do problema prilikom stvaranja novog opsega.
+            success: Novi opseg za vrstu inicijative stvoren.
+          update:
+            error: Došlo je do problema prilikom ažuriranja opsega.
+            success: Opseg uspješno ažuriran.
+          destroy:
+            success: Opseg uspješno uklonjen.
+        committee_requests:
+          index:
+            invite_to_committee_help: Podijelite ovu poveznicu za pozivanje drugih sudionika u promicateljski odbor.
+            approve: Odobri
+            confirm_revoke: Jeste li sigurni?
+            revoke: Opozovi
+            title: Članovi odbora
+            no_members_yet: Nema članova u promicateljskom odboru.
+        content_blocks:
+          highlighted_initiatives:
+            order:
+              label: 'Poredaj elemente po:'
+              default: Zadano (najstarije)
+              most_recent: Najnovije
+            max_results: Maksimalan broj elemenata za prikaz
+        index:
+          initiatives_types:
+            alert_html: <p>Morate stvoriti barem jednu vrstu inicijative kako bi sudionici mogli početi stvarati inicijative.</p><p> %{link}</p>
+            button: Nova vrsta inicijative
+        exports:
+          initiatives: Inicijative
+      pages:
+        home:
+          highlighted_initiatives:
+            see_all_spaces: Pogledaj sve inicijative
+            active_spaces: Aktivne inicijative
+      last_activity:
+        new_initiative: 'Nova inicijativa:'
+      initiatives:
+        filters:
+          myself: Moje inicijative
+          area: Područje
+          type: Vrsta
+          author: Autor
+          state: Status
+          scope: Opseg
+          any: Bilo koji
+        print:
+          city: Grad
+          province: Županija/država
+          address: Adresa
+          legal_text: Prikupljeni osobni podaci bit će obrađeni povjerljivo.
+          author_title: Autor inicijative
+          postal_code: Poštanski broj
+          members_header: Članovi promicateljskog odbora inicijative
+          initiative:
+            type: Vrsta inicijative
+            attachments: Priložena dokumentacija
+            description: 'Opis:'
+            title: 'Naslov:'
+          general_title: Zahtjev za prihvaćanje inicijative
+          full_name: Puno ime
+          email: E-pošta
+          phone_number: Broj telefona
+          signature: Potpis
+          id_number: Broj ID-a
+          place_date: Mjesto, datum
+        orders:
+          label: 'Sortiraj inicijative po:'
+          random: Nasumično
+          recent: Najnovije
+          most_voted: Najviše potpisa
+          recently_published: Nedavno objavljeno
+          most_commented: Najviše komentara
+        committee_members:
+          confirm_approve: Jeste li sigurni da želite odobriti ovog člana?
+          title: Članovi odbora
+          invite_to_committee_help: Podijelite ovu poveznicu za pozivanje u promicateljski odbor.
+          revoke: Opozovi
+          approve: Odobri
+          link: Poveznica
+          no_members_yet: Nema članova u promicateljskom odboru.
+          confirm_revoke: Jeste li sigurni da želite opozvati ovog člana?
+        signatures_count:
+          other: ' potpisa'
+          one: ' potpis'
+        votes_count:
+          count:
+            other: Potpisi
+            one: Potpis
+        vote_cabin:
+          vote: Potpiši
+          already_voted: Već potpisano
+          votes_blocked: Potpisivanje onemogućeno
+        show:
+          before_send_to_technical_validation_announcement: 'Prije slanja inicijative morate dodati još %{count} članova u promicateljski odbor.<br/><br/>Podijelite ovu poveznicu: %{href}'
+          signature_collection: Prikupljanje potpisa
+          scope: Opseg
+          send_to_technical_validation: Pošalji u tehničku provjeru
+          area: Područje
+          initiative_data: Podaci inicijative
+          send_to_technical_validation_announcement: Ako sve izgleda u redu, kliknite "Pošalji u tehničku provjeru".
+          state: Stanje
+          confirm: Poslat ćete inicijativu administratoru na pregled i objavu. Jesu li sigurni?
+          edit: Uredi
+          type: Vrsta
+        count:
+          title:
+            other: '%{count} inicijativa'
+            one: '%{count} inicijativa'
+        result:
+          initiative_rejected_reason: Ova inicijativa je odbijena zbog nedostatka potpisa.
+          answer_title: Na ovu inicijativu je odgovoreno.
+        author_list:
+          hidden_authors_count:
+            one: i još 1 osoba
+            other: i još %{count} osoba
+        index_header:
+          new_initiative: Nova inicijativa
+        initiatives:
+          no_initiatives_warning: Niti jedna inicijativa ne odgovara vašim kriterijima.
+          closed_initiatives_warning: Trenutno nema otvorenih inicijativa.
+        pending_initiatives:
+          description: Ove inicijative još nisu javne. Pregledajte ih i pošaljite na tehničku provjeru.
+          title: Nacrti i inicijative na čekanju
+      events:
+        revoke_membership_request:
+          email_subject: '%{author_name} odbio je vašu prijavu u promicateljski odbor'
+          email_intro: '%{author_name} odbio je vašu prijavu za članstvo u promicateljskom odboru inicijative %{resource_title}.'
+          email_outro: 'Primili ste obavijest jer ste se prijavili na inicijativu: %{resource_title}.'
+          notification_title: <a href="%{author_profile_url}">%{author_name}</a> odbio je vašu prijavu za promicateljski odbor inicijative <a href="%{resource_url}">%{resource_title}</a>.
+        approve_membership_request:
+          email_outro: 'Primili ste obavijest jer ste se prijavili na inicijativu: %{resource_title}'
+          email_intro: '%{author_name} prihvatio je vašu prijavu za članstvo u promicateljskom odboru inicijative %{resource_title}.'
+          notification_title: <a href="%{author_profile_url}">%{author_name}</a> prihvatio je vašu prijavu za promicateljski odbor inicijative <a href="%{resource_url}">%{resource_title}</a>.
+          email_subject: '%{author_name} prihvatio je vašu prijavu u promicateljski odbor'
+        spawn_committee_request_event:
+          email_outro: 'Primili ste obavijest jer ste autor inicijative: %{resource_title}'
+          email_subject: '%{applicant_name} želi se pridružiti vašoj inicijativi'
+          notification_title: <a href="%{applicant_profile_url}">%{applicant_name}</a> prijavio se za promicateljski odbor vaše inicijative <a href="%{resource_url}">%{resource_title}</a>.
+          email_intro: '%{applicant_name} prijavio se za promicateljski odbor vaše inicijative %{resource_title}.'
+        create_initiative_event:
+          email_subject: Nova inicijativa autora %{author_name}
+          notification_title: Inicijativu <a href="%{resource_path}">%{resource_title}</a> stvorio je <a href="%{author_path}">%{author_name}</a>.
+          email_intro: '%{author_name}, kojeg pratite, stvorio je novu inicijativu, pogledajte i pridonesite:'
+          email_outro: Ovu ste obavijest primili jer pratite %{author_name}.
+      admin_states:
+        open: Otvorena
+        validating: Tehnička provjera
+        rejected: Nedovoljno potpisa
+        accepted: Dovoljno potpisa
+        created: Nacrt
+        discarded: Odbačena
+      edit:
+        export_pdf_signatures: Izvezi PDF potpisa
+        export_votes: Izvezi potpise
+        accept: Prihvati inicijativu
+        discard: Odbaci inicijativu
+        confirm: Jeste li sigurni?
+        title: Uredi inicijativu
+        back: Natrag
+        reject: Odbij inicijativu
+        update: Ažuriraj
+      admin_log:
+        initiative:
+          update: '%{user_name} ažurirao je inicijativu %{resource_name}'
+          publish: '%{user_name} objavio je inicijativu %{resource_name}'
+          send_to_technical_validation: '%{user_name} poslao je inicijativu %{resource_name} u tehničku provjeru'
+          unpublish: '%{user_name} odbacio je inicijativu %{resource_name}'
+        initiatives_type:
+          create: '%{user_name} stvorio je vrstu inicijative %{resource_name}'
+          update: '%{user_name} ažurirao je vrstu inicijative %{resource_name}'
+          delete: '%{user_name} izbrisao je vrstu inicijative %{resource_name}'
+        initiatives_settings:
+          update: '%{user_name} ažurirao je postavke inicijativa'
+      show:
+        badge_name:
+          created: Nacrt
+          accepted: Dovoljno potpisa
+          rejected: Nedovoljno potpisa
+          open: Otvorena
+          discarded: Odbačena
+          validating: Tehnička provjera
+      create_initiative:
+        fill_data:
+          select_area: Odaberite područje
+          fill_data_help: <ul> <li>Pregledajte sadržaj svoje inicijative.</li> <li>Morate odabrati vrstu potpisa.</li> <li>Koji je geografski opseg inicijative?</li> </ul>
+          discard: Odbaci inicijativu
+          select_scope: Odaberite opseg
+          more_information: Više informacija
+          confirm_discard: Jeste li sigurni da želite odbaciti ovu inicijativu?
+          continue: Nastavi
+        finish:
+          callout_text_created: Čestitamo! Vaša inicijativa uspješno je stvorena.
+          back: Natrag
+          callout_text_validating: Vaša inicijativa uspješno je poslana u tehničku provjeru.
+          go_to_initiatives: Idi na inicijative
+          publish_helper_text_html: Zapamtite da inicijativa mora proći tehničku provjeru administratora prije objave.
+        promotal_committee:
+          invite_link_title: Poveznica za pozivanje
+          promoters_committee_title: Promicateljski odbor
+          individual_help_text: Vaša inicijativa je stvorena i spremljena kao nacrt. Sada morate dodati ljude u promicateljski odbor.
+          promoters_committee_help_2: Zapamtite da morate dovršiti potrebne informacije i poslati inicijativu u tehničku provjeru.
+          promoters_committee_help_html: Prije slanja inicijative morate dodati još %{committee_members_left} članova, imate <strong>%{committee_members_count}/%{committee_size}</strong>.
+        select_initiative_type:
+          subtitle: Koju inicijativu želite promicati?
+          show_more: Prikaži više
+          consult_existing_initiatives: Pogledajte postojeće inicijative
+          new: Stvori novu inicijativu
+          select: Želim promicati ovu inicijativu
+          verification_required: Provjerite svoj račun za promicanje ove inicijative
+          choose_html: Želim stvoriti <strong>%{title}</strong>
+          select_initiative_type_help_html: <p>Inicijative su način na koji sudionici mogu intervenirati. Koju inicijativu želite pokrenuti?</p>
+          show_less: Prikaži manje
+          continue: Nastavi
+          more_information: Više informacija
+          back: Natrag
+        share_committee_link:
+          more_information: Više informacija
+          invite_to_committee_help_2: Ova vrsta inicijative zahtijeva odbor od barem %{committee_size} članova.
+          invite_to_committee_help: Poveznica za pozivanje ljudi u promicateljski odbor.
+        committee_member:
+          confirm_revoke: Jeste li sigurni da želite opozvati ovog člana?
+          approve: Odobri
+          revoke: Opozovi
+          confirm_approve: Jeste li sigurni da želite odobriti ovog člana?
+        send_to_technical_validation_button:
+          button: Pošalji u tehničku provjeru
+          confirm: Poslat ćete inicijativu administratoru na pregled i objavu. Nakon objave nećete je moći uređivati. Jeste li sigurni?
+        previous_form:
+          back: Natrag
+        return_to_initiatives_button:
+          return_initiatives_html: Preskočite za sada i <a href="%{initiatives_path}">vratite se na inicijative</a>
+      initiative_votes:
+        create:
+          invalid: Podaci za potpis inicijative nisu valjani.
+          success_html: Čestitamo! Inicijativa <strong>%{title}</strong> uspješno je potpisana.
+          error: Došlo je do problema prilikom potpisivanja inicijative.
+          already_voted: Vaš potpis već je registriran s vašim podacima.
+        sms_phone:
+          invalid: Broj mobitela nije valjan ili čeka autorizaciju.
+        sms_code:
+          invalid: Vaš kod za provjeru ne podudara se s našim.
+      application_helper:
+        filter_state_values:
+          answered: Odgovoreno
+          all: Sve
+          rejected: Nedovoljno potpisa
+          accepted: Dovoljno potpisa
+          open: Otvorena
+          closed: Zatvorena
+        filter_type_values:
+          all: Sve
+      initiatives_mailer:
+        more_information: Ovdje imate više informacija o procesu stvaranja inicijative.
+        initiative_link:
+          check_initiative_details: Detalje inicijative možete vidjeti
+          here: ovdje
+        progress_report_body_for: Inicijativa %{title} dosegla je %{percentage}% potrebnih potpisa.
+        promotal_committee_help: Morate pozvati barem %{member_count} osoba u promicateljski odbor.
+        progress_report_for: 'Sažetak o inicijativi: %{title}'
+        status_change_body_for: 'Inicijativa %{title} promijenila je status u: %{state}'
+        status_change_for: Inicijativa %{title} promijenila je status
+        creation_subject: Vaša inicijativa '%{title}' je stvorena
+      signatures:
+        workflows:
+          ephemeral_dummy_signature_handler:
+            name: Privremeni ogledni handler potpisa
+            description: Privremeni potpis
+          dummy_signature_with_personal_data_handler:
+            name: Ogledni handler potpisa s osobnim podacima
+            description: Potpis koji preuzima i provjerava osobne podatke
+          legacy_signature_handler:
+            description: Handler potpisa na temelju stare značajke potpisa
+            name: Naslijeđeni handler potpisa
+          dummy_signature_handler:
+            name: Ogledni handler potpisa
+            description: Potpis koji preuzima osobne podatke i provjerava SMS kod
+          dummy_signature_with_sms_handler:
+            description: Potpis koji provjerava samo broj mobitela i SMS kod
+            name: Ogledni handler potpisa samo sa SMS-om
+      update:
+        success: Inicijativa uspješno ažurirana.
+        error: Došlo je do problema prilikom ažuriranja inicijative.
+      form:
+        add_image: Dodaj sliku
+        edit_image: Uredi sliku
+        edit_attachments: Uredi privitke
+        attachment_legend: Dodaj dokument ili sliku
+        add_attachments: Dodaj privitke
+        image_legend: (Opcionalno) Dodaj sliku
+      index:
+        uninitialized: Inicijative još nisu konfigurirane od strane administratora.
+      committee_requests:
+        revoke:
+          success: Zahtjev je opozvan.
+        new:
+          help_text: Zatražit ćete članstvo u promicateljskom odboru ove inicijative.
+          continue: Nastavi
+        approve:
+          success: Zahtjev je odobren.
+        spawn:
+          success: Vaš zahtjev poslan je autoru inicijative.
+      states:
+        accepted: Prihvaćeno
+        expired: Isteklo
+      content_blocks:
+        highlighted_initiatives:
+          name: Istaknute inicijative
+      unavailable_scope: Nedostupan opseg
+      actions:
+        answer: Odgovori
+    open_data:
+      help:
+        initiatives:
+          title: Naslov inicijative
+          updated_at: Zadnji datum ažuriranja prostora
+          signature_start_date: Datum početka prikupljanja potpisa
+          first_progress_notification_at: Datum prve obavijesti o napretku
+          second_progress_notification_at: Datum druge obavijesti o napretku
+          answer: Odgovor koji je ova inicijativa primila (ako postoji)
+          scope: Opseg inicijative
+          online_votes: Broj potpisa primljenih mrežno
+          state: Stanje inicijative
+          authors: Autori ove inicijative
+          follows_count: Broj korisnika koji prate ovaj prostor
+          signatures: Broj potpisa inicijative
+          created_at: Datum stvaranja ovog prostora
+          type: Vrsta inicijative
+          signature_end_date: Datum završetka prikupljanja potpisa
+          url: URL prostora
+          description: Opis inicijative
+          signature_type: Vrsta prikupljanja potpisa
+          comments_count: Broj komentara ove inicijative
+          offline_votes: Broj potpisa primljenih izvan ove platforme
+          answered_at: Datum odgovora (ako postoji)
+          area: Područje ove inicijative
+          published_at: Datum objave prostora
+          reference: Jedinstvena referenca prostora
+          answer_url: URL odgovora (ako postoji)
+    events:
+      initiatives:
+        initiative_extended:
+          email_intro: Datum završetka prikupljanja potpisa za inicijativu %{resource_title} je produljen!
+          email_outro: Ovu ste obavijest primili jer pratite %{resource_title}.
+          notification_title: Datum završetka prikupljanja potpisa za <a href="%{resource_path}">%{resource_title}</a> je produljen.
+          email_subject: Datum završetka prikupljanja potpisa je produljen!
+        milestone_completed:
+          affected_user:
+            email_intro: Vaša inicijativa %{resource_title} dosegla je %{percentage}% potpisa!
+            notification_title: Vaša <a href="%{resource_path}">%{resource_title}</a> inicijativa dosegla je %{percentage}% potpisa.
+            email_subject: Nova etapa dovršena!
+            email_outro: Ovu ste obavijest primili jer ste autor inicijative %{resource_title}.
+          follower:
+            email_intro: Inicijativa %{resource_title} dosegla je %{percentage}% potpisa!
+            notification_title: <a href="%{resource_path}">%{resource_title}</a> inicijativa dosegla je %{percentage}% potpisa.
+            email_outro: Ovu ste obavijest primili jer pratite %{resource_title}.
+            email_subject: Nova etapa dovršena!
+        admin:
+          initiative_sent_to_technical_validation:
+            email_outro: Ovu ste obavijest primili jer ste administrator platforme.
+            email_intro: Inicijativa "%{resource_title}" poslana je u tehničku provjeru. Pogledajte na <a href="%{admin_initiative_url}">administratorskoj ploči</a>
+            notification_title: Inicijativa "%{resource_title}" poslana je u tehničku provjeru.
+            email_subject: Inicijativa "%{resource_title}" poslana je u tehničku provjeru.
+        support_threshold_reached:
+          email_outro: Ovu ste obavijest primili jer ste administrator platforme.
+          email_subject: Prag potpisa dosegnut
+          email_intro: Inicijativa %{resource_title} dosegla je prag potpisa
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> inicijativa dosegla je prag potpisa
+        initiative_sent_to_technical_validation:
+          notification_title: Inicijativa "%{resource_title}" poslana je u tehničku provjeru.
+          email_subject: Inicijativa "%{resource_title}" poslana je u tehničku provjeru.
+          email_intro: Inicijativa "%{resource_title}" poslana je u tehničku provjeru.
+          email_outro: Ovu ste obavijest primili jer ste administrator platforme.
+    gamification:
+      badges:
+        initiatives:
+          description_own: Imate %{score} objavljenih inicijativa.
+          unearned_another: Ovaj sudionik još nema objavljenih inicijativa.
+          unearned_own: Još nemate objavljenih inicijativa.
+          description_another: Ovaj sudionik ima %{score} objavljenih inicijativa.
+          conditions:
+          - Idite na prostor sudjelovanja Inicijative
+          - Slijedite korake za stvaranje nove inicijative
+          next_level_in: Objavite još %{score} inicijativa za sljedeću razinu!
+          name: Objavljene inicijative
+          description: Ova značka dodjeljuje se kada pokrenete nove inicijative.
+    resources:
+      initiative:
+        actions:
+          comment: Komentiraj
+      initiatives_type:
+        actions:
+          create: Stvori inicijativu
+          title: Radnje
+    help:
+      participatory_spaces:
+        initiatives:
+          page: '<p><strong>Inicijativa</strong> je prijedlog koji može promicati bilo tko prikupljanjem potpisa.</p>
+
+            '
+          contextual: '<p><strong>Inicijativa</strong> je prijedlog koji može promicati bilo tko na vlastitu inicijativu prikupljanjem (digitalnih) potpisa kako bi organizacija provela specifičnu radnju.</p> <p>Promicatelji inicijative mogu definirati ciljeve, prikupiti podršku, raspravljati i širiti je.</p> <p>Primjeri: Inicijativa može prikupljati potpise za sazivanje konzultacija ili stvaranje skupštine.</p>
+
+            '
+          title: Što su inicijative?
+    menu:
+      initiatives: Inicijative
+    statistics:
+      initiatives_count: Inicijative
+      initiatives_count_tooltip: Broj objavljenih građanskih inicijativa.
+    download_your_data:
+      show:
+        initiatives: Izvoz inicijativa
+  activemodel:
+    attributes:
+      initiative:
+        answer: Odgovor
+        decidim_scope_id: Opseg
+        signature_type_values:
+          online: Mrežno
+          any: Mješovito
+          offline: Uživo
+        offline_votes_for_scope: Potpisi uživo za %{scope_name}
+        signature_type: Vrsta prikupljanja potpisa
+        scope_id: Opseg
+        type_id: Vrsta
+        state: Status
+        signature_end_date: Kraj razdoblja prikupljanja potpisa
+        answer_url: URL odgovora
+        area_id: Područje
+        description: Opis
+        signature_start_date: Početak razdoblja prikupljanja potpisa
+        offline_votes: Potpisi uživo
+        title: Naslov
+      initiatives_type:
+        child_scope_threshold_enabled: Omogući potpise podopsega
+        undo_online_signatures_enabled: Omogući sudionicima poništavanje mrežnih potpisa
+        description: Opis
+        collect_user_extra_fields: Prikupi osobne podatke sudionika pri potpisu
+        extra_fields_legal_information: Pravne informacije o prikupljanju osobnih podataka
+        online_signature_enabled: Mrežni potpis omogućen
+        signature_type: Vrsta potpisa
+        comments_enabled: Omogući komentare
+        document_number_authorization_handler: Tijek potpisa
+        promoting_committee_enabled: Omogući promicateljski odbor
+        custom_signature_end_date_enabled: Omogući autorima odabir kraja razdoblja prikupljanja potpisa
+        validate_sms_code_on_votes: Dodaj korak provjere SMS koda procesu potpisa
+        attachments_enabled: Omogući privitke
+        area_enabled: Omogući autorima odabir područja za inicijativu
+        minimum_committee_members: Minimum članova odbora
+        only_global_scope_enabled: Dopusti samo inicijative globalnog opsega
+        banner_image: Naslovna slika
+        title: Naslov
+      organization_data:
+        name: Puno ime i prezime
+        id_document: ID dokument
+        address: Adresa
+      initiatives_vote:
+        postal_code: Poštanski broj
+        date_of_birth: Datum rođenja
+        name_and_surname: Ime i prezime
+        document_number: Broj dokumenta
+      initiatives_settings:
+        initiatives_order: Redoslijed
+      initiatives_committee_member:
+        user: Član odbora
+      initiatives_type_scope:
+        decidim_scopes_id: Opsezi
+        supports_required: Potrebne podrške
+    errors:
+      models:
+        initiative:
+          attributes:
+            attachment:
+              file: Datoteka nije valjana
+              needs_to_be_reattached: Treba ponovno priložiti
+              title: Naslov ne smije biti prazan
+  layouts:
+    decidim:
+      initiative_creation_header:
+        finish: Tehnička provjera
+        promotal_committee: Potraži promicatelje
+        fill_data: Stvori
+        select_initiative_type: Odaberi
+      initiative_signature_creation_header:
+        verify_your_identity: Provjerite svoj identitet
+        help_information_html: Za potpis inicijative <strong>%{initiative_title}</strong> koju promiče %{initiative_author}, morate dati neke informacije.
+      initiatives:
+        no_initiatives_yet:
+          no_initiatives_yet: Još nema inicijativa!
+  activerecord:
+    models:
+      decidim/initiative_vote:
+        other: Potpisi
+        one: Potpis
+      decidim/initiative_comittee:
+        other: Odbori
+        one: Odbor
+      decidim/initiative:
+        one: Inicijativa
+        other: Inicijative

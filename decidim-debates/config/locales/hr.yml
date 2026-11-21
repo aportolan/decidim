@@ -1,1 +1,284 @@
+---
 hr:
+  decidim:
+    debates:
+      actions:
+        edit: Uredi
+        new: Nova rasprava
+        confirm_delete_debate: Jeste li sigurni da želite izbrisati ovu raspravu?
+        close: Zatvori
+        title: Radnje
+        deleted_debate_info: Izbrisana rasprava može se vratiti iz koša.
+        view_deleted_debates: Pogledaj izbrisane rasprave
+      admin:
+        debates:
+          form:
+            debate_type: Vrsta rasprave
+            attachment_legend: Dodajte dokument ili sliku
+            comments_layout_locked_warning: Raspored komentara ne može se promijeniti jer su komentari već objavljeni.
+            add_attachments: Dodaj privitke
+            two_columns: 'Dva stupca: Komentari su prikazani u stupcima "Za" i "Protiv" i ne mogu imati odgovore.'
+            edit_attachments: Uredi privitke
+            errors:
+              comments_layout_locked: Raspored komentara ne može se promijeniti jer su komentari već objavljeni.
+            comments_warning: Nakon objave prvog komentara, odabrana opcija prikaza ne može se promijeniti.
+            comments_visualization: Prikaz komentara
+            finite: Ograničena (s početkom i završetkom)
+            open: Otvorena (bez početka i završetka)
+            single_column: 'Jedan stupac: Komentari su prikazani kronološkim redom i mogu imati odgovore.'
+          new:
+            title: Nova rasprava
+            create: Stvori raspravu
+          manage_trash:
+            title: Izbrisane rasprave
+          create:
+            invalid: Došlo je do problema prilikom stvaranja rasprave.
+            success: Rasprava uspješno stvorena.
+          update:
+            invalid: Došlo je do problema prilikom ažuriranja ove rasprave.
+            success: Rasprava uspješno ažurirana.
+          edit:
+            update: Ažuriraj raspravu
+            title: Uredi raspravu
+          index:
+            title: Rasprave
+        debate_closes:
+          edit:
+            close: Zatvori
+            title: Zatvori raspravu
+        exports:
+          debate_comments: Komentari
+          debates: Rasprave
+      debates:
+        close_debate_modal:
+          cancel: Otkaži
+          send: Zatvori raspravu
+          description: Koji je sažetak ili zaključak ove rasprave?
+        filters:
+          my_debates: Moje rasprave
+          category: Kategorija
+          state_values:
+            closed: Zatvoreno
+            ongoing: U tijeku
+          origin: Podrijetlo
+          search: Pretraga
+          commented: Komentirano
+          participants: Sudionici
+          activity: Moja aktivnost
+          official: Službeno
+          all: Sve
+          category_prompt: Odaberite kategoriju
+          state: Status
+        close:
+          success: Rasprava uspješno zatvorena.
+          invalid: Došlo je do problema prilikom zatvaranja rasprave.
+        show:
+          open_ended: Otvorena
+          participants_count: Sudionici
+          closed: Zatvoreno
+          debate_conclusions_are: 'Rasprava je zatvorena %{date} sa sljedećim zaključcima:'
+          edit_conclusions: Uredi zaključke
+          ongoing: U tijeku
+          close_debate: Zatvori
+          edit_debate: Uredi
+          not_started: Nije započeto
+        new:
+          back: Natrag
+          create: Stvori
+          title: Stvori novu raspravu
+        update:
+          invalid: Došlo je do problema prilikom ažuriranja rasprave.
+          success: Rasprava uspješno ažurirana.
+        create:
+          invalid: Došlo je do problema prilikom stvaranja rasprave.
+          success: Rasprava uspješno stvorena.
+        index:
+          new_debate: Nova rasprava
+        orders:
+          recent: Najnovije
+          commented: Najkomentiranije
+          random: Nasumični redoslijed
+          updated: Nedavno ažurirano
+          label: Poredaj rasprave po
+        edit:
+          back: Natrag
+          save: Spremi promjene
+          title: Uredi raspravu
+        debates:
+          empty: Još nema rasprava.
+          empty_filters: Nema rasprava s ovim kriterijima.
+        count:
+          debates_count:
+            one: '%{count} rasprava'
+            other: '%{count} rasprava'
+      content_blocks:
+        highlighted_debates:
+          name: Rasprave
+          see_all: Pogledaj sve rasprave
+      models:
+        debate:
+          fields:
+            start: Početak
+            taxonomies: Taksonomije
+            official_debate: Službena rasprava
+            start_time: Datum početka
+            title: Naslov
+            end: Kraj
+            end_time: Datum završetka
+      admin_log:
+        debate:
+          soft_delete: '%{user_name} premjestio je raspravu %{resource_name} u prostoru %{space_name} u koš'
+          close: '%{user_name} zatvorio je raspravu %{resource_name} u prostoru %{space_name}'
+          update: '%{user_name} ažurirao je raspravu %{resource_name} u prostoru %{space_name}'
+          create: '%{user_name} stvorio je raspravu %{resource_name} u prostoru %{space_name}'
+          restore: '%{user_name} vratio je raspravu %{resource_name} u prostor %{space_name}'
+      debate_m:
+        commented_time_ago: Komentirano prije %{time}
+      last_activity:
+        debate_updated: 'Rasprava ažurirana:'
+        new_debate: 'Nova rasprava:'
+    open_data:
+      help:
+        debates:
+          likes_count: Broj sviđanja rasprave
+          title: Naslov rasprave
+          reference: Jedinstveni identifikator resursa na ovoj platformi
+          last_comment_by: Podaci o zadnjem komentaru u raspravi
+          conclusions: Zaključci rasprave ako je zatvorena
+          url: URL na kojem se rasprava može pronaći
+          taxonomies: Taksonomije projekta
+          id: Jedinstveni identifikator rasprave
+          comments_enabled: Ima li ova rasprava omogućene komentare
+          description: Opis rasprave
+          start_time: Kada rasprava počinje, ako je otvorena i ima ograničeno vrijeme
+          last_comment_at: Datum kada je ova rasprava zadnji put komentirana
+          participatory_space: Kojem prostoru rasprava pripada
+          end_time: Kada rasprava završava, ako je otvorena i ima ograničeno vrijeme
+          author: Podaci o autoru ove rasprave
+          updated_at: Datum zadnjeg ažuriranja rasprave
+          created_at: Datum i vrijeme stvaranja rasprave
+          comments: Broj komentara ove rasprave
+          follows_count: Broj pratitelja ove rasprave
+          instructions: Koje su upute za komentiranje u ovoj raspravi
+          information_updates: Ažuriranja koja je autor napravio na raspravi
+          closed_at: Datum kada je ova rasprava zatvorena
+          component: Komponenta kojoj rasprava pripada
+        debate_comments:
+          alignment: Je li ovaj komentar za, protiv ili neutralan
+          root_commentable_url: URL resursa koji se veže na ovaj komentar
+          commentable_id: Jedinstveni ID sadržaja na koji se komentira
+          depth: Mjesto ovog komentara u stablu komentara
+          locale: Jezik koji je sudionik imao pri pisanju ovog komentara
+          commentable_type: Vrsta sadržaja na koji se komentira (rezultat, prijedlog itd.)
+          body: Sam komentar
+          id: ID ovog komentara
+          author: Ime sudionika koji je napisao ovaj komentar
+          created_at: Datum kada je ovaj komentar stvoren
+    events:
+      debates:
+        creation_disabled:
+          notification_title: Stvaranje rasprava sada je onemogućeno u <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+          email_intro: 'Stvaranje rasprava više nije aktivno u %{participatory_space_title}. I dalje možete sudjelovati u otvorenim raspravama s ove stranice:'
+          email_outro: Ovu ste obavijest primili jer pratite %{participatory_space_title}. Obavijesti možete prestati primati putem prethodne poveznice.
+          email_subject: Stvaranje rasprava onemogućeno u %{participatory_space_title}
+        creation_enabled:
+          notification_title: Sada možete započeti <a href="%{resource_path}">nove rasprave</a> u <a href="%{participatory_space_url}">%{participatory_space_title}</a>.
+          email_subject: Rasprave su sada dostupne u %{participatory_space_title}
+          email_intro: 'Sada možete započeti nove rasprave u %{participatory_space_title}! Počnite sudjelovati na ovoj stranici:'
+          email_outro: Ovu ste obavijest primili jer pratite %{participatory_space_title}. Obavijesti možete prestati primati putem prethodne poveznice.
+        create_debate_event:
+          space_followers:
+            email_outro: Ovu ste obavijest primili jer pratite participativni prostor %{participatory_space_title}. Obavijesti možete prestati primati putem prethodne poveznice.
+            email_subject: Nova rasprava "%{resource_title}" u %{participatory_space_title}
+            notification_title: Rasprava <a href="%{resource_path}">%{resource_title}</a> stvorena je u <a href="%{participatory_space_url}">%{participatory_space_title}</a>.
+            email_intro: 'Pozdrav,
+
+              Nova rasprava "%{resource_title}" stvorena je u participativnom prostoru %{participatory_space_title}, pogledajte je i pridonesite:'
+          user_followers:
+            notification_title: <a href="%{author_path}">%{author_name}</a> stvorio je raspravu <a href="%{resource_path}">%{resource_title}</a>.
+            email_subject: Nova rasprava "%{resource_title}" autora %{author_name}
+            email_outro: Ovu ste obavijest primili jer pratite %{author_name}. Obavijesti možete prestati primati putem prethodne poveznice.
+            email_intro: 'Pozdrav,
+
+              %{author_name}, kojeg pratite, stvorio je novu raspravu "%{resource_title}". Pogledajte je i pridonesite:'
+        debate_closed:
+          affected_user:
+            email_subject: Rasprava "%{resource_title}" je zatvorena
+            email_outro: Ovu ste obavijest primili jer pratite raspravu "%{resource_title}". Možete je prestati pratiti putem prethodne poveznice.
+            notification_title: Rasprava <a href="%{resource_path}">%{resource_title}</a> je zatvorena.
+            email_intro: 'Rasprava "%{resource_title}" je zatvorena. Zaključke možete pročitati na njezinoj stranici:'
+          follower:
+            email_outro: Ovu ste obavijest primili jer pratite raspravu "%{resource_title}". Možete je prestati pratiti putem prethodne poveznice.
+            notification_title: Rasprava <a href="%{resource_path}">%{resource_title}</a> je zatvorena.
+            email_subject: Rasprava "%{resource_title}" je zatvorena
+            email_intro: 'Rasprava "%{resource_title}" je zatvorena. Zaključke možete pročitati na njezinoj stranici:'
+    components:
+      debates:
+        settings:
+          global:
+            comments_enabled: Komentari omogućeni
+            no_taxonomy_filters_found: Nisu pronađeni filtri taksonomije.
+            comments_max_length: Maksimalan broj znakova po komentaru (Ostavite 0 za zadanu vrijednost)
+            attachments_allowed: Dopusti privitke
+            taxonomy_filters_add: Dodaj filtar
+            clear_all: Obriši sve
+            announcement: Obavijest
+            taxonomy_filters: Odaberite filtre za komponentu
+            define_taxonomy_filters: Prije korištenja ove postavke definirajte neke filtre za ovaj participativni prostor.
+          step:
+            creation_enabled: Sudionici mogu stvarati rasprave
+            likes_enabled: Sviđanja omogućena
+            announcement: Obavijest
+            comments_blocked: Komentari blokirani
+            likes_blocked: Sviđanja blokirana
+        actions:
+          comment: Komentiraj
+          like: Sviđa mi se
+          create: Stvori raspravu
+        name: Rasprave
+    gamification:
+      badges:
+        commented_debates:
+          description: Ova značka dodjeljuje se kada aktivno sudjelujete u različitim raspravama ostavljajući komentare.
+          description_another: Ovaj sudionik sudjelovao je u %{score} rasprava.
+          conditions:
+          - Odaberite otvorenu raspravu u kojoj ćete sudjelovati
+          unearned_own: Još niste sudjelovali ni u jednoj raspravi.
+          description_own: Sudjelovali ste u %{score} rasprava.
+          unearned_another: Ovaj sudionik još nije sudjelovao ni u jednoj raspravi.
+          next_level_in: Sudjelujte u još %{score} rasprava za sljedeću razinu!
+          name: Rasprave
+    download_your_data:
+      show:
+        debates: Izvoz rasprava
+        debate_comments: Izvoz komentara rasprava
+    statistics:
+      debates_count: Rasprave
+      debates_count_tooltip: Broj održanih rasprava.
+    admin:
+      admin_log:
+        changeset:
+          debates: Rasprave
+      tooltips:
+        deleted_debates_info: Nije moguće izbrisati ovu raspravu
+  activemodel:
+    models:
+      decidim/debates/creation_enabled_event: Stvaranje rasprava omogućeno
+      decidim/debates/close_debate_event: Rasprava zatvorena
+      decidim/debates/creation_disabled_event: Rasprave onemogućene
+      decidim/debates/create_debate_event: Rasprava
+    attributes:
+      debate:
+        start_time: Počinje u
+        description: Opis
+        instructions: Upute za sudjelovanje
+        title: Naslov
+        closed_at: Zatvoreno
+        conclusions: Zaključci
+        end_time: Završava u
+        information_updates: Ažuriranja informacija
+  activerecord:
+    models:
+      decidim/debates/debate:
+        one: Rasprava
+        other: Rasprave

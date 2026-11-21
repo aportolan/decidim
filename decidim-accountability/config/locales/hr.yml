@@ -1,1 +1,361 @@
+---
 hr:
+  activemodel:
+    attributes:
+      result:
+        start_date: Datum početka
+        progress: Napredak
+        decidim_scope_id: Opseg
+        subresults: Podrezultati
+        decidim_accountability_status_id: Status
+        decidim_category_id: Kategorija
+        updated_at: Ažurirano
+        description: Opis
+        end_date: Datum završetka
+        title: Naslov
+      milestone:
+        description: Opis
+        entry_date: Datum
+        title: Naslov
+      status:
+        key: Ključ
+        description: Opis
+        progress: Napredak
+        name: Naziv
+    models:
+      decidim/accountability/proposal_linked_event: Prijedlog uključen u rezultat
+      decidim/accountability/result_progress_updated_event: Napredak rezultata ažuriran
+  decidim:
+    accountability:
+      actions:
+        confirm_destroy: Jeste li sigurni da želite izbrisati ovaj %{name}?
+        title: Radnje
+        deleted_results_info: Izbrisani rezultati mogu se vratiti iz koša.
+        confirm_delete_result: Jeste li sigurni da želite izbrisati ovaj rezultat?
+        new_result: Novi rezultat
+        preview: Pregled
+        add_result: Dodaj rezultat
+        view_deleted_results: Pogledaj izbrisane rezultate
+        import_csv: Uvezi rezultate iz CSV datoteke
+        new_status: Novi status
+        destroy: Izbriši
+        import: Uvezi rezultate iz druge komponente
+        edit: Uredi
+        new_milestone: Nova etapa
+        add_milestone: Dodaj etapu
+      models:
+        result:
+          fields:
+            end_date: Datum završetka
+            status: Status
+            id: ID
+            title: Naslov
+            taxonomies: Taksonomije
+            created_at: Stvoreno
+            start_date: Datum početka
+            progress: Napredak
+        status:
+          fields:
+            key: Ključ
+            description: Opis
+            name: Naziv
+            progress: Napredak
+        milestone:
+          fields:
+            entry_date: Datum
+            title: Naslov
+      admin:
+        results:
+          index:
+            title: Rezultati
+            selected: Odabrano
+          bulk_actions:
+            dates_form:
+              start_date: Datum početka
+              change_dates: Promijeni datum
+              end_date: Datum završetka
+            dropdown:
+              change_status: Promijeni status
+              change_taxonomies: Promijeni taksonomije
+              change_dates: Promijeni datume
+              actions: Radnje
+            status_form:
+              change_status: Promijeni status
+              status: Status
+            taxonomies_form:
+              change_taxonomies: Promijeni taksonomije
+            submit_buttons:
+              cancel: Otkaži
+          update_taxonomies:
+            select_a_result: Odaberite rezultat
+            success: Uspješno ažurirane taksonomije %{taxonomies} za rezultate %{results}
+            select_a_taxonomy: Odaberite taksonomiju
+            invalid: Nije moguće ažurirati taksonomije %{taxonomies} za rezultate %{results}
+          manage_trash:
+            title: Izbrisani rezultati
+          update_status:
+            invalid: Došlo je do problema prilikom ažuriranja statusa rezultata
+            success: Status rezultata uspješno ažuriran
+          update:
+            invalid: Došlo je do problema prilikom ažuriranja ovog rezultata.
+            success: Rezultat uspješno ažuriran.
+          new:
+            create: Stvori rezultat
+            title: Novi rezultat
+          create:
+            invalid: Došlo je do problema prilikom stvaranja ovog rezultata.
+            success: Rezultat uspješno stvoren.
+          edit:
+            title: Uredi rezultat
+            update: Ažuriraj rezultat
+          update_dates:
+            invalid: Došlo je do problema prilikom ažuriranja datuma rezultata
+            success: Datumi rezultata uspješno ažurirani
+        import_components:
+          create:
+            invalid: Došlo je do problema prilikom uvoza rezultata, slijedite upute pažljivo i provjerite jeste li odabrali projekte za provedbu.
+          new:
+            success:
+              one: 1 rezultat stavljen u red za uvoz. Bit ćete obaviješteni e-poštom po završetku.
+              other: '%{count} rezultata stavljeno u red za uvoz. Bit ćete obaviješteni e-poštom po završetku.'
+            title: Uvezi rezultate iz druge komponente
+          filters:
+            new_items_proposals:
+              one: 1 prijedlog bit će uvezen
+              other: '%{count} prijedloga bit će uvezeno'
+              zero: U ovoj izvornoj komponenti nema prijedloga
+            new_items_projects:
+              one: 1 odabrani projekt bit će uvezen
+              zero: U ovoj izvornoj komponenti nema odabranih projekata
+              other: '%{count} odabranih projekata bit će uvezeno'
+            proposal_state: Status prijedloga
+            select_state: Odaberite status
+          form:
+            select_component: Odaberite komponentu
+            origin_component_id: Izvorna komponenta
+            create: Uvezi
+            no_components: U ovom participativnom prostoru nema komponenti za uvoz.
+        milestones:
+          edit:
+            title: Uredi etapu
+            update: Ažuriraj etapu
+          create:
+            invalid: Došlo je do problema prilikom stvaranja ove etape.
+            success: Etapa uspješno stvorena.
+          update:
+            invalid: Došlo je do problema prilikom ažuriranja ove etape.
+            success: Etapa uspješno ažurirana.
+          destroy:
+            success: Etapa uspješno izbrisana.
+          new:
+            create: Stvori etapu
+            title: Nova etapa
+          index:
+            title: Etape
+        models:
+          status:
+            name: Status
+          result:
+            name: Rezultat
+        statuses:
+          edit:
+            title: Uredi status
+            update: Ažuriraj status
+          update:
+            invalid: Došlo je do problema prilikom ažuriranja ovog statusa.
+            success: Status uspješno ažuriran.
+          destroy:
+            success: Status uspješno izbrisan.
+          create:
+            success: Status uspješno stvoren.
+            invalid: Došlo je do problema prilikom stvaranja ovog statusa.
+          new:
+            create: Stvori status
+            title: Novi status
+          index:
+            title: Statusi
+        import_results:
+          new:
+            import: Uvezi
+            title: Uvezi rezultate iz CSV datoteke
+            download_export: Preuzmite izvoz u CSV formatu
+            info: "<p>Preporučujemo da slijedite ove korake:</p>\n<ol>\n<li><a href='%{link_new_status}' target='_blank'>Stvorite statuse za rezultate</a> koje želite dodati</li>\n<li><a href='%{link_new_result}' target='_blank'>Ručno stvorite barem jedan rezultat</a> kroz ovu administratorsku ploču prije korištenja uvoza.</li>\n<li>%{link_export_csv}</li>\n<li>Napravite promjene lokalno. Možete promijeniti samo sljedeće stupce CSV-a:</li>\n  <ul>\n  <li><b>taxonomies/ids:</b> ID-ovi taksonomija (ako ih je više, odvojite zarezom)</li>\n  <li><b>parent/id:</b> ID roditelja. Opcionalno</li>\n  <li><b>title/en:</b> Naslov na engleskom.</li>\n  <li><b>description/en:</b> Opis na engleskom.</li>\n  <li><b>start_date:</b> datum početka (format GGGG-MM-DD)</li>\n  <li><b>end_date:</b> datum završetka (format GGGG-MM-DD)</li>\n  <li><b>status/id:</b> ID statusa za ovaj rezultat</li>\n  <li><b>progress:</b> Postotak (od 0 do 100) izvršenja</li>\n  <li><b>proposals_ids:</b> interni ID povezanih prijedloga\
+              \ (odvojeni zarezom).</li>\n  </ul>\n</li>\n</ol>\n"
+        exports:
+          results: Rezultati
+          result_comments: Komentari
+        shared:
+          subnav:
+            statuses: Statusi
+        imports:
+          create:
+            success: Uvoz datoteke je započeo. Primit ćete e-poštu za nekoliko minuta s rezultatom uvoza.
+            invalid: Došlo je do problema prilikom uvoza rezultata.
+      results:
+        show:
+          stats:
+            back_to_resource: Natrag na rezultat
+        count:
+          results_count:
+            other: '%{count} rezultata'
+            one: 1 rezultat
+        root_taxonomies:
+          title: 'Prikaži po:'
+        search:
+          search: Pretraži radnje
+        no_results: Nema projekata
+        milestones:
+          title: Etape
+        home_header:
+          global_status: Globalni status izvršenja
+      admin_log:
+        result:
+          restore: '%{user_name} vratio je rezultat %{resource_name} u %{space_name}'
+          update: '%{user_name} ažurirao je rezultat %{resource_name} u %{space_name}'
+          soft_delete: '%{user_name} premjestio je rezultat %{resource_name} u %{space_name} u koš'
+          create: '%{user_name} stvorio je rezultat %{resource_name} u %{space_name}'
+          delete: '%{user_name} izbrisao je rezultat %{resource_name} u %{space_name}'
+        milestones:
+          update: '%{user_name} ažurirao je etapu %{resource_name}'
+          delete: '%{user_name} izbrisao je etapu %{resource_name}'
+          create: '%{user_name} stvorio je etapu %{resource_name}'
+        status:
+          create: '%{user_name} stvorio je status %{resource_name}'
+          delete: '%{user_name} izbrisao je status %{resource_name}'
+          update: '%{user_name} ažurirao je status %{resource_name}'
+        value_types:
+          parent_presenter:
+            not_found: 'Roditelj nije pronađen u bazi podataka (ID: %{id})'
+      import_projects_mailer:
+        import:
+          success: Uspješno uvezeni projekti u rezultate u komponenti %{component_name}.
+          subject: Uspješan uvoz projekata
+          added_projects:
+            one: Jedan rezultat uvezen je iz projekata.
+            other: '%{count} rezultata uvezeno je iz projekata.'
+      import_mailer:
+        import:
+          row_number: Redak
+          success: Uspješan uvoz rezultata. Rezultate možete pregledati u administratorskom sučelju.
+          errors_present: Došlo je do problema prilikom uvoza rezultata.
+          subject: Uspješan uvoz rezultata
+          errors: Pogreške
+      import_proposals_mailer:
+        import:
+          added_proposals:
+            one: Jedan rezultat uvezen je iz prijedloga
+            other: '%{count} rezultata uvezeno je iz prijedloga.'
+          success: Uspješno uvezeni prijedlozi u rezultate u komponenti %{component_name}.
+          subject: Uspješan uvoz prijedloga
+      content_blocks:
+        highlighted_results:
+          results: Rezultati
+      creation:
+        text: Ovaj rezultat je stvoren
+      last_activity:
+        new_result: 'Novi rezultat:'
+    open_data:
+      help:
+        result_comments:
+          author: Ime sudionika koji je napisao ovaj komentar
+          body: Sam komentar
+          created_at: Datum kada je ovaj komentar stvoren
+          root_commentable_url: URL resursa koji se veže na ovaj komentar
+          commentable_type: Vrsta sadržaja na koji se komentira
+          locale: Jezik koji je sudionik imao pri pisanju ovog komentara
+          id: ID ovog komentara
+          alignment: Je li ovaj komentar za, protiv ili neutralan
+          depth: Mjesto ovog komentara u stablu komentara
+          commentable_id: Jedinstveni ID sadržaja na koji se komentira
+        results:
+          url: URL na kojem se rezultat može pronaći
+          status: Trenutni status ovog rezultata
+          address: Adresa rezultata (ako postoji)
+          end_date: Datum završetka izvršenja rezultata
+          start_date: Datum početka izvršenja rezultata
+          id: Jedinstveni identifikator rezultata
+          children_count: Broj podrezultata
+          created_at: Datum stvaranja rezultata
+          progress: Postotak izvršenja rezultata
+          title: Naslov rezultata
+          latitude: Geografska širina rezultata ako ima fizičku lokaciju
+          proposal_urls: URL-ovi prijedloga uključenih u ovaj rezultat
+          component: Komponenta kojoj rezultat pripada
+          taxonomies: Taksonomije rezultata
+          comments_count: Broj komentara koje ovaj rezultat ima
+          parent: Roditeljski rezultat (ako postoji)
+          reference: Jedinstvena referenca rezultata
+          description: Opis rezultata
+          longitude: Geografska dužina rezultata ako ima fizičku lokaciju
+          updated_at: Zadnji datum ažuriranja rezultata
+    components:
+      accountability:
+        settings:
+          global:
+            display_progress_enabled: Prikaži napredak
+            intro: Uvod
+            clear_all: Obriši sve
+            default_taxonomy_help: Odaberite koju taksonomiju želite prikazati prema zadanim postavkama.
+            comments_enabled: Komentari omogućeni
+            geocoding_enabled: Karte omogućene
+            comments_max_length: Maksimalan broj znakova po komentaru (Ostavite 0 za zadanu vrijednost)
+            no_taxonomy_filters_found: Nisu pronađeni filtri taksonomije.
+            taxonomy_filters_add: Dodaj filtar
+            taxonomy_filters: Odaberite filtre za komponentu
+            default_taxonomy: Zadana taksonomija
+            define_taxonomy_filters: Prije korištenja ove postavke definirajte neke filtre za ovaj participativni prostor.
+          visualization: Vizualizacija
+          step:
+            comments_blocked: Komentari blokirani
+        name: Odgovornost
+        actions:
+          comment: Komentiraj
+    admin:
+      filters:
+        results:
+          taxonomies_part_of_contains:
+            label: Taksonomija
+          status_id_eq:
+            label: Status
+      tooltips:
+        deleted_results_info: Nije moguće izbrisati ovaj rezultat
+    statistics:
+      results_count_tooltip: Broj odluka ili ishoda generiranih iz ovog prostora.
+      results_count: Rezultati
+    events:
+      accountability:
+        proposal_linked:
+          email_subject: Ažuriranje za %{proposal_title}
+          email_outro: Ovu ste obavijest primili jer pratite "%{proposal_title}". Obavijesti možete prestati primati putem prethodne poveznice.
+          notification_title: Prijedlog <a href="%{proposal_path}">%{proposal_title}</a> uključen je u rezultat <a href="%{resource_path}">%{resource_title}</a>.
+          email_intro: 'Prijedlog "%{proposal_title}" uključen je u rezultat. Možete ga vidjeti s ove stranice:'
+        result_progress_updated:
+          email_intro: 'Rezultat "%{resource_title}", koji uključuje prijedlog "%{proposal_title}", sada je %{progress}% dovršen. Možete ga vidjeti s ove stranice:'
+          email_subject: Ažuriranje napretka %{resource_title}
+          email_outro: Ovu ste obavijest primili jer pratite "%{proposal_title}", a taj je prijedlog uključen u rezultat "%{resource_title}".
+          notification_title: Rezultat <a href="%{resource_path}">%{resource_title}</a>, koji uključuje prijedlog <a href="%{proposal_path}">%{proposal_title}</a>, sada je %{progress}% dovršen.
+    download_your_data:
+      show:
+        results: Izvoz rezultata
+        result_comments: Izvoz komentara rezultata
+    resource_links:
+      included_projects:
+        result_project: Projekti uključeni u ovaj rezultat
+      included_proposals:
+        result_proposal: Prijedlozi uključeni u ovaj rezultat
+    participatory_spaces:
+      highlighted_results:
+        see_all: Pogledaj sve rezultate
+  activerecord:
+    models:
+      decidim:
+        accountability:
+          result:
+            meetings_ids: 'Raspravljeno je na ovom sastanku: %{link}'
+            text: 'Dodano je u ovaj rezultat: %{link}'
+            project_ids: 'Uključeno je u ovaj projekt: %{link}'
+            budget_text: Ovaj rezultat %{link} je uključen
+            proposal_ids: 'Uključeno je u ovaj prijedlog: %{link}'
+      decidim/accountability/result:
+        other: Rezultati
+        one: Rezultat

@@ -1,1 +1,378 @@
+---
 hr:
+  decidim:
+    system:
+      organizations:
+        advanced_settings:
+          hide: Sakrij napredne postavke
+          show: Prikaži napredne postavke
+        omniauth_settings:
+          decidim:
+            client_id: ID klijenta
+            site_url: URL stranice
+            client_secret: Tajna klijenta
+          google_oauth2:
+            client_secret: Tajna klijenta
+            client_id: ID klijenta
+          facebook:
+            app_id: ID aplikacije
+            app_secret: Tajna aplikacije
+          icon: Ikona
+          twitter:
+            api_key: API ključ
+            api_secret: API tajna
+          enabled_by_default: Ovaj pružatelj omogućen je prema zadanim postavkama. Može se uređivati, ali ne i onemogućiti.
+          icon_path: Putanja ikone
+          enabled: Omogućeno
+        new:
+          default: Zadano?
+          title: Nova organizacija
+          secondary_hosts_hint: Unesite svaki u novi redak.
+          short_name_hint: Kratki naziv za progresivnu web aplikaciju. Mora imati najviše 12 znakova.
+          locale: Jezik
+          reference_prefix_hint: Prefiks reference koristi se za jedinstveno označavanje resursa unutar svih organizacija.
+          organization_admin_email_hint: Poslat ćemo e-poštu na ovu adresu kako biste je mogli potvrditi i postaviti lozinku.
+          enabled: Omogućeno
+        header_snippets_help_html: Ovo polje koristite za dodavanje stvari u HTML head. Najčešća je integracija usluga trećih strana koje zahtijevaju dodatni JavaScript ili CSS. Također ga možete koristiti za dodavanje dodatnih meta oznaka u HTML. Imajte na umu da se ovo prikazuje samo na javnim stranicama, ne u administratorskom dijelu. Ako kod komunicira s vanjskim API-jima ili nije u skladu sa sigurnosnim smjernicama aplikacije, bit će potrebno promijeniti Politiku sigurnosti sadržaja. Pročitajte više <a href="https://docs.decidim.org/en/develop/customize/content_security_policy">na stranici dokumentacije</a>.
+        index:
+          title: Organizacije
+        csp_settings:
+          img_src_hint: 'Direktiva img-src ograničava URL-ove koji se mogu učitati pomoću <img>, <image>, <picture> i <svg> elemenata.
+
+            Platforma će dodati ''self'', ali vam omogućuje dodavanje više. Ostavite prazno ako niste sigurni.
+
+            '
+          style_src_hint: 'Direktiva style-src ograničava URL-ove koji se mogu učitati pomoću <style> elemenata.
+
+            Platforma će dodati "''self'' ''unsafe-inline''", ali vam omogućuje dodavanje više. Ostavite prazno ako niste sigurni.
+
+            '
+          font_src_hint: 'Direktiva font-src ograničava URL-ove koji se mogu učitati pomoću @font-face.
+
+            Platforma će dodati ''self'', ali vam omogućuje dodavanje više. Ostavite prazno ako niste sigurni.
+
+            '
+          connect_src: Connect src
+          style_src: Style src
+          connect_src_hint: 'direktiva connect-src ograničava URL-ove koji se mogu učitati pomoću <script> elemenata.
+
+            Platforma će dodati ''self'', ali vam omogućuje dodavanje više. Ostavite prazno ako niste sigurni.
+
+            '
+          default_src_hint: 'Direktiva default-src je zadana politika za učitavanje sadržaja poput JavaScripta, slika, CSS-a, fontova, AJAX zahtjeva, okvira, HTML5 medija.
+
+            Platforma će dodati "''self'' ''unsafe-inline''", ali vam omogućuje dodavanje više. Ostavite prazno ako niste sigurni.
+
+            '
+          script_src_hint: 'Direktiva script-src ograničava URL-ove koji se mogu učitati pomoću <script> elemenata.
+
+            Platforma će dodati "''self'' ''unsafe-inline'' ''unsafe-eval''", ali vam omogućuje dodavanje više. Ostavite prazno ako niste sigurni.
+
+            '
+          media_src: Media src
+          media_src_hint: 'Direktiva media-src ograničava URL-ove koji se mogu učitati pomoću <video>, <audio> i <source> elemenata.
+
+            Platforma će dodati ''self'', ali vam omogućuje dodavanje više. Ostavite prazno ako niste sigurni.
+
+            '
+          frame_src: Frame src
+          img_src: Img src
+          frame_src_hint: 'Direktiva frame-src ograničava URL-ove koji se mogu učitati pomoću <frame>, <iframe> i <object> elemenata.
+
+            Platforma će dodati ''self'', ali vam omogućuje dodavanje više. Ostavite prazno ako niste sigurni.
+
+            '
+          script_src: Script src
+          default_src: Default src
+          font_src: Font src
+        file_upload_settings:
+          file_extensions:
+            title: Dopušteni nastavci datoteka
+            image_hint: Ovi nastavci datoteka dopušteni su za bilo koju vrstu prijenosa slika.
+            default_hint: Ovi nastavci datoteka dopušteni su svim korisnicima prema zadanim postavkama.
+            admin_hint: Ovi nastavci datoteka dopušteni su za prijenose u administratorskom dijelu. Administratori bi trebali biti svjesni rizika prijenosa nekih formata dokumenata, pa se od njih očekuje da budu oprezniji s prijenosima datoteka.
+          intro: 'Budite iznimno oprezni pri razmatranju promjene ovih postavki. Što manje dopuštate, to bolje.
+
+            Dopuštanje specifičnih nastavaka datoteka ili MIME vrsta može izložiti korisnike sustava sigurnosnim rizicima, a može utjecati i na pristupačnost web stranice.
+
+            '
+          file_sizes:
+            default_hint: Megabajti (MB). Ovo ograničenje veličine datoteke je zadano i koristi se za sve prijenose datoteka osim ako nije drukčije navedeno.
+            avatar_hint: Megabajti (MB). Ovo ograničenje veličine datoteke koristi se za prijenose slika avatara.
+            title: Maksimalne veličine datoteka
+          content_types:
+            default_hint: Ove MIME vrste dopuštene su svim korisnicima prema zadanim postavkama.
+            title: Dopuštene MIME vrste
+            admin_hint: Ove MIME vrste dopuštene su za prijenose u administratorskom dijelu. Administratori bi trebali biti svjesni rizika prijenosa nekih formata dokumenata, pa se od njih očekuje da budu oprezniji s prijenosima datoteka.
+            intro_html: Zamjenske znakove dodajete zvjezdicom za MIME vrste, npr. <code>image/*</code>.
+        update:
+          success: Organizacija uspješno ažurirana.
+          error: Došlo je do problema prilikom ažuriranja ove organizacije.
+        smtp_settings:
+          placeholder:
+            from_email: vaša-organizacija@example.org
+            from_label: naziv-vaše-organizacije
+          instructions:
+            from_label: 'Pošiljatelj e-pošte bit će: "naziv-vaše-organizacije <vaša-organizacija@example.org>". Ostavite prazno za korištenje istog naziva kao onog definiranog za organizaciju.'
+          fieldsets:
+            sender: Pošiljatelj
+        users_registration_mode:
+          enabled: Dopusti sudionicima stvaranje računa i prijavu
+          existing: Ne dopuštajte sudionicima stvaranje računa, ali dopustite postojećim sudionicima prijavu
+          disabled: Pristup se može ostvariti samo vanjskim računima
+        resend_invitation:
+          error: Došlo je do problema prilikom slanja pozivnice.
+          success: Pozivnica uspješno poslana.
+        edit:
+          short_name_hint: Kratki naziv za progresivnu web aplikaciju. Mora imati najviše 12 znakova.
+          confirm_resend_invitation: Jeste li sigurni da želite ponovno poslati pozivnicu?
+          resend_invitation: Ponovno pošalji pozivnicu
+          title: Uredi organizaciju
+          secondary_hosts_hint: Unesite svaki u novi redak
+        create:
+          error: Došlo je do problema prilikom stvaranja nove organizacije.
+          success_html: "<p>\n  Organizacija uspješno stvorena.\n</p>\n<ol>\n  <li>Možda ćete morati ažurirati kod aplikacije; kako biste dopustili zahtjeve prema %{host}, morate dodati sljedeće u konfiguraciju okruženja (npr. <code>config/environment/production.rb</code>) ili u <code>config/application.rb</code>:\n    <p> config.hosts << \"%{host}\" </p>\n  </li>\n  <li>\n    Nakon toga moći ćete pristupiti platformi putem <a href=\"http://%{host}\">http://%{host}</a>\n  </li>\n  <li>\n    Poslali smo e-poštu na <b>%{email}</b> koju trebate potvrditi.\n  </li>\n</ol>\n"
+          error_invitation: Došlo je do problema prilikom stvaranja nove organizacije. Provjerite ime administratora organizacije.
+      oauth_applications:
+        new:
+          save: Spremi
+          title: Nova aplikacija
+        form:
+          application_type:
+            public:
+              explanation: Aplikacije koje ne mogu koristiti registrirane tajne klijenta, poput aplikacija koje se izvode u pregledniku ili na mobilnom uređaju.
+              name: Javna
+            confidential:
+              name: Povjerljiva
+              explanation: Aplikacije koje se mogu sigurno autenticirati kod poslužitelja za autorizaciju, primjerice one koje mogu sigurno čuvati svoju registriranu tajnu klijenta. Tipično aplikacija koja radi na poslužitelju gdje je pohranjena tajna klijenta.
+          refresh_tokens_help_html: 'Osvježavajući tokeni korisni su kada je tokenu potreban dulji vijek od onog dodijeljenog pristupnom tokenu. Imajte na umu da <strong>osvježavajuće tokene treba koristiti pažljivo</strong> jer mogu oslabiti sigurnost vaših korisnika.
+
+            '
+          application_type_help_html: 'Vrsta OAuth klijenta kako je definirana u <a href="%{client_type_link}" target="_blank">RFC 6749 odjeljak 2.1</a>. Javni klijenti trebaju implementirati PKCE tijek kako je definirano u <a href="%{pkce_link}" target="_blank">RFC 7636</a>.
+
+            '
+          scopes_explanation:
+            api:read: Omogućuje korisniku izvršavanje upita kroz GraphQL API.
+            profile: Omogućuje pristup vlastitim podacima profila korisnika. Samo je ovaj opseg potreban ako se OAuth aplikacija koristi isključivo kao pružatelj identiteta ili usluga autentikacije.
+            user: Mogućnost djelovanja kao prijavljeni korisnik s danim tokenom tijekom poziva GraphQL API-ja. To je potrebno za sve api:write ili api:read operacije koje trebaju informacije o trenutnom korisniku.
+            api:write: Omogućuje korisniku izvršavanje mutacija kroz GraphQL API.
+          select_organization: Odaberite organizaciju
+          scopes_help_html: 'Odabrani opsezi bit će dostupni povezanim aplikacijama da ih zatraže tijekom postupka autorizacije. Korisniku će biti prikazani detalji o zahtjevu za autorizaciju kada se prijavi putem OAuth-a.
+
+            <br>
+
+            Različiti opsezi pružaju različite mogućnosti ovjerenom korisniku koristeći dodijeljene pristupne tokene.
+
+            <br>
+
+            <strong>Napomena:</strong> Ako samo trebate autenticirati korisnike na svojim vanjskim aplikacijama, trebate samo opseg <strong>profile</strong>. Aplikacije koje komuniciraju s Decidim API-jem trebaju i druge opsege.
+
+            '
+        update:
+          success: Aplikacija uspješno ažurirana.
+          error: Došlo je do problema prilikom ažuriranja ove aplikacije.
+        index:
+          title: OAuth aplikacije
+          confirm_delete: Jeste li sigurni da želite izbrisati ovu aplikaciju?
+        edit:
+          save: Spremi
+          title: Uredi aplikaciju
+        create:
+          error: Došlo je do problema prilikom stvaranja ove aplikacije.
+          success: Aplikacija uspješno stvorena.
+        destroy:
+          success: Aplikacija uspješno izbrisana.
+          error: Došlo je do problema prilikom brisanja ove aplikacije.
+      devise:
+        shared:
+          links:
+            did_not_receive_unlock_instructions?: Niste primili upute za otključavanje?
+            did_not_receive_confirmation_instructions?: Niste primili upute za potvrdu?
+            sign_up: Stvori račun
+            forgot_your_password?: Zaboravili ste lozinku?
+            log_in: Prijavite se
+        passwords:
+          edit:
+            minimum_characters: (najmanje %{minimum} znakova)
+            change_your_password: Promijenite lozinku
+          new:
+            forgot_your_password: Zaboravili ste lozinku
+            send_me_reset_password_instructions: Pošalji mi upute za ponovno postavljanje lozinke
+      menu:
+        api_credentials: API vjerodajnice
+        admins: Administratori
+        oauth_applications: OAuth aplikacije
+        dashboard: Naslovnica
+        organizations: Organizacije
+      models:
+        organization:
+          fields:
+            created_at: Stvoreno
+            smtp_settings: SMTP postavke
+            content_security_policy: Politika sigurnosti sadržaja
+            file_upload_settings: Postavke prijenosa datoteka
+            omniauth_settings: Omniauth postavke
+            name: Naziv
+          actions:
+            save_and_invite: Stvori organizaciju i pozovi administratora
+        oauth_application:
+          fields:
+            organization_name: Organizacija
+            name: Naziv OAuth aplikacije
+            created_at: Stvoreno
+        api_user:
+          fields:
+            key: Ključ
+            organization: Organizacija
+            name: Naziv
+            secret: Tajna
+            created_at: Stvoreno
+          validations:
+            name_uniqueness: API korisnik s ovim nazivom već postoji.
+        admin:
+          fields:
+            email: E-pošta
+            created_at: Stvoreno
+          validations:
+            email_uniqueness: drugi administrator s istom e-poštom već postoji
+      api_user:
+        create:
+          success: API korisnik uspješno stvoren. Tajna za korisnika vidljiva je samo nakon stvaranja. Kopirajte je i pohranite na sigurno prije nego što napustite ovu stranicu!
+          error: Stvaranje API korisnika nije uspjelo.
+        destroy:
+          success: API korisnik uspješno izbrisan.
+        refresh:
+          error: Nešto je pošlo po zlu! Pokušajte ponovno kasnije.
+          success: Tajna uspješno osvježena. Tajna za korisnika vidljiva je samo nakon stvaranja. Kopirajte je i pohranite na sigurno prije nego što napustite ovu stranicu!
+      api_users:
+        index:
+          manage: Upravljaj API korisnicima
+          explanation_html: '<p>API korisnici omogućuju programerima integracija dodavanje administrativnih strojnih korisničkih računa u sustav. Ti strojni korisnici mogu djelovati kao administratori na platformi i izvršavati ažuriranja koja bi normalni administratori izvršavali putem administratorske ploče. Tipičan slučaj je vanjska platforma za upravljanje gdje bi automatizirana skripta izvršavala administrativne zadatke bez da se stvarni korisnik mora autenticirati u sustav. Na primjer, sustav automatizacije mogao bi slati odgovore na prijedloge, u kojem slučaju trebamo integracijskog korisnika za taj zadatak.</p>
+
+            <p>Glavna razlika između ovih računa i normalnih administratorskih računa je da su ovi korisnici namijenjeni strojevima te su stoga njihovi zahtjevi za lozinkom drugačiji. Ti korisnici ne moraju redovito ažurirati lozinku, a promjena lozinke može se obaviti na upravljan način po potrebi.</p>
+
+            <p>Ove vjerodajnice namijenjene su strojevima. Aplikacije okrenute sudionicima trebale bi se integrirati s <a href="%{oauth_link}">OAuth aplikacijama</a>.</p>
+
+            '
+        new:
+          select_organization: Odaberite svoju organizaciju
+          title: Stvori novog API korisnika
+      default_pages:
+        placeholders:
+          title: Zadani naslov za %{page}
+          summary: Dodajte smislen sažetak na statičku stranicu %{page} na administratorskoj ploči.
+          content: Dodajte smislen sadržaj na statičku stranicu %{page} na administratorskoj ploči.
+        terms-of-service: Uvjeti korištenja
+      admins:
+        edit:
+          title: Uredi administratora
+          update: Ažuriraj
+        new:
+          create: Stvori
+          title: Novi administrator
+        destroy:
+          success: Administrator uspješno izbrisan.
+        update:
+          error: Došlo je do problema prilikom ažuriranja ovog administratora.
+          success: Administrator uspješno ažuriran.
+        create:
+          error: Došlo je do problema prilikom stvaranja novog administratora.
+          success: Administrator uspješno stvoren.
+        index:
+          title: Administratori
+      actions:
+        api_user:
+          shown_secret: Tajna je prikazana
+          show_secret: Prikaži tajnu
+          hide_secret: Sakrij tajnu
+          secret_can_not_be_shown: API tajna može se vidjeti ili kopirati samo nakon stvaranja
+          hidden_secret: Tajna je skrivena
+        api_users:
+          new: Novi API korisnik
+          remove: Ukloni korisnika
+          create: Stvori
+        refresh_secret: Osvježi tajnu
+        destroy: Izbriši
+        copy_secret_clarification: Kopiraj tajnu u međuspremnik
+        title: Radnje
+        new_organization: Nova organizacija
+        copy_secret: Kopiraj tajnu
+        new_oauth_application: Nova OAUTH aplikacija
+        confirm_destroy: Jeste li sigurni da želite ovo izbrisati?
+        copied: Kopirano
+        confirm_refresh_api_secret: Jeste li sigurni da želite osvježiti tajnu za ovog API korisnika? Nakon osvježavanja, stara tajna postat će nevažeća i više se neće moći koristiti.
+        save: Spremi
+        new_admin: Novi administrator
+        confirm_remove_api_user: Jeste li sigurni da želite ukloniti ovog API korisnika?
+        edit: Uredi
+      system_checks:
+        active_job_queue:
+          error: Red čekanja ActiveJob nije konfiguriran. Ovo nije preporučena postavka za produkciju. Pročitajte više na %{error_extra}.
+          success: Red čekanja ActiveJob ispravno je konfiguriran.
+          decidim_documentation: Decidim dokumentacija
+        secret_key:
+          error: 'Tajni ključ nije ispravno definiran. Spremite ga u varijablu okruženja SECRET_KEY_BASE i ponovno pokrenite poslužitelj: %{error_extra}'
+          success: Tajni ključ ispravno je konfiguriran.
+      shared:
+        notices:
+          no_organization_warning_html: Morate stvoriti organizaciju za početak. Svakako pročitajte %{guide} prije nastavka.
+          our_getting_started_guide: naš vodič za početak
+        organizations_list:
+          confirm_resend_invitation: Jeste li sigurni da želite ponovno poslati pozivnicu?
+          resend_invitation: Ponovno pošalji pozivnicu
+      titles:
+        dashboard: Naslovnica
+        decidim: Decidim
+      dashboard:
+        show:
+          system_checks: Provjere sustava
+          admins: Administratori
+          current_organizations: Trenutne organizacije
+  activemodel:
+    errors:
+      models:
+        organization:
+          attributes:
+            host:
+              invalid: nije ispravan
+            secondary_hosts:
+              invalid: nije ispravan
+            password:
+              secret_key: Morate definirati varijablu okruženja SECRET_KEY_BASE kako biste mogli spremiti ovo polje
+        oauth_application:
+          attributes:
+            redirect_uri:
+              must_be_ssl: URI za preusmjeravanje mora biti SSL URI
+    attributes:
+      oauth_application:
+        name: Naziv OAuth aplikacije
+        redirect_uri: URI za preusmjeravanje
+        organization_name: Organizacija
+        organization_logo: Logotip organizacije (kvadratni)
+        scopes: Dostupni opsezi
+        refresh_tokens_enabled: Osvježavanje tokena omogućeno
+        refresh_tokens: Osvježavanje tokena
+        organization_url: URL organizacije
+      organization:
+        address: SMTP poslužitelj
+        password: Lozinka
+        port: Port
+        from_email: Adresa e-pošte
+        from_label: Oznaka
+        user_name: Korisničko ime
+      organization_file_uploads:
+        allowed_content_types:
+          default: zadane MIME vrste
+          admin: admin MIME vrste
+        allowed_file_extensions:
+          image: nastavci datoteka za slike
+          default: zadani nastavci datoteka
+          admin: admin nastavci datoteka
+        maximum_file_size:
+          avatar: veličina datoteke avatara
+          default: zadana veličina datoteke
+  layouts:
+    decidim:
+      system:
+        login_items:
+          logout: Odjava

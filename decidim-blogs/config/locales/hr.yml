@@ -1,1 +1,164 @@
+---
 hr:
+  decidim:
+    blogs:
+      admin:
+        posts:
+          destroy:
+            success: Objava uspješno izbrisana.
+          create:
+            success: Objava uspješno stvorena.
+            invalid: Došlo je do problema prilikom stvaranja ove objave.
+          edit:
+            save: Ažuriraj
+            title: Uredi objavu
+          manage_trash:
+            title: Izbrisane objave
+          update:
+            success: Objava uspješno spremljena.
+            invalid: Došlo je do problema prilikom spremanja objave.
+          new:
+            create: Stvori
+            title: Stvori objavu
+          index:
+            not_published_yet: Još nije objavljeno.
+            title: Objave
+      content_blocks:
+        highlighted_posts:
+          see_all: Pogledaj sve objave
+          name: Objave
+          last_published: Zadnje objavljeno
+      admin_log:
+        post:
+          update: '%{user_name} ažurirao je objavu bloga %{resource_name} u %{space_name}'
+          delete: '%{user_name} izbrisao je objavu bloga %{resource_name} iz %{space_name}'
+          soft_delete: '%{user_name} premjestio je objavu bloga %{resource_name} u %{space_name} u koš'
+          restore: '%{user_name} vratio je objavu bloga %{resource_name} u %{space_name}'
+          create: '%{user_name} stvorio je objavu bloga %{resource_name} u %{space_name}'
+      posts:
+        new:
+          button: Stvori
+          title: Stvori novu objavu
+          back: Natrag na objave
+        index:
+          count:
+            other: '%{count} objava'
+            one: '%{count} objava'
+          empty: Još nema objava.
+          new_post: Nova objava
+        form:
+          body: Tijelo
+          title: Naslov
+          author_id: Autor
+        menu_actions:
+          button_edit: Uredi objavu
+          button_destroy: Izbriši objavu
+          button_destroy_confirm: Jeste li sigurni da želite izbrisati ovu objavu?
+        edit:
+          title: Uredi objavu
+          add_attachments: Dodaj privitke
+          edit_attachments: Uredi privitke
+          back: Natrag na objavu
+          attachment_legend: Dodajte dokument ili sliku
+          button: Ažuriraj
+      models:
+        post:
+          fields:
+            author: Autor
+            published_at: Vrijeme objave
+            title: Naslov
+            taxonomies: Taksonomije
+            body: Tijelo
+            official_blog_post: Službena objava
+      actions:
+        view_deleted_posts: Pogledaj izbrisane objave
+        author_id: Stvori objavu kao
+        edit: Uredi
+        deleted_posts_info: Izbrisane objave mogu se vratiti iz koša.
+        title: Radnje
+        confirm_delete_post: Jeste li sigurni da želite izbrisati ovu objavu?
+        new: Nova objava
+      last_activity:
+        new_post: 'Nova objava:'
+    open_data:
+      help:
+        posts:
+          title: Naslov objave
+          url: URL za ovu objavu
+          published_at: Datum objave ove objave
+          comments_count: Broj komentara ove objave
+          id: Jedinstveni identifikator ove objave
+          likes_count: Broj sviđanja ove objave
+          component: Komponenta kojoj objava pripada
+          follows_count: Broj praćenja ove objave
+          created_at: Datum stvaranja ove objave
+          author: Informacije o autoru
+          updated_at: Zadnji datum ažuriranja objave
+          participatory_space: Kojem prostoru ova objava pripada
+          body: Tijelo objave
+        post_comments:
+          depth: Mjesto ovog komentara u stablu komentara
+          commentable_id: Jedinstveni ID sadržaja na koji se komentira
+          id: ID ovog komentara
+          body: Sam komentar
+          created_at: Datum kada je ovaj komentar stvoren
+          author: Ime sudionika koji je napisao ovaj komentar
+          root_commentable_url: URL resursa koji se veže na ovaj komentar
+          commentable_type: Vrsta sadržaja na koji se komentira
+          locale: Jezik koji je sudionik imao pri pisanju ovog komentara
+          alignment: Je li ovaj komentar za, protiv ili neutralan
+    events:
+      blogs:
+        post_created:
+          email_subject: Nova objava objavljena u %{participatory_space_title}
+          notification_title: Objava <a href="%{resource_path}">%{resource_title}</a> objavljena je u %{participatory_space_title}
+          email_intro: Objava "%{resource_title}" objavljena je u "%{participatory_space_title}" koji pratite.
+          email_outro: Ovu ste obavijest primili jer pratite "%{participatory_space_title}". Možete ga prestati pratiti putem prethodne poveznice.
+    components:
+      blogs:
+        actions:
+          update: Ažuriraj
+          create: Stvori
+          destroy: Izbriši
+          comment: Komentiraj
+          like: Sviđa mi se
+        settings:
+          step:
+            comments_blocked: Komentari blokirani
+            likes_enabled: Sviđanja omogućena
+            likes_blocked: Sviđanja blokirana
+            announcement: Obavijest
+          global:
+            creation_enabled_for_participants: Sudionici mogu stvarati objave
+            announcement: Obavijest
+            attachments_allowed: Dopusti privitke
+            comments_max_length: Maksimalan broj znakova po komentaru (Ostavite 0 za zadanu vrijednost)
+            taxonomy_filters: Odaberite filtre za komponentu
+            taxonomy_filters_add: Dodaj filtar
+            define_taxonomy_filters: Prije korištenja ove postavke definirajte neke filtre za ovaj participativni prostor.
+            no_taxonomy_filters_found: Nisu pronađeni filtri taksonomije.
+            comments_enabled: Komentari omogućeni
+        name: Blog
+    admin:
+      admin_log:
+        changeset:
+          posts: Objave
+      tooltips:
+        deleted_posts_info: Nije moguće izbrisati ovu objavu
+    statistics:
+      posts_count: Objave
+      posts_count_tooltip: Broj objavljenih ažuriranja ili objava bloga.
+  activemodel:
+    attributes:
+      post:
+        title: Naslov
+        decidim_author_id: Autor
+        body: Tijelo
+        published_at: Vrijeme objave
+    models:
+      decidim/blogs/create_post_event: Nova objava bloga
+  activerecord:
+    models:
+      decidim/blogs/post:
+        one: Objava
+        other: Objave

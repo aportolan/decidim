@@ -1,1 +1,148 @@
+---
 hr:
+  activemodel:
+    attributes:
+      sortition:
+        additional_info: Informacije o ždrijebanju
+        decidim_proposals_component_id: Skup prijedloga
+        dice: Rezultat bacanja kocke. Bacite 6-stranu kocku ili pronađite drugi slučajni način za generiranje broja od 1 do 6 te ovdje pred svjedocima unesite dobiveni broj. To pridonosi kvaliteti i jamstvu slučajnosti rezultata
+        target_items: Broj prijedloga za odabir (označava broj prijedloga koje želite odabrati ždrijebanjem iz skupine prijedloga koju ste prethodno odabrali)
+        witnesses: Svjedoci
+        title: Naslov
+    models:
+      decidim/sortitions/create_sortition_event: Ždrijebanje
+  decidim:
+    sortitions:
+      admin:
+        actions:
+          show: Detalji ždrijebanja
+          edit: Uredi
+          new_sortition: Novo ždrijebanje
+          title: Radnje
+          destroy: Otkaži ždrijebanje
+        sortitions:
+          destroy:
+            error: Ždrijebanje nije moguće otkazati.
+            success: Ždrijebanje uspješno otkazano.
+          edit:
+            update: Ažuriraj
+            title: Ažurirajte informacije o ždrijebanju
+          index:
+            title: Ždrijebanja
+          new:
+            confirm: Pritiskom na sljedeći gumb platforma će zabilježiti datum i vrijeme (s preciznošću do sekunde), a zajedno s bacanjem kocke ti će se podaci koristiti za generiranje slučajnog odabira. Radnja će biti nepovratna; nakon što kliknete gumb, rezultat ovog izvlačenja bit će objavljen zajedno s podacima unesenima u ovaj obrazac i neće se moći mijenjati. Pažljivo provjerite sadržaj.
+            create: Stvori
+            title: Novo ždrijebanje
+          form:
+            all_taxonomies: Sve taksonomije
+            select_taxonomies: Taksonomije skupa prijedloga na koji želite primijeniti izvlačenje. Ostavite prazno kako biste izvlačenje primijenili na sve prijedloge u toj taksonomiji.
+            select_proposal_component: Odaberite skup prijedloga
+          show:
+            selected_proposals: Prijedlozi odabrani za izvlačenje
+          confirm_destroy:
+            confirm_destroy: Jeste li sigurni da želite otkazati ovo ždrijebanje?
+            title: Otkazivanje ždrijebanja
+            destroy: Otkaži ždrijebanje
+          create:
+            error: Došlo je do problema prilikom stvaranja novog ždrijebanja.
+            success: Ždrijebanje uspješno stvoreno.
+          update:
+            error: Došlo je do problema prilikom ažuriranja ždrijebanja.
+            success: Ždrijebanje uspješno ažurirano.
+        models:
+          sortition:
+            fields:
+              decidim_proposals_component: Komponenta prijedloga
+              dice: Kocka
+              seed: Sjeme
+              reference: Referenca
+              created_at: Datum stvaranja
+              taxonomies: Taksonomije
+              request_timestamp: Vrijeme izvlačenja
+              title: Naslov
+              target_items: Stavke za odabir
+        deprecation_warning_html: ⚠️ <b>Obavijest o zastarjelosti.</b> Modul ždrijebanja (Sortitions) bit će uklonjen u Decidimu v0.32. Planirajte u skladu s tim i razmotrite alternativna rješenja za odabir sudionika ili prijedloga.
+      sortitions:
+        show:
+          cancelled: Otkazano ždrijebanje
+          mathematical_result: Rezultat (kocka × sjeme)
+          time_seed: Vremensko sjeme
+          sortition_reproducibility_details: Mogućnost reprodukcije ždrijebanja
+          proposals_selected_by_sortition: Prijedlozi odabrani ždrijebanjem
+          candidate_proposals_info: Ždrijebanje je provedeno među sljedećim prijedlozima (%{taxonomy_labels}), sa sljedećim ID-evima (podebljano su odabrani prijedlozi)
+          algorithm: Kod algoritma ždrijebanja
+          any_taxonomy: iz svih taksonomija
+          taxonomies: iz taksonomija %{taxonomies}
+          introduction: Ova stranica sadrži rezultate ždrijebanja %{reference}. Ovim ždrijebanjem odabrano je %{target_items} rezultata slučajno i s jednakom raspodjelom vjerojatnosti iz skupa prijedloga prikazanih u nastavku. Zajedno s rezultatima, informacije prikazane na ovoj stranici pružaju sve podatke potrebne za maksimizaciju jamstava i reprodukciju rezultata. Ključ kvalitete ovog ždrijebanja je dvostruka slučajnost koju pružaju bacanje kocke (potvrđeno od svjedoka) i precizno vrijeme ždrijebanja koje je ulaz za algoritam koji generira slučajni odabir. Vremensko sjeme za ždrijebanje toliko je precizno (u sekundama) da ga ljudi ne mogu kontrolirati, čime se pruža dvostruki nekontrolirani ulaz koji jamči pošten rezultat.
+          dice_result: Rezultat kocke
+          witnesses: Svjedoci
+          candidate_proposal_ids: Redoslijed prijedloga ždrijebanja i ID-evi
+        orders:
+          random: Slučajno
+          label: 'Poredaj ždrijebanja po:'
+          recent: Nedavno
+        count:
+          proposals_count:
+            one: 1 prijedlog
+            other: '%{count} prijedloga'
+        sortition:
+          selected_proposals:
+            other: odabrani prijedlozi
+            one: odabrani prijedlog
+          random_seed: Slučajno sjeme
+        sortitions_count:
+          count:
+            other: '%{count} ždrijebanja'
+            one: 1 ždrijebanje
+        filters:
+          category: Kategorija
+          cancelled: Otkazano
+          all: Sve
+          state: Status
+          active: Aktivno
+        results_count:
+          count:
+            one: Odabrani prijedlog
+            other: Odabrani prijedlozi
+        sortition_author:
+          deleted: Obrisani sudionik
+        linked_sortitions:
+          selected_proposals: Odabrani prijedlozi
+        index:
+          empty: Još nema ždrijebanja.
+        sortition_cancel_author:
+          deleted: Obrisani sudionik
+      admin_log:
+        sortition:
+          delete: '%{user_name} otkazao je ždrijebanje %{resource_name} u %{space_name}'
+          create: '%{user_name} stvorio je ždrijebanje %{resource_name} u %{space_name}'
+          update: '%{user_name} ažurirao je ždrijebanje %{resource_name} u %{space_name}'
+    components:
+      sortitions:
+        settings:
+          global:
+            define_taxonomy_filters: Definirajte neke filtre za ovaj participacijski prostor prije korištenja ove postavke.
+            taxonomy_filters: Odaberite filtre za komponentu
+            comments_enabled: Komentari omogućeni
+            taxonomy_filters_add: Dodaj filtar
+            comments_max_length: Maksimalna duljina komentara (ostavite 0 za zadanu vrijednost)
+            no_taxonomy_filters_found: Nisu pronađeni filtri taksonomije.
+            clear_all: Očisti sve
+        actions:
+          comment: Komentar
+        name: Ždrijebanja
+    events:
+      sortitions:
+        sortition_created:
+          email_intro: Ždrijebanje "%{resource_title}" dodano je u "%{participatory_space_title}" koje pratite.
+          email_subject: Novo ždrijebanje dodano u %{participatory_space_title}
+          email_outro: Ovu ste obavijest primili jer pratite "%{participatory_space_title}". Možete ga prestati pratiti putem prethodne poveznice.
+          notification_title: Ždrijebanje <a href="%{resource_path}">%{resource_title}</a> dodano je u %{participatory_space_title}
+    statistics:
+      sortitions_count_tooltip: Broj slučajnih odabira provedenih za donošenje odluka.
+      sortitions_count: Ždrijebanja
+  activerecord:
+    models:
+      decidim/sortitions/sortition:
+        other: Ždrijebanja
+        one: Ždrijebanje

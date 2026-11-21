@@ -1,1 +1,79 @@
+---
 hr:
+  decidim:
+    demographics:
+      admin:
+        publish_responses:
+          index:
+            description: Opis
+            title: Prikaži odgovore
+        settings:
+          show:
+            collect_data_help: Omogućavanjem ove postavke korisnici će moći donirati svoje podatke platformi.
+            collect_data: Omogući prikupljanje demografskih podataka
+            title: Postavke
+            save: Spremi
+          update:
+            invalid: Došlo je do pogreške prilikom spremanja demografskih podataka
+            success: Demografski podaci uspješno spremljeni
+        questions:
+          questions_form:
+            collapse: Sažmi sva pitanja
+            add_question: Dodaj pitanje
+            expand: Proširi sva pitanja
+          edit:
+            title: Pitanja
+            save: Spremi
+        demographics_menu:
+          responses: Odgovori
+          settings: Postavke
+          questions: Pitanja
+        responses:
+          index:
+            title: '%{total} ukupno odgovora'
+            publish_responses: Prikaži odgovore
+        demographics:
+          tabs_menu:
+            title: Demografija
+        title: Demografija
+      destroy:
+        success: Uspješno uklonjeni vaši donirani podaci
+        error: Došlo je do pogreške prilikom uklanjanja vaših doniranih podataka
+      demographics:
+        questionnaire:
+          modal_question: Svi vaši demografski podaci bit će uklonjeni.
+          modal_close: Otkaži
+          tos_agreement: Sudjelovanjem prihvaćate %{link}.
+          modal_ok: U redu
+          terms_of_service: uvjete korištenja
+          delete_my_data: Izbriši podatke
+          submit: Spremi podatke
+          modal_title: Izbriši podatke
+        show:
+          page_title: Donacija demografskih podataka
+      actions:
+        title: Radnje
+      questions:
+        age:
+          options:
+          - 15 do 29 godina
+          - 30 do 44 godine
+          - 45 do 64 godine
+          - 65 godina i više
+          question: Koliko imate godina?
+        postal:
+          question: Koji je vaš kućni poštanski broj?
+        gender:
+          options:
+          - Muškarac
+          - Žena
+          - Nebinarno
+          - Moj spol nije naveden
+          - Radije ne bih rekao/la
+          question: Što od navedenog najbolje opisuje vaš spol?
+      name: Donacija demografskih podataka
+  layouts:
+    decidim:
+      shared:
+        layout_center:
+          alert: Pružanjem ovih informacija pridonosite statističkoj analizi koja pomaže poboljšati pokazatelj kvalitete. Vaši podaci bit će agregirani i korišteni samo u istraživačke svrhe.

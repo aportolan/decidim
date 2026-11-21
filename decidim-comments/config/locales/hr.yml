@@ -1,1 +1,197 @@
+---
 hr:
+  decidim:
+    download_your_data:
+      help:
+        comment_votes:
+          weight: Težina glasa (1 za pozitivno, -1 za negativno)
+          comment: ID komentara za koji se glasalo
+          updated_at: Datum kada je ovaj glas zadnji put ažuriran
+          id: ID glasa
+          created_at: Datum kada je ovaj glas stvoren
+        comments:
+          root_commentable_url: URL resursa koji se veže na ovaj komentar
+          commentable_id: Jedinstveni ID sadržaja na koji se komentira
+          locale: Jezik koji je sudionik imao pri pisanju ovog komentara
+          alignment: Je li ovaj komentar za, protiv ili neutralan
+          id: ID ovog komentara
+          depth: Mjesto ovog komentara u stablu komentara (je li odgovor ili odgovor na odgovor)
+          body: Sam komentar
+          created_at: Datum kada je ovaj komentar stvoren
+          author: Ime sudionika koji je napisao ovaj komentar
+          commentable_type: Vrsta sadržaja na koji se komentira (rezultat, prijedlog itd.)
+    components:
+      comment:
+        report:
+          reasons:
+            spam: Sadrži clickbait, oglašavanje, prijevare ili skriptne botove.
+            does_not_belong: Sadrži nezakonite aktivnosti, prijetnje samoubojstvom, osobne podatke ili nešto drugo što mislite da ne pripada na %{organization_name}.
+            offensive: Sadrži rasizam, seksizam, uvrede, osobne napade, prijetnje smrću, zahtjeve za samoubojstvom ili bilo koji oblik govora mržnje.
+          action: Prijavi
+          title: Prijavi neprikladan sadržaj
+          already_reported: Ovaj sadržaj je već prijavljen i pregledat će ga administrator.
+          description: Je li ovaj sadržaj neprikladan?
+          details: Dodatni komentari
+          close: Zatvori
+        comment_label: Komentar %{comment_id}
+        sort_by: 'Sortiraj po: '
+        show_replies:
+          one: Prikaži odgovor
+          other: Prikaži %{count} odgovora
+        moderated_at: Komentar moderiran %{date}
+        cancel_reply: Otkaži odgovor
+        answers:
+          one: '%{count} odgovor'
+          other: '%{count} odgovora'
+        deleted_at: Komentar izbrisan %{date}
+        deleted_user: Izbrisani sudionik
+        hide_replies:
+          one: Sakrij odgovor
+          other: Sakrij %{count} odgovora
+        confirm_destroy: Jeste li sigurni da želite izbrisati ovaj komentar?
+        edit: Uredi
+        edited: Uređeno
+        comment_label_reply: Komentar %{comment_id} (odgovor na komentar %{parent_comment_id})
+        controls_label: Kontrole komentara
+        alignment:
+          in_favor: Za
+          against: Protiv
+        reply: Odgovori
+        single_comment_link_title: Dobij poveznicu
+        delete: Izbriši
+      add_comment_form:
+        form:
+          body:
+            label: Komentar
+            placeholder: Što mislite o ovome?
+          submit_root_comment: Objavi komentar
+          form_error: Tekst je obavezan i ne smije biti dulji od %{length} znakova.
+          submit_reply: Objavi odgovor
+        remaining_characters: preostalo %{count} znakova
+        account_message: Prijavite se ili stvorite račun za dodavanje komentara.
+        add_comment: Dodaj komentar
+        opinion:
+          positive: Pozitivno
+          label: Vaše mišljenje o ovoj temi
+          negative_selected: Vaše mišljenje o ovoj temi je negativno
+          neutral_selected: Vaše mišljenje o ovoj temi je neutralno
+          positive_selected: Vaše mišljenje o ovoj temi je pozitivno
+          negative: Negativno
+          neutral: Neutralno
+        remaining_characters_1: preostao %{count} znak
+        title: Dodajte svoj komentar
+      comment_order_selector:
+        order:
+          best_rated: Najbolje ocijenjeno
+          recent: Nedavno
+          most_discussed: Najviše raspravljano
+          older: Starije
+        title: 'Poredaj po:'
+      comments:
+        title:
+          one: '%{count} komentar'
+          other: '%{count} komentara'
+        comment_details_title: Detalji komentara
+        blocked_comments_for_unauthorized_user_warning: Za komentiranje u ovom trenutku morate biti ovjereni, ali možete čitati prethodne.
+        top_comment_label: Najviše pozitivno ocijenjeno
+        against: Protiv
+        loading: Učitavanje komentara ...
+        in_favor: Za
+        single_comment_warning_title: Vidite jedan komentar
+        blocked_comments_for_user_warning: U ovom trenutku ne možete komentirati, ali možete čitati prethodne.
+        blocked_comments_warning: Komentari su trenutno onemogućeni, samo administratori mogu odgovarati ili objavljivati nove.
+        single_comment_warning: <a href="%{url}">Pogledaj sve komentare</a>
+      up_vote_button:
+        label:
+          one: Gumb za pozitivnu ocjenu. %{count} pozitivna ocjena
+          other: Gumb za pozitivnu ocjenu. %{count} pozitivnih ocjena
+        text: Slažem se s ovim komentarom
+      edit_comment_modal_form:
+        form:
+          submit: Pošalji
+          body:
+            label: Komentar
+            placeholder: Što mislite o ovome?
+        close: Zatvori
+        title: Uredite svoj komentar
+      down_vote_button:
+        label:
+          one: Gumb za negativnu ocjenu. %{count} negativna ocjena
+          other: Gumb za negativnu ocjenu. %{count} negativnih ocjena
+        text: Ne slažem se s ovim komentarom
+    comments:
+      votes:
+        create:
+          error: Došlo je do problema prilikom glasanja o komentaru.
+      comments_title: Komentar
+      comments:
+        create:
+          error: Došlo je do problema prilikom stvaranja komentara.
+        delete:
+          error: Komentar nije moguće izbrisati.
+        update:
+          error: Došlo je do problema prilikom ažuriranja komentara.
+      admin:
+        shared:
+          availability_fields:
+            enabled: Komentari omogućeni
+            end_time: Komentari omogućeni do
+            start_time: Komentari omogućeni od
+      comment_thread:
+        accessibility_label: Niz komentara pokrenuo %{full_name} dana %{date}
+      last_activity:
+        new_comment: 'Novi komentar:'
+    events:
+      comments:
+        user_mentioned:
+          email_intro: Spomenuti ste
+          email_outro: Ovu ste obavijest primili jer ste spomenuti u %{resource_title}.
+          notification_title: Spomenuti ste u <a href="%{resource_path}">%{resource_title}</a> od strane <a href="%{author_path}">%{author_name}</a>
+          email_subject: Spomenuti ste u %{resource_title}
+        comment_downvoted:
+          email_outro: Ovu ste obavijest primili jer ste autor ovog komentara.
+          notification_title: Vaš <a href="%{resource_path}">komentar</a> na "%{resource_title}" negativno je ocijenjen. Sada ima ukupno %{upvotes} pozitivnih i %{downvotes} negativnih ocjena.
+          email_subject: Vaš komentar na "%{resource_title}" negativno je ocijenjen.
+          email_intro: Vaš komentar na "%{resource_title}" negativno je ocijenjen. Sada ima ukupno %{upvotes} pozitivnih i %{downvotes} negativnih ocjena.
+        comment_created:
+          notification_title: Novi komentar od <a href="%{author_path}">%{author_name}</a> na <a href="%{resource_path}">%{resource_title}</a>
+          email_outro: Ovu ste obavijest primili jer pratite "%{resource_title}" ili njegovog autora. Možete ga prestati pratiti putem prethodne poveznice.
+          email_subject: Novi komentar od %{author_name} na %{resource_title}
+          email_intro: '%{resource_title} je komentiran. Komentar možete pročitati na ovoj stranici:'
+        comment_by_followed_user:
+          email_outro: Ovu ste obavijest primili jer pratite %{author_name}. Ovog korisnika možete prestati pratiti na njegovoj stranici profila.
+          email_subject: Novi komentar od %{author_name} na %{resource_title}
+          notification_title: Novi komentar od <a href="%{author_path}">%{author_name}</a> na <a href="%{resource_path}">%{resource_title}</a>.
+          email_intro: '%{author_name} je ostavio komentar na %{resource_title}. Možete ga pročitati na ovoj stranici:'
+        reply_created:
+          email_outro: Ovu ste obavijest primili jer je na vaš komentar odgovoreno.
+          notification_title: <a href="%{author_path}">%{author_name}</a> je odgovorio na vaš komentar na <a href="%{resource_path}">%{resource_title}</a>
+          email_subject: '%{author_name} je odgovorio na vaš komentar na %{resource_title}'
+          email_intro: '%{author_name} je odgovorio na vaš komentar na %{resource_title}. Možete ga pročitati na ovoj stranici:'
+        comment_upvoted:
+          email_subject: Vaš komentar na "%{resource_title}" pozitivno je ocijenjen.
+          email_outro: Ovu ste obavijest primili jer ste autor ovog komentara.
+          notification_title: Vaš <a href="%{resource_path}">komentar</a> na "%{resource_title}" pozitivno je ocijenjen. Sada ima ukupno %{upvotes} pozitivnih i %{downvotes} negativnih ocjena.
+          email_intro: Vaš komentar na "%{resource_title}" pozitivno je ocijenjen. Sada ima ukupno %{upvotes} pozitivnih i %{downvotes} negativnih ocjena.
+    admin:
+      admin_log:
+        changeset:
+          comments: Komentari
+  activemodel:
+    models:
+      decidim/comments/reply_created_event: Odgovor na komentar
+      decidim/comments/comment_upvoted_event: Komentar pozitivno ocijenjen
+      decidim/comments/comment_created_event: Komentar
+      decidim/comments/user_mentioned_event: Spominjanje
+      decidim/comments/comment_by_followed_user_event: Komentar
+  errors:
+    messages:
+      cannot_have_comments: ne može imati komentare
+  activerecord:
+    models:
+      decidim/comments/comment:
+        other: Komentari
+        one: Komentar
+      decidim/comments/comment_vote:
+        one: Glas
+        other: Glasovi

@@ -1,1 +1,465 @@
+---
 hr:
+  decidim:
+    assemblies:
+      admin:
+        assemblies:
+          form:
+            taxonomies: Taksonomije
+            duration: Trajanje
+            private_notice: Nakon što ga postavite kao privatnog, moći ćete upravljati privatnim sudionicima
+            define_taxonomy_filters: Prije korištenja ove postavke definirajte neke filtre za ovaj participativni prostor.
+            duration_help: Ako je trajanje ove skupštine ograničeno, odaberite datum završetka. Inače će se prikazati kao neodređeno.
+            visibility: Vidljivost
+            social_handlers: Društvene mreže
+            title: Opće informacije
+            metadata: Metapodaci
+            other: Ostalo
+            slug_help_html: 'URL slugovi koriste se za generiranje URL-ova koji upućuju na ovu skupštinu. Primjer: %{url}'
+            included_at_help: Odaberite datum kada je ova skupština dodana platformi. Ne mora nužno biti isti kao datum stvaranja.
+            no_taxonomy_filters_found: Nisu pronađeni filtri taksonomije.
+            select_parent_assembly: Odaberite roditeljsku skupštinu
+            images: Slike
+            select_a_created_by: Odaberite tko je stvorio
+            announcement_help: Tekst koji ovdje unesete bit će prikazan korisniku odmah ispod informacija o skupštini.
+        new_import:
+          help_html: Ova značajka uvoza omogućuje stvaranje nove skupštine iz izvezene JSON datoteke. Uvezena skupština uključit će postavke, komponente i privitke (ako je odabrano).
+          accepted_types:
+            json: JSON
+        assembly_duplicates:
+          form:
+            slug_help_html: 'URL slugovi koriste se za generiranje URL-ova. Primjer: %{url}'
+        assembly_members:
+          form:
+            image_guide: Po mogućnosti portretna slika bez teksta.
+            explanation: 'Smjernice za sliku:'
+            non_user_avatar_help: Prije objave kao člana trebate dobiti privolu osoba.
+        imports:
+          banner_image_error: Slika natpisa nije se mogla uvesti (%{error}).
+          hero_image_error: Hero slika nije mogla biti uvezena (%{error}).
+          attachment_error: Privitak "%{title}" nije moguće uvesti (%{error}).
+        assembly_imports:
+          form:
+            slug_help_html: 'URL slugovi koriste se za generiranje URL-ova. Primjer: %{url}'
+            document_legend: Dodaj dokument
+        content_blocks:
+          highlighted_assemblies:
+            max_results: Maksimalan broj elemenata za prikaz
+      created_by:
+        public: Javnost
+        others: Ostali
+        city_council: Gradsko vijeće
+      content_blocks:
+        dates_metadata:
+          name: Metapodaci datuma
+        children_assemblies:
+          name: Skupštine
+        highlighted_assemblies:
+          name: Istaknute skupštine
+        related_assemblies:
+          name: Povezane skupštine
+        extra_data:
+          name: Vrsta i trajanje
+      filter:
+        executive: Izvršno
+        commission: Povjerenstvo
+        government: Vlada
+        others: Ostali
+        consultative_advisory: Savjetodavno
+        all: Sve vrste
+        working_group: Radna grupa
+        participatory: Participativno
+        help: 'Prikaži:'
+      show:
+        duration: Trajanje
+        social_networks_title: Posjetite skupštinu na
+        private_space: Ovo je privatna skupština
+      assemblies:
+        description:
+          included_at: Uključeno
+          data: Podaci skupštine
+          title: O ovoj skupštini
+          developer_group: Grupa predlagatelja
+          duration: Trajanje
+          participatory_scope: O čemu se odlučuje
+          meta_scope: Opseg
+          target: Tko sudjeluje
+          area_name: Područje
+          participatory_structure: Kako se odlučuje
+          closing_date: Datum zatvaranja
+          indefinite_duration: Neodređeno
+          creation_date: Datum stvaranja
+          created_by: Stvorio
+          local_area: Područje organizacije
+        filters:
+          type: Vrsta
+          names:
+            all: Sve
+        show:
+          title: O ovoj skupštini
+      assembly_members:
+        index:
+          members: Članovi
+      index:
+        title: Skupštine
+      pages:
+        home:
+          highlighted_assemblies:
+            see_all_spaces: Pogledaj sve skupštine
+            active_spaces: Aktivne skupštine
+        user_profile:
+          member_of:
+            member_of: Član
+      last_activity:
+        new_assembly: 'Nova skupština:'
+    open_data:
+      help:
+        assemblies:
+          developer_group: Razvojna grupa skupštine
+          remote_hero_image_url: URL hero slike skupštine
+          reference: Jedinstvena referenca prostora
+          short_description: Kratki opis skupštine
+          taxonomies: Taksonomije projekta
+          closing_date_reason: Zašto je skupština zatvorena
+          purpose_of_action: Svrha djelovanja skupštine
+          slug: Slug skupštine (za URL)
+          decidim_scope_id: Opseg skupštine
+          title: Naslov skupštine
+          follows_count: Broj korisnika koji prate ovaj prostor
+          promoted: Je li skupština istaknuta ili ne
+          instagram_handler: Instagram handler
+          created_by_other: Drugi stvaratelj skupštine
+          description: Dugačak opis skupštine
+          scopes_enabled: Jesu li opsezi omogućeni ili ne
+          included_at: Datum kada je skupština uključena
+          id: Jedinstveni identifikator ove skupštine
+          participatory_scope: Participativni opseg skupštine
+          scope: Opseg skupštine
+          area: Područje skupštine
+          internal_organisation: Unutarnja organizacija ove skupštine
+          created_by: Tko je stvorio ovu skupštinu
+          assembly_type: Vrsta skupštine
+          facebook_handler: Facebook handler
+          closing_date: Datum zatvaranja skupštine
+          published_at: Datum objave ovog prostora
+          meta_scope: Metapodaci opsega skupštine
+          url: URL prostora
+          is_transparent: Je li skupština transparentna ili ne
+          updated_at: Zadnji datum ažuriranja prostora
+          youtube_handler: YouTube handler
+          twitter_handler: Twitter handler
+          remote_banner_image_url: URL banner slike skupštine
+          target: Cilj skupštine
+          subtitle: Podnaslov skupštine
+          local_area: Lokalno područje skupštine
+          creation_date: Datum stvaranja ove skupštine
+          special_features: Koje posebne značajke ova skupština ima
+          composition: Sastav skupštine
+          github_handler: GitHub handler
+          duration: Trajanje skupštine
+          participatory_structure: Participativna struktura skupštine
+          announcement: Informacije o najavi (callout)
+          created_at: Datum stvaranja ovog prostora
+    admin_log:
+      assembly:
+        unpublish_all_members: '%{user_name} povukao je objavu svih članova skupštine %{resource_name}'
+        create: '%{user_name} stvorio je skupštinu %{resource_name}'
+        publish_all_members: '%{user_name} objavio je sve članove skupštine %{resource_name}'
+        unpublish: '%{user_name} povukao je objavu skupštine %{resource_name}'
+        export: '%{user_name} izvezao je skupštinu %{resource_name}'
+        import: '%{user_name} uvezao je skupštinu %{resource_name}'
+        soft_delete: '%{user_name} premjestio je u koš skupštinu %{resource_name}'
+        restore: '%{user_name} vratio je skupštinu %{resource_name}'
+        update: '%{user_name} ažurirao je skupštinu %{resource_name}'
+        duplicate: '%{user_name} duplicirao je skupštinu %{resource_name}'
+        publish: '%{user_name} objavio je skupštinu %{resource_name}'
+      assembly_user_role:
+        create: '%{user_name} pozvao je %{resource_name} u skupštinu %{space_name}'
+        update: '%{user_name} promijenio je ulogu %{resource_name} u skupštini %{space_name}'
+        delete: '%{user_name} uklonio je sudionika %{resource_name} iz skupštine %{space_name}'
+      assembly_type:
+        publish: '%{user_name} objavio je vrstu skupštine %{resource_name}'
+        unpublish: '%{user_name} povukao je objavu vrste skupštine %{resource_name}'
+        create: '%{user_name} stvorio je vrstu skupštine %{resource_name}'
+        update: '%{user_name} ažurirao je vrstu skupštine %{resource_name}'
+        delete: '%{user_name} uklonio je vrstu skupštine %{resource_name}'
+      assembly_member:
+        update: '%{user_name} ažurirao je člana %{resource_name} u skupštini %{space_name}'
+        create: '%{user_name} stvorio je člana %{resource_name} u skupštini %{space_name}'
+        delete: '%{user_name} uklonio je člana %{resource_name} iz skupštine %{space_name}'
+      assembly_setting:
+        update: '%{user_name} ažurirao je postavke skupština'
+    admin:
+      titles:
+        assemblies: Skupštine
+        assemblies_types: Tipovi skupština
+        assemblies_deleted: Obrisane skupštine
+      menu:
+        assemblies_submenu:
+          attachments: Privici
+          see_assembly: Pogledaj skupštinu
+          attachment_collections: Mape
+          info: O ovoj skupštini
+          private_users: Članovi
+          landing_page: Izgled odredišne stranice
+          moderations: Moderacije
+          assembly_admins: Administratori skupštine
+          components: Komponente
+          attachment_files: Datoteke
+        assemblies: Skupštine
+      assemblies_duplicates:
+        create:
+          success: Skupština uspješno duplicirana.
+          error: Došlo je do problema prilikom dupliciranja ove skupštine.
+      assembly_duplicates:
+        new:
+          duplicate: Dupliciraj
+          title: Dupliciraj skupštinu
+          select: Odaberite koje podatke želite duplicirati
+      models:
+        assembly_member:
+          positions:
+            vice_president: Potpredsjednik
+            other: Ostalo
+            president: Predsjednik
+            secretary: Tajnik
+          name: Član
+        assembly_user_role:
+          roles:
+            evaluator: Procjenitelj
+            collaborator: Suradnik
+            moderator: Moderator
+            admin: Administrator
+          fields:
+            actions: Radnje
+            role: Uloga
+            name: Ime
+            email: E-pošta
+          name: Administrator skupštine
+        assembly:
+          fields:
+            private: Privatno
+            published: Objavljeno
+            created_at: Stvoreno
+            actions: Radnje
+            title: Naslov
+            promoted: Istaknuta
+          name: Skupština
+      assemblies:
+        create:
+          success: Skupština uspješno stvorena. Sada možete dodati komponente i konfigurirati je.
+          error: Došlo je do problema prilikom stvaranja nove skupštine.
+        update:
+          success: Skupština uspješno ažurirana.
+          error: Došlo je do problema prilikom ažuriranja ove skupštine.
+        manage_trash:
+          title: Obrisane skupštine
+        index:
+          private: Privatno
+          public: Javno
+          unpublished: Neobjavljeno
+          published: Objavljeno
+        new:
+          create: Stvori
+          title: Nova skupština
+        edit:
+          update: Ažuriraj
+      assembly_publications:
+        destroy:
+          success: Objava skupštine uspješno povučena.
+          error: Došlo je do problema prilikom povlačenja objave ove skupštine.
+        create:
+          error: Došlo je do problema prilikom objavljivanja ove skupštine.
+          success: Skupština uspješno objavljena.
+      assembly_user_roles:
+        edit:
+          title: Ažuriraj administratora skupštine
+          update: Ažuriraj
+        create:
+          error: Došlo je do problema prilikom dodavanja administratora za ovu skupštinu.
+          success: Administrator uspješno dodan ovoj skupštini.
+        update:
+          success: Administrator uspješno ažuriran za ovu skupštinu.
+          error: Došlo je do problema prilikom ažuriranja administratora za ovu skupštinu.
+        destroy:
+          success: Administrator uspješno uklonjen iz ove skupštine.
+        index:
+          assembly_admins_title: Administratori skupštine
+        new:
+          title: Novi administrator skupštine
+          create: Stvori
+      actions:
+        new_assembly_user_role: Novi administrator skupštine
+        new_assembly: Nova skupština
+        import_assembly: Uvezi
+        confirm_delete_assembly: Jeste li sigurni da želite izbrisati ovu skupštinu? Ako se predomislite, kasnije je možete vratiti.
+        view_deleted_assemblies: Pogledaj izbrisane skupštine
+      taxonomy_filters:
+        space_filter_for:
+          assemblies: Sve skupštine
+      filters:
+        ceased_date_not_null:
+          label: Prestala
+          values:
+            'true': Prestala
+            'false': Nije prestala
+        search_placeholder:
+          full_name_or_user_name_or_user_nickname_cont: Pretraži po imenu ili nadimku
+      assembly_imports:
+        create:
+          success: Skupština uspješno uvezena.
+          error: Došlo je do problema prilikom uvoza ove skupštine.
+        new:
+          title: Uvezi skupštinu
+          select: Odaberite koje podatke želite uvesti
+          import: Uvezi
+      tooltips:
+        deleted_assemblies_info: Skupština se može izbrisati samo ako je status "Neobjavljeno".
+    help:
+      participatory_spaces:
+        assemblies:
+          page: '<p><strong>Skupština</strong> je grupa članova organizacije koji se povremeno sastaju kako bi donosili odluke o specifičnom području.</p> <p>Skupštine održavaju sastanke, neki su privatni, a neki otvoreni.</p>
+
+            '
+          contextual: '<p><strong>Skupština</strong> je grupa članova organizacije koji se povremeno sastaju kako bi donosili odluke o specifičnom području ili opsegu organizacije.</p> <p>Skupštine održavaju sastanke, neki su privatni, a neki otvoreni. Ako su otvoreni, moguće je sudjelovati (npr. prisustvovanje, dodavanje točaka dnevnog reda ili komentiranje prijedloga i odluka).</p> <p>Primjeri: glavna skupština, savjetodavno vijeće za ravnopravnost, povjerenstvo za evaluaciju ili jamstveno tijelo — sve su primjeri skupština.</p>
+
+            '
+          title: Što su skupštine?
+    log:
+      value_types:
+        assembly_presenter:
+          not_found: 'Skupština nije pronađena u bazi podataka (ID: %{id})'
+        assembly_type_presenter:
+          not_found: 'Tip skupštine nije pronađen u bazi podataka (ID: %{id})'
+    statistics:
+      assemblies_count: Skupštine
+      assemblies_count_tooltip: Broj javnih skupština u kojima se donose kolektivne odluke.
+    events:
+      assembly:
+        role_assigned:
+          email_subject: Dodijeljeni ste kao %{role} za "%{resource_title}".
+          email_intro: Dodijeljeni ste kao %{role} za skupštinu "%{resource_title}".
+          email_outro: Ovu ste obavijest primili jer ste %{role} skupštine "%{resource_title}".
+          notification_title: Dodijeljeni ste kao %{role} za skupštinu <a href="%{resource_url}">%{resource_title}</a>.
+      assemblies:
+        create_assembly_member:
+          email_outro: Ovu ste obavijest primili jer ste pozvani u skupštinu. Pogledajte <a href="%{resource_url}">stranicu skupštine</a> za doprinos!
+          notification_title: Registrirani ste kao član skupštine <a href="%{resource_path}">%{resource_name}</a>. Pogledajte <a href="%{resource_path}">stranicu skupštine</a> za doprinos!
+          email_subject: Pozvani ste da budete član skupštine %{resource_name}!
+          email_intro: Administrator skupštine <a href="%{resource_url}">%{resource_name}</a> dodao vas je kao jednog od članova.
+    menu:
+      assemblies: Skupštine
+    download_your_data:
+      show:
+        assemblies: Izvoz skupština
+    assembly_members:
+      index:
+        title: Članovi
+    participatory_processes:
+      show:
+        related_assemblies: Povezane skupštine
+  activemodel:
+    attributes:
+      assembly:
+        import_attachments: Uvezi privitke
+        participatory_processes_ids: Povezani participativni procesi
+        published_at: Objavljeno
+        parent_id: Roditeljska skupština
+        created_by: Stvorio
+        duplicate_categories: Dupliciraj kategorije
+        special_features: Posebne značajke
+        target: Tko sudjeluje
+        short_description: Kratki opis
+        participatory_structure: Kako se odlučuje
+        weight: Pozicija u redoslijedu
+        private_space: Privatni prostor
+        meta_scope: Metapodaci opsega
+        is_transparent: Je transparentna
+        participatory_scope: O čemu se odlučuje
+        hero_image: Početna slika
+        facebook: Facebook
+        banner_image: Banner slika
+        document: Dokument
+        included_at: Uključeno
+        duplicate_features: Dupliciraj značajke
+        duplicate_components: Dupliciraj komponente
+        promoted: Istaknuta
+        developer_group: Grupa predlagatelja
+        description: Opis
+        closing_date_reason: Razlog zatvaranja
+        assembly_type_other: Druga vrsta skupštine
+        decidim_scope_id: Opseg
+        instagram: Instagram
+        slug: URL slug
+        decidim_area_id: Područje
+        purpose_of_action: Svrha djelovanja
+        announcement: Obavijest
+        github: GitHub
+        creation_date: Datum stvaranja
+        duration: Trajanje
+        twitter: X
+        closing_date: Datum zatvaranja
+        import_components: Uvezi komponente
+        composition: Sastav
+        area_id: Područje
+        youtube: YouTube
+        created_by_other: Stvorio drugi
+        assembly_type: Vrsta skupštine
+        subtitle: Podnaslov
+        import_categories: Uvezi kategorije
+        local_area: Područje organizacije
+        title: Naslov
+        domain: Domena
+        internal_organisation: Unutarnja organizacija
+      assembly_user_role:
+        name: Ime
+        role: Uloga
+        email: E-pošta
+      assembly_member:
+        designation_date: Datum imenovanja
+        birthday: Rođendan
+        weight: Pozicija u redoslijedu
+        gender: Spol
+        birthplace: Mjesto rođenja
+        non_user_avatar: Avatar
+        full_name: Puno ime
+        ceased_date: Datum prestanka
+        user_id: Korisnik ili grupa
+        position: Pozicija
+    errors:
+      models:
+        assembly:
+          attributes:
+            document:
+              allowed_file_content_types: 'Nevažeća vrsta dokumenta. Dopuštene su samo datoteke sa sljedećim nastavcima: %{types}.'
+              invalid_json: Dokument nije valjani JSON
+              empty: Dokument je prazan
+  layouts:
+    decidim:
+      assemblies:
+        metadata:
+          children_item:
+            one: '%{count} skupština'
+            other: '%{count} skupština'
+        assembly:
+          take_part: Sudjelujte
+          more_info: Više informacija
+        order_by_assemblies:
+          assemblies:
+            other: '%{count} skupština'
+            one: '%{count} skupština'
+        index:
+          promoted_assemblies: Istaknute skupštine
+      assembly_navigation:
+        assembly_member_menu_item: Članovi
+  activerecord:
+    models:
+      decidim/assembly_user_role:
+        one: Uloga korisnika skupštine
+        other: Uloge korisnika skupštine
+      decidim/assembly:
+        other: Skupštine
+        one: Skupština
+      decidim/assembly_member:
+        one: Član skupštine
+        other: Članovi skupštine

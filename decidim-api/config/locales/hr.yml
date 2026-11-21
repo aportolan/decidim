@@ -1,1 +1,8 @@
+---
 hr:
+  decidim:
+    api:
+      errors:
+        too_many_aliases_error: Korišteno je previše alijasa. Koristili ste %{size} alijasa, a dopušteno je %{limit}.
+        recursion_limit_exceeded_error: Otkriveno je previše rekurzija u upitu
+        introspection_disabled: Introspekcija je onemogućena za ovaj zahtjev

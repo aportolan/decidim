@@ -1,1 +1,680 @@
+---
 hr:
+  decidim:
+    conferences:
+      conference_registration_mailer:
+        confirmation:
+          details_1: 'Registrirani ste na konferenciju s vrstom %{registration_type}. Ima cijenu %{price} i možete prisustvovati sljedećim događajima:'
+          confirmed_html: Vaša registracija za konferenciju <a href="%{url}">%{title}</a> je potvrđena.
+          details_2: Detalje konferencije pronaći ćete u privitku.
+        pending_validation:
+          details: 'Registrirali ste se na vrstu %{registration_type} s cijenom %{price} i možete prisustvovati sljedećim događajima:'
+          pending_html: Vaša registracija za konferenciju <a href="%{url}">%{title}</a> čeka potvrdu.
+          confirmation_pending: Potvrdu ćete primiti uskoro
+      admin:
+        conference_invites:
+          form:
+            invite_explanation: Sudionik će biti pozvan u konferenciju i organizaciju.
+            existing_user: Postojeći sudionik
+            select_user: Odaberite sudionika
+            attendee_type: Vrsta sudionika
+            non_user: Nepostojeći sudionik
+          index:
+            invites: Pozivi
+            invite_attendee: Pozovi sudionika
+          create:
+            error: Došlo je do problema prilikom pozivanja sudionika.
+            success: Sudionik uspješno pozvan u konferenciju.
+          new:
+            new_invite: Pozovi sudionika
+            explanation: Sudionik će biti pozvan u konferenciju.
+            invite: Pozovi
+        conference_registrations:
+          index:
+            registrations: Registracije
+        diplomas:
+          edit:
+            save: Spremi
+            title: Potvrda o prisustvu
+        send_conference_diploma_mailer:
+          diploma_user:
+            certificate_of_attendance: Potvrda o prisustvu
+            certificate_of_attendance_description: Ovime se potvrđuje da je <strong>%{user}</strong> prisustvovao/la i sudjelovao/la u <strong>%{title}</strong> održanoj na <strong>%{location}</strong> dana <strong>%{start} - %{end}</strong>
+            attendance_verified_by: Prisustvo provjerio
+          diploma:
+            diploma_html: Potvrdu o prisustvu za konferenciju <a href="%{url}">%{title}</a> pronaći ćete u privicima.
+        conferences:
+          form:
+            slug_help_html: 'URL slugovi koriste se za generiranje URL-ova. Primjer: %{url}'
+            available_slots_help: Ostavite 0 ako imate neograničena mjesta.
+            registrations_count:
+              one: Bila je 1 registracija.
+              other: Bilo je %{count} registracija.
+            taxonomies: Taksonomije
+            no_taxonomy_filters_found: Nisu pronađeni filtri taksonomije.
+            define_taxonomy_filters: Prije korištenja ove postavke definirajte filtre.
+        conference_speakers:
+          form:
+            user_type: Vrsta sudionika
+            non_user: Nije sudionik
+            select_user: Odaberite sudionika
+            existing_user: Postojeći sudionik
+          index:
+            search: Pretraga
+        invite_join_conference_mailer:
+          invite:
+            registration: Registracija za '%{conference_title}'
+            invited_existing_user_to_join_a_conference: '%{invited_by} vas je pozvao u konferenciju na %{application}.'
+            invited_user_to_join_a_conference: '%{invited_by} vas je pozvao u konferenciju na %{application}.'
+            decline: Odbij pozivnicu '%{conference_title}'
+        conference_duplicates:
+          form:
+            slug_help_html: 'URL slugovi koriste se za generiranje URL-ova. Primjer: %{url}'
+        content_blocks:
+          highlighted_conferences:
+            max_results: Maksimalan broj elemenata za prikaz
+        partners:
+          index:
+            title: Partneri
+        registration_types:
+          index:
+            title: Vrste registracije
+          form:
+            select_conference_meetings: Odaberite sastanke konferencije
+        send_diploma:
+          success: Potvrde o prisustvu uspješno poslane.
+          error: Došlo je do problema prilikom slanja potvrda o prisustvu.
+      conference:
+        registration_confirm:
+          confirm: Potvrdi
+          cancel: Otkaži
+        show:
+          going: Prisustvuje
+          registration: Registracija
+          no_slots_available: Nema dostupnih mjesta
+      conferences:
+        partners:
+          main_promotors: Organizatori
+          collaborators: Partneri
+        show:
+          already_have_an_account?: Već imate račun?
+          sign_in_description: Prijavite se za registraciju na konferenciju
+          register: Registriraj se
+          manage_registration: Upravljaj registracijom
+          login_as: Prijavljeni ste kao %{name} <%{email}>
+          make_conference_registration: Registrirajte se za konferenciju
+          sign_up_description: Stvorite račun za registraciju na konferenciju
+          are_you_new?: Novi sudionik?
+      conference_registrations:
+        create:
+          invalid: Došlo je do problema prilikom pridruživanja konferenciji.
+          unauthorized: Morate se prijaviti prije registracije.
+          success: Uspješno ste se pridružili konferenciji.
+        decline_invitation:
+          success: Uspješno ste odbili pozivnicu.
+          invalid: Došlo je do problema prilikom odbijanja pozivnice.
+          unauthorized: Morate se prijaviti prije odbijanja pozivnice.
+        destroy:
+          invalid: Došlo je do problema prilikom napuštanja konferencije.
+          success: Uspješno ste napustili konferenciju.
+      content_blocks:
+        highlighted_conferences:
+          name: Istaknute konferencije
+      models:
+        conference_invite:
+          status:
+            accepted: Prihvaćeno (%{at})
+            rejected: Odbijeno (%{at})
+            sent: Poslano
+          fields:
+            email: E-pošta
+            status: Status
+            name: Ime
+            sent_at: Poslano
+            registration_type: Vrsta registracije
+        conference_registration:
+          fields:
+            registration_type: Vrsta registracije
+            states:
+              pending: Na čekanju
+              confirmed: Potvrđeno
+            name: Ime
+            email: E-pošta
+            state: Status
+            actions: Radnje
+      mailer:
+        invite_join_conference_mailer:
+          invite:
+            subject: Pozivnica za pridruživanje konferenciji
+        send_conference_diploma_mailer:
+          diploma:
+            subject: Vaša potvrda o prisustvu konferenciji je poslana
+        conference_registration_mailer:
+          pending_validation:
+            subject: Vaša registracija za konferenciju čeka potvrdu.
+          confirmation:
+            subject: Vaša registracija za konferenciju je potvrđena.
+      last_activity:
+        new_conference: 'Nova konferencija:'
+      registration_types:
+        index:
+          register: Registriraj se
+          no_registrations: Nema registracija
+          choose_an_option: 'Odaberite svoju opciju registracije:'
+          title: Vrste registracije
+      show:
+        related_participatory_processes: Povezani participativni procesi
+        details: Detalji
+        introduction: Uvod
+        related_assemblies: Povezane skupštine
+        objectives: Ciljevi
+      conference_program:
+        program_item:
+          other_category: Ostalo
+        show:
+          program: Program
+      conference_speaker:
+        go_to_twitter: Idi na X
+        more_info: više informacija
+        show:
+          more_info: više informacija
+          speaking_at: Govori na
+        personal_website: Osobna web stranica
+      conference_speakers:
+        index:
+          speakers:
+            one: Govornik
+            other: Govornici
+      pages:
+        home:
+          highlighted_conferences:
+            see_all_spaces: Pogledaj sve konferencije
+            active_spaces: Aktivne konferencije
+      conference_speaker_cell:
+        personal_url:
+          personal_website: Osobna web stranica
+      index:
+        title: Konferencije
+    admin:
+      media_links:
+        edit:
+          title: Uredi medijsku vezu
+          update: Ažuriraj
+        update:
+          success: Medijska poveznica uspješno ažurirana.
+          error: Došlo je do problema prilikom ažuriranja medijske poveznice.
+        new:
+          create: Stvori
+          title: Stvori medijsku vezu
+        create:
+          error: Došlo je do problema prilikom stvaranja medijske poveznice.
+          success: Medijska poveznica uspješno stvorena.
+        destroy:
+          success: Medijska poveznica uspješno izbrisana.
+        index:
+          media_links_title: Medijske veze
+      menu:
+        conferences_submenu:
+          attachment_files: Datoteke
+          user_registrations: Registracije korisnika
+          media_links: Medijske poveznice
+          registration_types: Vrste registracije
+          components: Komponente
+          info: O ovoj konferenciji
+          see_conference: Pogledaj konferenciju
+          attachments: Privici
+          conference_speakers: Govornici
+          conference_invites: Pozivnice
+          attachment_collections: Mape
+          moderations: Moderacije
+          diploma: Potvrda o prisustvu
+          partners: Partneri
+          conference_admins: Administratori konferencije
+          registrations: Registracije
+        conferences: Konferencije
+      models:
+        partner:
+          fields:
+            link: Poveznica
+            name: Naziv
+            partner_type: Vrsta
+            actions: Radnje
+            logo: Logotip
+          types:
+            main_promotor: Glavni organizator
+            collaborator: Suradnik
+          name: Partner
+        media_link:
+          fields:
+            link: Poveznica
+            actions: Radnje
+            title: Naslov
+            date: Datum
+          name: Medijska poveznica
+        conference_user_role:
+          roles:
+            evaluator: Procjenitelj
+            moderator: Moderator
+            collaborator: Suradnik
+            admin: Administrator
+          fields:
+            name: Ime
+            actions: Radnje
+            email: E-pošta
+            role: Uloga
+          name: Administrator konferencije
+        conference_speaker:
+          name: Govornik konferencije
+          fields:
+            position: Pozicija
+            full_name: Puno ime
+            affiliation: Pripadnost
+            actions: Radnje
+        conference:
+          fields:
+            actions: Radnje
+            published: Objavljeno
+            title: Naslov
+            created_at: Stvoreno
+        registration_type:
+          fields:
+            price: Cijena
+            conference_meetings: Sastanci konferencije
+            registrations_count: Broj registracija
+            actions: Radnje
+            title: Naslov
+            weight: Pozicija u redoslijedu
+          name: Vrsta registracije
+      conference_duplicates:
+        new:
+          title: Dupliciraj konferenciju
+          select: Odaberite koje podatke želite duplicirati
+          duplicate: Dupliciraj
+      titles:
+        conferences_deleted: Izbrisane konferencije
+        conferences: Konferencije
+      conferences:
+        edit:
+          update: Ažuriraj
+        form:
+          images: Slike
+          visibility: Vidljivost
+          related_spaces: Povezani prostori
+          metadata: Metapodaci
+          registrations: Registracije
+          title: Opće informacije
+          duration: Trajanje
+        update:
+          success: Konferencija uspješno ažurirana.
+          error: Došlo je do problema prilikom ažuriranja ove konferencije.
+        exports:
+          registrations: Registracije
+        new:
+          create: Stvori
+          title: Nova konferencija
+        manage_trash:
+          title: Izbrisane konferencije
+        create:
+          error: Došlo je do problema prilikom stvaranja ove konferencije.
+          success: Konferencija uspješno stvorena.
+        index:
+          published: Objavljeno
+          unpublished: Neobjavljeno
+      tooltips:
+        deleted_conferences_info: Konferencije se mogu izbrisati samo ako je status "Neobjavljeno".
+      conference_user_roles:
+        new:
+          create: Stvori
+          title: Novi administrator konferencije
+        update:
+          error: Došlo je do problema prilikom ažuriranja administratora.
+          success: Administrator konferencije uspješno ažuriran.
+        edit:
+          title: Uredi administratora konferencije
+          update: Ažuriraj
+        index:
+          conference_admins_title: Administratori konferencije
+        destroy:
+          success: Administrator konferencije uspješno uklonjen.
+        create:
+          error: Došlo je do problema prilikom dodavanja administratora.
+          success: Administrator konferencije uspješno dodan.
+      registration_type_publications:
+        create:
+          success: Vrsta registracije uspješno objavljena.
+          error: Došlo je do problema prilikom objavljivanja vrste registracije.
+        destroy:
+          error: Došlo je do problema prilikom povlačenja objave.
+          success: Objava vrste registracije uspješno povučena.
+      actions:
+        send_diplomas: Pošalji potvrde o prisustvu
+        new_media_link: Nova medijska poveznica
+        confirm: Potvrdi
+        confirm_delete_conference: Jeste li sigurni da želite izbrisati ovu konferenciju? Ako se predomislite, kasnije je možete vratiti.
+        new_registration_type: Nova vrsta registracije
+        new_conference_user_role: Novi administrator konferencije
+        view_deleted_conferences: Pogledaj izbrisane konferencije
+        new_partner: Novi partner
+        new_speaker: Novi govornik
+        new_conference: Nova konferencija
+      registration_types:
+        edit:
+          update: Ažuriraj
+          title: Uredi vrstu registracije
+        new:
+          create: Stvori
+          title: Nova vrsta registracije
+        destroy:
+          success: Vrsta registracije uspješno uklonjena.
+        create:
+          error: Došlo je do problema prilikom dodavanja vrste registracije.
+          success: Vrsta registracije uspješno dodana.
+        update:
+          error: Došlo je do problema prilikom ažuriranja vrste registracije.
+          success: Vrsta registracije uspješno ažurirana.
+      partners:
+        create:
+          error: Došlo je do problema prilikom dodavanja partnera.
+          success: Partner konferencije uspješno dodan.
+        new:
+          title: Novi partner
+          create: Stvori
+        update:
+          success: Partner konferencije uspješno ažuriran.
+          error: Došlo je do problema prilikom ažuriranja partnera.
+        edit:
+          update: Ažuriraj
+          title: Uredi partnera
+        destroy:
+          success: Partner konferencije uspješno uklonjen.
+      conference_speakers:
+        publish:
+          invalid: Došlo je do problema prilikom objavljivanja govornika.
+          success: Govornik uspješno objavljen.
+        index:
+          conference_speakers_title: Govornici konferencije
+        edit:
+          title: Uredi govornika konferencije
+          update: Ažuriraj
+        unpublish:
+          invalid: Došlo je do problema prilikom povlačenja objave govornika.
+          success: Objava govornika uspješno povučena.
+        update:
+          error: Došlo je do problema prilikom ažuriranja govornika.
+          success: Govornik uspješno ažuriran.
+        create:
+          success: Govornik konferencije uspješno stvoren.
+          error: Došlo je do problema prilikom dodavanja govornika.
+        new:
+          create: Stvori
+          title: Novi govornik konferencije
+        destroy:
+          success: Govornik konferencije uspješno izbrisan.
+      conference_registration:
+        confirm:
+          success: Registracija konferencije uspješno potvrđena.
+          error: Došlo je do problema prilikom potvrde registracije.
+      conferences_duplicates:
+        create:
+          error: Došlo je do problema prilikom dupliciranja konferencije.
+          success: Konferencija uspješno duplicirana.
+      taxonomy_filters:
+        space_filter_for:
+          conferences: Sve konferencije
+      conference_publications:
+        create:
+          error: Došlo je do problema prilikom objavljivanja ove konferencije.
+          success: Konferencija uspješno objavljena.
+        destroy:
+          success: Objava konferencije uspješno povučena.
+          error: Došlo je do problema prilikom povlačenja objave.
+    admin_log:
+      conferences:
+        registration_type:
+          delete: '%{user_name} uklonio je vrstu registracije %{resource_name} iz konferencije %{space_name}'
+          unpublish: '%{user_name} povukao je objavu vrste registracije %{resource_name} u konferenciji %{space_name}'
+          publish: '%{user_name} objavio je vrstu registracije %{resource_name} u konferenciji %{space_name}'
+          create: '%{user_name} stvorio je vrstu registracije %{resource_name} u konferenciji %{space_name}'
+          update: '%{user_name} ažurirao je vrstu registracije %{resource_name} u konferenciji %{space_name}'
+        partner:
+          create: '%{user_name} stvorio je partnera %{resource_name} u konferenciji %{space_name}'
+          update: '%{user_name} ažurirao je partnera %{resource_name} u konferenciji %{space_name}'
+          delete: '%{user_name} uklonio je partnera %{resource_name} iz konferencije %{space_name}'
+        conference_registration:
+          confirm: '%{user_name} potvrdio je registraciju konferencije u %{resource_name}'
+      conference_user_role:
+        update: '%{user_name} promijenio je ulogu %{resource_name} u konferenciji %{space_name}'
+        delete: '%{user_name} uklonio je administratora %{resource_name} iz konferencije %{space_name}'
+        create: '%{user_name} pozvao je %{resource_name} u konferenciju %{space_name}'
+      conference:
+        update: '%{user_name} ažurirao je konferenciju %{resource_name}'
+        unpublish: '%{user_name} povukao je objavu konferencije %{resource_name}'
+        create: '%{user_name} stvorio je konferenciju %{resource_name}'
+        duplicate: '%{user_name} duplicirao je konferenciju %{resource_name}'
+        update_diploma: '%{user_name} ažurirao je konfiguraciju potvrda o prisustvu za konferenciju %{resource_name}'
+        publish: '%{user_name} objavio je konferenciju %{resource_name}'
+        send_conference_diplomas: '%{user_name} poslao je potvrde o prisustvu sudionicima konferencije %{resource_name}'
+        soft_delete: '%{user_name} premjestio je u koš konferenciju %{resource_name}'
+        restore: '%{user_name} vratio je konferenciju %{resource_name}'
+      conference_speaker:
+        update: '%{user_name} ažurirao je govornika %{resource_name} u konferenciji %{space_name}'
+        create: '%{user_name} stvorio je govornika %{resource_name} u konferenciji %{space_name}'
+        delete: '%{user_name} uklonio je govornika %{resource_name} iz konferencije %{space_name}'
+      media_link:
+        update: '%{user_name} ažurirao je medijsku poveznicu %{resource_name} u konferenciji %{space_name}'
+        create: '%{user_name} stvorio je medijsku poveznicu %{resource_name} u konferenciji %{space_name}'
+        delete: '%{user_name} uklonio je medijsku poveznicu %{resource_name} iz konferencije %{space_name}'
+    help:
+      participatory_spaces:
+        conferences:
+          title: Što su konferencije?
+          page: '<p><strong>Konferencija</strong> je skup sastanaka organiziranih u programu, s brojnim pozvanim govornicima.</p>
+
+            '
+          contextual: '<p><strong>Konferencija</strong> je skup sastanaka organiziranih u programu, s brojnim pozvanim govornicima i drugim informacijama tipičnim za velike kongrese ili društvene događaje.</p> <p>Primjeri: Konferencija može biti relevantan događaj za organizaciju i njezine članove ili biti dio participativnog procesa.</p>
+
+            '
+    download_your_data:
+      help:
+        conference_invites:
+          rejected_at: Datum odbijanja pozivnice
+          registration_type: Vrsta registracije
+          updated_at: Datum zadnjeg ažuriranja pozivnice
+          created_at: Datum stvaranja pozivnice
+          confirmed_at: Datum potvrde pozivnice
+          id: Jedinstveni identifikator pozivnice
+          accepted_at: Datum prihvaćanja pozivnice konferencije
+          conference: Konferencija na koju je pozivnica poslana
+          sent_at: Datum slanja pozivnice
+        conference_registrations:
+          id: Jedinstveni identifikator registracije
+          confirmed_at: Datum potvrde registracije
+          conference: Konferencija kojoj ovo pripada
+          registration_type: Vrsta registracije
+          created_at: Datum stvaranja registracije
+          updated_at: Datum zadnjeg ažuriranja registracije
+    events:
+      conferences:
+        conference_registrations_over_percentage:
+          email_subject: Zauzeta mjesta konferencije "%{resource_title}" premašila su %{percentage}%
+          notification_title: Zauzeta mjesta konferencije <a href="%{resource_path}">%{resource_title}</a> premašila su %{percentage}%.
+          email_intro: Zauzeta mjesta konferencije "%{resource_title}" premašila su %{percentage}%.
+          email_outro: Ovu ste obavijest primili jer ste administrator participativnog prostora konferencije.
+        role_assigned:
+          email_subject: Dodijeljeni ste kao %{role} za "%{resource_title}".
+          email_outro: Ovu ste obavijest primili jer ste %{role} konferencije "%{resource_title}".
+          email_intro: Dodijeljeni ste kao %{role} za konferenciju "%{resource_title}".
+          notification_title: Dodijeljeni ste kao %{role} za konferenciju <a href="%{resource_url}">%{resource_title}</a>.
+        conference_registration_confirmed:
+          notification_title: Vaša registracija za konferenciju <a href="%{resource_url}">%{resource_title}</a> je potvrđena.
+        conference_updated:
+          notification_title: Konferencija <a href="%{resource_path}">%{resource_title}</a> je ažurirana.
+          email_outro: Ovu ste obavijest primili jer pratite konferenciju "%{resource_title}".
+          email_subject: Konferencija "%{resource_title}" je ažurirana
+          email_intro: 'Konferencija "%{resource_title}" je ažurirana. Novu verziju možete pročitati na njezinoj stranici:'
+        registrations_enabled:
+          email_subject: Konferencija "%{resource_title}" omogućila je registracije.
+          email_outro: Ovu ste obavijest primili jer pratite konferenciju "%{resource_title}".
+          notification_title: Konferencija <a href="%{resource_path}">%{resource_title}</a> omogućila je registracije.
+          email_intro: 'Konferencija "%{resource_title}" omogućila je registracije. Možete se registrirati na njezinoj stranici:'
+        upcoming_conference:
+          email_outro: Ovu ste obavijest primili jer pratite konferenciju "%{resource_title}".
+          notification_title: Konferencija <a href="%{resource_path}">%{resource_title}</a> dolazi za 2 dana.
+          email_subject: Konferencija "%{resource_title}" dolazi!
+          email_intro: 'Konferencija "%{resource_title}" održava se za 2 dana. Opis možete pročitati na njezinoj stranici:'
+        conference_registration_validation_pending:
+          notification_title: Vaša registracija za konferenciju <a href="%{resource_url}">%{resource_title}</a> čeka potvrdu.
+    open_data:
+      help:
+        conferences:
+          created_at: Datum stvaranja ovog prostora
+          url: URL prostora
+          short_description: Kratki opis konferencije
+          location: Lokacija konferencije.
+          id: Jedinstveni identifikator konferencije
+          title: Naslov konferencije
+          promoted: Je li konferencija istaknuta ili ne
+          published_at: Datum objave prostora
+          remote_banner_image_url: URL banner slike konferencije
+          slogan: Slogan konferencije
+          start_date: Datum početka konferencije.
+          objectives: Ciljevi konferencije.
+          scopes_enabled: Jesu li opsezi omogućeni
+          slug: Slug konferencije (za URL)
+          scope: Opseg konferencije
+          description: Dugačak opis konferencije
+          taxonomies: Taksonomije konferencije
+          decidim_scope_id: Opseg konferencije
+          reference: Jedinstvena referenca prostora
+          follows_count: Broj korisnika koji prate ovaj prostor
+          end_date: Datum završetka konferencije.
+          updated_at: Zadnji datum ažuriranja prostora
+          remote_hero_image_url: URL hero slike konferencije
+    menu:
+      conferences: Konferencije
+    statistics:
+      conferences_count_tooltip: Broj objavljenih konferencija.
+      conferences_count: Konferencije
+    conference_program:
+      index:
+        title: Program
+    media:
+      index:
+        title: Mediji i poveznice
+        description: Poveznice o ovoj konferenciji
+    log:
+      value_types:
+        conference_presenter:
+          not_found: 'Konferencija nije pronađena u bazi podataka (ID: %{id}).'
+    conference_speakers:
+      index:
+        title: Govornici
+  activemodel:
+    attributes:
+      conference_speaker:
+        full_name: Puno ime
+        avatar: Avatar
+        user_id: Korisnik
+        personal_url: Osobni URL
+        twitter_handle: X handle
+        short_bio: Kratka biografija
+        affiliation: Pripadnost
+        position: Pozicija
+        conference_meeting_ids: Povezani sastanci
+      conference_media_link:
+        date: Datum
+        weight: Pozicija u redoslijedu
+        link: Poveznica
+        title: Naslov
+      conference:
+        description: Opis
+        registration_terms: Uvjeti registracije
+        slogan: Slogan
+        participatory_processes_ids: Povezani participativni procesi
+        weight: Pozicija u redoslijedu
+        duplicate_features: Dupliciraj značajke
+        slug: URL slug
+        duplicate_categories: Dupliciraj kategorije
+        signature_name: Ime potpisa
+        short_description: Kratki opis
+        objectives: Ciljevi
+        location: Lokacija
+        banner_image: Banner slika
+        promoted: Istaknuta
+        title: Naslov
+        sign_date: Datum potpisa
+        end_date: Datum završetka
+        start_date: Datum početka
+        main_logo: Glavni logotip
+        duplicate_components: Dupliciraj komponente
+        published_at: Objavljeno
+        available_slots: Dostupna mjesta
+        signature: Potpis
+        hero_image: Početna slika
+        decidim_scope_id: Opseg
+        assemblies_ids: Povezane skupštine
+        show_statistics: Prikaži statistiku
+        registrations_enabled: Registracije omogućene
+      conference_registration_invite:
+        email: E-pošta
+        registration_type_id: Vrsta registracije
+        name: Ime
+        user_id: Korisnik
+      conference_partner:
+        name: Naziv
+        partner_type: Vrsta partnera
+        link: Poveznica
+        logo: Logotip
+        weight: Pozicija u redoslijedu
+      conference_user_role:
+        name: Ime
+        role: Uloga
+        email: E-pošta
+      conference_registration_type:
+        description: Opis
+        price: Cijena
+        weight: Pozicija u redoslijedu
+        title: Naslov
+      partner:
+        logo: Logotip
+    errors:
+      models:
+        conference_registration_invite:
+          attributes:
+            email:
+              already_invited: Ova e-pošta već je pozvana.
+  activerecord:
+    models:
+      decidim/conference:
+        one: Konferencija
+        other: Konferencije
+      decidim/conference_speaker:
+        one: Govornik konferencije
+        other: Govornici konferencije
+      decidim/conference_user_role:
+        one: Uloga korisnika konferencije
+        other: Uloge korisnika konferencije
+  layouts:
+    decidim:
+      conferences:
+        conference:
+          take_part: Sudjelujte
+          more_info: Više informacija
+        order_by_conferences:
+          conferences:
+            one: '%{count} konferencija'
+            other: '%{count} konferencija'
+        index:
+          promoted_conferences: Istaknute konferencije
+      conference_hero:
+        register: Registriraj se
+        manage_registration: Upravljaj registracijom
+      conferences_nav:
+        conference_speaker_menu_item: Govornici
+        conference_partners_menu_item: Partneri
+        media: Mediji
+        venues: Prostori
+  devise:
+    mailer:
+      join_conference:
+        subject: Pozivnica za pridruživanje konferenciji

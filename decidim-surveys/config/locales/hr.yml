@@ -1,1 +1,172 @@
+---
 hr:
+  decidim:
+    surveys:
+      surveys:
+        response:
+          invalid: Došlo je do problema prilikom odgovaranja na anketu.
+          success: Na anketu je uspješno odgovoreno.
+          spam_detected: Došlo je do problema prilikom odgovaranja na obrazac. Možda ste bili prebrzi, možete li pokušati ponovno?
+        filters:
+          all: Sve
+          state_values:
+            closed: Zatvoreno
+            open: Otvoreno
+        count:
+          surveys_count:
+            other: '%{count} anketa'
+            one: '%{count} anketa'
+        show:
+          closed: Zatvoreno
+          open: Otvoreno
+          questions: pitanja
+        no_surveys_warning: Niti jedna anketa ne odgovara vašim kriterijima pretrage ili nema otvorenih anketa.
+      admin:
+        responses:
+          show:
+            title: 'Odgovor #%{number}'
+          index:
+            title: '%{total} ukupno odgovora'
+            no_responses: Još nema odgovora
+        surveys:
+          create:
+            invalid: Došlo je do problema prilikom stvaranja ankete.
+            success: Anketa uspješno stvorena.
+          publish:
+            success: Anketa uspješno objavljena.
+            invalid: Došlo je do problema prilikom objavljivanja ove ankete.
+          edit:
+            title: Uredi anketu
+          index:
+            title: Ankete
+          update:
+            invalid: Došlo je do problema prilikom spremanja ankete.
+            success: Anketa uspješno spremljena.
+          unpublish:
+            success: Objava ankete uspješno povučena.
+            invalid: Došlo je do problema prilikom povlačenja objave ove ankete.
+          new:
+            title: Nova anketa
+          destroy:
+            success: Anketa uspješno izbrisana.
+        publish_responses:
+          index:
+            status:
+              not_published: Nije objavljeno
+              published: Objavljeno
+            description: 'Objavljivanjem odgovora na pitanja, učinit ćete ih vidljivima javnosti.
+
+              Odgovore koje želite objaviti možete odabrati klikom na potvrdni okvir pored svakog pitanja.
+
+              Možete objaviti samo sljedeće vrste pitanja: "Jedna opcija", "Više opcija", "Matrica (jedna opcija)", "Matrica (više opcija)" i "Sortiranje".'
+            responses:
+              one: '%{count} odgovor'
+              other: '%{count} odgovora'
+            title: Objavi odgovore
+        questions:
+          surveys:
+            edit:
+              title: Pitanja
+        settings:
+          surveys:
+            edit:
+              title: Postavke
+        exports:
+          survey_user_responses: Odgovori sudionika ankete
+      actions:
+        responses_alert: Brisanje odgovora pri objavi aktivno je za ovu anketu. Trenutno postoji %{responses_count} odgovora koji će biti uništeni ako nastavite.
+        title: Radnje
+        manage_questions: Pitanja
+        new_survey: Nova anketa
+        confirm_destroy: Jeste li sigurni da želite ovo izbrisati?
+        preview: Pregled
+        destroy: Izbriši
+        edit: Uredi
+        responses: Odgovori
+      models:
+        survey:
+          published:
+            published: Objavljeno
+            unpublished: Neobjavljeno
+          fields:
+            questions: Pitanja
+            status: Status
+            published: Objavljeno
+            responses: Odgovori
+            title: Naslov
+          status:
+            closed: Zatvoreno
+            open: Otvoreno
+      admin_log:
+        survey:
+          unpublish: '%{user_name} povukao je objavu ankete %{resource_name} u prostoru %{space_name}'
+          update: '%{user_name} ažurirao je anketu %{resource_name} u prostoru %{space_name}'
+          create: '%{user_name} stvorio je anketu %{resource_name} u prostoru %{space_name}'
+          delete: '%{user_name} izbrisao je anketu %{resource_name} u prostoru %{space_name}'
+          publish: '%{user_name} objavio je anketu %{resource_name} u prostoru %{space_name}'
+      survey_confirmation_mailer:
+        confirmation:
+          body: Uspješno ste odgovorili na anketu %{questionnaire_title} u %{participatory_space}
+          subject: Potvrda odgovora na upitnik %{questionnaire_title}
+        export_name: Odgovori ankete
+      last_activity:
+        new_survey: 'Nova anketa:'
+      directory:
+        surveys:
+          index:
+            surveys: Ankete
+    statistics:
+      surveys_count_tooltip: Broj dostupnih anketa i prikupljenih odgovora.
+      responses_count: Odgovori
+      responses: 'Odgovori:'
+    admin:
+      menu:
+        surveys_menu:
+          responses: Odgovori
+          settings: Postavke
+          main: Glavno
+          questions: Pitanja
+      admin_log:
+        changeset:
+          surveys: ankete
+      actions:
+        confirm_unpublish_survey: Jeste li sigurni da želite povući objavu ove ankete?
+        see_survey: Pogledaj anketu
+    events:
+      surveys:
+        survey_opened:
+          email_intro: 'Anketa %{resource_title} u %{participatory_space_title} sada je otvorena. Možete sudjelovati s ove stranice:'
+          email_subject: Nova anketa u %{participatory_space_title}
+          email_outro: Ovu ste obavijest primili jer pratite %{participatory_space_title}. Obavijesti možete prestati primati putem prethodne poveznice.
+          notification_title: Anketa <a href="%{resource_path}">%{resource_title}</a> u <a href="%{participatory_space_url}">%{participatory_space_title}</a> sada je otvorena.
+        survey_closed:
+          email_outro: Ovu ste obavijest primili jer pratite %{participatory_space_title}. Obavijesti možete prestati primati putem prethodne poveznice.
+          email_intro: Anketa %{resource_title} u %{participatory_space_title} je zatvorena.
+          notification_title: Anketa <a href="%{resource_path}">%{resource_title}</a> u <a href="%{participatory_space_url}">%{participatory_space_title}</a> je završila.
+          email_subject: Anketa je završila u %{participatory_space_title}
+    components:
+      surveys:
+        settings:
+          step:
+            announcement: Obavijest
+          global:
+            announcement: Obavijest
+          announcement: Obavijest
+        name: Ankete
+        actions:
+          respond: Odgovori
+  activemodel:
+    attributes:
+      response:
+        add_attachments: Dodaj privitke
+    models:
+      decidim/surveys/closed_survey_event: Anketa završena
+      decidim/surveys/opened_survey_event: Anketa započeta
+  activerecord:
+    models:
+      decidim/surveys/survey_response:
+        one: Odgovor
+        other: Odgovori
+      decidim/surveys/survey:
+        one: Anketa
+        other: Ankete

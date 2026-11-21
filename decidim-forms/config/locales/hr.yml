@@ -1,1 +1,231 @@
+---
 hr:
+  decidim:
+    forms:
+      admin:
+        questionnaires:
+          responses:
+            actions:
+              next: Naprijed &rsaquo;
+              previous: '&lsaquo; Natrag'
+              back: Natrag na odgovore
+              show: Prikaži odgovore
+              export: Izvezi
+            empty: Još nema odgovora
+            show:
+              title: 'Odgovor #%{number}'
+            index:
+              title: '%{total} ukupno odgovora'
+            export:
+              response:
+                title: 'Odgovor #%{number}'
+            export_response:
+              title: survey_user_responses_%{token}
+          display_condition:
+            select_condition_type: Odaberite vrstu uvjeta
+            condition_types:
+              equal: Jednako
+              match: Sadrži tekst
+              responded: Odgovoreno
+              not_responded: Nije odgovoreno
+              not_equal: Nije jednako
+            remove: Ukloni
+            response_option: Opcija odgovora
+            select_response_option: Odaberite opciju odgovora
+            save_warning: Zapamtite spremiti obrazac prije konfiguracije uvjeta prikaza
+            display_condition: Uvjet prikaza
+            select_condition_question: Odaberite pitanje
+            mandatory: Ovaj uvjet mora uvijek biti zadovoljen bez obzira na status ostalih uvjeta
+            condition_type: Uvjet
+            condition_question: Pitanje
+            condition_value: Uključeni tekst
+          edit_questions:
+            add_title_and_description: Dodaj naslov i opis
+            add_separator: Dodaj razdjelnik
+            save: Spremi
+            title: Pitanja
+            add_question: Dodaj pitanje
+          question:
+            add_display_condition_info: Spremite obrazac za konfiguraciju uvjeta prikaza
+            description: Opis
+            question: Pitanje
+            add_response_option: Dodaj opciju odgovora
+            remove: Ukloni
+            statement: Izjava
+            add_matrix_row: Dodaj redak
+            add_display_condition: Dodaj uvjet prikaza
+            any: Bilo koji
+            expand: Proširi
+            collapse: Sažmi
+          questions_form:
+            update:
+              success: Pitanja ankete uspješno spremljena.
+            unpublished_warning: Obrazac nije objavljen. Možete mijenjati njegova pitanja, ali time se brišu trenutni odgovori.
+            already_responded_warning: Na obrazac su već odgovorili neki korisnici pa ne možete mijenjati njegova pitanja.
+            collapse: Sažmi sva pitanja
+            expand: Proširi sva pitanja
+          response_option:
+            statement: Izjava
+            response_option: Opcija odgovora
+            remove: Ukloni
+            free_text: Slobodan tekst
+          form:
+            add_question: Dodaj pitanje
+            expand: Proširi sva pitanja
+            collapse: Sažmi sva pitanja
+            preview: Pregled
+            title: Uredi obrazac za %{questionnaire_for}
+          matrix_row:
+            matrix_row: Redak
+            statement: Izjava
+            remove: Ukloni
+          update:
+            success: Obrazac uspješno spremljen.
+            invalid: Došlo je do problema prilikom spremanja obrasca.
+          separator:
+            separator: Razdjelnik
+            remove: Ukloni
+          title_and_description:
+            expand: Proširi
+            remove: Ukloni
+            title: Naslov
+            collapse: Sažmi
+            title_and_description: Naslov i opis
+            description: Opis
+          edit:
+            title: Uredi upitnik
+            save: Spremi
+          actions:
+            publish_responses: Objavi odgovore
+            back: Natrag na odgovore
+            show: Odgovori
+        models:
+          components:
+            allow_editing_responses: Dopusti registriranim korisnicima uređivanje vlastitih odgovora ankete
+            clean_after_publish: Obriši odgovore prilikom objavljivanja ankete
+            allow_unregistered_help: Ako je aktivno, prijava neće biti potrebna za odgovaranje na anketu. To može dovesti do loših ili nepouzdanih podataka i veće ranjivosti na automatizirane napade. Koristite s oprezom! Imajte na umu da sudionik može više puta odgovoriti na istu anketu korištenjem različitih preglednika ili "privatnog pregledavanja".
+            ends_at: Odgovori prihvaćeni do
+            tos: Uvjeti korištenja
+            starts_at: Odgovori prihvaćeni od
+            ends_at_help: Ostavite prazno za neodređeni datum
+            announcement: Obavijest
+            description: Opis
+            allow_unregistered: Dopusti neregistriranim korisnicima odgovaranje na anketu
+            allow_responses: Dopusti odgovore
+            starts_at_help: Ostavite prazno za neodređeni datum
+      questionnaires:
+        show:
+          questionnaire_responded:
+            title: Već odgovoreno
+            body: Već ste odgovorili na ovaj obrazac.
+          questionnaire_responded_edit:
+            edit: Uredite svoje odgovore
+            body: Već ste odgovorili na ovaj obrazac. %{link}
+          response_questionnaire:
+            already_have_an_account?: Već imate račun?
+            sign_up_description: Stvorite račun sudionika za ispunjavanje ankete
+            sign_in_description: Prijavite se za ispunjavanje ankete
+            title: Odgovorite na obrazac
+            are_you_new?: Novi korisnik?
+          tos_agreement: Sudjelovanjem prihvaćate Uvjete korištenja
+          questionnaire_js_disabled:
+            title: JavaScript je onemogućen
+            body: Neke značajke ovog obrasca bit će onemogućene. Omogućite JavaScript u pregledniku za bolje iskustvo.
+          current_step: Korak %{step}
+          of_total_steps: od %{total_steps}
+          empty: Za ovaj obrazac još nije konfigurirano nijedno pitanje.
+          questionnaire_not_published:
+            body: Ovaj obrazac još nije objavljen.
+          questionnaire_for_private_users:
+            body: Obrazac je dostupan samo privatnim korisnicima
+            title: Obrazac zatvoren
+          questionnaire_closed:
+            body: Obrazac je zatvoren i na njega se ne može odgovoriti.
+            title: Obrazac zatvoren
+        response:
+          success: Na obrazac je uspješno odgovoreno.
+          invalid: Došlo je do problema prilikom odgovaranja na obrazac.
+          max_choices_alert: Odabrano je previše opcija
+        question:
+          max_choices: 'Maks. izbora: %{n}'
+      user_responses_serializer:
+        unregistered: Neregistrirano
+        completion: Dovršenost
+        body: Odgovor
+        session_token: Identifikator korisnika
+        question: Pitanje
+        registered: Registrirano
+        id: ID odgovora
+        ip_hash: IP Hash
+        user_status: Status korisnika
+        created_at: Odgovoreno
+      images:
+        processors:
+          resize_to_fit: Ova slika bit će promijenjena da stane u %{dimensions}.
+          resize_and_pad: Ova slika bit će promijenjena i dopunjena na %{dimensions}.
+        dimensions: '%{width} x %{height} px'
+      question_types:
+        sorting: Sortiranje
+        long_response: Dugačak odgovor
+        multiple_option: Više opcija
+        files: Datoteke
+        title_and_description: Naslov i opis
+        matrix_single: Matrica (jedna opcija)
+        matrix_multiple: Matrica (više opcija)
+        short_response: Kratki odgovor
+        single_option: Jedna opcija
+      errors:
+        response:
+          body: Tijelo ne može biti prazno
+      step_navigation:
+        show:
+          back: Natrag
+          continue: Nastavi
+          are_you_sure_edit_guest: Ako želite kasnije moći uređivati odgovore, morate se prijaviti ili stvoriti račun.
+          disallowed: Nije vam dopušteno uređivati odgovore.
+          are_you_sure_no_edit: Ova radnja ne može se poništiti i nećete moći uređivati odgovore. Jeste li sigurni?
+          submit: Pošalji
+      admin_log:
+        question:
+          publish_responses: '%{user_name} objavio je odgovore pitanja %{resource_name} u prostoru %{space_name}'
+          unpublish_responses: '%{user_name} povukao je objavu odgovora pitanja %{resource_name} u prostoru %{space_name}'
+        questionnaire:
+          update: '%{user_name} ažurirao je upitnik %{resource_name}'
+      questionnaire_response_presenter:
+        download_attachment: Preuzmi privitak
+    download_your_data:
+      show:
+        survey_user_responses: Odgovori korisnika ankete
+        responses: Izvoz odgovora
+      help:
+        responses:
+          user: Korisnik koji je odgovorio na upitnik
+          response: Odgovor na pitanje
+          id: Jedinstveni identifikator odgovora
+          question: Pitanje na koje je odgovoreno
+          questionnaire: Upitnik na koji je odgovoreno
+  activemodel:
+    errors:
+      models:
+        response:
+          attributes:
+            add_documents:
+              needs_to_be_reattached: Treba ponovno priložiti
+            choices:
+              missing: nisu potpuni
+              too_many: Možete odabrati najviše %{count}.
+            body:
+              too_long: je predugo
+        questionnaire:
+          request_invalid: Došlo je do problema prilikom obrade zahtjeva. Pokušajte ponovno.
+    attributes:
+      questionnaire_question:
+        mandatory: Obavezno
+        max_characters: Ograničenje znakova (ostavite 0 ako nema ograničenja)
+      response:
+        body: Odgovor
+        choices: Izbori
+        selected_choices: Odabrani izbori
+      question:
+        question_type: Vrsta
+        max_choices: Maksimalan broj izbora

@@ -1,1 +1,1084 @@
+---
 hr:
+  decidim:
+    components:
+      proposals:
+        settings:
+          step:
+            default_sort_order_options:
+              with_more_authors: S više autora
+              most_liked: Najviše sviđanja
+              most_voted: Najviše glasova
+              random: Nasumično
+              most_followed: Najviše praćenja
+              automatic: Automatski
+              most_commented: Najviše komentara
+              recent: Nedavno
+            amendments_visibility_choices:
+              all: Amandmani su vidljivi svima
+              participants: Amandmani su vidljivi samo njihovim autorima
+            creation_enabled_readonly: Ova postavka je onemogućena kada aktivirate funkcionalnost Participativni tekstovi. Za prijenos prijedloga kao participativni tekst kliknite gumb Participativni tekstovi i slijedite upute.
+            publish_answers_immediately_help_html: Imajte na umu da ćete, ako odgovorite na bilo koji prijedlog bez omogućene ove postavke, morati ih ručno objaviti odabirom i korištenjem radnje za objavu. Za više informacija pogledajte <a href="https://docs.decidim.org/en/admin/components/proposals/answers#_publication" target="_blank">stranicu dokumentacije o odgovorima na prijedloge</a>.
+            default_sort_order_help: Automatski znači da će, ako su glasovanja omogućena, prijedlozi biti prikazani sortirani nasumično, a ako su glasovanja blokirana, bit će sortirani po najviše glasova.
+            amendment_reaction_enabled_help: Autori prijedloga moći će prihvatiti ili odbiti izmjene sudionika.
+            announcement: Obavijest
+            amendment_promotion_enabled: Promicanje amandmana omogućeno
+            default_sort_order: Zadano sortiranje prijedloga
+            votes_enabled: Glasovi omogućeni
+            amendment_promotion_enabled_help: Autori izmjena moći će promaknuti odbijenu izmjenu u prijedlog.
+            amendments_visibility: Vidljivost amandmana
+            publish_answers_immediately: Odmah objavi odgovore na prijedloge
+            amendments_visibility_help: Ako je odabrana opcija "Amandmani su vidljivi samo njihovim autorima", sudionik mora biti prijavljen za pregled izmjena.
+            answers_with_costs: Omogući troškove na odgovorima prijedloga
+            amendment_reaction_enabled: Reakcija na amandman omogućena
+            likes_enabled: Sviđanja omogućena
+            votes_hidden: Glasovi skriveni (ako su glasovi omogućeni, označavanje će sakriti broj glasova)
+            likes_blocked: Sviđanja blokirana
+            amendment_creation_enabled_help: Sudionik može izmijeniti prijedloge.
+            creation_enabled: Sudionici mogu stvarati prijedloge
+            votes_blocked: Glasovi blokirani
+            proposal_answering_enabled: Odgovaranje na prijedloge omogućeno
+            comments_blocked: Komentari blokirani
+            amendment_creation_enabled: Stvaranje amandmana omogućeno
+          global:
+            proposal_edit_time_unit_options:
+              hours: Sati
+              days: Dani
+              minutes: Minute
+            proposal_answering_enabled: Odgovaranje na prijedloge omogućeno
+            default_sort_order_options:
+              random: Nasumično
+              most_voted: Najviše glasova
+              most_liked: Najviše sviđanja
+              automatic: Automatski
+              with_more_authors: S više autora
+              most_commented: Najviše komentara
+              most_followed: Najviše praćenja
+              recent: Nedavno
+            proposal_wizard_step_2_help_text: Tekst pomoći koraka "Objavi" čarobnjaka za prijedlog
+            clear_all: Obriši sve
+            resources_permissions_enabled: Dopuštenja radnji mogu se postaviti za svaki prijedlog
+            proposal_edit_time_choices:
+              limited: Dopusti uređivanje prijedloga unutar specifičnog vremenskog okvira
+              infinite: Dopusti uređivanje prijedloga neograničeno vrijeme
+            geocoding_enabled: Karte omogućene
+            proposal_length: Maksimalna duljina tijela prijedloga
+            amendments_enabled_help: Ako je aktivno, konfigurirajte značajke Amandmana za svaki korak.
+            can_accumulate_votes_beyond_threshold: Mogu se akumulirati glasovi iznad praga
+            default_sort_order: Zadano sortiranje prijedloga
+            proposal_wizard_step_1_help_text: Tekst pomoći koraka "Stvori" čarobnjaka za prijedlog
+            new_proposal_body_template_help: Možete definirati prethodno ispunjen tekst koji će novi prijedlozi imati
+            official_proposals_enabled: Službeni prijedlozi omogućeni
+            vote_limit: Ograničenje glasova po sudioniku
+            proposal_edit_time: Uređivanje prijedloga
+            announcement: Obavijest
+            participatory_texts_enabled_readonly: Ne možete mijenjati ovu postavku ako postoje prijedlozi. Stvorite novu 'Komponentu prijedloga' ako želite omogućiti ovu značajku ili odbacite sve uvezene prijedloge u izborniku 'Participativni tekstovi' ako je želite onemogućiti.
+            proposal_limit: Ograničenje prijedloga po sudioniku
+            edit_time_units:
+              days: Dani
+              hours: Sati
+              minutes: Minute
+            amendments_wizard_help_text: Tekst pomoći čarobnjaka za amandmane
+            taxonomy_filters_add: Dodaj filtar
+            edit_time: Prijedlozi se mogu uređivati od strane autora dok ne prođe ovoliko vremena
+            attachments_allowed_help: Omogućavanjem ove opcije, prijedlozi će prema zadanim postavkama biti u mrežnom prikazu, a prva slika pojavit će se na kartici.
+            new_proposal_body_template: Predložak tijela novog prijedloga
+            comments_enabled: Komentari omogućeni
+            comments_max_length: Maksimalan broj znakova po komentaru (Ostavite 0 za zadanu vrijednost)
+            define_taxonomy_filters: Prije korištenja ove postavke definirajte neke filtre za ovaj participativni prostor.
+            participatory_texts_enabled: Participativni tekstovi omogućeni
+            attachments_allowed: Dopusti privitke
+            no_taxonomy_filters_found: Nisu pronađeni filtri taksonomije.
+            threshold_per_proposal: Prag po prijedlogu
+            collaborative_drafts_enabled_help: Značajka Suradnički nacrti bit će uklonjena u Decidim v0.32. Organizacije koje je koriste mogu prijeći na novu značajku suautorstva prijedloga.
+            default_sort_order_help: Automatski znači da će, ako su glasovanja omogućena, prijedlozi biti prikazani sortirani nasumično, a ako su glasovanja blokirana, bit će sortirani po najviše glasova.
+            collaborative_drafts_enabled: Suradnički nacrti omogućeni
+            new_proposal_help_text: Tekst pomoći novog prijedloga
+            taxonomy_filters: Odaberite filtre za komponentu
+            amendments_enabled: Amandmani omogućeni
+            minimum_votes_per_user: Minimalan broj glasova po korisniku
+        actions:
+          amend: Izmijeni
+          vote: Glasaj
+          create: Izradi prijedlog
+          vote_comment: Glasaj za komentar
+          withdraw: Povuci
+          comment: Komentiraj
+          like: Sviđa mi se
+        name: Prijedlozi
+    admin:
+      filters:
+        proposals:
+          taxonomies_part_of_contains:
+            label: Taksonomija
+          state_eq:
+            values:
+              accepted: Prihvaćeno
+              rejected: Odbijeno
+              withdrawn: Povučeno
+              published: Objavljeno
+              validating: Tehnička provjera
+              not_answered: Nije odgovoreno
+              evaluating: U procjeni
+            label: Status
+          is_emendation_true:
+            values:
+              'true': Amandmani
+              'false': Prijedlozi
+            label: Vrsta
+          with_any_state:
+            label: Odgovoreno
+            values:
+              state_published: Odgovoreno
+              state_not_published: Nije odgovoreno
+          proposal_state_id_eq:
+            label: Status
+          evaluator_role_ids_has:
+            label: Dodijeljeno procjenitelju
+        search_placeholder:
+          id_string_or_title_cont: Pretraži %{collection} po ID-u ili naslovu
+      admin_log:
+        changeset:
+          proposals: Prijedlozi
+      tooltips:
+        cannot_edit_proposal_info: Nije moguće urediti ovaj prijedlog jer ga je izradio sudionik ili je primio barem jedan glas
+        deleted_proposals_info: Nije moguće izbrisati ovaj prijedlog
+        deleted_proposal_states_info: Nije moguće izbrisati ovo stanje prijedloga jer su mu dodijeljeni prijedlozi
+    proposals:
+      withdraw:
+        errors:
+          has_votes: Ovaj prijedlog ne može se povući jer već ima glasove.
+      collaborative_drafts:
+        orders:
+          recent: Nedavno
+          most_contributed: Najviše doprinosa
+          random: Slučajno
+          label: 'Poredaj skice po:'
+        requests:
+          collaboration_requests:
+            title: Zahtjevi za suradnju
+            accept_request: Prihvati
+            reject_request: Odbij
+          accepted_request:
+            error: Nije ga bilo moguće prihvatiti kao suradnika; pokušajte ponovno kasnije.
+            success: '@%{user} uspješno je prihvaćen kao suradnik.'
+          access_requested:
+            error: Vaš zahtjev nije mogao biti dovršen; pokušajte ponovno kasnije.
+            success: Vaš zahtjev za suradnju uspješno je poslan.
+          rejected_request:
+            success: '@%{user} uspješno je odbijen kao suradnik.'
+            error: Nije ga bilo moguće odbiti kao suradnika; pokušajte ponovno kasnije.
+        empty_filters: Nema suradničkih skica s ovim kriterijima
+        new:
+          edit_file: Uredi datoteku
+          send: Nastavi
+          add_file: Dodaj datoteku
+        filters:
+          related_to: Povezano s
+          amendment: Amandmani
+          withdrawn: Povučeno
+          search: Pretraži
+          published: Objavljeno
+          open: Otvoreno
+          state: Status
+          all: Sve
+        create:
+          success: Suradnička skica uspješno stvorena.
+          error: Došlo je do problema prilikom stvaranja ove suradničke skice.
+        states:
+          withdrawn: Povučeno
+          open: Otvoreno
+          published: Objavljeno
+        collaborative_draft:
+          publish:
+            irreversible_action_modal:
+              title: Sljedeća radnja je nepovratna
+              ok: Objavi kao prijedlog
+              body: Nakon objavljivanja skice kao prijedloga, više neće biti moguće uređivati je. Prijedlog neće prihvaćati nove autore ni doprinose.
+              cancel: Odustani
+            error: Došlo je do problema prilikom objavljivanja suradničke skice.
+            success: Suradnička skica uspješno objavljena kao prijedlog.
+          withdraw:
+            error: Došlo je do problema prilikom zatvaranja suradničke skice.
+            irreversible_action_modal:
+              body: Nakon zatvaranja skice, više neće biti moguće uređivati je. Skica neće prihvaćati nove autore ni doprinose.
+              cancel: Odustani
+              title: Sljedeća radnja je nepovratna
+              ok: Povuci suradničku skicu
+            success: Suradnička skica uspješno povučena.
+        edit:
+          attachment_legend: Dodajte dokument ili sliku
+          back: Natrag
+          send: Pošalji
+          title: Uredi suradničku skicu
+        wizard_aside:
+          back_from_collaborative_draft: Natrag na suradničke skice
+        show:
+          final_proposal: Konačni prijedlog
+          requested_access: Pristup zatražen
+          hidden_authors_count:
+            one: i još %{count} osoba
+            other: i još %{count} osoba
+          withdraw: povucite skicu
+          edit: Uredi
+          info-message: Ovo je <strong>suradnička skica</strong> za prijedlog. To znači da možete pomoći autorima da oblikuju prijedlog koristeći odjeljak za komentare ispod ili ga izravno poboljšati zatraživši pristup za uređivanje. Nakon što vam autori odobre pristup, moći ćete mijenjati ovu skicu.
+          request_access: Zatraži pristup
+          final_proposal_help_text: Ova je skica dovršena. Pogledajte konačni prijedlog
+          publish_info: Objavite ovu verziju skice ili
+          publish: Objavi
+          published_proposal: Objavljeni prijedlog
+        filters_small_view:
+          close_modal: Zatvori modal
+          filter_by: Filtriraj po
+          unfold: Razvij
+          filter: Filtriraj
+        update:
+          error: Došlo je do problema prilikom spremanja suradničke skice.
+          success: Suradnička skica uspješno ažurirana.
+        new_collaborative_draft_button:
+          new_collaborative_draft: Nova suradnička skica
+        name: Suradničke skice
+        wizard_header:
+          title: Stvorite svoju suradničku skicu
+        empty: Još nema suradničkih skica
+        index:
+          count:
+            other: '%{count} suradničkih skica'
+            one: '%{count} suradnička skica'
+      proposals:
+        voting_rules:
+          proposal_limit:
+            description: Možete stvoriti do %{limit} prijedloga.
+          already_vote:
+            title: Ostalo vam je %{number} podrški
+            see_other_proposals: Pogledaj ostale prijedloge
+            description: Zapamtite da još morate dati %{number} podrški između različitih prijedloga kako bi se vaše podrške uzele u obzir.
+          can_accumulate_votes_beyond_threshold:
+            description: Svaki prijedlog može akumulirati više od %{limit} glasova
+          vote_limit:
+            description: Možete podržati do %{limit} prijedloga.
+            votes: Preostalo %{number} glasova
+          minimum_votes_per_user:
+            description: Morate rasporediti najmanje %{votes} podrški među različitim prijedlozima kako bi se vaše podrške uzele u obzir.
+          threshold_per_proposal:
+            description: Za potvrdu, prijedlozi moraju doseći %{limit} glasova.
+          success: Vaši glasovi uspješno su prihvaćeni
+          title: Pravila sudjelovanja
+        edit_draft:
+          title: Uredi nacrt prijedloga
+          discard_confirmation: Jeste li sigurni da želite odbaciti ovaj nacrt prijedloga?
+          send: Pregled
+          discard: Odbaci ovaj nacrt
+        index:
+          text_banner: Gledate popis prijedloga koje su autori povukli. %{go_back_link}.
+          see_all: Pogledaj sve prijedloge
+          click_here: Pogledaj sve prijedloge
+          grid_mode: Mrežni prikaz
+          list_mode: Lista
+          new_proposal: Novi prijedlog
+          count:
+            one: '%{count} prijedlog'
+            other: '%{count} prijedloga'
+          collaborative_drafts_list: Pristupi suradničkim skicama
+          see_all_withdrawn: Pogledaj sve povučene prijedloge
+        dynamic_map_instructions:
+          description: Koordinate će se ažurirati kada kliknete gumb 'pregled'. Međutim, adresa se ne mijenja.
+          instructions: Možete pomaknuti točku na karti.
+        show:
+          withdraw_proposal: Povuci
+          link_to_promoted_emendation_help_text: Ovaj prijedlog je promaknuta izmjena
+          withdraw_confirmation_html: Jeste li sigurni da želite povući ovaj prijedlog?<br><br><strong>Ova radnja se ne može otkazati!</strong>
+          proposal_in_evaluation_reason: Ovaj prijedlog je u procjeni
+          withdraw_btn_hint: Svoj prijedlog možete povući ako se predomislite, sve dok niste primili nijedan glas. Prijedlog se ne briše, pojavit će se na popisu povučenih prijedloga.
+          hidden_likes_count:
+            one: i još %{count} osoba
+            other: i još %{count} osoba
+          link_to_proposal_from_emendation_help_text: Ovo je odbijena izmjena
+          link_to_proposal_from_emendation_text: Pogledaj prijedlog
+          proposal_rejected_reason: 'Ovaj prijedlog je odbijen jer:'
+          link_to_collaborative_draft_help_text: Ovaj je prijedlog rezultat suradničke skice. Pregledajte povijest
+          link_to_promoted_emendation_text: Pogledaj odbijenu izmjenu.
+          answer: Odgovor
+          estimated_cost: Procijenjeni trošak
+          proposal_accepted_reason: 'Ovaj prijedlog je prihvaćen jer:'
+          changes_at_title: Amandman na "%{title}"
+          link_to_collaborative_draft_text: Pogledajte suradničku skicu
+          edit_proposal: Uredi
+        edit:
+          add_attachments: Dodaj privitke
+          back: Natrag
+          edit_attachments: Uredi privitke
+          attachment_legend: Dodajte dokument ili sliku
+          send: Pošalji
+          title: Uredi prijedlog
+        votes_count:
+          count:
+            one: Glas
+            other: Glasova
+        orders:
+          label: 'Sortiraj prijedloge po:'
+          most_liked: Najviše sviđanja
+          most_followed: Najviše praćenja
+          most_commented: Najviše komentara
+          most_voted: Najviše glasova
+          with_more_authors: S više autora
+          random: Nasumično
+          recent: Nedavno
+        wizard_aside:
+          back: Natrag
+          back_from_step_2: Natrag na uređivanje
+          back_from_step_1: Natrag na prijedloge
+        placeholder:
+          address: Ilica 25, 10000 Zagreb
+        vote_button:
+          vote: Glasaj
+          maximum_votes_reached: Ograničenje glasova dosegnuto
+          already_voted_hover: Povuci glas
+          votes_blocked: Glasaj
+          already_voted: Glasano
+          no_votes_remaining: Nema preostalih glasova
+        preview:
+          proposal_edit_before_minutes:
+            other: Ovaj prijedlog moći ćete uređivati tijekom prvih %{count} minuta nakon objave. Nakon isteka tog vremenskog okvira, nećete moći uređivati prijedlog.
+            one: Ovaj prijedlog moći ćete uređivati tijekom prve minute nakon objave. Nakon isteka tog vremenskog okvira, nećete moći uređivati prijedlog.
+          publish: Objavi
+          modify: Izmijeni prijedlog
+          announcement_title: Vaš prijedlog još nije objavljen
+          announcement_body: Vaš prijedlog spremljen je kao nacrt. Mora biti objavljen kako bi se pojavio na stranici.
+          title: Objavite svoj prijedlog
+        new:
+          title: Stvori novi prijedlog
+          send: Nastavi
+        proposals:
+          empty: Još nema prijedloga.
+          empty_filters: Nema prijedloga s ovim kriterijima.
+        filters:
+          all: Sve
+          scope: Opseg
+          state: Status
+          voted: Glasano
+          related_to: Povezano s
+          my_proposals: Moji prijedlozi
+          search: Pretraga
+          activity: Moja aktivnost
+          origin: Podrijetlo
+          amendment_type: Vrsta
+          type: Vrsta
+          taxonomy_filters: Filtri
+        update:
+          title: Ažuriraj prijedlog
+        edit_form_fields:
+          marker_added: Oznaka dodana na kartu.
+        participatory_texts:
+          view_index:
+            document_index: Kazalo dokumenta
+        wizard_steps:
+          step_2: Objavite svoj prijedlog
+          step_1: Stvorite svoj prijedlog
+          title: Koraci stvaranja prijedloga
+          current_step: Trenutni korak
+      admin:
+        participatory_texts:
+          index:
+            publish_document: Objavi dokument
+            info_1: Sljedeći odjeljci pretvoreni su u prijedloge. Sada ih možete pregledati i prilagoditi prije objave.
+            title: Pregled participativnog teksta
+            save_draft: Spremi nacrt
+          sections:
+            sub-section: <em>Pododjeljak:</em> %{title}
+            article: <em>Članak</em>
+            section: <em>Odjeljak:</em> <strong>%{title}</strong>
+          bulk-actions:
+            discard_all: Odbaci sve
+            are_you_sure: Jeste li sigurni da želite odbaciti cijeli nacrt participativnog teksta?
+            import_doc: Uvezi dokument
+          discard:
+            success: Svi nacrti participativnih tekstova su odbačeni.
+          import:
+            invalid: Obrazac nije valjan!
+            success: Čestitamo, sljedeći odjeljci pretvoreni su u prijedloge. Sada ih možete pregledati i prilagoditi prije objave.
+            invalid_file: Datoteka sadrži neku pogrešku, pokušajte urediti sadržaj datoteke i ponovno je učitati.
+          new_import:
+            upload_document: Učitaj dokument
+            accepted_mime_types:
+              odt: ODT
+              md: Markdown
+            title: Dodaj dokument
+            bottom_hint: (Moći ćete pregledati i sortirati odjeljke dokumenta)
+            document_legend: 'Dodajte dokument manji od 2MB, svaki odjeljak do 3 razine dubine bit će raščlanjen u prijedloge. Podržani formati su: %{valid_mime_types}'
+          publish:
+            invalid: Došlo je do problema prilikom objavljivanja prijedloga.
+            success: Svi prijedlozi su objavljeni.
+          update:
+            success: Participativni tekst uspješno ažuriran.
+        proposals:
+          index:
+            split: Podijeli prijedloge
+            publish_answers: Objavi odgovore
+            unassign_from_evaluator_button: Ukloni dodjelu
+            select_evaluators: Odaberite jednog ili više procjenitelja
+            unassign_from_evaluator: Ukloni dodjelu procjenitelju
+            merge: Spoji u novi
+            change_taxonomies: Promijeni taksonomije
+            no_templates_available: Nema dostupnih predložaka
+            publish: Objavi
+            selected: odabrano
+            merge_button: Stvori
+            update: Ažuriraj
+            apply_answer_template: Primijeni predložak odgovora
+            split_button: Podijeli
+            cancel: Otkaži
+            title: Prijedlozi
+            actions: Radnje
+            assign_to_evaluator_button: Dodijeli
+            assign_to_evaluator: Dodijeli procjenitelju
+            select_component: Odaberite komponentu
+            statuses: Statusi
+          answer:
+            invalid: Došlo je do problema prilikom odgovaranja na ovaj prijedlog.
+            bulk_answer_error: Na prijedloge s ID-ovima [%{proposals}] nije moguće odgovoriti zbog pogrešaka pri primjeni predloška "%{template}". Možete provjeriti odgovara li predložak odgovora očekivanom formatu za ovu komponentu primjenjujući ga pojedinačno.
+            bulk_answer_success: Na %{count} prijedloga bit će odgovoreno pomoću predloška "%{template}". Pričekajte nekoliko minuta i osvježite stranicu za prikaz ažuriranja.
+            success: Na prijedlog je uspješno odgovoreno.
+          publish_answers:
+            number_of_proposals: Odgovori za %{number} prijedloga bit će objavljeni?
+            select_a_proposal: Molimo odaberite prijedlog.
+          create:
+            invalid: Došlo je do problema prilikom stvaranja ovog prijedloga.
+            success: Prijedlog uspješno stvoren.
+          manage_trash:
+            title: Izbrisani prijedlozi
+          show:
+            n_more_likes:
+              other: i još %{count}
+              one: i još 1
+            related_meetings: Povezani sastanci
+            likes: Sviđanja
+            remove_assignment_confirmation: Jeste li sigurni da želite ukloniti procjenitelja iz ovog prijedloga?
+            amendments_count: Broj amandmana
+            evaluators: Procjenitelji
+            documents: Dokumenti
+            votes_count: Broj glasova
+            body: Tijelo
+            likes_count: Broj sviđanja
+            photos: Fotografije
+            comments_count: Broj komentara
+            assigned_evaluators: Dodijeljeni procjenitelji
+            remove_assignment: Ukloni dodjelu
+            link: Pogledaj prijedlog
+            ranking: '%{ranking} od %{total}'
+          form:
+            created_in_meeting: Ovaj prijedlog dolazi sa sastanka
+            select_a_meeting: Odaberite sastanak
+          update_taxonomies:
+            success: 'Prijedlozi uspješno ažurirani na taksonomije %{taxonomies}: %{proposals}.'
+            select_a_taxonomy: Molimo odaberite taksonomiju.
+            select_a_proposal: Molimo odaberite prijedlog.
+            invalid: 'Ovi prijedlozi već su imali taksonomije %{taxonomies}: %{proposals}.'
+          new:
+            title: Stvori prijedlog
+            create: Stvori
+          edit:
+            update: Ažuriraj
+            title: Ažuriraj prijedlog
+        proposal_states:
+          index:
+            title: Statusi
+          create:
+            error: Pogreška prilikom stvaranja stanja
+            success: Status uspješno stvoren
+          new:
+            title: Novi status
+            create: Stvori
+          update:
+            success: Status uspješno ažuriran
+            error: Pogreška prilikom ažuriranja statusa
+          destroy:
+            success: Status uspješno izbrisan
+          edit:
+            title: Uredi status
+            update: Ažuriraj
+          form:
+            preview: Pregled
+        actions:
+          deleted_proposals_info: Izbrisani prijedlozi mogu se vratiti iz koša.
+          preview: Pregled
+          view_deleted_proposals: Pogledaj izbrisane prijedloge
+          confirm_delete_proposal: Jeste li sigurni da želite izbrisati ovaj prijedlog?
+        models:
+          proposal:
+            name: Prijedlog
+        exports:
+          proposals: Prijedlozi
+          proposal_comments: Komentari
+        proposals_merges:
+          create:
+            success: Uspješno spojeni prijedlozi u novi.
+            invalid: 'Došlo je do problema prilikom spajanja odabranih prijedloga jer neki od njih:'
+          form:
+            select_a_meeting: Odaberite sastanak
+            created_in_meeting: Ovaj prijedlog dolazi sa sastanka
+          new:
+            title: Spoji u novi
+        evaluation_assignments:
+          create:
+            success: Prijedlozi uspješno dodijeljeni procjenitelju.
+            invalid: Došlo je do problema prilikom dodjeljivanja prijedloga procjenitelju.
+          delete:
+            invalid: Došlo je do problema prilikom ukidanja dodjele prijedloga procjenitelju.
+            success: Procjenitelj uspješno uklonjen iz prijedloga.
+        imports:
+          label:
+            answers: Uvezi odgovore iz datoteke
+            proposals: Uvezi prijedloge iz datoteke
+          resources:
+            proposals:
+              other: prijedloga
+              one: prijedlog
+            answers:
+              other: odgovora na prijedlog
+              one: odgovor na prijedlog
+          help:
+            proposals: 'Datoteka mora imati sljedeće nazive stupaca u slučaju CSV ili Excel datoteka, ili nazive ključeva u slučaju JSON datoteka:
+
+              <ul>
+
+              <li><b>title/en:</b> Naslov na engleskom jeziku. To ovisi o konfiguraciji jezika vaše platforme.</li>
+
+              <li><b>body/en:</b> Tijelo na engleskom jeziku. To ovisi o konfiguraciji jezika vaše platforme.</li>
+
+              <li><b>taxonomies/ids:</b> ID taksonomija (ako ih je više, odvojite zarezom)</li>
+
+              </ul>
+
+              '
+            answers: 'Dokument za uvoz mora sadržavati sljedeće nazive stupaca u slučaju CSV ili Excel datoteka, ili nazive ključeva u slučaju JSON datoteka (ostali stupci bit će zanemareni):
+
+              <ul>
+
+              <li><b>id:</b> ID prijedloga na koji se odgovara</li>
+
+              <li><b>state:</b> Jedan od "accepted", "evaluating" ili "rejected"</li>
+
+              <li><b>answer/en:</b> Odgovor na engleskom jeziku. To ovisi o konfiguraciji jezika vaše platforme.</li>
+
+              </ul>
+
+              '
+          title:
+            proposals: Uvezi prijedloge iz datoteke
+            answers: Uvezi odgovore na prijedloge iz datoteke
+        proposal_notes:
+          reply:
+            success: Odgovor na bilješku prijedloga uspješno stvoren.
+            error: Došlo je do problema prilikom stvaranja odgovora na bilješku prijedloga.
+          form:
+            submit: Pošalji
+            note: Bilješka
+          title: Privatne bilješke
+          create:
+            error: Došlo je do problema prilikom stvaranja ove bilješke prijedloga.
+            success: Bilješka prijedloga uspješno stvorena.
+        proposals_imports:
+          new:
+            no_components: U ovom participativnom prostoru nema drugih komponenti prijedloga iz kojih bi se uvozili prijedlozi.
+            select_component: Molimo odaberite komponentu
+            title: Uvezi prijedloge iz druge komponente
+            select_states: Uvezi samo prijedloge s ovim statusima. Ako nijedan nije odabran, svi će prijedlozi biti uvezeni.
+            create: Uvezi prijedloge
+          create:
+            success: Postupak uvoza je započeo. Obavijestit ćemo vas kada završi.
+            invalid: Došlo je do problema prilikom uvoza prijedloga.
+        proposal_answers:
+          form:
+            title: Odgovor za prijedlog %{title}
+            answer_proposal: Odgovori
+        import_proposals_mailer:
+          notify_success:
+            subject: Prijedlozi su uspješno uvezeni
+            added_proposals:
+              other: '%{count} prijedloga je uvezeno.'
+              one: Jedan prijedlog je uvezen.
+            body: Uspješno uvezeni prijedlozi iz komponente %{origin_component_name} u komponentu %{target_component_name}. Rezultate možete pregledati u administratorskom sučelju.
+          notify_failure:
+            subject: Došlo je do pogreške prilikom uvoza prijedloga
+            body: Došlo je do problema prilikom uvoza prijedloga iz komponente %{origin_component_name} u komponentu %{target_component_name}.
+        proposals_splits:
+          create:
+            invalid: 'Došlo je do problema prilikom dijeljenja odabranih prijedloga jer neki od njih:'
+            success: Uspješno podijeljeni prijedlozi u nove.
+        deprecation_warning_collaborative_drafts_html: ⚠️ <b>Obavijest o zastarjelosti.</b> Značajka suradničkih skica bit će uklonjena u Decidimu v0.32. Organizacije koje je koriste mogu prijeći na novu značajku suautorstva prijedloga.
+      actions:
+        new: Novi prijedlog
+        cancel_coauthor_invitation: Otkaži pozivnicu suautorstva
+        new_proposal_state: Novi status
+        mark_as_coauthor: Označi kao suautora
+        delete_proposal_state_confirm: Jeste li sigurni da želite izbrisati ovo stanje?
+        participatory_texts: Participativni tekstovi
+        destroy: Izbriši stanje
+        show: Prikaži prijedlog
+        import: Uvezi prijedloge iz druge komponente
+        answer_proposal: Odgovori na prijedlog
+        title: Radnje
+        mark_as_coauthor_confirm: Jeste li sigurni da želite označiti ovog korisnika kao suautora? Primatelj će primiti obavijest da prihvati ili odbije pozivnicu.
+        edit_proposal: Uredi prijedlog
+        cancel_coauthor_invitation_confirm: Jeste li sigurni da želite otkazati pozivnicu suautorstva?
+        edit_proposal_state: Uredi stanje
+      models:
+        proposal:
+          fields:
+            published_answer: Objavljeni odgovor
+            evaluators: Procjenitelji
+            comments: Komentari
+            published_at: Objavljeno
+            notes: Bilješke
+            official_proposal: Službeni prijedlog
+            state: Status
+            votes: Glasovi
+            id: ID
+            taxonomies: Taksonomije
+            evaluator: Procjenitelj
+            title: Naslov
+        proposal_state:
+          title: Status
+          css_class: CSS klasa
+      update_draft:
+        success: Nacrt prijedloga uspješno ažuriran.
+        error: Došlo je do problema prilikom spremanja suradničkog nacrta.
+      creation:
+        text: Ovaj prijedlog je stvoren
+        splitted_text: Postao je ovaj prijedlog
+        merged_text: Postali su ovaj prijedlog
+        imported_text: Postao je ovaj prijedlog
+      invite_coauthors:
+        update:
+          success: Pozivnica je prihvaćena.
+          error: Došlo je do problema prilikom prihvaćanja pozivnice.
+        create:
+          success: '%{author_name} uspješno je pozvan kao suautor.'
+          error: Došlo je do problema prilikom pozivanja suautora.
+        destroy:
+          success: Pozivnica je odbijena.
+          error: Došlo je do problema prilikom odbijanja pozivnice.
+        cancel:
+          error: Došlo je do problema prilikom otkazivanja pozivnice suautorstva.
+          success: Pozivnica suautorstva uspješno otkazana.
+      last_activity:
+        new_proposal: 'Novi prijedlog:'
+        proposal_updated: 'Prijedlog ažuriran:'
+      application_helper:
+        filter_origin_values:
+          all: Sve
+          meetings: Sastanci
+          participants: Sudionici
+          official: Službeno
+        filter_type_values:
+          proposals: Prijedlozi
+          amendments: Amandmani
+          all: Sve
+        filter_state_values:
+          not_answered: Nije odgovoreno
+          all: Sve
+      exit_modal:
+        exit: Nastavi
+        message: Morate dati još %{number} glasova između različitih prijedloga kako bi se vaši glasovi uzeli u obzir.
+        cancel: Otkaži
+        title: Zapamtite, ostalo vam je %{number} glasova
+      update:
+        success: Prijedlog uspješno ažuriran.
+        error: Došlo je do problema prilikom spremanja prijedloga.
+      destroy_draft:
+        error: Došlo je do problema prilikom brisanja suradničkog nacrta.
+        success: Nacrt prijedloga uspješno izbrisan.
+      answers:
+        accepted: Prihvaćeno
+        evaluating: U procjeni
+        withdrawn: Povučeno
+        not_answered: Nije odgovoreno
+        rejected: Odbijeno
+      participatory_text_proposal:
+        alternative_title: Trenutno nema participativnih tekstova
+        buttons:
+          amend: Izmijeni
+          comment: Komentiraj
+      versions:
+        index:
+          title: Verzije
+      create:
+        error: Došlo je do problema prilikom spremanja prijedloga.
+        success: Prijedlog uspješno stvoren. Spremljen kao nacrt.
+      admin_log:
+        proposal:
+          restore: '%{user_name} vratio je prijedlog %{resource_name} u prostor %{space_name}'
+          publish_answer: '%{user_name} objavio je odgovor na prijedlog %{resource_name} u prostoru %{space_name}'
+          soft_delete: '%{user_name} premjestio je u koš prijedlog %{resource_name} u prostoru %{space_name}'
+          answer: '%{user_name} odgovorio je na prijedlog %{resource_name} u prostoru %{space_name}'
+          create: '%{user_name} stvorio je prijedlog %{resource_name} spajanjem %{merged_count} prijedloga u %{space_name}'
+          update: '%{user_name} ažurirao je službeni prijedlog %{resource_name} u prostoru %{space_name}'
+        evaluation_assignment:
+          delete: '%{user_name} uklonio je dodjelu procjenitelja iz prijedloga %{proposal_title}'
+          create: '%{user_name} dodijelio je prijedlog %{resource_name} procjenitelju'
+        proposal_note:
+          create: '%{user_name} ostavio je privatnu bilješku na prijedlogu %{resource_name} u prostoru %{space_name}'
+      new:
+        limit_reached: Ne možete stvarati nove prijedloge jer ste premašili ograničenje.
+      forms:
+        locating: Lociranje...
+        use_my_location: Koristi moju trenutnu lokaciju
+        errors:
+          device_not_supported: Vaš uređaj ne podržava usluge lokacije. Molimo unesite adresu ručno.
+          no_device_location: Nažalost, nismo mogli otkriti vašu lokaciju. Molimo unesite adresu ručno.
+      proposals_picker:
+        no_proposals: Nijedan prijedlog ne odgovara vašim kriterijima pretrage ili nema prijedloga.
+        choose_proposals: Odaberite prijedloge
+      publish:
+        success: Prijedlog uspješno objavljen.
+        error: Došlo je do problema prilikom objavljivanja prijedloga.
+      content_blocks:
+        highlighted_proposals:
+          name: Prijedlozi
+      proposal_votes:
+        create:
+          error: Došlo je do problema prilikom glasanja o prijedlogu.
+      publish_answers:
+        success: Odgovori na prijedloge uspješno objavljeni.
+    gamification:
+      badges:
+        proposal_votes:
+          name: Glasovi za prijedloge
+          next_level_in: Glasajte za još %{score} prijedloga za sljedeću razinu!
+          unearned_own: Još niste glasali ni za jedan prijedlog.
+          unearned_another: Ovaj sudionik još nije glasao ni za jedan prijedlog.
+          description_another: Ovaj sudionik glasao je za %{score} prijedloga.
+          description_own: Glasali ste za %{score} prijedloga.
+          description: Ova značka dodjeljuje se kada glasate za prijedloge drugih ljudi.
+          conditions:
+          - Pregledavajte i odvojite vrijeme za čitanje prijedloga drugih ljudi
+          - Glasajte za prijedloge koji vam se sviđaju ili su vam zanimljivi
+        accepted_proposals:
+          unearned_another: Ovaj sudionik još nema prihvaćenih prijedloga.
+          conditions:
+          - Odaberite prostor sudjelovanja koji vas zanima s omogućenim podnošenjem prijedloga
+          - Pokušajte izraditi prijedloge koji se mogu provesti. Tako je vjerojatnije da će biti prihvaćeni.
+          description: Ova značka dodjeljuje se kada aktivno sudjelujete novim prijedlozima i oni budu prihvaćeni.
+          unearned_own: Još nemate prihvaćenih prijedloga.
+          name: Prihvaćeni prijedlozi
+          description_own: Imate %{score} prihvaćenih prijedloga.
+          description_another: Ovaj sudionik ima %{score} prihvaćenih prijedloga.
+          next_level_in: Pridobijte još %{score} prihvaćenih prijedloga za sljedeću razinu!
+        proposals:
+          description_another: Ovaj sudionik stvorio je %{score} prijedloga.
+          description_own: Stvorili ste %{score} prijedloga.
+          next_level_in: Stvorite još %{score} prijedloga za sljedeću razinu!
+          unearned_another: Ovaj sudionik još nije stvorio nijedan prijedlog.
+          name: Prijedlozi
+          description: Ova značka dodjeljuje se kada aktivno sudjelujete novim prijedlozima.
+          conditions:
+          - Odaberite prostor sudjelovanja koji vas zanima s omogućenim podnošenjem prijedloga
+          - Stvorite novi prijedlog
+          unearned_own: Još niste stvorili nijedan prijedlog.
+    events:
+      proposals:
+        proposal_mentioned:
+          notification_title: Vaš prijedlog "%{mentioned_proposal_title}" spomenut je <a href="%{resource_path}">u ovom prostoru</a> u komentarima.
+          email_subject: Vaš prijedlog "%{mentioned_proposal_title}" je spomenut
+          email_outro: Ovu ste obavijest primili jer ste autor sadržaja "%{resource_title}".
+          email_intro: Vaš prijedlog "%{mentioned_proposal_title}" spomenut je <a href="%{resource_url}">u ovom prostoru</a> u komentarima.
+        proposal_merged:
+          email_outro: Ovu ste obavijest primili jer ste autor prijedloga.
+          notification_title: Prijedlog <a href="%{resource_path}">%{resource_title}</a> spojio je administrator.
+          email_subject: Prijedlog %{resource_title} je spojen
+          email_intro: 'Administrator je spojio vaš prijedlog "%{resource_title}", pogledajte na ovoj stranici:'
+        proposal_published:
+          email_intro: '%{author_name}, kojeg pratite, objavio je novi prijedlog pod nazivom "%{resource_title}". Pogledajte i pridonesite:'
+          notification_title: Prijedlog <a href="%{resource_path}">%{resource_title}</a> objavio je <a href="%{author_path}">%{author_name}</a>.
+          email_outro: Ovu ste obavijest primili jer pratite %{author_name}. Obavijesti možete prestati primati putem prethodne poveznice.
+          email_subject: Novi prijedlog "%{resource_title}" autora %{author_name}
+        liking_enabled:
+          notification_title: Sada možete početi <a href="%{resource_path}">označavati sviđanje prijedloga</a> u <a href="%{participatory_space_url}">%{participatory_space_title}</a>.
+          email_intro: 'Možete označiti sviđanje prijedloga u %{participatory_space_title}! Počnite sudjelovati na ovoj stranici:'
+          email_subject: Sviđanje prijedloga je započelo za %{participatory_space_title}
+          email_outro: Ovu ste obavijest primili jer pratite %{participatory_space_title}. Obavijesti možete prestati primati putem prethodne poveznice.
+        coauthor_accepted_invite:
+          notification_title: <a href="%{coauthor_path}">%{coauthor_name}</a> je prihvatio vašu pozivnicu da postane suautor prijedloga <a href="%{resource_path}">%{resource_title}</a>.
+        collaborative_draft_access_requested:
+          email_subject: '%{requester_name} je zatražio pristup za doprinos %{resource_title}.'
+          email_intro: '%{requester_name} je zatražio pristup kao suradnik. Možete <strong>prihvatiti ili odbiti zahtjev</strong> sa stranice suradničkog nacrta <a href="%{resource_url}">%{resource_title}</a>.'
+          notification_title: <a href="%{requester_path}">%{requester_name}</a> je zatražio pristup za doprinos suradničkom nacrtu <a href="%{resource_path}">%{resource_title}</a>. Molimo <strong>prihvatite ili odbijte zahtjev</strong>.
+          email_outro: Ovu ste obavijest primili jer ste suradnik <a href="%{resource_url}">%{resource_title}</a>.
+        proposal_state_changed:
+          affected_user:
+            email_outro: Ovu ste obavijest primili jer ste autor sadržaja "%{resource_title}".
+            notification_title: Vaš prijedlog <a href="%{resource_path}">%{resource_title}</a> promijenio je stanje u "%{state}".
+            email_intro: 'Prijedlog "%{resource_title}" promijenio je stanje u "%{state}". Odgovor možete pročitati na ovoj stranici:'
+            email_subject: Vaš prijedlog je promijenio stanje (%{state})
+          follower:
+            email_subject: Prijedlog koji pratite promijenio je stanje (%{state})
+            notification_title: Prijedlog <a href="%{resource_path}">%{resource_title}</a> promijenio je stanje u "%{state}".
+            email_outro: Ovu ste obavijest primili jer pratite "%{resource_title}". Možete ga prestati pratiti putem prethodne poveznice.
+            email_intro: 'Prijedlog "%{resource_title}" promijenio je stanje u "%{state}". Odgovor možete pročitati na ovoj stranici:'
+        proposal_update_taxonomies:
+          email_outro: Ovu ste obavijest primili jer ste autor prijedloga.
+          email_subject: Taksonomije prijedloga %{resource_title} su ažurirane
+          email_intro: 'Administrator je ažurirao taksonomije vašeg prijedloga "%{resource_title}", pogledajte na ovoj stranici:'
+          notification_title: Taksonomije prijedloga <a href="%{resource_path}">%{resource_title}</a> ažurirao je administrator.
+        coauthor_invited:
+          email_intro: 'Pozvani ste da budete suautor prijedloga "%{resource_title}". Pozivnicu možete prihvatiti ili odbiti na ovoj stranici:'
+          notification_title: <a href="%{author_path}">%{author_name}</a> želi vas pozvati kao suautora prijedloga <a href="%{resource_path}">%{resource_title}</a>.
+          actions:
+            decline: Odbij
+            accept: Prihvati
+          email_subject: Pozvani ste da budete suautor prijedloga "%{resource_title}"
+          email_outro: Ovu ste obavijest primili jer autor prijedloga želi prepoznati vaše doprinose tako da postanete suautor.
+        collaborative_draft_access_requester_accepted:
+          email_subject: Prihvaćeni ste kao suradnik %{resource_title}.
+          email_outro: Ovu ste obavijest primili jer ste zatražili da postanete suradnik <a href="%{resource_url}">%{resource_title}</a>.
+          email_intro: Prihvaćeni ste za pristup kao suradnik suradničkog nacrta <a href="%{resource_url}">%{resource_title}</a>.
+          notification_title: <strong>Prihvaćeni ste za pristup kao suradnik</strong> suradničkog nacrta <a href="%{resource_path}">%{resource_title}</a>.
+        proposal_published_for_space:
+          email_subject: Novi prijedlog "%{resource_title}" dodan u %{participatory_space_title}
+          email_outro: Ovu ste obavijest primili jer pratite "%{participatory_space_title}". Obavijesti možete prestati primati putem prethodne poveznice.
+          notification_title_official: Službeni prijedlog <a href="%{resource_path}">%{resource_title}</a> dodan je u %{participatory_space_title}.
+          notification_title: Prijedlog <a href="%{resource_path}">%{resource_title}</a> dodan je u %{participatory_space_title} od strane %{author}.
+          email_intro: Prijedlog "%{resource_title}" dodan je u "%{participatory_space_title}" koji pratite.
+        collaborative_draft_access_accepted:
+          email_intro: '%{requester_name} je prihvaćen za pristup kao suradnik suradničkog nacrta <a href="%{resource_url}">%{resource_title}</a>.'
+          email_outro: Ovu ste obavijest primili jer ste suradnik <a href="%{resource_url}">%{resource_title}</a>.
+          notification_title: <a href="%{requester_path}">%{requester_name}</a> je <strong>prihvaćen za pristup kao suradnik</strong> suradničkog nacrta <a href="%{resource_path}">%{resource_title}</a>.
+          email_subject: '%{requester_name} je prihvaćen za pristup kao suradnik %{resource_title}.'
+        admin:
+          proposal_note_mentioned:
+            email_subject: Netko vas je spomenuo u bilješci na prijedlogu %{resource_title}.
+            email_outro: Ovu ste obavijest primili jer ste spomenuti u privatnoj bilješci.
+            notification_title: Spomenuti ste u privatnoj bilješci u <a href="%{resource_path}">%{resource_title}</a> od <a href="%{author_path}">%{author_name}</a>. Pogledajte na <a href="%{admin_proposal_info_path}">administratorskoj ploči</a>.
+            email_intro: Spomenuti ste u privatnoj bilješci u "%{resource_title}" od "%{author_name}". Pogledajte na <a href="%{admin_proposal_info_url}">administratorskoj ploči</a>.
+          proposal_assigned_to_evaluator:
+            email_outro: Ovu ste obavijest primili jer možete procijeniti prijedlog.
+            email_subject: Dodijeljeni ste kao procjenitelj prijedlogu %{resource_title}.
+            email_intro: Dodijeljeni ste kao procjenitelj prijedlogu "%{resource_title}". To znači da vam je povjereno dati povratne informacije i odgovarajući odgovor u narednim danima. Pogledajte na <a href="%{admin_proposal_info_url}">administratorskoj ploči</a>.
+            notification_title: Dodijeljeni ste kao procjenitelj prijedlogu <a href="%{resource_path}">%{resource_title}</a>. Pogledajte na <a href="%{admin_proposal_info_path}">administratorskoj ploči</a>.
+          proposal_note_created:
+            email_outro: Ovu ste obavijest primili jer možete procijeniti prijedlog.
+            email_subject: Netko je ostavio bilješku na prijedlogu %{resource_title}.
+            email_intro: '%{author_name} je stvorio privatnu bilješku u %{resource_title}. Pogledajte na <a href="%{admin_proposal_info_url}">administratorskoj ploči</a>.'
+            notification_title: <a href="%{author_path}">%{author_name}</a> je stvorio privatnu bilješku u <a href="%{resource_path}">%{resource_title}</a>. Pogledajte na <a href="%{admin_proposal_info_path}">administratorskoj ploči</a>.
+          proposal_note_replied:
+            email_subject: '%{author_name} je odgovorio na vašu privatnu bilješku u %{resource_title}.'
+            email_outro: Ovu ste obavijest primili jer ste autor bilješke.
+            email_intro: '%{author_name} je odgovorio na vašu privatnu bilješku u %{resource_title}. Pogledajte na <a href="%{admin_proposal_info_url}">administratorskoj ploči</a>.'
+            notification_title: <a href="%{author_path}">%{author_name}</a> je odgovorio na vašu privatnu bilješku u <a href="%{resource_path}">%{resource_title}</a>. Pogledajte na <a href="%{admin_proposal_info_path}">administratorskoj ploči</a>.
+        collaborative_draft_access_rejected:
+          email_subject: '%{requester_name} je odbijen za pristup kao suradnik %{resource_title}.'
+          email_outro: Ovu ste obavijest primili jer ste suradnik <a href="%{resource_url}">%{resource_title}</a>.
+          notification_title: <a href="%{requester_path}">%{requester_name}</a> je <strong>odbijen za pristup kao suradnik</strong> suradničkog nacrta <a href="%{resource_path}">%{resource_title}</a>.
+          email_intro: '%{requester_name} je odbijen za pristup kao suradnik suradničkog nacrta <a href="%{resource_url}">%{resource_title}</a>.'
+        collaborative_draft_withdrawn:
+          email_intro: <a href="%{author_url}">%{author_name}</a> je povukao suradnički nacrt <a href="%{resource_url}">%{resource_title}</a>.
+          email_subject: '%{author_name} je povukao suradnički nacrt %{resource_title}.'
+          notification_title: <a href="%{author_path}">%{author_name}</a> je <strong>povukao</strong> suradnički nacrt <a href="%{resource_path}">%{resource_title}</a>.
+          email_outro: Ovu ste obavijest primili jer ste suradnik <a href="%{resource_url}">%{resource_title}</a>.
+        creation_enabled:
+          email_outro: Ovu ste obavijest primili jer pratite %{participatory_space_title}. Obavijesti možete prestati primati putem prethodne poveznice.
+          notification_title: Sada možete iznijeti <a href="%{resource_path}">nove prijedloge</a> u <a href="%{participatory_space_url}">%{participatory_space_title}</a>.
+          email_subject: Prijedlozi su sada dostupni u %{participatory_space_title}
+          email_intro: 'Sada možete stvarati nove prijedloge u %{participatory_space_title}! Počnite sudjelovati na ovoj stranici:'
+        collaborative_draft_access_requester_rejected:
+          email_intro: Odbijeni ste za pristup kao suradnik suradničkog nacrta <a href="%{resource_url}">%{resource_title}</a>.
+          email_subject: Odbijeni ste kao suradnik %{resource_title}.
+          notification_title: <strong>Odbijeni ste za pristup kao suradnik</strong> suradničkog nacrta <a href="%{resource_path}">%{resource_title}</a>.
+          email_outro: Ovu ste obavijest primili jer ste zatražili da postanete suradnik <a href="%{resource_url}">%{resource_title}</a>.
+        rejected_coauthorship:
+          notification_title: Odbili ste pozivnicu od <a href="%{author_path}">%{author_name}</a> da postanete suautor prijedloga <a href="%{resource_path}">%{resource_title}</a>.
+        voting_enabled:
+          notification_title: Sada možete početi <a href="%{resource_path}">glasati o prijedlozima</a> u <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+          email_subject: Glasovanje o prijedlozima je započelo za %{participatory_space_title}
+          email_outro: Ovu ste obavijest primili jer pratite %{participatory_space_title}. Obavijesti možete prestati primati putem prethodne poveznice.
+          email_intro: 'Možete glasati o prijedlozima u %{participatory_space_title}! Počnite sudjelovati na ovoj stranici:'
+        coauthor_rejected_invite:
+          notification_title: <a href="%{coauthor_path}">%{coauthor_name}</a> je odbio vašu pozivnicu da postane suautor prijedloga <a href="%{resource_path}">%{resource_title}</a>.
+        accepted_coauthorship:
+          notification_title: Dodani ste kao suautor prijedloga <a href="%{resource_path}">%{resource_title}</a>.
+    open_data:
+      help:
+        proposals:
+          state_published_at: Vremenska oznaka stanja prijedloga pri objavi
+          url: URL na kojem se prijedlog može pronaći
+          taxonomies: Taksonomije kojima ovaj prijedlog pripada
+          related_proposals: Prijedlozi povezani s ovim prijedlogom
+          published_at: Datum objave prijedloga
+          answered_at: Datum kada je na ovaj prijedlog odgovoreno
+          reference: Jedinstveni identifikator resursa na ovoj platformi
+          state: Status prijedloga (npr. "Prihvaćeno")
+          withdrawn: Je li prijedlog povučen
+          id: Jedinstveni identifikator prijedloga
+          cost_report: Izvještaj o troškovima prijedloga
+          original_proposal: Referenca izvornog prijedloga ako je ovo amandman
+          votes: Broj glasova ovog prijedloga
+          address: Adresa prijedloga u slučaju da prijedlog ima fizičku lokaciju
+          participatory_space: Kojem prostoru (npr. participativni proces ili skupština) prijedlog pripada
+          execution_period: Razdoblje trajanja prijedloga od početka do kraja
+          likes: Broj sviđanja ovog prijedloga
+          answer: Odgovor na prijedlog ako je odgovoreno
+          meeting_urls: URL-ovi sastanaka na kojima je prijedlog predstavljen ili raspravljen
+          updated_at: Datum zadnjeg ažuriranja prijedloga
+          title: Naslov prijedloga
+          is_amend: Mijenja li ovaj prijedlog drugi prijedlog
+          author: Podaci o autoru ovog prijedloga
+          longitude: Geografska dužina prijedloga ako ima fizičku lokaciju
+          component: Komponenta kojoj prijedlog pripada
+          created_in_meeting: Je li prijedlog stvoren na sastanku
+          cost: Ukupni trošak dotičnog prijedloga
+          coauthorships_count: Broj suautorstava koje prijedlog predstavlja
+          withdrawn_at: Kada je prijedlog povučen
+          created_at: Datum stvaranja prijedloga
+          attachments: Broj privitaka ovog prijedloga
+          comments: Broj komentara ovog prijedloga
+          latitude: Geografska širina prijedloga ako ima fizičku lokaciju
+          follows_count: Broj pratitelja ovog prijedloga
+          body: Tijelo prijedloga
+        proposal_comments:
+          commentable_type: Vrsta sadržaja na koji se komentira (rezultat, prijedlog itd.)
+          author: Ime sudionika koji je napisao ovaj komentar
+          body: Sam komentar
+          depth: Mjesto ovog komentara u stablu komentara (je li odgovor ili odgovor na odgovor)
+          created_at: Datum kada je ovaj komentar stvoren
+          alignment: Je li ovaj komentar za, protiv ili neutralan
+          root_commentable_url: URL resursa koji se veže na ovaj komentar
+          locale: Jezik koji je sudionik imao pri pisanju ovog komentara
+          id: ID ovog komentara
+          commentable_id: Jedinstveni ID sadržaja na koji se komentira
+    participatory_spaces:
+      highlighted_proposals:
+        see_all: Pogledaj sve prijedloge
+    statistics:
+      votes_count: Glasovi
+      proposals_accepted: Prihvaćeni prijedlozi
+      votes: 'Glasovi:'
+      proposals_count_tooltip: Ukupan broj podnesenih prijedloga i glasova danih na njih.
+      proposals_count: Prijedlozi
+      participatory_space_proposals_count: Prijedlozi
+    resource_links:
+      included_proposals:
+        proposal_project: 'Prijedlog koji se pojavljuje u ovim projektima:'
+        proposal_result: 'Prijedlog koji se pojavljuje u ovim rezultatima:'
+      copied_from_component:
+        proposal_proposal: Povezani prijedlozi
+      included_projects:
+        project_result: 'Rezultati koji se pojavljuju u ovom projektu:'
+    download_your_data:
+      show:
+        proposals: Izvoz prijedloga
+        proposal_comments: Izvoz komentara prijedloga
+    application:
+      geocoding:
+        not_configured: Geokodiranje nije konfigurirano!
+  activemodel:
+    attributes:
+      proposal:
+        answered_at: Odgovoreno
+        body: Tijelo
+        answer: Odgovor
+        decidim_scope_id: Opseg
+        address: Adresa
+        title: Naslov
+        has_address: Ima adresu
+        latitude: Geografska širina
+        longitude: Geografska dužina
+        decidim_proposals_proposal_state_id: Stanje
+        scope_id: Opseg
+        state: Stanje
+      proposal_answer:
+        answer: Odgovor
+        cost: Trošak
+        execution_period: Razdoblje provedbe
+        cost_report: Izvještaj o troškovima
+      proposal_state:
+        colors:
+          red: Crvena
+          green: Zelena
+          orange: Narančasta
+          blue: Plava
+          gray: Siva
+          purple: Ljubičasta
+          yellow: Žuta
+          pink: Ružičasta
+        announcement_title: Naslov odgovora
+        text_color: Boja teksta
+        bg_color: Boja pozadine
+      collaborative_draft:
+        has_address: Ima adresu
+        title: Naslov
+        state: Stanje
+        address: Adresa
+        decidim_scope_id: Opseg
+        body: Tijelo
+        scope_id: Opseg
+      proposals_copy:
+        copy_proposals: Razumijem da će ovo uvesti sve prijedloge iz odabrane komponente u trenutnu i da se ova radnja ne može poništiti.
+        origin_component_id: Komponenta iz koje se kopiraju prijedlozi
+      proposals_file_import:
+        file: Datoteka
+      proposals_import:
+        import_proposals: Uvezi prijedloge
+        keep_answers: Zadrži statuse i odgovore
+        keep_authors: Zadrži izvorne autore
+      evaluation_assignment:
+        admin_log:
+          evaluator_role_id: Ime procjenitelja
+      import_participatory_text:
+        document: Dokument
+    errors:
+      models:
+        proposal:
+          attributes:
+            add_attachments:
+              needs_to_be_reattached: Treba ponovno priložiti
+            title:
+              identical: I tijelo ne može biti identično
+            body:
+              identical: I naslov ne može biti identičan
+              cant_be_equal_to_template: ne može biti jednako predlošku
+        participatory_text:
+          attributes:
+            document:
+              allowed_file_content_types: 'Nevažeća vrsta dokumenta. Dopuštene su samo datoteke sa sljedećim nastavcima: %{types}'
+        proposals_split:
+          attributes:
+            base:
+              not_official: Nisu službeni
+              voted: Primili su glasove ili sviđanja
+        proposals_merge:
+          attributes:
+            base:
+              voted: Primili su glasove ili sviđanja
+              not_official: Nisu službeni
+    models:
+      decidim/proposals/publish_proposal_event: Prijedlog objavljen
+      decidim/proposals/liking_enabled_event: Sviđanje prijedloga omogućeno
+      decidim/proposals/creation_enabled_event: Stvaranje prijedloga omogućeno
+      decidim/proposals/admin/update_proposal_taxonomies_event: Taksonomije prijedloga promijenjene
+      decidim/proposals/voting_enabled_event: Glasovanje o prijedlozima omogućeno
+      decidim/proposals/proposal_mentioned_event: Prijedlog spomenut
+  activerecord:
+    models:
+      decidim:
+        proposals:
+          proposal:
+            import_to_proposal_text: Ovaj prijedlog <span "resource-link">%{link} stvoren je</span>
+            split_to_proposal_text: 'Ovaj prijedlog je stvoren: %{link}'
+            merge_from_proposal_text: 'Postao je ovaj prijedlog: %{link}'
+            merge_to_proposal_text: 'Ovaj prijedlog je stvoren: %{link}'
+            import_from_proposal_text: 'Postao je ovaj prijedlog: %{link}'
+            split_from_proposal_text: 'Postao je ovaj prijedlog: %{link}'
+            budget_text: Prijedlog <span class="resource-link">%{link} stvoren je</span>
+      decidim/proposals/collaborative_draft:
+        one: Suradnički nacrt
+        other: Suradnički nacrti
+      decidim/proposals/proposal:
+        other: Prijedlozi
+        one: Prijedlog
+      decidim/proposals/proposal_vote:
+        other: Glasovi
+        one: Glas
+      decidim/proposals/proposal_note:
+        one: Bilješka
+        other: Bilješke

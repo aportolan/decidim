@@ -1,1 +1,163 @@
+---
 hr:
+  decidim:
+    collaborative_texts:
+      admin:
+        documents:
+          draft_options:
+            draft: Nacrt verzije
+            accepting_suggestions_help: Omogućavanje prijedloga započinje novu rundu prijedloga za ovaj dokument.
+            draft_help_html: Nacrt verzije nije javan i mogu ga uređivati administratori.
+            accepting_suggestions: Omogući prijedloge u sljedećoj verziji
+          edit:
+            update: Ažuriraj
+            draft: Nacrt verzije
+            document_has_suggestions_html: <a href="%{url}">Ovaj dokument ima prijedloge</a> i ne može se izravno uređivati.
+            version: Verzija %{version_number}, stvorena %{created_at}, ima %{suggestions_count} prijedloga.
+            title: Uredi suradničke tekstove
+            public_version: Javna verzija
+            previous_versions: Prethodne verzije
+          publish:
+            invalid: Došlo je do problema prilikom objavljivanja ovog dokumenta.
+            success: Dokument uspješno objavljen.
+          non_draft_options:
+            draft_help_html: Nacrt verzije nije javan i mogu ga uređivati administratori.
+            enable_suggestions: Omogući prijedloge
+            enable_suggestions_help: Omogućavanje prijedloga dopušta sudionicima davanje prijedloga na ovoj verziji.
+            create_draft: Odbaci prijedloge i stvori novu nacrt verziju
+          update:
+            invalid: Došlo je do problema prilikom ažuriranja dokumenta.
+            success: Dokument uspješno ažuriran.
+          update_settings:
+            invalid: Došlo je do problema prilikom ažuriranja dokumenta.
+            success: Dokument uspješno ažuriran.
+          create:
+            invalid: Došlo je do problema prilikom stvaranja dokumenta.
+            success: Dokument uspješno stvoren.
+          new:
+            create: Stvori
+            title: Stvori suradničke tekstove
+          unpublish:
+            invalid: Došlo je do problema prilikom povlačenja objave dokumenta.
+            success: Objava dokumenta uspješno povučena.
+          edit_settings:
+            update: Ažuriraj
+            title: Konfiguriraj suradničke tekstove
+          index:
+            title: Suradnički tekstovi
+          manage_trash:
+            title: Izbrisani dokumenti
+        index:
+          published: Objavljeno
+          unpublished: Neobjavljeno
+      document:
+        apply: Primijeni
+        status:
+          selection_active: Odabir je aktivan. Otkažite trenutni odabir za novi.
+          not_accepting_suggestions: Prijedlozi trenutno nisu dopušteni.
+          accepting_suggestions: Za prijedlog izmjena odaberite ili dvaput kliknite tekst koji želite urediti, zatim kliknite gumb 'Predloži izmjene'.
+          draft: Ovaj dokument trenutno pregledavaju administratori.
+        index: Kazalo
+        restore: Vrati
+        rollout:
+          invalid: Došlo je do problema prilikom stvaranja nove verzije dokumenta (%{errors}).
+          confirm: Ova radnja stvorit će novu nacrt verziju dokumenta.
+          new: Izradi nacrt nove verzije
+        consolidate:
+          new: Objedini prihvaćene prijedloge
+          confirm: Ova radnja objedinit će sve prihvaćene prijedloge u novu verziju dokumenta.
+        consolidate_counter: Objedinjavanje će spojiti %{applied} primijenjenih prijedloga i premjestiti %{pending} prijedloga na čekanju u novu verziju.
+        controls_label: Kontrole prijedloga
+        save: Predloži izmjene
+        draft_counter: Nacrt će spojiti %{applied} primijenjenih prijedloga i odbaciti %{pending} prijedloga na čekanju.
+        toggle: Prikaži/sakrij prijedloge
+        cancel: Otkaži
+        suggestions_count: '%{count} prijedloga'
+      actions:
+        new: Novi tekst
+        title: Radnje
+        deleted_document_info: Izbrisani dokument može se vratiti iz koša.
+        manage: Konfiguriraj
+        confirm_delete_document: Jeste li sigurni da želite izbrisati ovaj dokument?
+        view_deleted_documents: Pogledaj izbrisane dokumente
+        edit: Uredi
+      documents:
+        index:
+          empty: Još nema suradničkih tekstova.
+          count:
+            other: '%{count} suradničkih tekstova'
+            one: '%{count} suradnički tekst'
+        show:
+          contributors: Suradnici
+      suggestions:
+        create:
+          success: Prijedlog uspješno stvoren.
+          invalid: Došlo je do problema prilikom stvaranja prijedloga.
+        errors:
+          blank_changeset: Skup promjena ne može biti prazan.
+          invalid_nodes: Nevažeći odabrani čvorovi.
+      admin_log:
+        document:
+          soft_delete: '%{user_name} premjestio je suradnički tekst %{resource_name} u koš'
+          unpublish: '%{user_name} povukao je objavu suradničkog teksta %{resource_name}'
+          create: '%{user_name} stvorio je suradnički tekst %{resource_name} u %{space_name}'
+          publish: '%{user_name} objavio je suradnički tekst %{resource_name} u %{space_name}'
+          update: '%{user_name} ažurirao je suradnički tekst %{resource_name} u %{space_name}'
+          delete: '%{user_name} izbrisao je suradnički tekst %{resource_name} iz %{space_name}'
+          restore: '%{user_name} vratio je suradnički tekst %{resource_name} u %{space_name}'
+        version:
+          delete: '%{user_name} izbrisao je verziju suradničkog teksta %{resource_name} iz %{space_name}'
+          update: '%{user_name} ažurirao je verziju suradničkog teksta %{resource_name} u %{space_name}'
+        suggestion:
+          create: '%{user_name} predložio je izmjene suradničkog teksta %{resource_name} u %{space_name}'
+      models:
+        collaborative_text:
+          fields:
+            title: Naslov
+            published: Objavljeno
+            suggestions: Prihvati prijedloge
+      suggestion:
+        add_html: <span class="type">Dodaj:</span> <span class="text">%{text}</span>
+        remove_html: <span class="type">Ukloni:</span> <span class="text">%{text}</span>
+        replace_html: <span class="type">Zamijeni:</span> <span class="text">%{text}</span>
+    components:
+      collaborative_texts:
+        settings:
+          global:
+            comments_blocked: Komentari blokirani
+            announcement: Obavijest
+          step:
+            announcement: Obavijest
+        actions:
+          create: Stvori
+          destroy: Izbriši
+          update: Ažuriraj
+        name: Suradnički tekstovi
+    admin:
+      tooltips:
+        deleted_collaborative_texts_info: Nije moguće izbrisati ovaj dokument
+    statistics:
+      all_collaborative_texts_count: Svi suradnički tekstovi
+      collaborative_texts_count: Suradnički tekstovi
+      collaborative_texts_count_tooltip: Broj suradničkih tekstova
+  activemodel:
+    attributes:
+      collaborative_texts:
+        suggestion:
+          original: Izvorni tekst
+          replace: Zamjena
+          nodes: DOM čvorovi
+        document:
+          version_number: Broj verzije
+          draft: Nacrt
+          body: Tijelo
+          title: Naslov
+        version:
+          version_number: Broj verzije
+          body: Tijelo
+          draft: Nacrt
+  activerecord:
+    models:
+      decidim/collaborative_texts/document:
+        one: Suradnički tekst
+        other: Suradnički tekstovi

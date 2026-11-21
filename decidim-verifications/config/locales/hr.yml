@@ -1,1 +1,354 @@
+---
 hr:
+  decidim:
+    verifications:
+      authorizations:
+        index:
+          subscribe: Pretplatite se
+          introduce_code: Unesite kod
+          expired_verification: Provjera je istekla
+          show_renew_info: Kliknite za obnovu provjere
+          granted_verification: Dodijeljena provjera
+          unauthorized_methods: Metode provjere
+          pending_verification: Provjera na čekanju
+        onboarding_pending:
+          unauthorized: Niste ovlašteni za %{action} u ovom resursu
+          pending_verifications: Provjere na čekanju
+          onboarding_message_html: Skoro ste spremni za %{action} na <strong>%{resource_title}</strong> %{resource_name}. Provjerite svoj račun dovršavanjem sljedećih autorizacija.
+          pending_admin_approval_verifications: Provjere koje čekaju odobrenje administratora
+          completed_verifications: Uspješno ste autorizirani, sada možete %{action} u %{resource_name}
+          granted_verifications: Dodijeljene provjere
+        renew_modal:
+          continue: Nastavi
+          title: Obnovi provjeru
+          cancel: Otkaži
+          info_renew: Ako želite ažurirati podatke, nastavite s obnovom.
+        new:
+          tos_agreement: Provjerom identiteta prihvaćate %{link}.
+          authorize: Pošalji
+          authorize_with: Provjerite se s %{authorizer}
+        create:
+          unconfirmed: Za autorizaciju morate potvrditi svoju e-poštu.
+          transferred: 'Oporavili smo sljedeće podatke o sudjelovanju na temelju vaše autorizacije:'
+          error: Došlo je do problema prilikom stvaranja autorizacije.
+          success: Uspješno ste autorizirani.
+        destroy:
+          success: Uspješno ste izbrisali autorizaciju.
+          error: Došlo je do problema prilikom brisanja autorizacije.
+        authorization_metadata:
+          info: 'Ovo su podaci trenutne provjere:'
+          no_data_stored: Nema pohranjenih podataka.
+        start_exploring: početi istraživati
+        skip_verification: Ovo za sada možete preskočiti i %{link}
+      id_documents:
+        authorizations:
+          create:
+            success: Dokument uspješno učitan.
+            error: Došlo je do problema prilikom učitavanja dokumenta.
+          edit:
+            offline: Koristi izvanmrežnu provjeru
+            rejection_correctness: Provjerite je li unesena informacija točna.
+            rejection_clarity: Provjerite je li informacija jasno vidljiva na učitanoj slici.
+            rejection_notice: Došlo je do problema s vašom provjerom. Pokušajte ponovno.
+            send: Ponovno zatraži provjeru
+            online: Koristi mrežnu provjeru
+            being_reviewed: Pregledavamo vaše dokumente. Uskoro ćete biti provjereni.
+          choose:
+            online: Mrežno
+            offline: Izvanmrežno
+            title: Provjerite se identitetskim dokumentom
+            choose_a_type: 'Odaberite kako se želite provjeriti:'
+          new:
+            title: Učitajte svoj identitetski dokument
+            send: Zatraži provjeru
+          update:
+            error: Došlo je do problema prilikom ponovnog učitavanja dokumenta.
+            success: Dokument uspješno ponovno učitan.
+        admin:
+          config:
+            update:
+              error: Došlo je do problema prilikom ažuriranja konfiguracije.
+              success: Konfiguracija uspješno ažurirana.
+            edit:
+              update: Ažuriraj
+              title: Konfiguracija identitetskih dokumenata
+          rejections:
+            create:
+              success: Provjera odbijena. Sudionik će biti pozvan da ispravi dokumente.
+          pending_authorizations:
+            index:
+              config: Konfiguracija
+              offline_verification: Izvanmrežna provjera
+              verification_number: 'Provjera #%{n}'
+              title: Mrežne provjere na čekanju
+          confirmations:
+            create:
+              error: Provjera se ne podudara. Pokušajte ponovno ili odbijte.
+              success: Sudionik uspješno provjeren.
+            new:
+              reject: Odbij
+              introduce_user_data: Unesite podatke sa slike
+              verify: Provjeri
+          offline_confirmations:
+            new:
+              introduce_user_data: Unesite e-poštu sudionika i podatke dokumenta
+              cancel: Otkaži
+              verify: Provjeri
+            create:
+              success: Sudionik uspješno provjeren.
+              error: Provjera se ne podudara.
+        passport: Putovnica
+        identification_number: Identifikacijski broj
+      csv_census:
+        admin:
+          actions:
+            destroy: Izbriši
+            confirm_destroy: Jeste li sigurni da želite izbrisati ovaj zapis?
+            edit: Uredi
+          census:
+            new_import:
+              example: 'john.doe@example.org
+
+                jane.doe@example.org
+
+                '
+              info: 'Mora biti CSV datoteka s jednim stupcem s adresom e-pošte:'
+              submit: Učitaj datoteku
+              upload_new_census: Učitaj novi popis
+              errors:
+                email_exists: Adresa e-pošte %{email} već postoji u organizaciji %{organization}.
+              title: Uvezi podatke popisa
+            last_login:
+              no_sign_in: Nikad se nije prijavio
+              no_user: Nema korisnika
+            create_import:
+              success: Uspješno uvezeno %{count} stavki.
+              no_user: Nije pronađen korisnik
+              error: Došlo je do problema prilikom uvoza popisa.
+            index:
+              empty: Nema podataka popisa. Koristite %{import_csv} za uvoz CSV datoteke.
+              no_sign_in: Nikad se nije prijavio
+              no_user: Nije pronađen korisnik
+            destroy:
+              success: Zapis popisa je izbrisan.
+          index:
+            fields:
+              created_at: Stvoreno
+              user_authorized: Korisnik autoriziran?
+              actions: Radnje
+              email: E-pošta
+            no_authorized: Korisnik nije autoriziran
+            authorized: Korisnik autoriziran
+            import_csv: Uvezi CSV
+            add_new_record_button: Dodaj novi zapis
+            title: Trenutni podaci popisa
+          census_records:
+            new_record:
+              save: Spremi
+              title: Dodaj novi zapis popisa
+            update_record:
+              invalid: Došlo je do problema prilikom ažuriranja zapisa popisa.
+              success: Zapis popisa uspješno ažuriran.
+            form:
+              email: E-pošta
+            edit_record:
+              save: Spremi
+              title: Uredi zapis popisa
+            create_record:
+              success: Uspješno dodan zapis popisa.
+          instructions:
+            title: Morate aktivirati CSV popis za ovu organizaciju
+            body: Da biste to učinili, morate ući u administraciju sustava i dodati autorizacije csv_census organizaciji
+        authorizations:
+          new:
+            success: Vaš račun uspješno je provjeren.
+            error: Nismo mogli provjeriti vaš račun ili niste na popisu organizacije.
+      postal_letter:
+        authorizations:
+          edit:
+            waiting_for_letter: Uskoro ćemo poslati pismo s kodom na vašu adresu.
+            title: Unesite kod za provjeru koji ste primili.
+            send: Potvrdi
+          new:
+            title: Zatražite svoj kod za provjeru
+            send: Pošalji mi pismo
+          update:
+            success: Čestitamo. Uspješno ste provjereni.
+            error: Vaš kod se ne podudara s našim. Provjerite pismo koje smo vam poslali.
+          create:
+            error: Došlo je do problema s vašim zahtjevom.
+            success: Hvala! Poslat ćemo kod za provjeru na vašu adresu.
+        admin:
+          postages:
+            create:
+              error: Pogreška pri označavanju pisma kao poslanog.
+              success: Pismo uspješno označeno kao poslano.
+          pending_authorizations:
+            index:
+              verification_code: Kod za provjeru
+              address: Adresa
+              mark_as_sent: Označi kao poslano
+              title: Provjere u tijeku
+              letter_sent_at: Pismo poslano
+              not_yet_sent: Još nije poslano
+              username: Nadimak
+              already_sent: Pismo je već poslano i ne može se ponovno označiti kao poslano.
+      admin_log:
+        csv_datum:
+          import: '%{user_name} uvezao je %{imported_count} zapisa popisa'
+          delete: '%{user_name} izbrisao je zapis popisa s e-poštom %{resource_email}'
+          create: '%{user_name} stvorio je novi zapis popisa s e-poštom %{resource_email}'
+          update: '%{user_name} ažurirao je zapis popisa s e-poštom %{resource_email}'
+      sms:
+        authorizations:
+          update:
+            error: Vaš kod se ne podudara s našim. Provjerite SMS koji smo vam poslali.
+            success: Čestitamo. Uspješno ste provjereni.
+          edit:
+            send: Potvrdi
+            confirm_destroy: Jeste li sigurni da želite poništiti kod za provjeru?
+            resend: Niste primili kod za provjeru?
+            title: Unesite kod za provjeru koji ste primili
+            destroy: Poništi kod za provjeru
+          new:
+            title: Zatražite svoj kod za provjeru
+            send: Pošalji mi SMS
+          destroy:
+            success: Kod za provjeru uspješno poništen. Ponovno unesite broj mobitela.
+          create:
+            success: Hvala! Poslali smo SMS na vaš mobitel.
+            error: Došlo je do problema s vašim zahtjevom.
+      dummy_authorization:
+        extra_explanation:
+          user_postal_codes:
+            one: Sudjelovanje je ograničeno na sudionike s poštanskim brojem %{postal_codes}, a vaš poštanski broj je %{user_postal_code}.
+            other: 'Sudjelovanje je ograničeno na sudionike s nekim od sljedećih poštanskih brojeva: %{postal_codes}. Vaš poštanski broj je %{user_postal_code}.'
+          postal_codes:
+            other: 'Sudjelovanje je ograničeno na sudionike s nekim od sljedećih poštanskih brojeva: %{postal_codes}.'
+            one: Sudjelovanje je ograničeno na sudionike s poštanskim brojem %{postal_codes}.
+      errors:
+        wrong_number_columns: Očekivano je %{expected} stupaca, ali je pronađeno %{actual}.
+        invalid_emails: 'Sljedeće adrese e-pošte su nevažeće: %{invalid_emails}.'
+        no_emails: Datoteka mora sadržavati e-pošte
+    events:
+      verifications:
+        verify_with_managed_user:
+          email_subject: Neuspjeli pokušaj provjere s podacima drugog sudionika
+          notification_title: Sudionik <a href="%{resource_path}">%{resource_title}</a> pokušao je provjeriti se podacima drugog sudionika (%{managed_user_name}).
+          email_outro: Provjerite popis sukoba provjera i kontaktirajte sudionika.
+          email_intro: Sudionik je pokušao provjeriti se s podacima drugog sudionika (%{managed_user_name}).
+    authorization_handlers:
+      admin:
+        ephemeral_dummy_authorization_handler:
+          help:
+          - Primjer privremenog handlera autorizacije.
+          - Kopija primjera autorizacije.
+          - Ovjerite se unošenjem broja dokumenta koji završava s "X".
+        csv_census:
+          help:
+          - Administratori učitavaju CSV s e-poštama prihvaćenih sudionika.
+          - Samo sudionici s e-poštom u toj CSV datoteci mogu biti provjereni.
+        id_documents:
+          help:
+          - Korisnici ispunjavaju podatke o identitetu i učitavaju kopiju dokumenta.
+          - Vi ispunjavate informacije prisutne na učitanoj slici.
+          - Informacije trebaju odgovarati onome što je korisnik ispunio.
+          - Ako ne možete jasno vidjeti informaciju, možete odbiti zahtjev.
+        dummy_authorization_handler:
+          help:
+          - Primjer handlera autorizacije za programere.
+          - Ovjerite se unošenjem broja dokumenta koji završava s "X".
+        another_dummy_authorization_handler:
+          help:
+          - Primjer handlera autorizacije za programere.
+          - Namijenjen programerima za razumijevanje implementacije vlastitog sustava provjere.
+          - Ovjerite se unošenjem broja putovnice koji počinje s "A".
+        postal_letter:
+          help:
+          - Sudionici traže kod za provjeru koji se šalje na njihovu adresu.
+          - Vi šaljete pismo s kodom na njihovu adresu.
+          - Označite pismo kao poslano.
+          - Nakon označavanja, sudionik može unijeti kod i biti provjeren.
+        default:
+          help:
+          - Pomoć za handler autorizacije nije definirana.
+          - Programer treba definirati pomoć u ključu "%{authorization_handler}"
+        sms:
+          help:
+          - Sudionici traže kod za provjeru koji se šalje na njihov mobitel.
+          - Moraju unijeti kod za provjeru.
+          - Ako ne prime kod, mogu ga ponovno zatražiti.
+      direct: Izravno
+      csv_census:
+        explanation: Ovjerite se koristeći popis (census) organizacije.
+        name: Popis organizacije
+      postal_letter:
+        explanation: Poslat ćemo vam pismo s kodom koji ćete morati unijeti.
+        name: Kod putem poštanskog pisma
+      id_documents:
+        explanation: Učitajte svoje identitetske dokumente kako bismo provjerili vaš identitet.
+        name: Identitetski dokumenti
+      multistep: Više koraka
+      help: Pomoć
+      name: Naziv
+    admin:
+      menu:
+        authorization_revocation:
+          info: Ukupno je %{count} provjerenih sudionika.
+          button_before: Opozovi prije datuma
+          destroy:
+            confirm_all: Opoziv svih autorizacija ne može se poništiti. Jeste li sigurni?
+            confirm: Opoziv autorizacija prije datuma ne može se poništiti. Jeste li sigurni?
+          before_date_info: Korisno ako je proces već započeo i želite opozvati dopuštenja prethodnog procesa.
+          title: Opoziv autorizacija
+          no_data: Nema provjerenih sudionika.
+          destroy_nok: Došlo je do problema prilikom opoziva autorizacija.
+          destroy_ok: Opoziv autorizacija je u tijeku. Može potrajati nekoliko minuta.
+          button: Opozovi sve
+        authorization_workflows: Autorizacije
+    admin_log:
+      organization:
+        update_id_documents_config: '%{user_name} ažurirao je konfiguraciju autorizacije identitetskim dokumentima'
+      user:
+        grant_id_documents_offline_verification: '%{user_name} provjerio je %{resource_name} izvanmrežnom autorizacijom identitetskim dokumentima'
+  activemodel:
+    attributes:
+      config:
+        offline: Izvanmrežno
+        offline_explanation: Upute za izvanmrežnu provjeru
+        available_methods: Dostupne metode
+        online: Mrežno
+      authorization:
+        verification_attachment: Prilog za provjeru
+      census_data:
+        file: Datoteka
+      id_document_upload:
+        document_number: Broj dokumenta (sa slovom)
+        user: Sudionik
+        verification_attachment: Skenirana kopija vašeg dokumenta
+        document_type: Vrsta vašeg dokumenta
+      postal_letter_postage:
+        full_address: Puna adresa
+        verification_code: Kod za provjeru
+      id_document_information:
+        document_number: Broj dokumenta (sa slovom)
+        document_type: Vrsta dokumenta
+      postal_letter_address:
+        full_address: Puna adresa
+      confirmation:
+        verification_code: Kod za provjeru
+      offline_confirmation:
+        email: E-pošta sudionika
+      mobile_phone:
+        mobile_phone_number: Broj mobitela
+      postal_letter_confirmation:
+        verification_code: Kod za provjeru
+    errors:
+      models:
+        census_data:
+          attributes:
+            file:
+              malformed: Neispravna datoteka za uvoz, provjerite da je UTF-8 kodirana.
+  errors:
+    messages:
+      uppercase_only_letters_numbers: mora biti velikim slovima i sadržavati samo slova i/ili brojeve

@@ -1,1 +1,337 @@
+---
 hr:
+  decidim:
+    elections:
+      admin:
+        dashboard:
+          results:
+            start_question_button: Omogući glasovanje
+            title: Rezultati
+            results_availability:
+              after_end: Sve rezultate možete objaviti nakon završetka izbora.
+              per_question: Morate omogućiti glasovanje i ručno objaviti rezultate za svako pitanje.
+              real_time: Rezultati se prikazuju automatski tijekom izbora.
+            publish_button: Objavi rezultate
+            not_started: Izbori još nisu započeli.
+            per_question_waiting: Glasovanje još nije omogućeno ni za jedno pitanje.
+          status:
+            results_availability:
+              real_time: Rezultati dostupni u stvarnom vremenu
+              after_end: Rezultati dostupni nakon završetka izbora
+              per_question: Rezultati dostupni po pitanju
+            census: 'Popis:'
+            title: Status izbora
+          questions_table:
+            percentage: Postotak
+            answer: Odgovori
+            votes_count:
+              one: 1 glas
+              other: '%{count} glasova'
+            votes: Glasovi
+            total: Ukupno
+          questions:
+            title: Pitanja
+            limit_info: Ovi izbori imaju više pitanja. Pregled je ograničen na 3 pitanja.
+            labels:
+              answers: Odgovori
+          calendar:
+            end_at: 'Vrijeme završetka:'
+            title: Kalendar
+            end_election: Završi izbore
+            start_at: 'Vrijeme početka:'
+            published_results_at: Rezultati objavljeni
+            manual_start: Ručno
+            start_election: Započni izbore
+          main:
+            labels:
+              image: Galerija slika
+              title: Naslov
+              calendar: Kalendar
+              results: Dostupnost rezultata
+              description: Opis
+            title: Glavno
+          publish_confirm: Jeste li sigurni da želite objaviti ove izbore?
+          census:
+            title: Popis birača
+        statuses:
+          end:
+            invalid: Došlo je do problema prilikom završetka izbora.
+            success: Izbori uspješno završeni.
+          publish_results:
+            success: Rezultati uspješno objavljeni.
+            invalid: Došlo je do problema prilikom objave rezultata.
+          enable_voting:
+            invalid: Došlo je do problema prilikom omogućavanja glasovanja.
+            success: Glasovanje uspješno omogućeno.
+          unknown: Nepoznat status
+          start:
+            invalid: Došlo je do problema prilikom početka izbora.
+            success: Izbori uspješno započeti.
+        elections:
+          new:
+            title: Novi izbori
+          form:
+            attachment_legend: Dodaj galeriju slika (opcionalno)
+            results_availability:
+              real_time: U stvarnom vremenu
+              per_question_help: ručno upravljajte glasovanjem i objavom rezultata
+              real_time_help: automatski objavljujte rezultate tijekom izbora
+              after_end: Nakon završetka izbora
+              per_question: Pitanje po pitanje
+              title: Dostupnost rezultata
+              after_end_help: objavite rezultate kada izbori završe
+            add_images: Dodaj slike
+            end_at: Vrijeme završetka
+            start_at: Vrijeme početka
+            calendar: Kalendar
+            publish: Objavi
+            calendar_description: Provjerite je li vremenska zona organizacije točna.
+            save: Spremi i nastavi
+            basic_title: Osnovne informacije
+            edit_attachments: Uredi privitke
+            manual_start: Ručni početak
+          update:
+            success: Izbori uspješno ažurirani.
+            invalid: Došlo je do problema prilikom ažuriranja izbora.
+          publish:
+            success: Izbori uspješno objavljeni.
+            invalid: Došlo je do problema prilikom objavljivanja izbora.
+          create:
+            invalid: Došlo je do problema prilikom stvaranja izbora.
+            success: Izbori uspješno stvoreni.
+          edit:
+            title: Uredi izbore
+          unpublish:
+            success: Objava izbora uspješno povučena.
+            invalid: Došlo je do problema prilikom povlačenja objave.
+          index:
+            title: Izbori
+          manage_trash:
+            title: Izbrisani izbori
+          dashboard:
+            title: Nadzorna ploča
+            subtitle: 'Zadnji korak: Pregledajte detalje. Izdanja su moguća prije objave.'
+        questions:
+          form:
+            errors:
+              at_least_one_question: Potrebno je barem jedno pitanje.
+            form_description: Pitanje mora imati barem dva odgovora za nastavak.
+          edit_questions:
+            new_question: Novo pitanje
+            remove_question_confirm: Jeste li sigurni da želite ukloniti ovo pitanje?
+            title: Pitanja
+          update:
+            success: Pitanja uspješno ažurirana.
+            invalid: Došlo je do problema prilikom ažuriranja pitanja.
+        census:
+          edit:
+            created_at: Stvoreno
+            identifier: Identifikator korisnika
+            choose_census: Odaberite vrstu popisa za ove izbore
+          update:
+            success: Popis uspješno ažuriran.
+            error: Došlo je do pogreške prilikom generiranja ili spremanja popisa.
+          preview:
+            title:
+              other: Popis pregleda ograničen je na %{count} zapisa.
+              one: Popis pregleda ograničen je na %{count} zapis.
+      admin_log:
+        election:
+          restore: '%{user_name} vratio je izbore %{resource_name} u %{space_name}'
+          soft_delete: '%{user_name} premjestio je izbore %{resource_name} u koš'
+          publish: '%{user_name} objavio je izbore %{resource_name} u %{space_name}'
+          unpublish: '%{user_name} povukao je objavu izbora %{resource_name} u %{space_name}'
+          update: '%{user_name} ažurirao je izbore %{resource_name} u %{space_name}'
+          create: '%{user_name} stvorio je izbore %{resource_name} u %{space_name}'
+        question:
+          update: '%{user_name} ažurirao je pitanja izbora %{resource_name}'
+      censuses:
+        internal_users:
+          sign_in_description: Prijavite se za glasovanje na ovim izborima
+          already_have_an_account?: Već imate račun?
+          info_html: 'Sudjelovanje možete ograničiti na sudionike s autorizacijom.<br>
+
+            Ostavljanje svih okvira praznim omogućit će glasovanje svakom registriranom.
+
+            '
+          label: Registrirani sudionici (dinamično)
+          internal_type_title: Dodatne potrebne autorizacije za glasovanje (opcionalno)
+          are_you_new?: Novi sudionik?
+          sign_up_description: Stvorite račun za glasovanje na ovim izborima
+        token_csv_form:
+          token: Token
+          token_placeholder: Unesite token birača
+          invalid: E-pošta ili token nije valjan.
+          email: E-pošta
+          email_placeholder: Unesite adresu e-pošte birača
+        token_csv:
+          info_html: 'Mora biti CSV datoteka s dva stupca — e-poštom i tokenom.
+
+            Moraju biti odvojeni točkom-zarezom (;)
+
+            '
+          label: Neregistrirani sudionici s tokenima (fiksno)
+          example: 'email;token
+
+            user@example.org;123456
+
+            user2@example.org;ABCXYZ
+
+            '
+          upload_new_census: Učitaj CSV datoteku
+          remove_before_upload: Za učitavanje novog popisa prvo uklonite postojeći.
+          upload_file: Učitaj datoteku
+        census_size_html:
+          one: Trenutno je <strong>1</strong> osoba s pravom glasa na ovim izborima.
+          other: Trenutno je <strong>%{count}</strong> osoba s pravom glasa na ovim izborima.
+        internal_users_form:
+          resume_with_method: Nastavi provjeru s %{name}
+          invalid: Niste ovlašteni glasati na ovim izborima.
+          authorization_options_invalid: Nažalost, iako imate sve potrebne autorizacije, neke nisu važeće za ove izbore.
+          exit_button: Izađi iz glasačke kabine
+          verify_with_method: Provjeri s %{name}
+        census_ready_html: Podaci popisa učitani su i pripremljeni za izbore <b>%{election_title}</b>.
+      elections:
+        filters:
+          state: Status
+          state_values:
+            ongoing: U tijeku
+            finished: Završeno
+            scheduled: Zakazano
+          all: Sve
+        show:
+          votes_count:
+            one: 1 glas
+            other: '%{count} glasova'
+          active_voting_until: 'Aktivno glasovanje do: %{end_date}'
+          edit_vote_button: Uredi glas
+          voting_began: 'Glasovanje je počelo: %{start_date}'
+          voted: Već ste glasali. Možete ponovno glasati, brojati će se samo zadnji glas.
+          vote_button: Glasaj
+        vote_results:
+          total: 'UKUPNO:'
+          subtitle:
+            per_question: Rezultati su dostupni po pitanju.
+            real_time: Rezultati su dostupni u stvarnom vremenu.
+            after_end: Izbori su završeni. Sada možete vidjeti rezultate.
+          total_votes:
+            one: 1 glas
+            other: '%{count} glasova'
+          title: Rezultati
+        elections:
+          empty_filters: Nema izbora koji odgovaraju vašim filtrima.
+          empty: Nema dostupnih izbora.
+        count:
+          elections_count:
+            one: '%{count} izbori'
+            other: '%{count} izbora'
+        orders:
+          start_at: Datum početka
+          end_at: Datum završetka
+          recent: Nedavno
+          label: Poredaj po
+        questions:
+          title: Pitanja izbora
+          subtitle: 'Ovo su pitanja za ovaj glasački proces:'
+      actions:
+        new: Novi izbori
+        title: Radnje
+        edit: Uredi izbore
+        view_deleted_elections: Pogledaj izbrisane izbore
+        confirm_delete_election: Jeste li sigurni da želite izbrisati ove izbore?
+        preview: Pregled
+        deleted_election_info: Izbrisani izbori nisu prikazani na popisu.
+        view: Pogledaj izbore
+        confirm_unpublish_election: Jeste li sigurni da želite povući objavu ovih izbora?
+      votes:
+        check_census:
+          access: Pristup
+          election_not_open: Izbori još nisu otvoreni.
+          failed: Vaš identitet nije moguće provjeriti.
+          invalid: Korisnik nije pronađen na popisu.
+          form_title: Provjerite svoj identitet
+        receipt:
+          edit_vote: Uredi svoj glas
+          description: Možete ponovno glasati dok je glasovanje otvoreno. Prethodni glas bit će zamijenjen.
+          exit_button: Izađi iz glasačke kabine
+          title: Vaši glasovi uspješno su dani
+        not_authorized: Niste ovlašteni glasati na ovim izborima.
+        confirm:
+          not_answered: Niste odgovorili na ovo pitanje.
+          title: Potvrdite svoj glas
+          edit_vote: Uredi svoj glas
+          cast_vote: Glasaj
+        cast:
+          success: Vaš glas uspješno je dan.
+          invalid: Došlo je do problema prilikom glasovanja. Provjerite informacije i pokušajte ponovno.
+        question:
+          cast_vote: Glasaj
+          back: Natrag
+          next: Sljedeće
+      status:
+        finished: Završeno
+        scheduled: Zakazano
+        active: Aktivno
+        not_started: Nije započeto
+        published_results: Objavljeni rezultati
+        ongoing: U tijeku
+        unpublished: Neobjavljeno
+        voting_enabled: Glasovanje u tijeku
+      per_question_votes:
+        waiting:
+          edit_vote: Uredite svoj glas
+          title: Čekanje sljedećeg pitanja
+          description: Ovdje možete čekati dok sljedeće pitanje ne postane dostupno.
+          exit_button: Izađi iz čekaonice
+      models:
+        election:
+          fields:
+            status: Status
+            start_at: Vrijeme početka
+            census: Popis birača
+            title: Naslov
+            end_at: Vrijeme završetka
+    admin:
+      tooltips:
+        edit_elections_info: Nije moguće urediti ove izbore
+        deleted_elections_info: Nije moguće izbrisati ove izbore
+      menu:
+        elections_menu:
+          election_dashboard: Nadzorna ploča
+          basic_elections: Glavno
+          election_questions: Pitanja
+          election_census: Popis birača
+    statistics:
+      elections_count: Izbori
+    components:
+      elections:
+        actions:
+          destroy: Izbriši
+          create: Stvori
+          update: Ažuriraj
+        settings:
+          global:
+            announcement: Obavijest
+          step:
+            announcement: Obavijest
+        name: Izbori
+    metadata:
+      progress:
+        published_results: 'Rezultati objavljeni: %{end_date}'
+  activerecord:
+    models:
+      decidim/elections/election:
+        other: Izbori
+        one: Izbori
+  time:
+    formats:
+      short_with_time: '%b %-d, %Y, %-I:%M %p'
+  layouts:
+    decidim:
+      election_votes_header:
+        exit: Zatvori
+  activemodel:
+    attributes:
+      token_csv:
+        remove_all: Ukloni sve trenutne podatke popisa
+        file: Datoteka

@@ -1,5 +1,2294 @@
 ---
 hr:
+  emojis:
+    skins:
+      '4': Srednje
+      '2': Svijetlo
+      '3': Srednje svijetlo
+      '1': Zadano
+      '6': Tamno
+      choose: Odaberite zadani ton kože
+      '5': Srednje tamno
+    pick: Odaberite emotikon…
+    categories:
+      nature: Životinje i priroda
+      frequent: Često korišteno
+      custom: Prilagođeno
+      people: Smješki i ljudi
+      symbols: Simboli
+      activity: Aktivnost
+      flags: Zastave
+      search: Rezultati pretrage
+      foods: Hrana i piće
+      objects: Predmeti
+      places: Putovanja i mjesta
+    search_no_results_1: O ne!
+    search: Pretraga
+    button: Dodaj emotikon
+    search_no_results_2: Taj emotikon nije pronađen
+    add_custom: Dodaj prilagođeni emotikon
+  decidim:
+    events:
+      amendments:
+        amendment_accepted:
+          affected_user:
+            email_intro: 'Amandman je prihvaćen za %{amendable_title}. Možete ga vidjeti na ovoj stranici:'
+            email_subject: Prihvaćeni amandman za %{amendable_title} autora %{emendation_author_name}
+            email_outro: Ovu ste obavijest primili jer ste autor sadržaja %{amendable_title}.
+            notification_title: <a href="%{emendation_path}">Amandman</a> koji je izradio <a href="%{emendation_author_path}">%{emendation_author_name}</a> prihvaćen je za <a href="%{amendable_path}">%{amendable_title}</a>.
+          follower:
+            notification_title: <a href="%{emendation_path}">Amandman</a> koji je izradio <a href="%{emendation_author_path}">%{emendation_author_name}</a> prihvaćen je za <a href="%{amendable_path}">%{amendable_title}</a>.
+            email_outro: Ovu ste obavijest primili jer pratite %{amendable_title}. Obavijesti možete prestati primati putem prethodne poveznice.
+            email_subject: Prihvaćeni amandman za %{amendable_title} autora %{emendation_author_name}
+            email_intro: 'Amandman je prihvaćen za %{amendable_title}. Možete ga vidjeti na ovoj stranici:'
+        amendment_created:
+          follower:
+            email_outro: Ovu ste obavijest primili jer pratite %{amendable_title}. Obavijesti možete prestati primati putem prethodne poveznice.
+            email_subject: Novi amandman za %{amendable_title}
+            notification_title: Izrađen je novi amandman za <a href="%{amendable_path}">%{amendable_title}</a>.
+            email_intro: 'Izrađen je novi amandman za %{amendable_title}. Možete ga vidjeti na ovoj stranici:'
+          affected_user:
+            email_intro: 'Izrađen je novi amandman za %{amendable_title}. Možete ga vidjeti na ovoj stranici:'
+            email_subject: Novi amandman za %{amendable_title}
+            email_outro: Ovu ste obavijest primili jer ste autor sadržaja %{amendable_title}.
+            notification_title: Izrađen je novi amandman za <a href="%{amendable_path}">%{amendable_title}</a>.
+        amendment_promoted:
+          follower:
+            email_intro: 'Odbijeni amandman za %{amendable_title} objavljen je kao novi %{amendable_type}. Možete ga vidjeti na ovoj stranici:'
+            email_subject: Amandman autora %{emendation_author_name} objavljen je kao novi %{amendable_type}
+            email_outro: Ovu ste obavijest primili jer pratite %{amendable_title}. Obavijesti možete prestati primati putem prethodne poveznice.
+            notification_title: <a href="%{emendation_path}">Odbijeni amandman</a> za <a href="%{amendable_path}">%{amendable_title}</a> objavljen je kao novi %{amendable_type} od strane <a href="%{emendation_author_path}">%{emendation_author_name}</a>.
+          affected_user:
+            email_outro: Ovu ste obavijest primili jer ste autor sadržaja %{amendable_title}.
+            email_intro: 'Odbijeni amandman za %{amendable_title} objavljen je kao novi %{amendable_type}. Možete ga vidjeti na ovoj stranici:'
+            email_subject: Amandman autora %{emendation_author_name} objavljen je kao novi %{amendable_type}
+            notification_title: <a href="%{emendation_path}">Odbijeni amandman</a> za <a href="%{amendable_path}">%{amendable_title}</a> objavljen je kao novi %{amendable_type} od strane <a href="%{emendation_author_path}">%{emendation_author_name}</a>.
+        emendation_promoted:
+          follower:
+            email_outro: Ovu ste obavijest primili jer ste autor sadržaja %{amendable_title}.
+            email_subject: Izmjena autora %{emendation_author_name} objavljena je kao novi %{amendable_type}
+            email_intro: 'Izmjena je objavljena za %{amendable_title}. Možete je vidjeti na ovoj stranici:'
+        amendment_rejected:
+          affected_user:
+            email_outro: Ovu ste obavijest primili jer ste autor sadržaja %{amendable_title}.
+            notification_title: <a href="%{emendation_path}">Amandman</a> koji je izradio <a href="%{emendation_author_path}">%{emendation_author_name}</a> odbijen je za <a href="%{amendable_path}">%{amendable_title}</a>.
+            email_subject: Odbijeni amandman za %{amendable_title} autora %{emendation_author_name}
+            email_intro: 'Amandman je odbijen za %{amendable_title}. Možete ga vidjeti na ovoj stranici:'
+          follower:
+            email_intro: 'Amandman je odbijen za %{amendable_title}. Možete ga vidjeti na ovoj stranici:'
+            notification_title: <a href="%{emendation_path}">Amandman</a> koji je izradio <a href="%{emendation_author_path}">%{emendation_author_name}</a> odbijen je za <a href="%{amendable_path}">%{amendable_title}</a>.
+            email_outro: Ovu ste obavijest primili jer pratite %{amendable_title}. Obavijesti možete prestati primati putem prethodne poveznice.
+            email_subject: Odbijeni amandman za %{amendable_title} autora %{emendation_author_name}
+      users:
+        user_officialized:
+          email_outro: Ovu ste obavijest primili jer ste administrator organizacije.
+          email_intro: Sudionik %{name} je ovjeren.
+          notification_title: Sudionik %{name} je ovjeren.
+          email_subject: '%{name} je ovjeren'
+        profile_updated:
+          email_intro: <a href="%{resource_url}">Stranica profila</a> korisnika %{name}, kojeg pratite, ažurirana je.
+          notification_title: <a href="%{resource_path}">Stranica profila</a> korisnika %{name}, kojeg pratite, ažurirana je.
+          email_outro: Ovu ste obavijest primili jer pratite %{name}. Obavijesti možete prestati primati putem prethodne poveznice.
+          email_subject: '%{name} je ažurirao svoj profil'
+      reports:
+        parent_hidden:
+          notification_title: 'Vaš %{resource_type} više nije vidljiv.<br>
+
+            To se dogodilo jer je prijedlog, sastanak, rasprava ili komentar na koji ste odgovorili moderiran. Ako ponovno postane dostupan, vaš će komentar biti automatski vraćen.
+
+            <i>%{resource_content}</i>'
+          email_subject: Vaš %{resource_type} više nije vidljiv
+          email_outro: Ovu ste obavijest primili jer ste autor zahvaćenog sadržaja %{resource_type}.
+          email_intro: 'Vaš %{resource_type} više nije vidljiv.<br>
+
+            To se dogodilo jer je prijedlog, sastanak, rasprava ili komentar na koji ste odgovorili moderiran. Ako ponovno postane dostupan, vaš će komentar biti automatski vraćen.'
+        resource_hidden:
+          email_subject: Vaš %{resource_type} je uklonjen
+          notification_title: 'Administrator je uklonio vaš %{resource_type} jer je prijavljen kao %{report_reasons}.</br>
+
+            <i>%{resource_content}</i>'
+          email_outro: Ovu ste obavijest primili jer ste autor uklonjenog sadržaja.
+          email_intro: Administrator je uklonio vaš %{resource_type} jer je prijavljen kao %{report_reasons}.
+      attachments:
+        attachment_created:
+          notification_title: <a href="%{resource_path}">Novi dokument</a> dodan je u <a href="%{attached_to_url}">%{resource_title}</a>
+          email_intro: 'Novi dokument dodan je u %{resource_title}. Možete ga vidjeti na ovoj stranici:'
+          email_subject: Ažuriranje za %{resource_title}
+          email_outro: Ovu ste obavijest primili jer pratite %{resource_title}. Obavijesti možete prestati primati putem prethodne poveznice.
+      components:
+        component_published:
+          notification_title: Komponenta %{resource_title} sada je aktivna za <a href="%{resource_path}">%{participatory_space_title}</a>
+          email_subject: Ažuriranje za %{participatory_space_title}
+          email_outro: Ovu ste obavijest primili jer pratite %{participatory_space_title}. Obavijesti možete prestati primati putem prethodne poveznice.
+          email_intro: 'Komponenta %{resource_title} sada je aktivna za %{participatory_space_title}. Možete je vidjeti na ovoj stranici:'
+      notification_event:
+        notification_title: Dogodio se događaj vezan uz <a href="%{resource_path}">%{resource_title}</a>.
+      gamification:
+        badge_earned:
+          email_intro: Čestitamo! Zaradili ste <a href="%{resource_url}">značku %{badge_name}</a> (razina %{current_level}).
+          email_subject: 'Zaradili ste novu značku: %{badge_name}!'
+          notification_title: Čestitamo! Zaradili ste <a href="%{resource_path}">značku %{badge_name}</a> (razina %{current_level}).
+          email_outro: Ovu ste obavijest primili jer ste bili aktivni na našoj web stranici.
+        level_up:
+          email_subject: Dosegli ste razinu %{current_level} na znački %{badge_name}!
+          email_outro: Ovu ste obavijest primili jer ste bili aktivni na našoj web stranici.
+          notification_title: Čestitamo! Dosegli ste razinu %{current_level} na <a href="%{resource_path}">znački %{badge_name}</a>!
+          email_intro: Čestitamo! Dosegli ste razinu %{current_level} na <a href="%{resource_url}">znački %{badge_name}</a>!
+      resource_liked:
+        email_intro: '%{liker_name}, kojeg pratite, upravo je označio sviđanje za "%{resource_title}" i mislimo da bi vam moglo biti zanimljivo. Pogledajte i pridonesite:'
+        email_subject: '%{liker_name} je izvršio novo sviđanje'
+        notification_title: <a href="%{resource_path}">%{resource_title}</a> %{resource_type} označio je sviđanjem <a href="%{liker_path}">%{liker_name}</a>.
+        email_outro: Ovu ste obavijest primili jer pratite %{liker_name}. Obavijesti možete prestati primati putem prethodne poveznice.
+      resources:
+        soft_deleted:
+          notification_title: Administrator je izbrisao vaš "%{resource_type}" "%{resource_title}".
+      nickname_event:
+        notification_body: Ispravili smo način korištenja nadimaka kako ne bi bilo duplikata, i zato smo uklonili pravilo o razlikovanju velikih i malih slova. <br/> Vaš nadimak stvoren je nakon drugog s istim nazivom, pa smo ga automatski preimenovali. Možete ga promijeniti u <a href="%{link_to_account_settings}">postavkama svog računa</a>.
+      email_event:
+        email_intro: 'Došlo je do ažuriranja sadržaja "%{resource_title}". Možete ga vidjeti na ovoj stranici:'
+        email_subject: Ažuriranje za %{resource_title}
+        email_outro: Ovu ste obavijest primili jer pratite "%{resource_title}". Možete ga prestati pratiti putem prethodne poveznice.
+        email_greeting: Pozdrav %{user_name},
+    newsletters:
+      unsubscribe:
+        subscription_preferences: Ažurirali smo vaše postavke pretplate i više nećete primati biltene od %{organization_name}.
+        unsubscribe: Odjava od biltena
+        token_error: Poveznica je istekla.
+        error: Došlo je do problema prilikom odjave.
+        check_subscription_html: Ako ih ponovno želite početi primati, pretplatu možete ponovno omogućiti bilo kada na <a href="%{link}" target="_blank">stranici postavki</a>.
+        success: Uspješno ste odjavljeni.
+    errors:
+      files:
+        not_inside_organization: Datoteka nije povezana ni s jednom organizacijom.
+        file_cannot_be_processed: Datoteka se ne može obraditi
+        file_resolution_too_large: Razlučivost datoteke je prevelika
+      internal_server_error:
+        copy_to_clipboard: Kopiraj u međuspremnik
+        url: URL
+        try_later: Molimo pokušajte ponovno kasnije. Ako se pogreška ponovi, kopirajte sljedeće informacije i pošaljite ih održavateljima platforme zajedno s drugim informacijama koje želite podijeliti.
+        request_method: Metoda zahtjeva
+        date_and_time: Datum i vrijeme
+        copy_error_message_clarification: Kopiraj poruku o pogrešci u međuspremnik
+        title: Došlo je do problema s našim poslužiteljem
+        unknown: Nepoznato
+        copied: Tekst kopiran!
+        reference: Referenca
+        user: ID korisnika
+      not_found:
+        back_home: Natrag na naslovnicu
+        content_doesnt_exist: Ova adresa je netočna ili je uklonjena.
+        title: Stranica koju tražite ne može se pronaći
+    download_your_data:
+      show:
+        expired: Već isteklo
+        request_data: Zatraži
+        action: Radnja
+        type: Vrsta preuzimanja
+        expiration: Istek
+        download: Preuzmi datoteku
+        explanation:
+          body_1: Ove datoteke su skupovi podataka izvezeni iz vaše aktivnosti na ovoj platformi, poput prijedloga ili komentara. Pružaju sirove, strukturirane podatke koji se mogu koristiti za analizu, istraživanje ili integraciju s drugim alatima
+          title: Što su ove datoteke?
+          body_2: Ove datoteke su u CSV (Comma-Separated Values) formatu, široko korištenom formatu datoteka koji se može otvarati i obrađivati raznim softverskim aplikacijama, uključujući programe za proračunske tablice, uređivače teksta i alate za analizu podataka.
+        download_your_data: Osobni podaci
+        download_data_description_1: Ovdje možete pronaći sva dostupna preuzimanja za svoj račun. Ove .zip datoteke bit će dostupne dva tjedna prije brisanja.
+        download_data: Preuzimanje podataka
+        files_to_download: Datoteke za preuzimanje
+        download_data_description_2: Možete zatražiti .zip datoteku sa svojim objavama i osobnim podacima.
+      help:
+        users:
+          reset_password_sent_at: Datum i vrijeme kada je ponovno postavljanje lozinke poslano
+          confirmed_at: Datum i vrijeme kada je ovaj korisnik potvrđen
+          invitation_sent_at: Datum i vrijeme kada je pozivnica poslana
+          notifications_sending_frequency: Učestalost obavijesti koje ovaj korisnik prima
+          password_updated_at: Datum kada je njihova lozinka zadnji put promijenjena
+          updated_at: Datum i vrijeme kada je ovaj korisnik zadnji put ažuriran
+          current_sign_in_ip: IP adresa trenutne prijave
+          invitation_created_at: Datum i vrijeme kada je ovaj korisnik pozvan
+          roles: Uloga koju ovaj korisnik ima, ako je ima
+          deleted_at: Datum i vrijeme kada je ovaj korisnik izbrisan
+          officialized_at: Datum i vrijeme kada je ovaj korisnik ovjeren
+          unconfirmed_email: Adresa e-pošte koju ovaj korisnik još nije potvrdio
+          officialized_as: Naziv ovjere (vijećnik, gradonačelnik itd.)
+          personal_url: Osobni URL ovog korisnika
+          delete_reason: Razlog naveden za brisanje ovog korisnika
+          notification_settings: Postavke obavijesti koje je ovaj korisnik odabrao
+          name: Ime ovog korisnika
+          invitations_count: Broj pozivnica poslanih ovom korisniku
+          id: Jedinstveni identifikator ovog korisnika
+          organization: Organizacija kojoj ovaj korisnik pripada
+          nickname: Nadimak ovog korisnika
+          type: Vrsta koju ovaj korisnik ima
+          locale: Jezik koji je ovaj korisnik odabrao
+          accepted_tos_version: Datum kada je korisnik prihvatio Uvjete korištenja ove platforme
+          current_sign_in_at: Datum i vrijeme trenutne prijave
+          newsletter_notifications_at: Datum i vrijeme kada se ovaj sudionik pretplatio na bilten
+          email: Adresa e-pošte ovog korisnika
+          admin: Je li ovaj korisnik administrator
+          invited_by: Korisnik koji je pozvao ovog korisnika
+          created_at: Datum i vrijeme kada je ovaj korisnik stvoren
+          last_sign_in_at: Datum i vrijeme prethodne prijave
+          followers_count: Broj sudionika koji prate ovog korisnika
+          last_sign_in_ip: IP adresa prethodne prijave
+          following_count: Broj sudionika koje ovaj korisnik prati
+          sign_in_count: Broj puta kada se ovaj korisnik prijavio
+          confirmation_sent_at: Datum i vrijeme kada je potvrda poslana
+          invitation_accepted_at: Datum i vrijeme kada je pozivnica prihvaćena
+          about: Opis profila ovog sudionika
+          remember_created_at: Datum i vrijeme kada je korisnik odabran da bude zapamćen
+          managed: Je li ovim korisnikom upravlja drugi korisnik
+        core:
+          description: Ovo su datoteke s osobnim podacima, doprinosima i aktivnostima korisnika %{user_name}
+          title: Preuzmite svoje podatkovne datoteke od %{organization}
+        participatory_space_private_users:
+          published: Je li ovaj privatni korisnik objavljen ili ne
+          id: Jedinstveni identifikator ovog privatnog korisnika
+          updated_at: Datum i vrijeme zadnjeg ažuriranja ovog privatnog korisnika
+          created_at: Datum i vrijeme stvaranja ovog privatnog korisnika
+          privatable_to: Kojem prostoru pripada ovaj privatni korisnik
+          role: Uloga koju ovaj privatni korisnik ima
+        notifications:
+          resource_type: Vrsta resursa na koji se obavijest odnosi
+          event_name: Naziv događaja koji je pokrenuo obavijest
+          event_class: Klasa događaja koji je pokrenuo obavijest
+          updated_at: Datum i vrijeme kada je obavijest zadnji put ažurirana
+          extra: Dodatne informacije ove obavijesti
+          id: Jedinstveni identifikator ove obavijesti
+          created_at: Datum i vrijeme kada je obavijest stvorena
+        reports:
+          locale: Jezik ove prijave
+          created_at: Datum i vrijeme kada je ova prijava stvorena
+          id: Jedinstveni identifikator ove prijave
+          moderation: Moderacija koju ova prijava ima
+          details: Detalji ove prijave
+          updated_at: Datum i vrijeme kada je ova prijava zadnji put ažurirana
+          reason: Razlog ove prijave
+        identities:
+          id: Jedinstveni identifikator ovog identiteta
+          provider: Pružatelj ovog identiteta
+          updated_at: Datum i vrijeme kada je identitet zadnji put ažuriran
+          uid: Jedinstveni identifikator ovog identiteta
+          created_at: Datum i vrijeme kada je identitet stvoren
+          user: Korisnik kojem ovaj identitet pripada
+        messaging_conversations:
+          messages: Poruke ovog razgovora
+          id: Jedinstveni identifikator za ovaj razgovor
+          created_at: Datum kada je ovaj razgovor stvoren
+          updated_at: Datum kada je ovaj razgovor zadnji put ažuriran
+        follows:
+          created_at: Datum i vrijeme kada je praćenje stvoreno
+          updated_at: Datum i vrijeme kada je praćenje zadnji put ažurirano
+          followable: Resurs ili prostor koji se prati
+          id: Jedinstveni identifikator ovog praćenja
+      export:
+        ready: Spremno
+    admin_log:
+      user:
+        bulk_unblock: '%{user_name} odblokirao je %{unblocked_count} korisnika'
+        unblock: '%{user_name} odblokirao je korisnika %{resource_name}'
+        bulk_block: '%{user_name} blokirao je %{blocked_count} korisnika'
+        remove_from_admin: '%{user_name} uklonio je sudionika %{resource_name} s ulogom: %{role}'
+        bulk_ignore: '%{user_name} poništio je prijave za %{unreported_users_count} korisnika'
+        promote: '%{user_name} promaknuo je %{resource_name}'
+        show_email: '%{user_name} dohvatio je e-poštu sudionika %{resource_name}'
+        transfer: '%{user_name} prenio je sudionika %{resource_name}'
+        block: '%{user_name} blokirao je korisnika %{resource_name}'
+        unofficialize: '%{user_name} poništio je ovjeru sudionika %{resource_name}'
+        invite: '%{user_name} pozvao je sudionika %{resource_name} s ulogom: %{role}'
+        officialize: '%{user_name} ovjerio je sudionika %{resource_name}'
+      area_type:
+        update: '%{user_name} ažurirao je vrstu područja %{resource_name}'
+        delete: '%{user_name} izbrisao je vrstu područja %{resource_name}'
+        create: '%{user_name} stvorio je vrstu područja %{resource_name}'
+      taxonomy_filter:
+        delete_with_filter_info: '%{user_name} izbrisao je filtar %{resource_name} temeljen na taksonomiji "%{taxonomy_name}" s %{filter_items_count} stavki'
+        delete: '%{user_name} izbrisao je filtar %{resource_name}'
+        create_with_filter_info: '%{user_name} stvorio je filtar %{resource_name} temeljen na taksonomiji "%{taxonomy_name}" s %{filter_items_count} stavki'
+        create: '%{user_name} stvorio je filtar %{resource_name}'
+        update: '%{user_name} ažurirao je filtar %{resource_name}'
+        update_with_filter_info: '%{user_name} ažurirao je filtar %{resource_name} temeljen na taksonomiji "%{taxonomy_name}" s %{filter_items_count} stavki'
+      newsletter:
+        create: '%{user_name} stvorio je bilten %{resource_name}'
+        delete: '%{user_name} izbrisao je bilten %{resource_name}'
+        update: '%{user_name} ažurirao je bilten %{resource_name}'
+        deliver: '%{user_name} dostavio je bilten %{resource_name}'
+      scope:
+        update_with_parent: '%{user_name} ažurirao je opseg %{resource_name} unutar opsega %{parent_scope}'
+        create: '%{user_name} stvorio je opseg %{resource_name}'
+        create_with_parent: '%{user_name} stvorio je opseg %{resource_name} unutar opsega %{parent_scope}'
+        update: '%{user_name} ažurirao je opseg %{resource_name}'
+        delete_with_parent: '%{user_name} izbrisao je opseg %{resource_name} unutar opsega %{parent_scope}'
+        delete: '%{user_name} izbrisao je opseg %{resource_name}'
+      attachment_collection:
+        delete: '%{user_name} izbrisao je kolekciju privitaka %{resource_name}'
+        update: '%{user_name} ažurirao je kolekciju privitaka %{resource_name}'
+        create: '%{user_name} stvorio je kolekciju privitaka %{resource_name}'
+      component:
+        soft_delete: '%{user_name} premjestio je u koš komponentu %{resource_name} u prostoru %{space_name}'
+        delete: '%{user_name} uklonio je komponentu %{resource_name} iz prostora %{space_name}'
+        publish: '%{user_name} objavio je komponentu %{resource_name} u prostoru %{space_name}'
+        create: '%{user_name} dodao je komponentu %{resource_name} u prostor %{space_name}'
+        update_permissions_with_space: '%{user_name} ažurirao je dopuštenja za %{resource_name} u %{space_name}'
+        unpublish: '%{user_name} povukao je objavu komponente %{resource_name} iz prostora %{space_name}'
+        restore: '%{user_name} vratio je komponentu %{resource_name} u prostor %{space_name}'
+        export_component: '%{user_name} izvezao je %{resource_name} %{component_name} u %{space_name} kao %{format_name}'
+      user_group:
+        block: '%{user_name} blokirao je grupu korisnika %{resource_name}'
+        bulk_unblock: '%{user_name} odblokirao je %{unblocked_count} korisnika'
+        unblock: '%{user_name} odblokirao je grupu korisnika %{resource_name}'
+        verify: '%{user_name} ovjerio je grupu %{resource_name}'
+        reject: '%{user_name} odbio je provjeru grupe %{resource_name}'
+        verify_via_csv: '%{user_name} ovjerio je grupu %{resource_name} putem CSV datoteke'
+        bulk_ignore: '%{user_name} poništio je prijave za %{unreported_users_count} korisnika'
+        bulk_block: '%{user_name} blokirao je %{blocked_count} korisnika'
+      oauth_application:
+        create: '%{user_name} stvorio je OAuth aplikaciju %{resource_name}'
+        update: '%{user_name} ažurirao je OAuth aplikaciju %{resource_name}'
+        delete: '%{user_name} izbrisao je OAuth aplikaciju %{resource_name}'
+      user_moderation:
+        unreport: '%{user_name} poništio je prijavu za %{resource_type} - %{unreported_user_name}'
+      attachment:
+        update: '%{user_name} ažurirao je privitak %{resource_name}'
+        delete: '%{user_name} izbrisao je privitak %{resource_name}'
+        create: '%{user_name} stvorio je privitak %{resource_name}'
+      share_token:
+        delete_with_space: '%{user_name} izbrisao je pristupnu poveznicu za %{resource_name} u %{space_name}'
+        create_with_space: '%{user_name} stvorio je pristupnu poveznicu za %{resource_name} u %{space_name}'
+        update_with_space: '%{user_name} ažurirao je pristupnu poveznicu za %{resource_name} u %{space_name}'
+        delete: '%{user_name} izbrisao je pristupnu poveznicu u %{space_name}'
+        update: '%{user_name} ažurirao je pristupnu poveznicu u %{space_name}'
+        create: '%{user_name} stvorio je pristupnu poveznicu u %{space_name}'
+      scope_type:
+        update: '%{user_name} ažurirao je vrstu opsega %{resource_name}'
+        delete: '%{user_name} izbrisao je vrstu opsega %{resource_name}'
+        create: '%{user_name} stvorio je vrstu opsega %{resource_name}'
+      taxonomy:
+        create: '%{user_name} stvorio je taksonomiju %{resource_name}'
+        delete: '%{user_name} izbrisao je taksonomiju %{resource_name}'
+        update_with_parent: '%{user_name} ažurirao je taksonomiju %{resource_name} unutar taksonomije %{parent_taxonomy}'
+        update: '%{user_name} ažurirao je taksonomiju %{resource_name}'
+        create_with_parent: '%{user_name} stvorio je taksonomiju %{resource_name} unutar taksonomije %{parent_taxonomy}'
+        delete_with_parent: '%{user_name} izbrisao je taksonomiju %{resource_name} unutar taksonomije %{parent_taxonomy}'
+      moderation:
+        bulk_unhide: '%{user_name} otkrio je %{reported_count} resursa'
+        unreport: '%{user_name} poništio je prijavu resursa vrste %{resource_type} u prostoru %{space_name}'
+        bulk_unreport: '%{user_name} poništio je prijave za %{reported_count} resursa'
+        bulk_hide: '%{user_name} sakrio je %{reported_count} resursa'
+        hide: '%{user_name} sakrio je resurs vrste %{resource_type} u prostoru %{space_name}'
+      area:
+        update: '%{user_name} ažurirao je područje %{resource_name}'
+        create: '%{user_name} stvorio je područje %{resource_name}'
+        delete: '%{user_name} izbrisao je područje %{resource_name}'
+      category:
+        update: '%{user_name} ažurirao je kategoriju %{resource_name} u prostoru %{space_name}'
+        create: '%{user_name} dodao je kategoriju %{resource_name} u prostor %{space_name}'
+        delete: '%{user_name} izbrisao je kategoriju %{resource_name} iz prostora %{space_name}'
+      organization:
+        update: '%{user_name} ažurirao je postavke organizacije'
+        update_external_domain: '%{user_name} ažurirao je vanjske domene organizacije'
+      static_page:
+        create: '%{user_name} stvorio je statičku stranicu %{resource_name}'
+        delete: '%{user_name} izbrisao je statičku stranicu %{resource_name}'
+        update: '%{user_name} ažurirao je statičku stranicu %{resource_name}'
+      impersonation_log:
+        manage: '%{user_name} upravljao je %{resource_name} jer %{reason}'
+      contextual_help_section:
+        update: '%{user_name} ažurirao je odjeljak pomoći %{resource_name}'
+      helpers:
+        answers: odgovori
+        comments: komentari
+        projects: projekti
+        results: rezultati
+      participatory_space_private_user:
+        create: '%{user_name} pozvao je %{resource_name} da bude privatni sudionik'
+        delete: '%{user_name} uklonio je sudionika %{resource_name} kao privatnog sudionika'
+        create_via_csv: '%{user_name} putem CSV-a pozvao je %{resource_name} da bude privatni sudionik'
+    messaging:
+      conversations:
+        add_conversation_users:
+          participant_with_disabled_message_reception: Ovaj sudionik ne želi primati privatne poruke.
+          add_max_users: 'Dodaj korisnike u razgovor: najviše 9 korisnika'
+          participants:
+            title: Sudionici
+          add_users_placeholder: Pretraži...
+          no_results: Nema rezultata
+          modal_title: Novi razgovor
+        index:
+          new_conversation: Novi razgovor
+          next: Sljedeće
+          no_conversations: Još nemate razgovora.
+          title: Razgovori
+        error_modal:
+          correct_errors: Ispravite pogreške i pokušajte ponovno.
+          ok: U redu
+          intro: 'Došlo je do sljedećih pogrešaka u vašoj poruci:'
+        show:
+          title: Razgovor s %{usernames}
+          back: Natrag na sve razgovore
+          not_allowed: Ovaj sudionik ne prihvaća izravne poruke.
+          deleted_accounts: Ne možete voditi razgovor s izbrisanim računima.
+          chat_with: Razgovor s
+        update:
+          error: Poruka nije poslana zbog pogreške.
+        create:
+          error: Razgovor nije započet. Pokušajte ponovno kasnije.
+        reply_form:
+          placeholder: Vaš odgovor...
+          send: Pošalji
+        start:
+          placeholder: Vaša poruka...
+          send: Pošalji
+      conversation_mailer:
+        new_message:
+          greeting: Pozdrav, %{recipient}!
+          intro: '%{sender} je objavio nove poruke u vašem razgovoru. Kliknite ovdje da ih vidite:'
+          subject: Imate nove poruke od %{sender}
+          outro: Uživajte na platformi!
+        new_conversation:
+          subject: '%{sender} je započeo razgovor s vama'
+          intro: '%{sender} je započeo novi razgovor s vama. Kliknite ovdje da ga vidite:'
+          outro: Uživajte na platformi!
+          greeting: Pozdrav, %{recipient}!
+    gamification:
+      badges:
+        index:
+          how: Kako je možete zaraditi
+          title: Značke
+          badge_title: Značka %{name}
+          page_description: Značke su priznanja za radnje i napredak sudionika na platformi. Kako počnete otkrivati, sudjelovati i komunicirati na platformi, zaradit ćete različite značke. Ovdje je popis znački i neki načini na koje ih možete zaraditi.
+        followers:
+          description_another: Ovaj sudionik ima %{score} pratitelja.
+          description_own: '%{score} ljudi vas prati.'
+          conditions:
+          - Ako budete aktivni i pratite druge ljude, i drugi će ljudi sigurno pratiti vas.
+          unearned_own: Još nemate pratitelja.
+          next_level_in: Pridobijte još %{score} pratitelja kako biste dosegli sljedeću razinu!
+          description: Ova značka dodjeljuje se kada dosegnete određeni broj pratitelja. %{organization_name} je društvena i politička mreža, ispletite svoju mrežu za komunikaciju s drugim ljudima na platformi.
+          name: Pratitelji
+          unearned_another: Ovaj sudionik još nema pratitelja.
+      reached_top: Dosegli ste najvišu razinu za ovu značku.
+      title: Što su značke?
+      level: Razina %{level}
+      description: Značke su priznanja za radnje i napredak sudionika na platformi. Kako počnete otkrivati, sudjelovati i komunicirati na platformi, zaradit ćete različite značke.
+      all_badges_link: Pogledajte sve dostupne značke.
+    authorization_handlers:
+      ephemeral_dummy_authorization_handler:
+        fields:
+          allowed_postal_codes: Dopušteni poštanski brojevi (odvojeni zarezima)
+          postal_code: Poštanski broj
+          document_number: Broj dokumenta
+        name: Privremena ogledna autorizacija
+        explanation: Ovjerite se unošenjem broja dokumenta koji završava s "X".
+      dummy_authorization_handler:
+        explanation: Ovjerite se unošenjem broja dokumenta koji završava s "X".
+        name: Ogledna autorizacija
+        fields:
+          allowed_postal_codes: Dopušteni poštanski brojevi (odvojeni zarezima)
+          document_number: Broj dokumenta
+          postal_code: Poštanski broj
+      another_dummy_authorization_handler:
+        fields:
+          postal_code: Poštanski broj
+          passport_number: Broj putovnice
+        name: Još jedna ogledna autorizacija
+        explanation: Ovjerite se unošenjem broja putovnice koji počinje s "A".
+      sms:
+        name: Kod putem SMS-a
+        explanation: Pošaljite svoj broj mobitela kako bismo provjerili vaš identitet.
+      errors:
+        duplicate_authorization: Sudionik je već ovjeren s istim podacima. Administrator će vas kontaktirati kako bi provjerio vaše podatke.
+      dummy_authorization_workflow:
+        explanation: Ogledni postupak autorizacije
+        name: Ogledni postupak autorizacije
+      foo_authorization:
+        fields:
+          foo: Foo
+          bar: Bar
+        name: Foo autorizacija
+      started_at: Započeta %{timestamp}
+      expires_at: Ističe %{timestamp}
+      expired_at: Istekla %{timestamp}
+      granted_at: Dodijeljena %{timestamp}
+    core:
+      application_helper:
+        filter_scope_values:
+          all: Sve
+        filter_taxonomy_values:
+          all: Sve
+        filter_area_values:
+          all: Sve
+      actions:
+        login_before_access: Molimo prijavite se sa svojim računom prije pristupa.
+        unauthorized: Niste ovlašteni za izvršavanje ove radnje.
+    newsletter_templates:
+      image_text_cta_settings_form:
+        cta_text: Tekst gumba za poziv na akciju
+        main_image: Glavna slika
+        introduction: Uvod
+        cta_url: URL gumba za poziv na akciju
+        body: Tijelo
+        interpolations_hint: 'Savjet: Možete koristiti "%{name}" bilo gdje u uvodu, tijelu, tekstu poziva na akciju ili predmetu i bit će zamijenjeno imenom primatelja.'
+      image_text_cta:
+        introduction_preview: 'Dummy text for introduction: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla nisl tellus. Donec sed mi dui. Sed efficitur libero a felis tempor sollicitudin. Nullam vestibulum fringilla felis, id efficitur lorem sagittis et. Vivamus aliquam maximus velit vel dapibus. Mauris pellentesque, enim eu varius lacinia, risus ante rutrum ipsum, non lobortis augue lorem quis urna. Aenean et malesuada arcu.'
+        body_preview: 'Dummy text for body: Maecenas ac nisl vitae lectus pretium facilisis. Etiam facilisis sem nibh, sit amet rutrum mi aliquam nec. Sed id urna at nisl pretium mollis eu vel velit. Proin vitae suscipit urna, sed faucibus urna. Pellentesque id libero vulputate ipsum scelerisque suscipit. Nam aliquam sodales mi sit amet cursus. Donec mattis faucibus purus. Aenean tincidunt porta lorem ac commodo. Vestibulum in mollis mi. Morbi eros erat, cursus ut tortor sit amet, imperdiet dapibus arcu. Suspendisse id egestas enim. In eget magna sed enim efficitur elementum sit amet aliquam quam. Donec fermentum metus eget urna luctus pulvinar.'
+        name: Slika, tekst i gumb za poziv na akciju
+        cta_text_preview: Tekst poziva na akciju
+      basic_only_text_settings_form:
+        body: Tijelo
+        interpolations_hint: 'Savjet: Možete koristiti "%{name}" bilo gdje u tijelu ili predmetu i bit će zamijenjeno imenom primatelja.'
+      basic_only_text:
+        body_preview: 'Dummy text for body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla nisl tellus. Donec sed mi dui. Sed efficitur libero a felis tempor sollicitudin. Nullam vestibulum fringilla felis, id efficitur lorem sagittis et. Vivamus aliquam maximus velit vel dapibus. Mauris pellentesque, enim eu varius lacinia, risus ante rutrum ipsum, non lobortis augue lorem quis urna. Aenean et malesuada arcu.'
+        name: Osnovno (samo tekst)
+    reported_mailer:
+      hidden_manually:
+        subject: Resurs je skrio %{moderator}
+        hello: Pozdrav %{name},
+        participatory_space: Participativni prostor
+        content: Prijavljeni sadržaj
+        reason: Razlog
+        details: Detalji
+        report_html: <p>Sljedeći <a href="%{url}">sadržaj</a> skrio je %{moderator}.</p>
+        manage_moderations: Upravljaj moderacijama
+      report:
+        details: Detalji
+        report_html: <p>Sljedeći <a href="%{url}">sadržaj</a> je prijavljen.</p>
+        see_report: Pogledaj prijavu
+        participatory_space: Participativni prostor
+        reason: Razlog
+        date: Prijavljeno
+        subject: Resurs je prijavljen
+        authors: Autori
+        content_original_language: Izvorni jezik sadržaja
+        content: Prijavljeni sadržaj
+        hello: Pozdrav %{name},
+        id: ID
+      hidden_automatically:
+        hello: Pozdrav %{name},
+        manage_moderations: Upravljaj moderacijama
+        reason: Razlog
+        participatory_space: Participativni prostor
+        report_html: <p>Sljedeći <a href="%{url}">sadržaj</a> automatski je skriven.</p>
+        details: Detalji
+        content: Prijavljeni sadržaj
+        subject: Resurs je automatski skriven
+    shared:
+      flag_user_modal:
+        hide: Sakrij sav njihov sadržaj
+        does_not_belong: Sadrži nezakonite aktivnosti, prijetnje samoubojstvom, osobne podatke ili nešto drugo što mislite da ne pripada na %{organization_name}.
+        title: Prijavi neprikladnog sudionika
+        report: Prijavi
+        description: Što je neprikladno u vezi s ovim sudionikom?
+        already_reported: Ovaj sadržaj je već prijavljen i pregledat će ga administrator.
+        offensive: Sadrži rasizam, seksizam, uvrede, osobne napade, prijetnje smrću, zahtjeve za samoubojstvom ili bilo koji oblik govora mržnje.
+        spam: Sadrži clickbait, oglašavanje, prijevare ili skriptne botove.
+        block: Blokiraj ovog sudionika
+      confirm_modal:
+        ok: U redu
+        close_modal: Zatvori prozor
+        cancel: Otkaži
+        title: Potvrdi
+      filter_form_help:
+        help: Obrazac u nastavku dinamički filtrira rezultate pretrage kada se promijene uvjeti pretrage.
+        skip: Preskoči na rezultate
+      share_modal:
+        copy_share_link_clarification: Kopiraj poveznicu za dijeljenje u međuspremnik
+        share_to: Podijeli na %{service}
+        share_link: Poveznica za dijeljenje
+        copy_share_link_message: Poveznica je uspješno kopirana u međuspremnik.
+        copy_share_link_copied: Kopirano!
+        share: Podijeli
+        copy_share_link_cta: Ili kopiraj poveznicu
+        copy_share_link: Kopiraj
+      flag_modal:
+        title: Prijavi neprikladan sadržaj
+        description: Je li ovaj sadržaj neprikladan?
+        hide: Sakrij
+        hide_content: Sakrij ovaj sadržaj
+        offensive: Sadrži rasizam, seksizam, uvrede, osobne napade, prijetnje smrću, zahtjeve za samoubojstvom ili bilo koji oblik govora mržnje.
+        reason: Razlog
+        close: Zatvori
+        already_reported: Ovaj sadržaj je već prijavljen i pregledat će ga administrator.
+        report: Prijavi
+        does_not_belong: Sadrži nezakonite aktivnosti, prijetnje samoubojstvom, osobne podatke ili nešto drugo što mislite da ne pripada na %{organization_name}.
+        spam: Sadrži clickbait, oglašavanje, prijevare ili skriptne botove.
+      login_modal:
+        please_log_in: Molimo prijavite se
+        sign_up: Stvori račun
+      reference:
+        reference: 'Referenca: %{reference}'
+      results_per_page:
+        label: 'Rezultata po stranici:'
+        title: Odaberite broj rezultata po stranici
+      floating_help:
+        help: Pomoć
+      embed:
+        title: Ugrađeni video sadržaj
+      progress: Napredak
+      public_participation:
+        public_participation: Javno prikaži moje prisustvo
+      confirm_unload: Ova stranica sadrži nespremljene promjene. Jeste li sigurni da želite napustiti ovu stranicu?
+      follow_button:
+        log_in_before_follow: Molimo prijavite se prije izvršavanja ove radnje
+      mentions_modal:
+        remove_recipient: Ukloni primatelja %{name}
+    forms:
+      upload:
+        labels:
+          save: Spremi
+          validating: Provjera...
+          remove: Ukloni
+          uploaded: Učitano
+          add_image: Dodaj sliku
+          title_required: Naslov je obavezan!
+          file_size_too_large: 'Veličina datoteke je prevelika! Maksimalna veličina datoteke: %{megabytes}MB'
+          edit_image: Uredi sliku
+          add_file: Dodaj datoteku
+          validation_error: Pogreška provjere! Provjerite ima li datoteka dopušteni nastavak ili veličinu.
+          error: Pogreška!
+          filename: Naziv datoteke
+          title: Naslov
+          replace: Zamijeni
+          add_attachment: Dodaj privitak
+        select_file: Odaberi datoteku
+      file_help:
+        import_file:
+          explanation: 'Smjernice za datoteku uvoza:'
+          message_1: Mora biti JSON dokument preuzet putem značajke izvoza.
+        icon:
+          explanation: 'Smjernice za ikonu:'
+          message_2: Preporučena veličina za ovu sliku je 512x512.
+          message_1: Mora biti kvadratna slika.
+        file:
+          message_2: Ako je slika, po mogućnosti vodoravna slika bez teksta. Platforma obrezuje sliku.
+          message_1: Mora biti slika ili dokument.
+          explanation: 'Smjernice za datoteku:'
+        image:
+          message_2: Usluga obrezuje sliku.
+          message_1: Po mogućnosti vodoravna slika bez teksta.
+          explanation: 'Smjernice za sliku:'
+      file_validation:
+        allowed_file_extensions: 'Dopušteni nastavci datoteka: %{extensions}'
+        max_file_dimension: 'Maksimalne dimenzije datoteke: %{resolution} piksela'
+        max_file_size: 'Maksimalna veličina datoteke: %{megabytes}MB'
+      errors:
+        error: U ovom polju postoji pogreška.
+        decidim/user:
+          password: Lozinka je prekratka.
+          password_confirmation: Potvrda lozinke mora odgovarati lozinki.
+      upload_help:
+        dropzone: Ispustite datoteke ovdje ili kliknite gumb za prijenos
+        explanation: Smjernice za %{attribute}
+      attachment_link:
+        explanation: Smjernice za poveznice privitaka
+        help_messages:
+        - Prihvaćaju se samo ispravni formati URL-a.
+        - Imajte na umu da poveznice moraju biti javne kako bi im svi sudionici mogli pristupiti.
+      files:
+        extension_allowlist: 'Prihvaćeni formati: %{extensions}'
+    notifications:
+      show:
+        deleted: Sadržaj je autor izbrisao.
+        missing_event: Ups, ova obavijest pripada stavci koja više nije dostupna. Možete je odbaciti.
+        not_available: Ups, ova obavijest pripada stavci koja više nije dostupna. Možete je odbaciti.
+        moderated: Sadržaj je skriven moderacijom.
+      action_error: Došlo je do problema prilikom ažuriranja postavki obavijesti.
+      no_notifications: Još nema obavijesti.
+    pad_iframe:
+      pad: Ploha
+      disclaimer: Sadržaj ove plohe napisali su registrirani korisnici i izražava njihova mišljenja. %{organization} ne može biti odgovorna za njen sadržaj.
+      explanation: Koristite ovu plohu za suradničko bilježenje tijekom sastanka kako bi kasnije bilo lakše napisati zapisnik.
+    user_group_mailer:
+      notify_user_group_patched:
+        instructions_2_html: Postavite novu adresu e-pošte i lozinku.
+        subject: Važno ažuriranje u vezi s vašim profilom Grupe
+        body_2_html: Kao dio naših napora za pojednostavljenje i poboljšanje iskustva organizacija poput vaše, ukidamo značajku "Grupe korisnika". Vaša Grupa, <strong>%{name}</strong>, pretvorena je u običan račun.
+        greeting: Poštovani %{name},
+        instructions_title_html: <strong>Što trebate učiniti</strong>
+        instructions_1_html: 'Koristite sljedeće privremene vjerodajnice za prijavu: <br><br> Korisničko ime: <strong>%{email}</strong> <br> Lozinka: <strong>%{password}</strong><br><br>'
+        body_1_html: Javljamo vam se kako bismo vas obavijestili o važnom ažuriranju u vezi s vašim profilom Grupe na %{organization_name}.
+        body_3_html: Za nastavak pristupa vašem računu i dijeljenje pristupa, trebate postaviti novu e-poštu i lozinku. Imajte na umu da će svaki član vaše grupe primiti ovu e-poštu. Kako biste osigurali nastavak pristupa, morat ćete se interno dogovoriti o zajedničkim vjerodajnicama (e-pošta i lozinka) koje će svi koristiti.
+        instructions_3_html: Podijelite odabrane vjerodajnice za prijavu sa svojim kolegama kako bi cijela grupa mogla nastaviti pristupati računu.
+      notify_deprecation_to_member:
+        instructions_2: Ako ne, jedan od vaših kolega koji ima pristup morat će postaviti lozinku i podijeliti vjerodajnice za prijavu s vama.
+        instructions_title: <strong>Što to znači za vas</strong>
+        subject: Važno ažuriranje u vezi s vašim profilom Grupe
+        body_2: Kao dio naših napora za pojednostavljenje iskustva organizacija, značajka "Grupe korisnika" se ukida. Vaš profil Grupe sada je pretvoren u običan profil sudionika.
+        instructions_intro: Članovi grupe sada će dijeliti pristup ovom profilu koristeći zajedničke vjerodajnice za prijavu (e-pošta i lozinka). Poslali smo upute na %{email} za postavljanje nove lozinke za profil.
+        greeting: Poštovani %{name},
+        instructions_1: Ako imate pristup tom računu e-pošte, provjerite svoju pristiglu poštu za upute.
+        body_1: 'Javljamo vam se kako bismo vas obavijestili o važnom ažuriranju Grupe korisnika čiji ste član: <strong>%{group_name}</strong>.'
+      notify_deprecation_to_owner:
+        subject: Važno ažuriranje u vezi s vašim profilom Grupe
+        greeting: Poštovani %{name},
+        instructions_2: 'Podijelite vjerodajnice za prijavu (e-pošta: %{email} i nova lozinka) sa svojim kolegama.'
+        body_1: Javljamo vam se kako bismo vas obavijestili o važnom ažuriranju u vezi s vašim profilom Grupe na %{organization_name}.
+        instructions_1: 'Kliknite poveznicu u nastavku za postavljanje lozinke:'
+        body_3: Za nastavak pristupa vašem računu i dijeljenje pristupa, trebamo postaviti lozinku. Nakon što je postavite, vjerodajnice za prijavu (e-poštu i lozinku) možete podijeliti s bilo kim.
+        instructions_title: <strong>Što trebate učiniti</strong>
+        set_password: Postavite lozinku
+        body_2: Kao dio naših napora za pojednostavljenje i poboljšanje iskustva organizacija poput vaše, ukidamo značajku "Grupe korisnika". Vaša Grupa, <strong>%{name}</strong>, pretvorena je u običan račun.
+    open_data:
+      index:
+        how_to:
+          step_2:
+            title: 2. Otvorite datoteke
+            body_html: "<ul>\n  <li><b>Aplikacije za proračunske tablice</b>: CSV datoteke možete otvoriti aplikacijama poput Microsoft Excela, Google Sheetsa ili LibreOffice Calca. Jednostavno otvorite aplikaciju, zatim odaberite \"Otvori\" iz izbornika Datoteka i odaberite preuzetu CSV datoteku.</li>\n  <li><b>Uređivači teksta</b>: CSV datoteke mogu se otvoriti i u bilo kojem uređivaču teksta, poput Notepada ili Sublime Texta. To će prikazati sirove podatke, gdje svaki redak predstavlja red, a svaka vrijednost odvojena je zarezom.</li>\n  <li><b>Alati za analizu podataka</b>: Ako poznajete alate za analizu podataka poput Pythona (s pandas), R ili SQL baza podataka, možete izravno uvesti ove CSV datoteke za obradu i analizu.</li>\n</ul>"
+          step_3:
+            body_html: "<ul>\n  <li><b>Filtriranje i sortiranje</b>: U aplikacijama za proračunske tablice možete filtrirati i sortirati podatke kako biste se usredotočili na specifične podskupove informacija.</li>\n  <li><b>Analiza</b>: Koristite podatke za razne analize, poput brojanja prijedloga, analize trendova u komentarima ili procjene sudjelovanja na sastancima.</li>\n  <li><b>Vizualizacija</b>: Možete izraditi grafikone i druge vizualizacije za tumačenje podataka.</li>\n</ul>"
+            title: 3. Rad s podacima
+          step_1:
+            title: 1. Preuzmite datoteke
+            body_html: Kliknite na poveznice u nastavku za preuzimanje CSV datoteka na svoje računalo.
+          title: Kako otvoriti i raditi s ovim datotekama
+        license:
+          title: Licenca
+          license_database_link: https://opendatacommons.org/licenses/odbl/1.0/
+          license_contents_link: https://opendatacommons.org/licenses/dbcl/1.0/
+          license_contents_name: Licenca sadržaja baze podataka
+          license_database_name: Otvorena licenca baze podataka
+          body_1_html: Ova baza podataka %{organization_name} dostupna je pod %{link_database}. Sva prava na pojedinačne sadržaje baze licencirana su pod %{link_contents}.
+        download_resource: Preuzmite %{resource_name} u CSV formatu
+        detailed:
+          body_1: 'U nastavku je opis svakog skupa podataka, uključujući njegovu shemu (strukturu) i vrstu informacija koje sadrži:'
+          title: Detaljno objašnjenje svake datoteke
+          spaces: Participativni prostori
+          components: Komponente
+        download_open_data: Preuzmite sve Open Data datoteke
+        explanation:
+          body_2: Ove datoteke su u CSV (Comma-Separated Values) formatu, široko korištenom formatu datoteka koji se može otvarati i obrađivati raznim softverskim aplikacijama, uključujući programe za proračunske tablice, uređivače teksta i alate za analizu podataka.
+          title: Što su ove datoteke?
+          body_1: Ove datoteke su skupovi podataka izvezeni iz participativnih procesa %{organization_name}, poput prijedloga, komentara i sastanaka. Pružaju sirove, strukturirane podatke koji se mogu koristiti za analizu, istraživanje ili integraciju s drugim alatima. Podaci se automatski ažuriraju svaka 24 sata, osiguravajući pristup najnovijim informacijama.
+        download:
+          spaces: Participativni prostori
+          core: Jezgra
+          title: Preuzmite resurse
+          components: Komponente
+        description: Dobrodošli na Open Data stranicu %{organization_name}. Ovdje ćete pronaći podatkovne datoteke koje se redovito generiraju iz različitih deliberativnih i upravljačkih procesa unutar %{organization_name}. Ove datoteke dostupne su radi promicanja transparentnosti, pristupačnosti i suradnje. U nastavku ćete pronaći detaljne informacije o tome što su ove datoteke, kako ih otvoriti i raditi s njima te opis sadržaja i strukture svake datoteke.
+        title: Open Data
+      help:
+        taxonomies:
+          parent_id: Jedinstveni identifikator roditelja ove taksonomije (ako postoji)
+          created_at: Datum kada je ova taksonomija stvorena
+          updated_at: Datum kada je ova taksonomija zadnji put ažurirana
+          filters_count: Broj filtara koji koriste ovu taksonomiju
+          weight: Redoslijed kojim se ova taksonomija prikazuje
+          filter_items_count: Broj filtara stavki koji koriste ovu taksonomiju
+          is_root: True ako ova taksonomija nema roditelja
+          part_of: Koristi se za otkrivanje je li ova taksonomija dio druge taksonomije
+          children_count: Broj djece koju ova taksonomija ima
+          taxonomizations_count: Broj resursa koji koriste ovu taksonomiju
+          name: Naziv ove taksonomije
+          id: Jedinstveni identifikator ove taksonomije
+        moderated_users:
+          about: Polje "o meni" korisnika
+          user_id: Jedinstveni ID prijavljenog korisnika
+          details: Detalji prijava
+          blocking_user: Ime korisnika koji je izvršio blokiranje
+          block_reasons: Razlog zbog kojeg je administrator blokirao korisnika
+          blocked_at: Datum i vrijeme kada je korisnik blokiran
+          reasons: Popis razloga zašto je profil prijavljen
+        users:
+          name: Ime ovog korisnika
+          avatar_url: Avatar korisnika
+          id: Jedinstveni identifikator ovog korisnika
+          deleted: Je li korisnik izbrisan ili ne
+          groups: ID i naziv grupe korisnika
+          profile_url: URL profila
+          nickname: Nadimak ovog korisnika
+          about: Opis profila ovog sudionika
+          direct_messages_enabled: Dopušta li korisnik izravne poruke
+          badge: Značka korisnika
+        moderations:
+          hidden_at: Datum i vrijeme kada je sadržaj skriven
+          reportable_id: Jedinstveni ID prijavljivog sadržaja
+          reports: Popis razloga zbog kojih je resurs prijavljen
+          id: Jedinstveni identifikator moderacije
+          reported_url: URL prijavljenog resursa
+          report_count: Broj puta koliko je prijavljen
+          reported_content: Sadržaj koji je prijavljen
+          reportable_type: Vrsta prijavljivog sadržaja
+        core:
+          resources:
+            other: '%{count} resursa'
+            one: '%{count} resurs'
+          description: Ovo su datoteke s osobnim podacima, doprinosima i aktivnostima korisnika %{user_name}
+          generated_on_date: Generirano %{date}
+          components: Komponente
+          title: Preuzmite svoje podatkovne datoteke od %{organization}
+          main: Jezgra
+          spaces: Prostori
+      not_available_yet: Open Data datoteke još nisu dostupne, pokušajte ponovno za nekoliko minuta.
+    log:
+      value_types:
+        taxonomy_presenter:
+          not_found: 'Taksonomija nije pronađena u bazi podataka (ID: %{id})'
+        area_presenter:
+          not_found: 'Područje nije pronađeno u bazi podataka (ID: %{id})'
+        scope_type_presenter:
+          not_found: 'Vrsta opsega nije pronađena u bazi podataka (ID: %{id})'
+        area_type_presenter:
+          not_found: 'Vrsta područja nije pronađena u bazi podataka (ID: %{id})'
+        scope_presenter:
+          not_found: 'Opseg nije pronađen u bazi podataka (ID: %{id})'
+      base_presenter:
+        update_filters: '%{user_name} ažurirao je filtre za %{resource_name}'
+        unpublish_with_space: '%{user_name} povukao je objavu %{resource_name} iz %{space_name}'
+        update_permissions_with_space: '%{user_name} ažurirao je dopuštenja za %{resource_name} u %{space_name}'
+        create: '%{user_name} stvorio je %{resource_name}'
+        update_filters_with_space: '%{user_name} ažurirao je filtre za %{resource_name} u %{space_name}'
+        delete: '%{user_name} izbrisao je %{resource_name}'
+        delete_with_space: '%{user_name} izbrisao je %{resource_name} u %{space_name}'
+        publish_with_space: '%{user_name} objavio je %{resource_name} u %{space_name}'
+        update: '%{user_name} ažurirao je %{resource_name}'
+        create_with_space: '%{user_name} stvorio je %{resource_name} u %{space_name}'
+        unknown_action_with_space: '%{user_name} izvršio je neku radnju na %{resource_name} u %{space_name}'
+        publish: '%{user_name} objavio je %{resource_name}'
+        unknown_action: '%{user_name} izvršio je neku radnju na %{resource_name}'
+        update_with_space: '%{user_name} ažurirao je %{resource_name} u %{space_name}'
+    doorkeeper:
+      authorizations:
+        new:
+          wants_to_use_your_account_html: '%{application_name} želi koristiti vaš račun'
+          connect_your_account_html: Povežite svoj račun prijavom u %{organization}.
+          this_application_will_not_be_able_to: 'Ova aplikacija neće moći:'
+          this_application_will_be_able_to: 'Ova aplikacija će moći:'
+          see_username: Vidi vaš nadimak
+          publish_content: Objavljuje sadržaj za vas
+          see_email: Vidi vašu e-poštu
+          update_profile: Ažurira vaš profil
+          by_organization_link_html: od %{link}
+          cancel: Otkaži
+          authorize: Ovlasti aplikaciju
+          api_read: Čitajte sadržaj putem API-ja
+          see_name: Vidi vaše ime
+    notifications_settings:
+      show:
+        push_notifications: Push obavijesti
+        direct_messages: Primaj izravne poruke od bilo koga
+        assigned_to_proposal: Želim primiti e-poštu kada mi netko dodijeli prijedlog za procjenu
+        update_notifications_settings: Spremi promjene
+        everything_followed: Sve što pratim
+        allow_public_contact: Dopusti bilo kome da mi pošalje izravnu poruku, čak i ako ih ne pratim.
+        own_activity: Moja vlastita aktivnost, poput kada netko komentira moj prijedlog ili me spomene
+        administrators: Administratori
+        email_on_moderations: Želim primiti e-poštu svaki put kada se nešto ili netko prijavi za moderaciju.
+        notifications_sending_frequencies:
+          weekly: Tjedno
+          real_time: U stvarnom vremenu
+          none: Nema
+          daily: Dnevno
+        newsletters: Bilteni
+        notifications_sending_frequency: Koliko često želite primati e-poštu s obavijestima?
+        allow_push_notifications: Primajte push obavijesti kako biste znali što se događa kada niste na platformi. Možete ih isključiti bilo kada.
+        evaluators: Procjenitelji
+        newsletter_notifications: Želim primati biltene
+        push_notifications_reminder: Kako biste primali obavijesti s platforme, prvo ih morate dopustiti u postavkama preglednika.
+        notification_settings:
+          close_meeting_reminder: Želim primati podsjetnike e-poštom o neobjavljenim izvještajima zatvorenih sastanaka
+        receive_notifications_about: Želim primati obavijesti o
+        push_notifications_unsupported_browser: Vaš preglednik nije podržan.
+      update:
+        error: Došlo je do problema prilikom ažuriranja postavki obavijesti.
+        success: Postavke obavijesti uspješno su ažurirane.
+    export_mailer:
+      download_your_data_export:
+        download: Preuzmi
+        click_button_html: Kliknite sljedeću poveznicu za preuzimanje svojih podataka.<br/>Datoteka će biti dostupna za preuzimanje do %{date}.
+      export:
+        download: Preuzmi
+        click_button_html: Vaše preuzimanje je spremno. <br/>Datoteka će biti dostupna za preuzimanje do %{date}.
+      subject: Vaš izvoz "%{name}" je spreman
+    fingerprint:
+      explanation: Tekst ispod sažeti je, hashirani prikaz ovog sadržaja. Koristan je kako biste osigurali da sadržaj nije izmijenjen, jer bi i jedna izmjena rezultirala potpuno drugom vrijednošću.
+      source: Izvor
+      value: Vrijednost
+      replicate_help: Ovaj otisak izračunat je pomoću SHA256 algoritma. Kako biste ga sami replicirali, možete koristiti %{online_calculator_link} i kopirati izvorne podatke.
+      online_calculator_name: MD5 kalkulator na mreži
+      check: Provjeri otisak
+      title: Otisak
+    amendments:
+      destroy_draft:
+        error: Došlo je do problema prilikom brisanja nacrta amandmana.
+        success: Nacrt amandmana uspješno je izbrisan.
+      accepted:
+        error: Došlo je do problema prilikom prihvaćanja amandmana.
+        success: Amandman je uspješno prihvaćen.
+      emendation:
+        announcement:
+          accepted: 'Ovaj amandman za %{amendable_type} %{proposal_link} prihvaćen je
+
+            dana <strong>%{date}</strong>.'
+          withdrawn: 'Ovaj amandman za %{amendable_type} %{proposal_link}
+
+            povukao je autor.'
+          promoted: Promaknut u %{amendable_type}.
+          rejected: Ovaj amandman za %{amendable_type} %{proposal_link} odbijen je dana <strong>%{date}</strong>.
+          evaluating: 'Ovaj amandman za %{amendable_type} %{proposal_link}
+
+            je u postupku procjene.'
+        actions:
+          button_reject: Odbij
+          button_accept: Prihvati
+          help_text: Pregledajte promjene i prihvatite ili odbijte ovaj amandman. Obavijest će biti poslana njegovom autoru/autorima.
+      name: Amandman
+      preview_draft:
+        publish: Objavi
+        modify: Izmijeni
+        title: Objavi nacrt amandmana
+      withdraw:
+        success: Amandman je uspješno povučen.
+        error: Došlo je do problema prilikom povlačenja amandmana.
+      update_draft:
+        error: Došlo je do problema prilikom ažuriranja nacrta amandmana.
+        success: Nacrt amandmana uspješno ažuriran.
+      amendable:
+        error: Došlo je do problema prilikom izmjene ovog resursa.
+        promote_help_text: Ovu izmjenu možete promaknuti i objaviti kao neovisni %{model_name}.
+        promote_confirm_text: Jeste li sigurni da želite promaknuti ovu izmjenu?
+        promote_button: Promakni u %{model_name}
+        button: Izmijeni %{model_name}
+      review:
+        back: Natrag
+        heading: Pregledajte amandman
+        send: Prihvati amandman
+      amendments:
+        title:
+          one: '%{count} amandman'
+          other: '%{count} amandmana'
+      created:
+        success: Nacrt amandmana uspješno je stvoren.
+        error: Došlo je do problema prilikom stvaranja nacrta amandmana.
+      promoted:
+        error: Došlo je do problema prilikom objavljivanja amandmana kao novog prijedloga.
+        success: Amandman je uspješno objavljen kao novi prijedlog.
+      new:
+        send: Stvori
+        title: Stvori nacrt amandmana
+      publish_draft:
+        error: Došlo je do problema prilikom objavljivanja amandmana.
+        success: Amandman uspješno objavljen.
+      edit_draft:
+        send: Pregled
+        discard: Odbaci ovaj nacrt
+        title: Uredi nacrt amandmana
+      rejected:
+        success: Amandman je uspješno odbijen.
+        error: Došlo je do problema prilikom odbijanja ovog amandmana, pokušajte ponovno kasnije.
+      wizard_step_form:
+        steps:
+          '2': Objavite svoj amandman
+          '1': Stvorite svoj amandman
+    documents:
+      other: '%{count} dokumenata'
+      one: '%{count} dokument'
+    author:
+      comments:
+        other: komentara
+        one: komentar
+      avatar: 'Avatar: %{name}'
+      likes:
+        other: sviđa mi se
+        one: sviđa mi se
+      official_author: Službeno
+    followers:
+      followers_count:
+        other: '%{count} pratitelja'
+        one: '%{count} pratitelj'
+      no_followers: Još nema pratitelja.
+    searches:
+      results:
+        view_all: Pogledaj sve (%{count})
+      filters:
+        state:
+          all: Sve
+          past: Prošlo
+          future: Buduće
+          active: Aktivno
+        search: Pretraga
+        resource: '%{label} među %{collection}'
+        jump_to: 'Prijeđi na:'
+      filters_small_view:
+        filter_and_search: Filtriraj i pretraži
+        filter_by: Filtriraj po
+        filter: Filtar
+    components:
+      dummy:
+        settings:
+          global:
+            dummy_global_attribute1: Ogledni atribut 1
+            enable_pads_creation: Omogući stvaranje ploha
+            define_taxonomy_filters: Prije korištenja ove postavke definirajte neke filtre za ovaj participativni prostor.
+            amendments_enabled: Amandmani omogućeni
+            resources_permissions_enabled: Dopuštenja resursa omogućena
+            comments_max_length: Maksimalan broj znakova po komentaru
+            no_taxonomy_filters_found: Nisu pronađeni filtri taksonomije.
+            taxonomy_filters: Odaberite filtre za komponentu
+            dummy_global_attribute2: Ogledni atribut 2
+            comments_enabled: Komentari omogućeni
+            dummy_global_translatable_text: Ogledni prevodivi tekst
+          step:
+            dummy_step_attribute1: Ogledni atribut koraka 1
+            comments_blocked: Komentari blokirani
+            amendments_visibility: Vidljivost amandmana
+            dummy_step_attribute2: Ogledni atribut koraka 2
+            amendment_creation_enabled: Stvaranje amandmana omogućeno
+            amendment_reaction_enabled: Reakcija na amandman omogućena
+            dummy_step_translatable_text: Ogledni prevodivi tekst koraka
+            amendment_promotion_enabled: Promicanje amandmana omogućeno
+        actions:
+          foo: Foo
+          bar: Bar
+        name: Ogledna komponenta
+      component_order_selector:
+        order:
+          order: Glasovanje o proračunu
+          collaborative_draft: Suradnički nacrt
+          proposal: Prijedlog
+          all_types: Sve vrste
+          comment: Komentar
+          initiative: Inicijativa
+          debate: Rasprava
+          meeting: Sastanak
+          question: Pitanje
+          post: Objava
+        no_content: Nismo mogli pronaći sadržaj s ovim kriterijima.
+        title: 'Prikaži:'
+      pagination:
+        page_title: '%{component_name} - Stranica %{current_page} od %{total_pages}'
+    account:
+      update:
+        success: Vaš je račun uspješno ažuriran.
+        error: Došlo je do problema prilikom ažuriranja vašeg računa.
+        success_with_email_confirmation: Vaš je račun uspješno ažuriran. Primit ćete e-poštu za potvrdu nove adrese.
+      delete:
+        alert: Ova se radnja ne može poništiti. Ako izbrišete račun, nećete se moći prijaviti sa svojim vjerodajnicama. Brisanjem računa vaši će doprinosi biti anonimizirani. I dalje možete stvoriti novi račun, ali ti doprinosi neće biti povezani s njim.
+        confirm:
+          title: Izbriši moj račun
+          question: Jeste li sigurni da želite izbrisati svoj račun?
+          close: Zatvori prozor
+          ok: Da, želim izbrisati svoj račun
+        explanation: Molimo navedite razlog zbog kojeg želite izbrisati račun (nije obavezno).
+        leaving_authorizations_behind: Neki podaci povezani s vašom autorizacijom bit će spremljeni iz sigurnosnih razloga. Ako stvorite drugi račun i ponovno se autorizirate, ti će podaci biti vraćeni na vaš novi račun.
+      email_change:
+        resend_error: Nije moguće ponovno poslati e-poštu za potvrdu.
+        send_again: Pošalji ponovno
+        cancel: otkaži
+        body2: Trebate li ponovno poslati e-poštu za potvrdu? %{resend_link} ili %{cancel_link}.
+        title: Potvrda promjene e-pošte
+        cancel_error: Nije moguće otkazati promjenu e-pošte.
+        cancel_successfully: Promjena e-pošte uspješno otkazana.
+        resend_successfully: E-pošta za potvrdu uspješno ponovno poslana na %{unconfirmed_email}.
+        body1: Poslali smo e-poštu na %{unconfirmed_email} kako biste potvrdili svoju novu adresu.
+      destroy:
+        error: Došlo je do problema prilikom brisanja vašeg računa.
+        inactive_account_removal_reason: Račun uklonjen nakon %{inactivity_period} dana neaktivnosti
+        success: Vaš je račun uspješno izbrisan.
+      download_your_data_export:
+        export_expired: Izvoz je istekao. Pokušajte generirati novi izvoz.
+        notice: Preuzimanje vaših podataka je u tijeku. Kada bude gotovo, primit ćete e-poštu.
+        file_no_exists: Datoteka ne postoji
+        export_not_found: Izvoz kojem ste pristupili ne postoji ili nemate pravo preuzimanja.
+      blocked: Ovaj je račun blokiran zbog kršenja uvjeta korištenja
+      show:
+        change_password: Promijeni lozinku
+        update_account: Ažuriraj račun
+        available_locales_helper: Odaberite jezik koji želite koristiti za pregledavanje i primanje obavijesti na platformi.
+    following:
+      following_count:
+        one: '%{count} praćenje'
+        other: '%{count} praćenja'
+      non_public_followings: Neki od praćenih resursa nisu javni.
+      no_followings: Još ne prati nikoga niti ništa.
+    likes_list:
+      title: Označeno sviđanjem od
+      liked_by:
+        other: Označeno sviđanjem od %{visible} i još %{others}
+        one: Označeno sviđanjem od %{visible}
+      you: vi
+      others: još %{count}
+    content_blocks:
+      cta_settings_form:
+        background_image: Pozadinska slika
+        description: Opis
+        button_url: URL poziva na akciju
+        button_text: Tekst poziva na akciju
+      last_activity:
+        view_all: Pogledaj sve
+        name: Posljednja aktivnost
+        title: Posljednja aktivnost
+      highlighted_elements_settings_form:
+        components:
+          all: Sve
+          label: 'Odaberite komponentu:'
+        orders:
+          random: Nasumično
+          label: 'Sortiraj elemente po:'
+          recent: Najnovije
+      highlighted_content_banner_settings_form:
+        short_description: Kratki opis
+        subtitle: Podnaslov
+        title: Naslov
+        action_button_url: URL gumba akcije
+        action_button_subtitle: Podnaslov gumba akcije
+        background_image: Pozadinska slika
+        action_button_title: Naslov gumba akcije
+      static_page:
+        summary:
+          summary_content: Sadržaj
+          name: Sažetak
+        two_pane_section:
+          right_column: Desni stupac
+          left_column: Lijevi stupac
+          name: Dvostupčani odjeljak
+        section:
+          section_content: Sadržaj
+          name: Odjeljak
+      cta:
+        name: Slika, tekst i gumb za poziv na akciju
+      announcement:
+        name: Obavijest
+      hero_settings_form:
+        cta_button_text_help: Možete promijeniti tekst gumba za poziv na akciju na naslovnici za svaki dostupni jezik vaše organizacije. Ako nije postavljen, koristit će se zadana vrijednost. Gumb za poziv na akciju prikazuje se na naslovnici između teksta dobrodošlice i opisa.
+        welcome_text: Tekst dobrodošlice
+        cta_button_path_help: 'Možete promijeniti na što vodi gumb za poziv na akciju na naslovnici. Ovdje koristite djelomične putanje, ne pune URL-ove. Prihvaća slova, brojke, crtice i kose crte, a mora početi slovom. Gumb za poziv na akciju prikazuje se na naslovnici između teksta dobrodošlice i opisa. Primjer: %{url}'
+        cta_button_path: URL gumba za poziv na akciju
+        cta_button_text: Tekst gumba za poziv na akciju
+        background_image: Pozadinska slika
+      hero:
+        name: Hero slika i poziv na akciju
+      html:
+        name: HTML blok
+        html_content: HTML sadržaj
+      last_activity_settings_form:
+        max_last_activity_users: Maksimalan broj avatara korisnika s nedavnom aktivnošću za prikaz
+      highlighted_content_banner:
+        name: Banner istaknutog sadržaja
+      participatory_space_stats:
+        name: Statistika
+      sub_hero:
+        name: Podbanner traka
+      footer_sub_hero:
+        name: Podnožna podbanner traka
+      stats:
+        name: Statistika organizacije
+      social_networks_metadata:
+        name: Društvene mreže
+      metadata:
+        name: Metapodaci
+      main_data:
+        name: Glavni podaci
+      global_menu:
+        name: Globalni izbornik
+      how_to_participate:
+        name: Kako sudjelovati
+    statistics:
+      followers_count_tooltip: Broj korisnika koji prate bilo koji dio ovog prostora kako bi ostali ažurirani.
+      pages_count: Stranice
+      followers_count: Pratitelji
+      surveys_count: Ankete
+      comments_count: Komentari
+      likes_count: Sviđanja
+      participants_count: Sudionici
+      comments_count_tooltip: Ukupan broj komentara objavljenih u ovom prostoru.
+      headline: Statistika
+      users_count_tooltip: Ukupan broj korisnika koji su se registrirali i potvrdili svoj račun putem e-pošte.
+      no_stats: Još nema statistike.
+      participants_count_tooltip: Broj jedinstvenih korisnika koji su komunicirali u ovom prostoru slanjem prijedloga, prisustvovanjem sastancima, glasovanjem ili pridruživanjem raspravama.
+      users_count: Sudionici
+    pages:
+      terms_of_service:
+        refuse:
+          modal_btn_exit: Pregledat ću ih kasnije
+          modal_button: Odbij uvjete
+          modal_btn_continue: Prihvaćam uvjete i nastavljam
+          modal_title: Doista odbijate ažurirane uvjete korištenja?
+          modal_body: Ako odbijete, nećete moći koristiti platformu, možete <a href="%{download_your_data_path}">preuzeti svoje podatke</a> i/ili <a href="%{delete_path}">izbrisati svoj račun</a>.
+        required_review:
+          body: Molimo odvojite trenutak za pregled ažuriranja naših Uvjeta korištenja. U suprotnom nećete moći koristiti platformu.
+          title: 'Obavezno: Pregledajte ažuriranja naših uvjeta korištenja'
+          alert: Ažurirali smo naše Uvjete korištenja, molimo pregledajte ih.
+        form:
+          legend: Prihvatite uvjete korištenja
+          agreement: Slažem se s ovim uvjetima
+        accept:
+          error: Došlo je do problema prilikom prihvaćanja uvjeta korištenja.
+          success: Odlično! Prihvatili ste uvjete korištenja.
+      home:
+        footer_sub_hero:
+          footer_sub_hero_headline: Sudjelujte... zajedno smo jači!
+          footer_sub_hero_body_html: Izgradimo otvorenije, transparentnije društvo sa više suradnje.<br /> Pridružite se, sudjelujte i odlučujte.
+          register: Stvori račun
+        extended:
+          how_to_participate: Kako sudjelovati u procesu?
+          meetings: Sastanci
+          more_info: Više informacija o %{resource_name}
+          proposals: Prijedlozi
+          proposals_explanation: Izradite prijedloge, podržite postojeće i promičite promjene koje želite vidjeti.
+          debates_explanation: Raspravljajte, iznesite svoje stavove i obogatite relevantne teme.
+          meetings_explanation: Saznajte gdje i kada možete sudjelovati na javnim sastancima.
+          debates: Rasprave
+        sub_hero:
+          register: Stvori račun
+          register_title: Stvori račun
+        statistics:
+          headline: Statistika
+        hero:
+          welcome: Dobrodošli u %{organization}!
+          participate_title: Sudjelujte u procesima platforme
+          participate: Sudjelujte
+      index:
+        standalone_pages: Stranice
+        title: Pomoć
+        topics: Teme
+        subheading: Krećite se kroz stranice pomoći za %{name}
+    help:
+      main_topic:
+        title: Općenito
+        default_page:
+          title: Što mogu raditi u %{organization}?
+          content: '<p>U %{organization} možete sudjelovati i odlučivati o različitim temama, kroz prostore koje vidite u gornjem izborniku: Procesi, Skupštine, Inicijative, Konzultacije.</p> <p>Unutar svakog pronaći ćete različite mogućnosti sudjelovanja: izrađivati prijedloge - pojedinačno ili s drugim ljudima-, sudjelovati u raspravama, prioritizirati projekte za provedbu, prisustvovati sastancima uživo i druge radnje.</p>
+
+            '
+        description: Pročitajte više o %{organization}.
+    accessibility:
+      logo: Službeni logotip organizacije %{organization}
+      secondary_menu: Sekundarni izbornik
+      front_page_link: Idi na naslovnicu
+      external_link: Vanjska poveznica
+      skip_button: Preskoči na glavni sadržaj
+      opens_in_new_tab: Otvara se u novoj kartici
+    groups:
+      roles:
+        admin: Administrator
+        creator: Administrator
+        member: Član
+    filters:
+      linked_classes:
+        project: Projekti
+        all: Sve
+        dummy_resource: Ogledni resursi
+        result: Rezultati
+        answer: Odgovor
+        proposal: Prijedlozi
+        meeting: Sastanci
+        collaborative_draft: Suradnički nacrt
+    notification_mailer:
+      event_received:
+        no_translation_available: Nažalost, automatski prijevod nije mogao biti dohvaćen kada je e-pošta poslana. Prijevod izvornog teksta možete provjeriti na sljedećoj poveznici %{link}.
+        same_language: Sadržaj je objavljen na vašem željenom jeziku (%{language}), zbog čega u ovoj e-pošti nije prikazan automatski prijevod.
+        original_text: 'Izvorni tekst:'
+        translated_text: 'Automatski prevedeni tekst:'
+    share_widget:
+      qr_code: QR kod
+      download: Preuzmi
+      print: Ispiši poster
+    notifications_digest_mailer:
+      header:
+        weekly: Tjedni sažetak obavijesti
+        daily: Dnevni sažetak obavijesti
+        real_time: U stvarnom vremenu
+      intro:
+        weekly: 'Ovo su obavijesti iz posljednjeg tjedna na temelju aktivnosti koje pratite:'
+        real_time: 'Ovo je obavijest o aktivnosti koju pratite:'
+        daily: 'Ovo su obavijesti iz posljednjeg dana na temelju aktivnosti koje pratite:'
+      see_more: Pogledajte više obavijesti
+      hello: Pozdrav %{name},
+      outro: Ove ste obavijesti primili jer pratite ovaj sadržaj ili njegove autore. Možete ih prestati pratiti na njihovim stranicama.
+      subject: Ovo je vaš sažetak e-pošte
+    delete_user_mailer:
+      delete:
+        body_2: Iz sigurnosnih razloga neki podaci povezani s autorizacijom bit će zadržani; ako stvorite novi račun i ponovno se ovjerite, mogu biti povezani s vašim novim računom.
+        greetings_html: Srdačan pozdrav,<br/><a href="%{organization_url}">%{organization_name}</a>
+        hello: Poštovani %{username},
+        body_1: Vaš račun je deaktiviran i više nije dostupan. Vaši osobni podaci predviđeni su za trajno brisanje u skladu s našim politikama čuvanja podataka.
+      subject: Vaš račun je izbrisan
+    passwords:
+      update:
+        error: Došlo je do problema prilikom ažuriranja lozinke.
+        success: Lozinka uspješno ažurirana.
+    collapsible_list:
+      hidden_elements_count:
+        other: i još %{count}
+        one: i još %{count}
+      see_less: (prikaži manje)
+    user_report_mailer:
+      notify:
+        body_1: Korisnika %{user} prijavio je %{token}
+        details: Detalji koje je korisnik naveo
+        hello: Pozdrav %{admin},
+        subject: Novi korisnik je prijavljen na %{organization_name}
+        greetings: Pozdrav,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
+        body_2: 'Razlog: %{reason}'
+    devise:
+      omniauth_registrations:
+        new_tos_fields:
+          sign_up: Stvori račun
+          sign_up_title: Dovršite stvaranje svog računa
+        new:
+          nickname_help: Vaš nadimak u %{organization}. Može sadržavati samo mala slova (a-z), brojke, '-' i '_'.
+          username_help: Javno ime koje se prikazuje na vašim objavama. Radi jamčenja anonimnosti može biti bilo koje ime.
+          sign_up: Molimo dovršite svoj profil
+          complete_profile: Dovrši profil
+          subtitle: Ispunite sljedeći obrazac kako biste dovršili stvaranje računa
+        create:
+          email_already_exists: Drugi račun koristi istu adresu e-pošte.
+      registrations:
+        new:
+          terms: uvjete korištenja
+          username_help: Javno ime koje se prikazuje na vašim objavama. Radi jamčenja anonimnosti može biti bilo koje ime.
+          newsletter: Primajte povremeni bilten s relevantnim informacijama
+          log_in: Prijavite se
+          newsletter_title: Dopuštenje za kontakt
+          sign_up: Stvori račun
+          already_have_an_account?: Već imate račun?
+          tos_agreement: Registracijom prihvaćate %{link}.
+          tos_title: Uvjeti korištenja
+          subtitle: Stvorite račun kako biste sudjelovali na platformi.
+        create:
+          error: Došlo je do problema prilikom stvaranja vašeg računa.
+      shared:
+        omniauth_buttons:
+          or: ili
+        placeholder_email: bok@primjer.hr
+        newsletter_modal:
+          buttons:
+            uncheck: Ostavi neoznačeno
+            check: Provjeri i nastavi
+          title: Obavijesti biltena
+          notice: '<p>Hej, jeste li sigurni da ne želite primati bilten?
+
+            Molimo ponovno razmislite o označavanju potvrdnog okvira za bilten ispod.
+
+            Za nas je vrlo važno da možete primati povremene e-poruke
+
+            s važnim obavijestima; to uvijek možete promijeniti na stranici
+
+            postavki obavijesti.</p>
+
+            <p>Ako ne označite okvir, mogli biste propustiti relevantne informacije
+
+            o novim prilikama za sudjelovanje na platformi.<br>
+
+            Ako i dalje želite izbjeći primanje biltena, savršeno
+
+            razumijemo vašu odluku.</p>
+
+            <p>Hvala što ste ovo pročitali!</p>'
+        password_fields:
+          show_password: Prikaži lozinku
+          hide_password: Sakrij lozinku
+          shown_password: Vaša lozinka je prikazana
+          hidden_password: Vaša lozinka je skrivena
+      sessions:
+        new:
+          sign_in_disabled: Možete pristupiti s vanjskim računom.
+          sign_up_disabled: Stvaranje računa je onemogućeno, možete koristiti postojeći račun za pristup.
+          are_you_new?: Još niste registrirani?
+          register: Stvori račun
+        user:
+          timed_out: Bili ste neaktivni predugo i automatski ste odjavljeni iz usluge. Ako želite nastaviti koristiti uslugu, molimo ponovno se prijavite.
+          ephemeral_session_closed: Vaša gostujuća sesija je završila
+    links:
+      warning:
+        cancel: Otkaži
+        body_2: Molimo provjerite poveznicu koju ćete posjetiti i provjerite prepoznajete li je kao sigurnu stranicu prije nastavka.
+        body_1: Upravo ćete posjetiti vanjsku poveznicu i želimo da budete oprezni u vezi sa sadržajem na vanjskoj stranici.
+        proceed: Nastavi
+        title: Otvori vanjsku poveznicu
+      invalid_url: Neispravan URL
+    newsletters_opt_in:
+      update:
+        success: Postavke biltena uspješno ažurirane.
+        error: Došlo je do problema prilikom spremanja postavki biltena.
+      unauthorized: Nažalost, ova poveznica više nije dostupna.
+    authorization_modals:
+      content:
+        incomplete:
+          title: Molimo ponovno se ovjerite
+          reauthorize: Ponovno ovjeri
+          cancel: Otkaži
+          invalid_field: '%{field}'
+          explanation: 'Iako ste trenutno ovjereni s "%{authorization}", morate se ponovno ovjeriti jer nam nedostaju sljedeći podaci:'
+        unconfirmed:
+          title: Potvrdite svoju e-poštu
+          request_confirmation_instructions: Zatraži upute za potvrdu
+          confirmation_instructions: 'Ako niste primili upute za potvrdu, možete ih ponovno zatražiti:'
+          explanation_html: Kako biste izvršili ovu radnju, morate biti ovjereni, a prije toga morate potvrditi svoju e-poštu <strong>%{email}</strong>.
+        unauthorized:
+          title: Niste ovjereni
+          explanation: Nažalost, ne možete izvršiti ovu radnju jer se neki od vaših podataka za autorizaciju ne podudaraju.
+          invalid_field: '%{field} vrijednost %{value} nije valjana.'
+          ok: U redu
+        expired:
+          authorize: Ponovno se ovjerite s "%{authorization}"
+          title: Autorizacija je istekla
+          explanation: Vaša autorizacija je istekla. Kako biste izvršili ovu radnju, morate se ponovno ovjeriti s "%{authorization}".
+        pending:
+          explanation: Kako biste izvršili ovu radnju, morate biti ovjereni s "%{authorization}", ali je vaša autorizacija još u tijeku.
+          title: Autorizacija je još u tijeku
+          resume: Provjerite napredak svoje "%{authorization}" autorizacije.
+        missing:
+          explanation: Kako biste izvršili ovu radnju, morate biti ovjereni s "%{authorization}".
+          title: Potrebna autorizacija
+          authorize: Ovjerite se s "%{authorization}"
+        ok:
+          title: Ovjereni ste dok ste na ovoj stranici. Molimo ponovno učitajte stranicu kako biste izvršili radnju.
+    translation_bar:
+      show_original: Prikaži izvorni tekst
+      show_translated: Prikaži automatski prevedeni tekst
+      help_text: <strong>Upozorenje:</strong> Sadržaj može biti automatski preveden i ne mora biti 100% točan.
+    profiles:
+      show:
+        conversations: Razgovori
+        activity: Aktivnost
+        officialized: Službeni sudionik
+        badges: Značke
+        send_private_message: Pošalji privatnu poruku
+        followers: Pratitelji
+        following: Praćenja
+      user:
+        actions:
+          resend_email_confirmation_instructions: Ponovno pošalji upute za potvrdu e-pošte
+          message: Poruka
+          edit_profile: Uredi profil
+          disabled_message: Poruka
+      default_officialization_text_for_users: Ovaj sudionik je javno ovjeren, njegovo ime ili uloga provjereni su da odgovaraju stvarnom imenu i ulozi.
+    onboarding_action_message:
+      click_link: Kliknite ovdje
+      incomplete_authorization_active_title: Vaša provjera nije dovršena sa svim potrebnim informacijama.
+      pending_ephemeral_authorization: Molimo provjerite svoj identitet za nastavak.
+      pending_authorization_active_message: Molimo ispunite obrazac za nastavak s ovom radnjom.
+      cta_html: <a href="%{path}">%{link_text}</a> kako biste %{action} u %{resource_name} <strong>%{resource_title}</strong>
+      finish_authorization_process: Možete dovršiti postupak autorizacije
+      pending_authorization_active_title: Moramo provjeriti vaš identitet.
+      expired_authorization_active_title: Vaša autorizacija je istekla.
+      ephemeral_authorized_message: Uspješno ste ovjereni.<br/>Započeli ste gostujuću sesiju, sada možete sudjelovati.
+    like_buttons_cell:
+      already_liked: Poništi sviđanje
+      like: Sviđa mi se
+    participants_account_mailer:
+      inactivity_notification:
+        body_html: '<p>Naši podaci pokazuju da ste stvorili %{organization_name} račun <strong>%{date_account_creation}</strong> i da niste bili aktivni od <strong>%{date_last_connection}</strong>.</p>
+
+          <p>Radi zaštite vaše privatnosti, ovaj račun predviđen je za automatsko brisanje za <strong>%{days} dana</strong>.</p>
+
+          <p>Ako želite zadržati svoj %{organization_name} račun, jednostavno se %{login_url} prije tog vremena i vaš će račun biti sačuvan.<p>
+
+          '
+        greetings_html: 'Srdačan pozdrav,<br>
+
+          %{organization_name}
+
+          '
+        hello_html: Poštovani <strong>%{username}</strong>,
+        log_in: prijavite se
+        subject: Upozorenje o neaktivnom računu
+        never_logged_in: nikada se nije prijavio
+    newsletter_mailer:
+      newsletter:
+        note: Ovu ste e-poštu primili jer ste pretplaćeni na biltene na %{organization_name}. Postavke možete promijeniti na svojoj <a href="%{link}">stranici obavijesti</a>.
+        unsubscribe: Kako biste se odjavili od primanja ove vrste e-pošte, <a href="%{link}" target="_blank" class="unsubscribe">Odjavite se</a>.
+        no_reply_notice: Ova e-pošta poslana je s adrese za obavijesti koja ne može primati e-poštu. Molimo ne odgovarajte na ovu poruku.
+        see_on_website: Ne možete ispravno vidjeti ovu e-poštu? Pogledajte je na <a href="%{link}" target="_blank" class="see-on-website">web stranici</a>.
+    wizard_step_form:
+      wizard_header:
+        see_steps: pogledaj korake
+        step_of: Korak %{current_step} od %{total_steps}
+      wizard_aside:
+        back: Natrag
+    metadata:
+      progress:
+        remaining: preostalo %{time_distance}
+        finished: 'Završeno: %{end_date}'
+        not_started: Još nije započeto
+        active: Aktivno
+    last_activities:
+      no_activities_warning: Nema unosa za prikaz za ovu vrstu aktivnosti.
+      index:
+        last_activity: Posljednja aktivnost
+      name: Posljednje aktivnosti
+      all: Sve vrste aktivnosti
+    application:
+      photo:
+        title: Slika
+        alt: Slika iz medija
+      photos:
+        photos: Slike
+        related_photos: Povezane slike
+      document:
+        download: Preuzmi datoteku
+        visit_link: Posjeti poveznicu
+      documents:
+        component_documents:
+          dummy: Dokumenti ogledne komponente
+          meetings: Dokumenti sastanaka
+        documents: Dokumenti
+        related_documents: Povezani dokumenti
+    offline:
+      name: Izvanmrežno
+      show:
+        retry: Pokušaj ponovno
+        message_1: Čini se da ste trenutno izvanmrežno.
+        message_2: Molimo pokušajte ponovno kasnije.
+    follows:
+      create:
+        error: Došlo je do problema prilikom praćenja ovog resursa.
+        participatory_space: Pratite <span>%{resource_name}</span>
+        button: Prati
+      destroy:
+        error: Došlo je do problema prilikom prestanka praćenja ovog resursa.
+        button: Prestani pratiti
+    newsletters_opt_in_mailer:
+      notify:
+        subject: Želite li nastaviti primati relevantne informacije o %{organization_name}?
+        greetings: Pozdrav,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
+        body_2: 'Kako nam možete dati svoju suglasnost? Samo kliknite sljedeći gumb:'
+        hello: Pozdrav,
+        body_3: S ovom suglasnošću moći ćete nastaviti primati informacije o uslugama platforme. Ako, nasuprot tome, ne primimo vašu pozitivnu potvrdu, prestat ćemo vam slati poruke. Ako potvrdite da želite ostati informirani, uvijek ćete imati mogućnost otkazati u bilo kojem trenutku.
+        button: Da, želim nastaviti primati relevantne informacije
+        body_1: Obrada osobnih podataka i njihova zaštita postaje sve važnija za sve nas. S Općom uredbom o zaštiti podataka (GDPR) od 25. svibnja 2018., pojedinci imaju bolju kontrolu nad svojim osobnim podacima. Zbog toga nam je potrebno vaše "OK" za nastavak slanja relevantnih informacija o aktivnostima %{organization_name}.
+    block_user_mailer:
+      notify:
+        subject: Vaš račun blokirala je %{organization_name}
+        body_2: 'Razlog: %{justification}'
+        body_1: Vaš račun je blokiran.
+        greetings: Pozdrav,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
+        hello: Pozdrav,
+    menu:
+      home: Početna
+      help: Pomoć
+    map:
+      static:
+        map_service_brand: OpenStreetMap
+        latlng_text: 'geografska širina: %{latitude}, geografska dužina: %{longitude}'
+      dynamic:
+        skip_button: Preskoči kartu
+        screen_reader_explanation: Sljedeći element je karta koja prikazuje stavke na ovoj stranici kao točke na karti. Element se može koristiti s čitačem zaslona, ali ga može biti teško razumjeti.
+    editor_images:
+      create:
+        error: Pogreška pri učitavanju slike.
+        success: Slika uspješno učitana.
+      drag_and_drop_help: Dodajte slike povlačenjem i ispuštanjem ili lijepljenjem.
+    user_update_mailer:
+      notify:
+        body_1: Šaljemo vam ovu poruku kako bismo vas obavijestili o ažuriranju vašeg računa.
+        update_fields: '%{updates} i %{last_update}'
+        hello: Pozdrav %{user}
+        main_body: 'Sljedeći detalji su promijenjeni: %{updates}.'
+        body_2: U slučaju da sami niste izvršili takvo ažuriranje, prijavite se na svoj račun za promjenu lozinke. Ako se ne možete prijaviti, kontaktirajte podršku platforme.
+        greetings: Pozdrav,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
+      subject: Vaš račun je ažuriran
+    admin:
+      actions:
+        cancel: Otkaži
+      password_change:
+        alert: Morate promijeniti lozinku kako biste nastavili dalje.
+        notification: Administratorski korisnici moraju mijenjati lozinku svakih %{days} dana.
+    user_conversations:
+      index:
+        time_ago: prije %{time}
+    user_contact_disabled: Ovaj sudionik ne prihvaća izravne poruke.
+    tags:
+      filter_results_for_taxonomy: 'Filtriraj rezultate za: %{resource}'
+    scopes:
+      global: Globalni opseg
+      prompt: Odaberite opseg
+    search:
+      results_found_for_term: '%{count} rezultata za pretragu: "%{term}"'
+      name: Pretraga
+      term_input_placeholder: Pretraga
+      results: Rezultati pretrage
+    resource:
+      controls_label: Kontrole resursa
+    activity:
+      time_ago: prije %{time}
+    user_activity:
+      index:
+        no_activities_warning: Ovaj sudionik još nema aktivnosti.
+    reports:
+      create:
+        success: Prijava je uspješno stvorena i pregledat će je administrator.
+        error: Došlo je do problema prilikom stvaranja prijave. Pokušajte ponovno.
+      parent_hidden:
+        report_details: Roditeljski resurs je skriven
+      hide:
+        success: Ovaj resurs je skriven.
+    linked_resource_from:
+      included_in: Uključeno u
+    qr:
+      show:
+        title: QR kod za %{resource_title}
+        scan: Skenirajte QR kod
+    resource_autocomplete:
+      help: Utipkajte za pretragu prijedloga
+    version:
+      show:
+        changes_at_title: Promjene na "%{title}"
+        number_of_versions: Verzije
+        version_created_at: Verzija stvorena
+        back_to_resource: Natrag
+    versions:
+      resource_version:
+        see_other_versions: pogledaj ostale verzije
+        of_versions: (od %{number})
+        version: Verzija broj %{number}
+    taxonomies:
+      prompt: Molimo odaberite opciju
+    machine_translations:
+      automatic: automatski prijevod na %{locale_name}
+    security:
+      selfxss_warning:
+        description: Ova značajka preglednika namijenjena je programerima i ne biste trebali ništa lijepiti ovdje ako je od vas to zatraženo. Lijepljenje sadržaja u ovaj prozor može ugroziti vašu privatnost i dati hakerima pristup vašem računu.
+        title: Stani!
+    contact: Kontakt
+    admin_terms_of_service:
+      default_body: <h2>UVJETI KORIŠTENJA ZA ADMINISTRATORE</h2><p>Vjerujemo da ste primili uobičajeno upozorenje od lokalnog administratora sustava. Obično se svodi na tri stvari:</p><ol><li>Poštujte privatnost drugih.</li><li>Razmislite prije nego što kliknete.</li><li>S velikom moći dolazi i velika odgovornost.</li></ol>
+    ephemeral_user: Posjetitelj
+    profile:
+      inaccessible_message: Ovaj profil nije dostupan zbog kršenja uvjeta korištenja!
+      deleted: Izbrisani sudionik
+    welcome_notification:
+      default_body: <p>Bok {{name}}, hvala što si se pridružio/la {{organization}} i dobrodošao/la!</p><ul><li>Ako želiš brzo saznati što možeš ovdje raditi, pogledaj odjeljak <a href="{{help_url}}">Pomoć</a>.</li><li>Nakon što ga pročitaš, dobit ćeš svoju prvu značku. Ovdje je <a href="{{badges_url}}">popis svih znački</a> koje možeš zaraditi dok sudjeluješ na {{organization}}</li><li>I na kraju, pridruži se drugim ljudima, podijeli s njima iskustvo angažmana i sudjelovanja na {{organization}}. Izrađuj prijedloge, komentiraj, raspravljaj, razmišljaj o tome kako pridonijeti općem dobru, daj argumente za uvjeravanje, slušaj i čitaj kako bi bio/la uvjeren/a, izrazi svoje ideje konkretno i izravno, odgovaraj strpljivo i odlučno, brani svoje ideje i budi otvorenog uma za suradnju i pridruživanje idejama drugih.</li></ul>
+      default_subject: Hvala što si se pridružio/la {{organization}}!
+    versions_list_item:
+      show:
+        version_index: Verzija %{index} od %{total}
+    managed_users:
+      expired_session: Trenutna administrativna sesija sudionika je istekla.
+    anonymous_user: Anonimno
+    resource_likes:
+      create:
+        error: Došlo je do problema prilikom radnje sviđanja.
+    alert:
+      dismiss: Odbaci obavijest
+  devise:
+    failure:
+      invited: Imate pozivnicu na čekanju, prihvatite je za dovršetak stvaranja računa.
+      already_authenticated: Već ste prijavljeni.
+      not_found_in_database: Neispravan %{authentication_keys} ili lozinka.
+      last_attempt: Imate još jedan pokušaj prije nego što se vaš račun zaključa.
+      inactive: Vaš račun još nije aktiviran.
+      invalid: Neispravan %{authentication_keys} ili lozinka.
+      timeout: Vaša sesija je istekla. Prijavite se ponovno za nastavak.
+      unauthenticated: Morate se prijaviti ili stvoriti račun prije nastavka.
+      csrf_token: Nije moguće provjeriti vaš zahtjev. Pokušajte ponovno.
+      locked: Vaš račun je zaključan.
+    registrations:
+      updated: Vaš račun uspješno je ažuriran.
+      destroyed: Vaš račun uspješno je otkazan. Nadamo se da ćemo vas uskoro ponovno vidjeti.
+      signed_up_but_inactive: Uspješno ste se registrirali. Međutim, nismo vas mogli prijaviti jer vaš račun još nije aktiviran.
+      new:
+        sign_up: Stvori račun
+      signed_up_but_unconfirmed: Poruka s poveznicom za potvrdu poslana je na vašu adresu e-pošte. Slijedite poveznicu za aktivaciju računa.
+      signed_up: Dobrodošli! Uspješno ste se registrirali.
+      signed_up_but_locked: Uspješno ste se registrirali. Međutim, nismo vas mogli prijaviti jer je vaš račun zaključan.
+      update_needs_confirmation: Uspješno ste ažurirali račun, ali moramo provjeriti vašu novu adresu e-pošte. Provjerite e-poštu i slijedite poveznicu za potvrdu.
+    mailer:
+      invitation_instructions:
+        someone_invited_you_as_admin: Netko vas je pozvao kao administratora %{application}, možete prihvatiti putem poveznice u nastavku.
+        ignore: 'Ako ne želite prihvatiti pozivnicu, zanemarite ovu e-poštu.<br />
+
+          Vaš račun neće biti stvoren dok ne pristupite gornjoj poveznici i postavite nadimak i lozinku.'
+        subject: Upute za pozivnicu
+        invited_you_as_private_user: '%{invited_by} pozvao vas je kao privatnog sudionika u %{application}. Pozivnicu možete prihvatiti putem poveznice ispod.'
+        someone_invited_you_as_private_user: Netko vas je pozvao kao privatnog sudionika u %{application}. Pozivnicu možete prihvatiti putem poveznice ispod.
+        hello: Pozdrav %{email},
+        invited_you_as_admin: '%{invited_by} vas je pozvao kao administratora %{application}. Možete prihvatiti putem poveznice u nastavku.'
+        decline: Odbij pozivnicu
+        accept_until: Ova pozivnica vrijedi do %{due_date}.
+        accept: Prihvati pozivnicu
+        someone_invited_you: Netko vas je pozvao na %{application}. Možete prihvatiti putem poveznice u nastavku.
+      unlock_instructions:
+        greeting: Pozdrav %{recipient}!
+        message: Vaš račun je zaključan zbog prevelikog broja neuspješnih pokušaja prijave.
+        instruction: 'Kliknite poveznicu u nastavku za otključavanje računa:'
+        action: Otključaj moj račun
+        subject: Upute za otključavanje
+      confirmation_instructions:
+        subject: Upute za potvrdu
+        greeting: Dobrodošli %{recipient}!
+        action: Potvrdi moj račun
+        instruction: 'Svoj račun e-pošte možete potvrditi putem poveznice u nastavku:'
+      invite_private_user:
+        subject: Pozvani ste u privatni participacijski proces na %{organization}
+      reset_password_instructions:
+        action: Promijeni lozinku
+        instruction_3: Vaša se lozinka neće promijeniti dok ne pristupite gornjoj poveznici i stvorite novu.
+        instruction: Netko je zatražio poveznicu za promjenu vaše lozinke, a to možete učiniti putem poveznice u nastavku.
+        instruction_2: Ako to niste zatražili vi, zanemarite ovu e-poštu.
+        subject: Upute za ponovno postavljanje lozinke
+        greeting: Pozdrav %{recipient}!
+      email_changed:
+        message: Javljamo vam se kako bismo vas obavijestili da se vaša e-pošta mijenja u %{email}.
+        subject: E-pošta promijenjena
+        greeting: Pozdrav %{recipient}!
+      password_change:
+        message: Javljamo vam se kako bismo vas obavijestili da je vaša lozinka promijenjena.
+        greeting: Pozdrav %{recipient}!
+        subject: Lozinka promijenjena
+      invite_admin:
+        subject: Pozvani ste za upravljanje %{organization}
+      organization_admin_invitation_instructions:
+        subject: Pozvani ste za upravljanje %{organization}
+      invite_collaborator:
+        subject: Pozvani ste na suradnju na %{organization}
+    passwords:
+      edit:
+        confirm_new_password: Potvrdite novu lozinku
+        password_help_admin: '%{minimum_characters} znakova minimalno, mora sadržavati najmanje 5 različitih znakova, ne smije biti previše uobičajena (npr. 123456), mora se razlikovati od vašeg imena, nadimka, e-pošte, hosta organizacije i mora se razlikovati od vaših starih lozinki.'
+        password_help: '%{minimum_characters} znakova minimalno, mora sadržavati najmanje 5 različitih znakova, ne smije biti previše uobičajena (npr. 123456) i mora se razlikovati od vašeg imena, nadimka, e-pošte i hosta organizacije.'
+        change_my_password: Promijeni lozinku
+        old_password_help: Kako biste potvrdili promjene na računu, unesite svoju trenutnu lozinku.
+        new_password: Nova lozinka
+        title: Promjena lozinke
+      send_instructions: Za nekoliko minuta primit ćete e-poštu s uputama za ponovno postavljanje lozinke.
+      no_token: Ne možete pristupiti ovoj stranici, osim ako dolazite s e-pošte za ponovno postavljanje lozinke. Ako dolazite s te e-pošte, provjerite jeste li koristili cijeli priloženi URL.
+      updated: Vaša lozinka uspješno je promijenjena. Sada ste prijavljeni.
+      new:
+        send_me_reset_password_instructions: Pošalji mi upute za ponovno postavljanje lozinke
+        forgot_your_password: Zaboravili ste lozinku?
+      updated_not_active: Vaša lozinka uspješno je promijenjena.
+      send_paranoid_instructions: Ako vaša adresa e-pošte postoji u našoj bazi, za nekoliko minuta primit ćete poveznicu za oporavak lozinke na vašu adresu e-pošte.
+    invitations:
+      edit:
+        subtitle: Ako prihvatite pozivnicu, postavite svoj nadimak i lozinku.
+        submit_button: Spremi
+        header: Dovršite stvaranje računa
+        nickname_help: Vaš nadimak u %{organization}. Može sadržavati samo mala slova (a-z), brojke, '-' i '_'.
+        subtitle_no_password: Ako prihvatite pozivnicu, postavite svoj nadimak.
+      updated: Pozivnica uspješno prihvaćena. Sada ste prijavljeni.
+      updated_not_active: Pozivnica uspješno prihvaćena.
+      invitation_removed: Vaša pozivnica je uklonjena.
+      new:
+        submit_button: Pošalji pozivnicu
+        header: Pošalji pozivnicu
+      send_instructions: Pozivnica je poslana na %{email}.
+      invitation_token_invalid: Priloženi token pozivnice nije valjan!
+      no_invitations_remaining: Nema preostalih pozivnica
+    shared:
+      links:
+        didn_t_receive_unlock_instructions: Niste primili upute za otključavanje?
+        sign_up: Stvori račun
+        didn_t_receive_confirmation_instructions: Niste primili upute za potvrdu?
+        log_in: Prijavite se
+        log_in_with_provider: Prijavite se putem %{provider}
+        back: Natrag
+        forgot_your_password: Zaboravili ste lozinku?
+      minimum_password_length:
+        other: (najmanje %{count} znakova)
+        one: (najmanje %{count} znak)
+    sessions:
+      new:
+        log_in: Prijavite se
+      signed_out: Uspješno ste odjavljeni.
+      signed_in: Uspješno ste prijavljeni.
+      already_signed_out: Uspješno ste odjavljeni.
+    unlocks:
+      new:
+        resend_unlock_instructions: Ponovno pošalji upute za otključavanje
+      send_instructions: Za nekoliko minuta primit ćete e-poštu s uputama za otključavanje računa.
+      unlocked: Vaš račun uspješno je otključan. Prijavite se za nastavak.
+      send_paranoid_instructions: Ako vaš račun postoji, za nekoliko minuta primit ćete e-poštu s uputama za otključavanje.
+    confirmations:
+      new:
+        resend_confirmation_instructions: Ponovno pošalji upute za potvrdu
+      confirmed: Vaša adresa e-pošte uspješno je potvrđena.
+      send_instructions: Za nekoliko minuta primit ćete e-poštu s uputama za potvrdu vaše adrese e-pošte.
+      send_paranoid_instructions: Ako vaša adresa e-pošte postoji u našoj bazi, za nekoliko minuta primit ćete e-poštu s uputama za potvrdu.
+    omniauth_callbacks:
+      success: Uspješno autenticirani putem %{kind} računa.
+      add_tos_errors: Za stvaranje računa moraju biti prihvaćeni uvjeti korištenja.
+      failure: Nije vas moguće autenticirati putem %{kind} zbog "%{reason}".
+  activemodel:
+    models:
+      decidim/gamification/level_up_event: Prešli ste na višu razinu
+      decidim/gamification/badge_earned_event: Zaslužena značka
+      decidim/invited_to_group_event: Pozvani ste u grupu
+      decidim/promoted_to_admin_event: Promaknuti u administratora grupe
+      decidim/demoted_membership: Više niste administrator grupe
+      decidim/attachment_created_event: Prilog
+      decidim/profile_updated_event: Profil ažuriran
+      decidim/join_request_accepted_event: Zahtjev za pridruživanje prihvaćen
+      decidim/promote_to_admin: Promaknuti u administratora grupe
+      decidim/resource_liked_event: Resurs se sviđa
+      decidim/resource_hidden_event: Resurs skriven
+      decidim/removed_from_group: Uklonjeni iz grupe
+      decidim/component_published_event: Aktivna komponenta
+      decidim/welcome_notification_event: Poruka dobrodošlice
+      decidim/join_request_rejected_event: Zahtjev za pridruživanje odbijen
+    attributes:
+      user:
+        email: Vaš e-mail
+        password_confirmation: Potvrdite lozinku
+        password: Lozinka
+        about: O meni
+        old_password: Trenutna lozinka
+        tos_agreement: Prihvaćanje uvjeta korištenja
+        nickname: Nadimak
+        encrypted_password: Lozinka
+        remove_avatar: Ukloni avatar
+        locale: Jezik
+        avatar: Avatar
+        personal_url: Osobni URL
+        name: Vaše ime
+      component:
+        taxonomy_filters: Filtri taksonomije
+      taxonomy:
+        name: Naziv taksonomije
+      content_block_attachment:
+        main_image: Glavna slika
+        background_image: Pozadinska slika
+      attachment:
+        image: Slika
+        documents: Dokumenti
+        photos: Fotografije
+      import:
+        file: Datoteka
+      group:
+        nickname: Nadimak
+        name: Naziv
+        avatar: Avatar
+        email: E-pošta
+        document_number: Broj dokumenta
+        phone: Telefon
+        about: O nama
+      taxonomy_filter:
+        root_taxonomy_id: Iz taksonomije
+        name: Oznaka
+        internal_name: Interna oznaka
+        space_filter: Dostupno kao filtar za
+      account:
+        delete_reason: Razlog brisanja računa
+      message:
+        body: Sadržaj
+      editor_image:
+        file: Datoteka
+      report:
+        details: Dodatni komentari
+      conversation:
+        body: Sadržaj
+      common:
+        created_at: Stvoreno
+    errors:
+      models:
+        user:
+          attributes:
+            nickname:
+              format: Nadimak mora biti malim slovima i bez razmaka
+  layouts:
+    decidim:
+      user_menu:
+        log_out: Odjavi se
+        title: Poveznice profila
+        conversations: Razgovori
+        profile: Moj račun
+        unread_conversations: Imate nepročitane razgovore
+        public_profile: Moj javni profil
+        notifications: Obavijesti
+        admin_dashboard: Administratorska ploča
+        unread_notifications: Imate nepročitane obavijesti
+        account: 'Korisnički račun: %{name}'
+        configuration: Konfiguracija
+      data_consent:
+        details:
+          items:
+            _session_id:
+              description: Omogućuje web stranicama pamćenje korisnika unutar web stranice kada se kreće između web stranica.
+              service: Ova web stranica
+            decidim-consent:
+              service: Ova web stranica
+              description: Pohranjuje informacije o kolačićima koje je korisnik dopustio na ovoj web stranici.
+            pwaInstallPromptSeen:
+              service: Ova web stranica
+              description: Pohranjuje status je li obavijest o instalaciji progresivne web aplikacije (PWA) već viđena od strane korisnika.
+          columns:
+            name: Naziv
+            type: Vrsta
+            description: Opis
+            service: Usluga
+          types:
+            cookie: Kolačić
+            local_storage: Lokalna pohrana
+        modal:
+          description: Koristimo kolačiće kako bismo osigurali osnovne funkcionalnosti web stranice i poboljšali vaše mrežno iskustvo. Upotrebu kolačića možete konfigurirati i prihvatiti, te izmijeniti postavke pristanka, u bilo kojem trenutku.
+          marketing:
+            description: Ovi kolačići prikupljaju informacije o tome kako koristite web stranicu i mogu se koristiti za pružanje personaliziranijeg marketinga na različitim web stranicama koje koristite.
+            title: Marketing
+          accept_only_essential: Prihvati samo nužne
+          accept_all: Prihvati sve
+          analytics:
+            description: Ovi kolačići koriste se za mjerenje i analizu publike web stranice radi poboljšanja stranice.
+            title: Analitika i statistika
+          title: Postavke kolačića
+          save_settings: Spremi postavke
+          preferences:
+            title: Postavke
+            description: Ovi kolačići omogućuju web stranici pamćenje izbora koje ste ranije napravili na ovoj web stranici radi pružanja personaliziranijeg iskustva.
+          essential:
+            title: Nužni
+            description: Ovi kolačići omogućuju ključne funkcionalnosti web stranice i pomažu osigurati korisnike. Automatski se spremaju u preglednik i ne mogu se onemogućiti.
+          toggle: Prebaci %{consent_category}
+        dialog:
+          description: Koristimo kolačiće na našoj web stranici za poboljšanje performansi i sadržaja stranice. Kolačići nam omogućuju pružanje individualnijeg korisničkog iskustva i kanala društvenih medija.
+          title: Informacije o kolačićima koji se koriste na web stranici
+          accept_only_essential: Prihvati samo nužne
+          settings: Postavke
+          accept_all: Prihvati sve
+        warning:
+          consent_required: Morate omogućiti %{categories} kako biste vidjeli ovaj sadržaj.
+          all_categories: sve kolačiće
+          change_settings: Promijeni postavke kolačića
+      footer:
+        decidim_title: Decidim
+        terms_of_service: Uvjeti korištenja
+        data_consent_settings: Postavke kolačića
+        cc_by_license: Creative Commons licenca
+        decidim_logo: Decidim logotip
+        help: Pomoć
+        log_in: Prijavite se
+        social_media: Društvene mreže
+        sign_up: Stvori račun
+        resources: Resursi
+        current_organization_img: '%{organization} (Natrag na naslovnicu)'
+        made_with_open_source: Web stranica izrađena pomoću <a target="_blank" href="https://github.com/decidim/decidim">slobodnog softvera</a>.
+        open_data: Open Data
+      user_profile:
+        account: Račun
+        my_data: Moji podaci
+        delete_my_account: Izbriši moj račun
+        authorizations: Autorizacije
+        profile: Profil
+        title: Postavke sudionika
+        notifications_settings: Postavke obavijesti
+      header:
+        back: Natrag
+        mobile_account_greeting: Pozdrav, %{user_name}
+        confirm_close_ephemeral_session: Ako napustite stranicu, vaša privremena sesija bit će zatvorena. Međutim, sav vaš napredak i aktivnost bit će spremljeni. Ako ste završili svoju aktivnost, kliknite U redu.
+        confirm_title_close_ephemeral_session: Prije napuštanja ove stranice…
+        main_menu: Glavni izbornik
+        close: Zatvori
+        log_in: Prijavite se
+        user_menu: Korisnički izbornik
+      notifications_dashboard:
+        mark_all_as_read: Označi sve pročitanim
+        mark_as_read: Označi pročitanim
+      impersonation_warning:
+        expire_time_html: Vaša sesija istječe za <b><span data-impersonation-warning-target="minutes">%{minutes}</span> minuta</b>.
+        close_session: Zatvori sesiju
+        description_html: Upravljate sudionikom <b>%{user_name}</b>.
+      timeout_modal:
+        log_out: Odjavi se
+        continue_session: Nastavi sesiju
+        body: Bili ste neaktivni %{minutes} minuta. Ako nastavite biti neaktivni, bit ćete automatski odjavljeni radi vaše sigurnosti.
+        title: Želite li nastaviti svoju sesiju?
+      social_media_links:
+        facebook: '%{organization} na Facebooku'
+        instagram: '%{organization} na Instagramu'
+        youtube: '%{organization} na YouTubeu'
+        github: '%{organization} na GitHubu'
+        x: '%{organization} na X'
+      offline_banner:
+        cache_version_page: Ups! Vaša mreža je izvanmrežna. Ovo je prethodno predmemorirana verzija stranice koju posjećujete, sadržaj možda nije ažuran.
+      edit_link:
+        edit: Uredi
+      language_chooser:
+        choose_language: Odaberite jezik
+      announcements:
+        view_less: Prikaži manje
+        view_more: Više informacija
+      navigation:
+        aria_label: 'Izbornik navigacije: %{title}'
+  social_share_button:
+    vkontakte: Vkontakte
+    twitter: Twitter
+    douban: Douban
+    reddit: Reddit
+    telegram: Telegram
+    pinterest: Pinterest
+    x: X
+    linkedin: Linkedin
+    delicious: Delicious
+    qq: Qzone
+    facebook: Facebook
+    wechat_footer: Otvorite WeChat, kliknite gumb "Otkrij" zatim kliknite izbornik "Skeniraj QR kod".
+    tumblr: Tumblr
+    share_to: Podijeli na %{name}
+    google_plus: Google+
+    weibo: Sina Weibo
+    xing: Xing
+    whatsapp_web: WhatsApp
+    email: E-pošta
+    google_bookmark: Google oznake
+    whatsapp_app: WhatsApp
+    hacker_news: Hacker News
+    wechat: WeChat
+  password_validator:
+    denied: je odbijeno
+    nickname_included_in_password: previše je slično vašem nadimku
+    password_repeated: ne može ponovno koristiti staru lozinku
+    email_included_in_password: previše je slično vašoj e-pošti
+    domain_included_in_password: previše je slično ovom nazivu domene
+    name_included_in_password: previše je slično vašem imenu
+    not_enough_unique_characters: nema dovoljno jedinstvenih znakova
+    password_too_short: prekratko je
+    password_too_common: previše je uobičajeno
+    password_not_allowed: nije dopuštena
+    fallback: nije valjano
+    password_too_long: predugo je
+  datetime:
+    widget:
+      picker:
+        time_button: Otvori odabir vremena za %{label}
+        date_button: Otvori odabir kalendara za %{label}
+      label:
+        time: Odaberite vrijeme za %{label}
+        date: Odaberite datum za %{label}
+    distance_in_words:
+      x_hours:
+        one: 1 sat
+        other: '%{count} sati'
+      about_x_months:
+        other: oko %{count} mjeseci
+        one: oko 1 mjesec
+      short:
+        x_seconds: '%{count}s'
+        about_x_hours: '%{count}h'
+        x_years: '%{count}g'
+        almost_x_years: '%{count}g'
+        about_x_minutes: '%{count}m'
+        about_x_months: '%{count} mj.'
+        less_than_x_seconds: '%{count}s'
+        half_a_minute: 1m
+        over_x_years: '%{count}g'
+        x_months: '%{count} mj.'
+        about_x_years: '%{count}g'
+        x_minutes: '%{count}m'
+        about_x_days: '%{count}d'
+        less_than_x_minutes: '%{count}m'
+        x_days: '%{count}d'
+        x_hours: '%{count}h'
+      x_months:
+        one: 1 mjesec
+        other: '%{count} mjeseci'
+      x_seconds:
+        one: 1 sekunda
+        other: '%{count} sekundi'
+      x_days:
+        other: '%{count} dana'
+        one: 1 dan
+      x_minutes:
+        other: '%{count} minuta'
+        one: 1 minuta
+      less_than_x_minutes:
+        one: manje od minute
+        other: manje od %{count} minuta
+      about_x_hours:
+        one: oko 1 sat
+        other: oko %{count} sati
+      half_a_minute: pola minute
+      less_than_x_seconds:
+        other: manje od %{count} sekundi
+        one: manje od 1 sekunde
+  date:
+    buttons:
+      select: Odaberi
+      close: Zatvori
+    formats:
+      decidim_short_dashed: '%d-%m-%Y'
+      separator: /
+      decidim_short: '%d/%m/%Y'
+      decidim_short_with_month_name_short: '%d %b %Y'
+      decidim_with_month_name_short: '%d %b'
+      decidim_with_month_name: '%d %B %Y'
+      decidim_with_day_and_month_name: '%A %d %b %Y'
+      help:
+        date_format: 'Format: dd/mm/gggg'
+      order: d-m-y
+  editor:
+    extensions:
+      link:
+        targets:
+          blank: Nova kartica
+          default: Zadano (ista kartica)
+        bubbleMenu:
+          url: URL
+          edit: Uredi
+          remove: Ukloni
+        targetLabel: Meta
+        hrefLabel: URL poveznice
+      videoEmbed:
+        titleLabel: Naslov
+        urlLabel: URL videa
+      image:
+        nodeView:
+          resizer:
+            control:
+              resize: Promijeni veličinu slike (%position%)
+            position:
+              topRight: gornji desni kut
+              topLeft: gornji lijevi kut
+              bottomRight: donji desni kut
+              bottomLeft: donji lijevi kut
+        uploadError: Prijenos datoteke nije uspio.
+        altLabel: Alternativni tekst za sliku
+    toolbar:
+      control:
+        indent:
+          indent: Uvuci
+          outdent: Izvuci uvlaku
+        common:
+          eraseStyles: Obriši stilove
+        italic: Kurziv
+        underline: Podcrtano
+        videoEmbed: Ugrađivanje videa
+        bold: Podebljano
+        hardBreak: Prijelom retka
+        orderedList: Uređena lista
+        image: Slika
+        heading: Stil teksta
+        link: Poveznica
+        blockquote: Citat
+        bulletList: Neuređena lista
+        codeBlock: Blok koda
+      textStyle:
+        normal: Normalno
+        heading: Naslov %level%
+    inputDialog:
+      close: Zatvori prozor
+      buttons:
+        remove: Ukloni
+        save: Spremi
+        cancel: Otkaži
+    upload:
+      uploadedFile: Učitana datoteka
+  views:
+    pagination:
+      previous: Prethodno
+      title: 'Broj stranice: '
+      previous_title: Poveznica na prethodnu stranicu
+      next: Sljedeće
+      next_title: Poveznica na sljedeću stranicu
+      pagination: Numeracija
+      truncate: '&hellip;'
+  number:
+    currency:
+      format:
+        format_html: <span>%u</span> %n
+        format: '%u %n'
+  time:
+    formats:
+      short: '%d/%m/%Y %H:%M'
+      devise:
+        mailer:
+          invitation_instructions:
+            accept_until_format: '%B %d, %Y %I:%M %p'
+      ddmm: '%d.%m'
+      tooltip: '%d-%m-%Y %H:%M %p %Z (GMT %:z)'
+      long_with_particles: '%B %d, %Y u %H:%M'
+      decidim_day_of_year: '%d %B %Y'
+      long: '%B %d, %Y %H:%M'
+      day_of_year: '%d.%m.%y'
+      decidim_short: '%d/%m/%Y %H:%M'
+      help:
+        time_format: 'Format: hh:mm'
+      default: '%a, %d %b %Y %H:%M:%S %z'
+      day_of_month: '%b %d'
+      long_dashed: '%Y-%m-%d %H:%M:%S'
+      time_of_day: '%H:%M'
+      day_of_week: '%a'
+      day_of_week_long: '%a %e'
+      ddmmyyyy: '%d.%m.%Y'
+    buttons:
+      select: Odaberi
+      close: Zatvori
+      reset: Poništi
+  forms:
+    required: Obavezno polje
+    length_validator:
+      minimum:
+        one: Najmanje %{count} znak
+        other: Najmanje %{count} znakova
+    required_explanation: '* Obavezna polja označena su zvjezdicom'
+    correct_errors: Na obrascu postoje pogreške, ispravite ih za nastavak.
+  errors:
+    messages:
+      long_words: sadrži preduge riječi (preko 35 znakova)
+      cycle_detected: roditelj opsega ne može biti jedan od njegovih potomaka
+      file_size_is_less_than_or_equal_to: veličina datoteke mora biti manja ili jednaka %{count}
+      cannot_be_blank: ne može biti prazno
+      not_found: nije moguće pronaći. Jeste li prethodno stvorili račun?
+      not_saved:
+        one: 'Došlo je do pogreške prilikom obrade vašeg zahtjeva:'
+        other: 'Došlo je do više pogrešaka prilikom obrade vašeg zahtjeva:'
+      too_much_caps: koristi previše velikih slova (preko 25% teksta)
+      url_format: Ovaj URL je u netočnom formatu
+      not_locked: nije bilo zaključano
+      must_start_with_caps: mora početi velikim slovom
+      invalid_time_zone: nije valjana vremenska zona
+      blank: ne može biti prazno
+      nesting_too_deep: ne može biti unutar potkategorije
+      expired: je isteklo, zatražite novo
+      too_many_marks: koristi previše uzastopnih interpunkcijskih znakova (npr. ! i ?)
+      allowed_file_content_types: 'dopuštene su samo datoteke sa sljedećim nastavcima: %{types}'
+      confirmation_period_expired: mora biti potvrđeno unutar %{period}, zatražite novo
+      confirmation: ne odgovara %{attribute}
+      already_confirmed: je već potvrđeno, pokušajte se prijaviti
+      content_type_allowlist_error: vrsta datoteke nije valjana
+      empty: ne može biti prazno
+      too_short: je prekratko (ispod %{count} znakova)
+  ransack:
+    predicates:
+      dtlteq: prije ili jednako
+      dtgt: nakon
+      dtgteq: nakon ili jednako
+      dtlt: prije
+  activerecord:
+    attributes:
+      decidim/user:
+        name: Nadimak
+        password_confirmation: Potvrda lozinke
+        password: Lozinka
+        current_password: Trenutna lozinka
+        remember_me: Zapamti me
+        email: Adresa e-pošte
+      decidim/action_log:
+        created_at: Vrijeme
+        with_participatory_space: Participativni prostor
+    models:
+      decidim:
+        history:
+          one: Povijest
+          other: Povijest
+      decidim/amendment:
+        other: Amandmani
+        one: Amandman
+      decidim/like:
+        other: Sviđa mi se
+        one: Sviđa mi se
+      decidim/user:
+        one: Sudionik
+        other: Sudionici
+  booleans:
+    'true': Da
+    'false': Ne
+  versions:
+    directions:
+      right: Dodavanja
+      left: Brisanja
+    dropdown:
+      option_split: Usporedno
+      toggle: Prebaci prikaz
+      option_unescaped: Unescaped
+      option_escaped: Escaped
+      choose_diff_view_mode: 'Način usporednog prikaza:'
+      option_unified: Jedinstveno
+      choose_diff_view_html: 'Način HTML prikaza:'
+  doorkeeper:
+    scopes:
+      public: Vaše javne informacije.
   locale:
+    name_with_error: Hrvatski (greska!)
     name: Hrvatski
-    name_with_error: Hrvatski (greška!)
+  invisible_captcha:
+    sentence_for_humans: Ako ste čovjek, zanemarite ovo polje
+    timestamp_error_message: Oprostite, to je bilo prebrzo! Molimo ponovno pošaljite.

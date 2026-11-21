@@ -1,1 +1,44 @@
+---
 hr:
+  decidim:
+    components:
+      pages:
+        settings:
+          global:
+            announcement: Obavijest
+          step:
+            announcement: Obavijest
+        name: Stranica
+    open_data:
+      help:
+        pages:
+          title: Naslov stranice
+          body: Tijelo stranice
+          id: Jedinstveni identifikator ove stranice
+          component: Komponenta kojoj stranica pripada
+          updated_at: Zadnji datum ažuriranja stranice
+          participatory_space: Kojem prostoru ova stranica pripada
+          created_at: Datum stvaranja ove stranice
+          url: URL za ovu stranicu
+    admin_log:
+      page:
+        update: '%{user_name} ažurirao je stranicu %{resource_name} u %{space_name}'
+    pages:
+      show:
+        empty: Na ovoj stranici još nema sadržaja.
+      admin:
+        models:
+          components:
+            body: Tijelo
+        pages:
+          edit:
+            save: Ažuriraj
+            title: Uredi stranicu
+          update:
+            success: Stranica uspješno spremljena.
+            invalid: Došlo je do problema prilikom spremanja stranice.
+  activerecord:
+    models:
+      decidim/pages/page:
+        other: Stranice
+        one: Stranica

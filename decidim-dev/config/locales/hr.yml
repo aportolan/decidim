@@ -1,1 +1,70 @@
+---
 hr:
+  decidim:
+    components:
+      dummy:
+        settings:
+          step:
+            likes_enabled: Sviđanja omogućena
+            test_options:
+              baz: Baz
+              foo: Foo
+              bar: Bar
+            likes_blocked: Sviđanja blokirana
+            readonly_step_attribute: Atribut koraka samo za čitanje
+          global:
+            test_options:
+              baz: Baz
+              bar: Bar
+              foo: Foo
+            clear_all: Obriši sve
+            readonly_attribute: Samo za čitanje
+            guided_readonly: Onemogućeni unos
+            guided_help: Tekst pomoći
+            test: Test
+            test_choices:
+              b: Izbor B
+              a: Izbor A
+              c: Izbor C
+            guided_rich_readonly_html: HTML <strong>pomoćni</strong> tekst za onemogućeni unos
+            guided_rich_help_html: HTML <strong>pomoćni</strong> tekst
+            guided: Vođeni unos
+            guided_rich: Vođeni bogati unos
+            test_add: Dodaj test
+    statistics:
+      foo: Foo
+      bar: Bar
+      dummies_count_high: Ogledni primjeri visoke razine
+      dummies_count_medium: Ogledni primjeri srednje razine
+    gamification:
+      badges:
+        test:
+          conditions:
+          - Koristite testno okruženje za decidim.
+          name: Testovi
+          next_level_in: Stvorite još %{score} testova za sljedeću razinu!
+          unearned_own: Još niste stvorili nijedan test.
+          description_own: Stvorili ste %{score} testova.
+          unearned_another: Ovaj sudionik još nije stvorio nijedan test.
+          description: Sudionici dobivaju ovu značku stvaranjem testova.
+          description_another: Ovaj sudionik stvorio je %{score} testova.
+    dummy:
+      admin:
+        exports:
+          dummies: Ogledni primjeri
+    resource_links:
+      test_link:
+        dummy_resource_dummy: Povezani ogledni primjer
+  activemodel:
+    attributes:
+      dummy_resource:
+        start_date: Datum početka
+        translatable_text: Prevodivi tekst
+        created_at: Stvoreno
+        decidim_scope_id: Opseg
+        field: Moje polje
+        updated_at: Ažurirano
+        title: Naslov
+      dummy:
+        image: Slika
+      dummy_attribute: Ogledni atribut

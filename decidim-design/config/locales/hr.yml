@@ -1,1 +1,309 @@
+---
 hr:
+  decidim:
+    design:
+      components:
+        forms:
+          emojis: Emotikoni
+          emojis_description: Radi samo za textarea
+          errors: Pogreške
+          multiselect_description_html: Višestruki odabiri su JavaScript značajka dostupna zahvaljujući vanjskoj biblioteci <a href="https://tom-select.js.org/" target="_blank" rel="noopener noreferrer">Tom Select</a>.
+          help_texts: Tekstovi pomoći
+          disabled: Onemogućeno
+          title: Obrasci
+          html_regular_inputs: HTML obični unosi
+          min_max_length: Min/Maks duljina
+          regular_inputs_description: Prikazuje samo uobičajene vrste.
+          textarea_required: obavezno textarea
+          multiselect: Višestruki odabir
+          header_alert: Ova stranica dolazi iz naslijeđenog prikaza. Sadržaj je zastario.
+          errors_description: Ne primjenjuje se za select
+          min_max_length_description: Radi samo za input type='text' i textarea
+        tab_panels:
+          title: Paneli kartica
+        cards:
+          title: Kartice
+        announcement:
+          this_is_the_body: Ovo je tijelo
+          iam_an_announcement: Ja sam obavijest
+          this_is_the_title: Ovo je naslov
+          title: Obavijest
+        buttons:
+          description_html: 'Gumbi se grade različitim kombinacijama CSS klasa: klasa <code>button</code>, veličina i boja.'
+          title: Gumbi
+        tooltips:
+          demo_description: Za rad ove komponente sudionik mora prijeći mišem preko elementa.
+          demo: Demo
+          usage_p_1_html: 1. String s vrijednošću tooltipa.
+          description: Tooltip je komponenta preko koje korisnici mogu prijeći mišem za dodatne informacije.
+          usage: Korištenje
+          usage_p: 'Tooltip zahtijeva korištenje `with_tooltip` helpera s tri argumenta:'
+          usage_p_2_html: 2. Opcionalna klasa sa simbolom gdje će se tooltip prikazati.
+          github_source_html: Izvorni kod na GitHubu %{github_link}
+          usage_p_3_html: 3. Blok sa stringom preko kojeg korisnik mora prijeći mišem.
+          title: Tooltipovi
+        accordions:
+          content_panel: Sadržaj panela
+          title: Harmonike
+          demo_description: U cijeloj aplikaciji harmonike se koriste uglavnom za prikaz/skrivanje sadržaja u karticama ili presavijanje/razvijanje vidljivih tekstova.
+          usage_p: Harmonika zahtijeva najmanje tri elementa
+          panel: Panel
+          description_accordions_html: Harmonike su JavaScript značajka dostupna zahvaljujući vanjskoj biblioteci %{link_code} a11y-accordion-component.
+          usage_p_1_html: 1. Omotač <code>div</code> s data-atributom <code>data-controller="accordion"</code>.
+          demo: Demo
+          usage_p_2_html: 2. Element okidača (gumb) koji upućuje na sklopivi element kroz <code>data-controls="panel"</code>.
+          usage_p_3_html: 3. Element koji se može sakriti, čiji <code>id</code> odgovara vrijednosti data-controls.
+          trigger: Okidač
+          github_source_html: Izvorni kod na GitHubu %{github_link}
+          usage: Korištenje
+        report:
+          title: Prijavi
+        dialogs:
+          usage_description: Dijalog zahtijeva dva elementa
+          tips_description_html: Obratite pažnju na <i>data-atribute</i> i <i>id-ove</i>.
+          dialogs_description_html: Dijalozi su JavaScript značajka dostupna zahvaljujući vanjskoj biblioteci <a href="https://github.com/jonathanlevaillant/a11y-dialog-component" target="_blank" rel="noopener noreferrer">a11y-dialog-component</a>.
+          title: Dijalozi
+          usage_description_2_html: 2. Modalni element čiji <code>id</code> odgovara vrijednosti data-target.
+          usage_description_html: 1. Element na koji korisnik djeluje, s data-atributom <code>data-dialog-open="example"</code>.
+          tips_description: 'Za prikaz složenog modala koristite sljedeći markup:'
+          dialog_demo_description_html: Dijalozi ili modalne komponente implementirani su kroz Rails helper <code>decidim_modal</code>.
+        address:
+          title: Adresa
+        activities:
+          activities: Aktivnosti
+        share:
+          title: Podijeli
+        follow:
+          title: Prati
+        author:
+          title: Autor
+      helpers:
+        report_button: Gumb za prijavu
+        background: Pozadina i rubovi
+        accountability_cards_html: Koriste je kartice <i>projekata odgovornosti</i>.
+        callout_description: Ovaj atribut primjenjuje status na obavijest. Zadano koristi sekundarnu boju.
+        initiative_s: inicijativa_s
+        meeting_l: Sastanak L
+        dummy_title: Naslov oglednog resursa
+        demo_text_2: Koristi je stranica zadnje aktivnosti.
+        card_l: Kartica L
+        participatory_process_s: Participativni proces S
+        budget_card_html: Koriste je kartice <i>projekata proračuna</i>.
+        usage_background_5: Pozadina podnožja
+        usage_formelements_1: Zadana pozadina unosa
+        usage_typography_5: Onemogućena kartica
+        initiatives: Inicijative
+        generic_cards: Generičke kartice
+        argument: Argument
+        card_g: Kartica G
+        proposals: Prijedlozi
+        participatory_process_group_s: Grupa participativnih procesa S
+        debate_l: Rasprava L
+        variations_description: Postoje tri verzije ove ćelije.
+        assemblies: Skupštine
+        context: Kontekst
+        debate_s: Rasprava S
+        description: Opis
+        report_usage_description: Gumb za prijavu otvara modalni prozor za označavanje resursa.
+        usage_typography_3: Tekst na tamnoj pozadini
+        dropdowns_demo_description_html: Sadržaj koji se može sakriti MORA imati <code>id</code> koji počinje s <i>dropdown-menu</i>.
+        post_l: Objava L
+        tab_panels_usage_description: 'Ova komponenta prima polje hashova. Dostupna svojstva za svaki panel:'
+        transparent: Transparentno
+        tailwind: Tailwind naziv
+        plain_text_description: Kao prvi argument možete dati običan tekst i hash objekt
+        budgets: Proračuni
+        state: Stanje
+        usage_background_3: Zadana boja ikone
+        assembly_g: Skupština G
+        usage_base_3: Grafički ukrasi i naglasci
+        address_description_2: Ovisno o vrsti sadržaja, adresa može biti mrežni URL.
+        default: Zadano
+        dropdowns_demo_1_description: 'Sljedeći primjer neće biti vidljiv na desktopu, ali na mobitelu:'
+        collaborative_draft_l: Zajednička skica l
+        project_s: Projekt S
+        compact_description: Ova verzija autora uobičajen je način identifikacije stvaratelja resursa.
+        usage: Korištenje
+        context_description_2: Za resurse se pojavljuje ispod glavnog naslova.
+        usage_base_1: Pozadina glavne navigacije
+        activity: Aktivnost
+        tab_panels_usage_description_tab_html: '<strong>text</strong>: <i>String</i>. Naslov kartice'
+        follow_button: Gumb za praćenje
+        meetings_html: Koriste je kartice <i>sastanaka</i>.
+        highlight: Istaknuto
+        tab_panels_usage_description_id_html: '<strong>id</strong>: <i>String</i>. Jedinstveni id'
+        proposal_l: Prijedlog L
+        debates_cards_html: Koriste je kartice <i>rasprava</i>.
+        avatar_description: Koristi se u uskim prostorima gdje je autor sekundarna informacija.
+        tab_panels_usage_description_rails_html: '<strong>method</strong>: <i>Simbol</i>. Bilo koja funkcija koju Rails razumije'
+        sizes: Veličine
+        grid: Mreža
+        debates: Rasprave
+        participatory_processes: Participativni procesi
+        colors: Boje
+        search: Pretraga
+        ally_link: a11y-dropdown-component
+        conference_s: Konferencija S
+        plain_text_vs_hash: Občni tekst nasuprot hashu
+        variations: Varijacije
+        context_description: Ova ćelija prikazuje informacije o korisniku.
+        result_l: Rezultat L
+        meetings: Sastanci
+        post_g: Objava G
+        usage_typography_2: Inline tekst
+        metadata_text: Svaki resurs definira vlastite stavke metapodataka
+        address_description: Ćelija adrese prima resurs i traži geolokalizabilne atribute.
+        text: Tekst
+        sortitions: Ždrijebanja
+        tab_panels_usage_description_html: '<strong>enabled</strong>: <i>Boolean</i>. Uvjetno prikaži karticu'
+        variations_cards_description: Svaka kartica izgledat će drugačije ovisno o svojstvima resursa.
+        callout_class: Klasa isticanja
+        proposal_s: Prijedlog S
+        rgba_code: RGBA kod
+        usage_typography_1: Naslovi i naslovi odjeljaka
+        usage_background_4: Linije i razdjelnici
+        usage_typography_4: Poveznice i gumbi
+        participatory_process_g: Participativni proces G
+        plain_text: Samo sam običan tekst
+        tab_panels_context_description_html: Uglavnom se koristi unutar <i>layout_item</i> ili <i>layout_center</i>.
+        dropdowns_demo_description: Padajući izbornici koriste se za sažimanje velikih izbornika.
+        initiative_g: inicijativa_g
+        metadata_items: Stavke metapodataka
+        share_usage_description_html: Osigurajte da je partial <code>decidim/shared/share_modal</code> prisutan u DOM-u.
+        dropdowns_usage_description_html: 1. Element na koji korisnik djeluje s <code>data-controller="dropdown" data-target="dropdown-menu-element"</code>.
+        dummy_description: Opis oglednog resursa
+        typography_texts: Tipografija i tekstovi
+        value: Vrijednost
+        image_and_description: Slika i opis
+        blogs: Blogovi
+        dropdowns_usage_description: 'Padajući izbornik zahtijeva dva elementa:'
+        assembly_s: Skupština S
+        share_button: Gumb za dijeljenje
+        usage_formelements_2: Pozadina onemogućenih unosa
+        default_description: Poziv ćelije bez dodatnih argumenata.
+        sortition_l: ždrijebanje_l
+        usage_base_2: Glavna boja poveznica i gumba
+        block_text: Koristi extra_data blok
+        html_tips: HTML savjeti
+        dropdowns_description_html: Padajući izbornici su JavaScript značajka zahvaljujući %{link}.
+        conferences: Konferencije
+        transparent_description: 'U slučaju tamnije pozadine:'
+        dropdowns_usage_1_description: 2. Element koji se može sakriti čiji <code>id</code> odgovara data-target.
+        hex_code: Hex kod
+        source_code: Izvorni kod
+        base: Osnova
+        dropdowns: Padajući izbornici
+        project_l: Projekt L
+        compact: Kompaktno
+        conference_g: Konferencija G
+        tab_panels_usage_description_arguments_html: '<strong>args</strong>: <i>Polje</i>. Argumenti za prethodnu metodu'
+        form_elements: Elementi obrasca
+        usage_state_2: Rub obavijesti upozorenja
+        participatory_process_group_g: Grupa participativnih procesa G
+        usage_background_6: Pozadina admin izgleda
+        blog_cards_html: Koriste je kartice <i>blogova</i>.
+        post_s: Objava S
+        icons: Ikone
+        demo: Demo
+        demo_text: 'Ova ćelija prima model stavki LastActivity i prikazuje:'
+        follower_description_html: Osigurajte da je partial <code>decidim/shared/login_modal</code> prisutan u DOM-u.
+        usage_state_3: Rub obavijesti upozorenja
+        tab_panels_usage_description_remixicon_html: '<strong>icon</strong>: <i>String</i>. Remixicon ključ'
+        usage_background_2: Pozadina odabranog filtra
+        usage_background_1: Pozadina pomoćnog područja
+        avatar: Avatar
+        highlight_description: Koriste ga resursi koji omogućuju isticanje
+        list: Popis
+        card_s: Kartica S
+        tab_panels_context_description: Ova komponenta tab-panela prikuplja povezane sadržaje glavnog elementa radi uštede okomitog prostora.
+        types: Vrste
+        variations_text: Ovisno o vrsti aktivnosti, ćelija može prikazati različit sadržaj.
+        accountability: Odgovornost
+        debates_cards_text: Koristi drugi predložak za blok slike
+        disabled: Onemogućeno
+        main_colors: Glavne boje
+        usage_state_1: Rub obavijesti o uspjehu
+        send: Pošalji
+      foundations:
+        layout:
+          breakpoint: Prijelomna točka
+          code: Kod
+          section_p_desktop: Desktop mreža sastoji se od 12 fleksibilnih stupaca s razmakom od 16px.
+          not_required: Nije potrebno
+          description_layout_p1: Za desktop Decidim koristi mrežu od 12 stupaca s ograničenim brojem predložaka.
+          right_aside: Desno
+          section_p_code_html: Osnovne izglede možete pronaći u %{link_section_code}
+          title: Izgled
+          properties: Svojstva
+          centered: Centrirano
+          mobile: Mobitel
+          section_p_breakpoints: 'Za upravljanje responzivnom širinom koristimo zadanu `container` Tailwind klasu. Podržane rezolucije:'
+          desktop: Desktop
+          layout_list_1: 'Početna stranica: puna širina'
+          tablet: Tablet
+          left_aside: Lijevo
+          layout_list_2: 'Popis elemenata: lijevo'
+          full_width: Puna širina
+          section_p_tablet: Tablet mreža sastoji se od 8 fleksibilnih stupaca s razmakom od 16px.
+          section_p_code: Pri implementaciji novih modula imate helpere koji automatski pružaju potreban kod.
+          breakpoints: Prijelomne točke
+          columns: Broj stupaca 10, 8 ili 6.
+          section_p_mobile: Mobilna mreža sastoji se od 4 fleksibilna stupca s razmakom od 16px.
+          layout_list_3: 'Pojedinačna stavka: centrirano'
+          description_layout_p2: Ova pravila treba slijediti pri stvaranju novih modula.
+        accessibility:
+          use_aria_header: Koristite ARIA atribute gdje je moguće
+          links_and_buttons: Poveznice i gumbi
+          adjacent_links: Susjedne poveznice
+          important_sections_heading: Naslov na važnim odjeljcima
+          dynamic_changes_header: Dinamične promjene mijenjaju kontekst stranice neintuitivno
+          unique_h1_paragraph: Svaka stranica treba imati jedinstven H1 naslov.
+          use_aria_paragraph: Mnogi interaktivni elementi zahtijevaju ARIA atribute za pristupačnost.
+          elements_hidden: Skriveni elementi
+          color_contrast_paragraph: Pri stvaranju sučelja uvijek osigurajte da ne narušavate pristupačnost promjenom boja.
+          wcag_guidelines: Smjernice za pristupačnost web sadržaja (WCAG)
+          elements_hidden_paragraph: Za skrivanje elementa od pomoćnih tehnologija koristite aria-hidden="true".
+          accessibility_title: Pristupačnost
+          adjacent_links_paragraph: Ako isti resurs ima više susjednih poveznica, korisnicima je teže pregledati stranicu.
+          important_sections_paragraph: Važno je da svaki važan odjeljak stranice ima naslov.
+          decidim_follows_html: Decidim slijedi %{link}
+          unique_h1: Jedinstveni H1
+          links_and_buttons_paragraph: Elementi sidra namijenjeni su povezivanju na različite stranice. Za otvaranje skrivenih stavki koristite <button>.
+          accessibility_labels_paragraph: Pri definiranju elemenata uvijek osigurajte da imaju smisla za čitače zaslona.
+          accessibility_labels: Oznake pristupačnosti
+          illogical_heading_order: Nelogičan redoslijed naslova
+          color_contrast: Kontrast boja
+          use_aria: Koristite ARIA
+          heading_on: Naslov na važnim odjeljcima
+          illogical_heading_paragraph: Svaka stranica treba imati logičan redoslijed naslova.
+          adjacent_links_header: Susjedne poveznice za isti resurs
+          learn_more_about_html: Saznajte više o %{link}
+          dynamic_changes_paragraph: Promjene u unosima ne bi trebale automatski mijenjati kontekst stranice.
+          elements_hidden_header: Elementi skriveni od API-ja pristupačnosti
+        typography:
+          typefaces_description_2: Fontovi su licencirani pod Open Font licencom.
+          headings:
+            size: Veličina
+            characters: Znakova po retku
+            layout: Stupci izgleda
+          title: Tipografija
+          typefaces_description_1: Decidim koristi Source Sans Pro kao primarni font. Podržava 310 jezika.
+          description: Ove smjernice sažimaju kako koristiti tipografiju u Decidimu.
+        color:
+          wcag_contrast_checker: WebAIM provjera kontrasta
+          color_header: Boja
+          wcag_compliant_rations: Omjer kontrasta usklađen s WCAG 2.1 AA
+          description_p2_html: Pri prilagodbi boja imajte na umu %{contrast_link}.
+          description_p1: Pružamo osnovnu paletu s nekoliko boja radi lakše prilagodbe.
+        iconography:
+          description_iconography: Ikone koristimo za pojačavanje značenja radnji i naslova.
+          description_iconography_html: 'Koristimo Remixicon biblioteku otvorenog koda: %{iconography_link}'
+          title: Ikonografija
+      home:
+        index:
+          github_source: Izvorni kod na GitHubu
+          different_ui_components: Istovremeno dokumentiramo različite UI komponente i obrasce u uporabi.
+          by_sharing_principles: Dijeljenjem principa i obrazloženja iza dizajnerskih odluka želimo osnažiti zajednicu za dosljedan doprinos.
+          decidim_guide: Vodič za dizajn svega u Decidimu
+          home_header: Decidim vodič za dizajn
+          welcome_sentence: Dobrodošli u Decidim vodič za dizajn (DDG). Ovaj vodič je resurs za dizajnere i programere.

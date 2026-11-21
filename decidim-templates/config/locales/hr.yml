@@ -1,1 +1,121 @@
+---
 hr:
+  decidim:
+    templates:
+      admin:
+        questionnaire_templates:
+          edit:
+            empty: Još nema pitanja.
+            edit: Uredi
+            questionnaire: Upitnik
+            manage_questions: Pitanja
+            title: Uredi predložak upitnika
+          choose:
+            description: Možete stvoriti novi upitnik ili odabrati unaprijed definirani predložak i kasnije ga izmijeniti.
+            placeholder: Odaberite predložak
+            label: Odaberite predložak
+            options:
+              create_new_form: Stvori novi obrazac
+              select_template: Odaberite predložak
+            continue: Nastavi
+          edit_questions:
+            add_title_and_description: Dodaj naslov i opis
+            add_separator: Dodaj razdjelnik
+            add_question: Dodaj pitanje
+          form:
+            title: Predložak upitnika %{questionnaire_for}
+          index:
+            title: Predlošci upitnika
+            confirm_delete: Jeste li sigurni da želite izbrisati ovaj predložak?
+          preview:
+            tos_agreement: Sudjelovanjem prihvaćate Uvjete korištenja
+            of_total_steps: od %{total_steps}
+            current_step: Korak %{step}
+          new:
+            title: Novi predložak upitnika
+        block_user_templates:
+          form:
+            save: Spremi
+          template_chooser:
+            select_template: Odaberite predložak odgovora
+          edit:
+            title: Uredi predložak poruke o blokiranju korisnika
+          new:
+            title: Novi predložak poruke o blokiranju korisnika
+          index:
+            title: Poruke o blokiranju korisnika
+            confirm_delete: Jeste li sigurni da želite izbrisati ovaj predložak?
+        proposal_answer_templates:
+          edit:
+            title: Uredi predložak odgovora na prijedlog
+          index:
+            confirm_delete: Jeste li sigurni da želite izbrisati ovaj predložak?
+            proposal_state_id: Interno stanje
+            missing_state: Nedostaje stanje
+            title: Odgovori na prijedloge
+            component_constraint: Dodaj ograničenje
+          form:
+            hint2_html: <strong>%{name}</strong> bit će zamijenjeno imenom autora
+            component_constraint_help: Imajte na umu da će biti navedeni samo participativni prostori s komponentama vrste "prijedlozi".
+            hint_html: <strong>Savjet:</strong> Ove varijable možete koristiti bilo gdje u predlošku odgovora
+            hint3_html: <strong>%{admin}</strong> bit će zamijenjeno imenom administratora
+            save: Spremi
+            hint1_html: <strong>%{organization}</strong> bit će zamijenjeno nazivom organizacije
+          new:
+            title: Novi predložak odgovora na prijedlog
+          template_chooser:
+            select_template: Odaberite predložak odgovora
+      admin_log:
+        template:
+          update: '%{user_name} ažurirao je predložak upitnika %{resource_name}'
+          create: '%{user_name} stvorio je predložak upitnika %{resource_name}'
+          delete: '%{user_name} izbrisao je predložak upitnika %{resource_name}'
+          duplicate: '%{user_name} duplicirao je predložak upitnika %{resource_name}'
+      template_types:
+        questionnaires: Upitnici
+        block_user: Poruke o blokiranju korisnika
+        proposal_answer_templates: Odgovori na prijedloge
+    admin:
+      titles:
+        template_types:
+          questionnaires: Predlošci upitnika
+        templates: Predlošci
+      templates:
+        destroy:
+          success: Predložak uspješno izbrisan.
+        create:
+          success: Predložak uspješno stvoren.
+          error: Došlo je do problema prilikom stvaranja ovog predloška.
+        empty: Još nema predložaka.
+        actions:
+          new_template: Novi predložak
+        apply:
+          success: Predložak uspješno primijenjen.
+          error: Došlo je do problema prilikom primjene ovog predloška.
+        update:
+          success: Predložak uspješno ažuriran.
+          error: Došlo je do problema prilikom ažuriranja ovog predloška.
+        fetch:
+          error: Predložak nije pronađen. Ponovno učitajte stranicu.
+        copy:
+          error: Došlo je do problema prilikom kopiranja ovog predloška.
+          success: Predložak uspješno kopiran.
+        missing_resource: (nedostaje resurs)
+      menu:
+        templates: Predlošci
+    models:
+      questionnaire_template:
+        fields:
+          title: Naslov upitnika
+          questions: Broj pitanja
+      template:
+        fields:
+          created_at: Stvoreno
+        name: Predložak
+  activemodel:
+    attributes:
+      template:
+        name: Naziv
+        description: Opis
+      questionnaire:
+        title: Naslov

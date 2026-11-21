@@ -1,0 +1,935 @@
+---
+hr:
+  activemodel:
+    attributes:
+      assembly:
+        has_members: Ovaj prostor ima članove
+      elections_question:
+        max_choices: Maksimalan broj izbora
+      member:
+        email: E-pošta
+        name: Ime
+      member_csv_import:
+        file: Datoteka
+      pabulib_rules:
+        equalshares:
+          help: Metoda jednakih udjela (MES) bez dovršetka. Kod MES-a svaki glasač počinje s jednakim virtualnim udjelom proračuna, a projekt se odabire kada ga njegovi podržavatelji zajedno mogu priuštiti.
+          label: Metoda jednakih udjela (%{rule})
+        equalshares/add1:
+          help: Koristi osnovnu metodu jednakih udjela, ali ako prerano stane, nastavlja povećavati virtualni proračun svakog glasača za 1 jedinicu (Add1) i ponovno izračunava, sve dok odabrani projekti stanu u stvarni proračun.
+          label: Metoda jednakih udjela, add1 (%{rule})
+        equalshares/add1_comparison:
+          help: Koristi equalshares/add1, a zatim primjenjuje isti korak usporedbe kao gore.
+          label: Metoda jednakih udjela, add1 usporedba (%{rule})
+        equalshares_comparison:
+          help: 'Koristi osnovnu metodu jednakih udjela, a zatim dodaje još jedan korak: uspoređuje rezultat s pohlepnim mjerilom i prebacuje se samo ako više glasača preferira pohlepni ishod.'
+          label: Metoda jednakih udjela, usporedba (%{rule})
+        greedy:
+          help: Standardni knapsack-pristup aproksimacije. Projekti se sortiraju po broju glasova (silazno). Algoritam prolazi kroz popis, odabirući projekte koji stanu u preostali proračun. Ako je projekt preskup za trenutna sredstva, preskače se i algoritam prelazi na sljedeći projekt.
+          label: Pohlepni (%{rule})
+        greedy_custom:
+          help: Koristi se za posebne slučajeve koji ne odgovaraju standardnim algoritmima, poput ručnih preraspodjela proračuna ili složenih hibridnih pravila.
+          label: Pohlepni, prilagođeno (%{rule})
+        greedy_exclusive:
+          help: Obrađuje sukobljene grupe projekata. Funkcionira kao standardni pohlepni, ali ako se više 'pobjedničkih' projekata sukobljava (npr. u istoj ekskluzivnoj zoni ili kategoriji), primjenjuje se hijerarhijsko pravilo umjesto oslanjanja isključivo na broj glasova.
+          label: Pohlepni, ekskluzivno (%{rule})
+        greedy_no_skip:
+          help: Projekti se sortiraju po broju glasova (silazno). Algoritam odabire projekte koji stanu u preostali proračun, ali se zaustavlja odmah na prvom projektu koji ne stane. Naknadni projekti se ne razmatraju.
+          label: Pohlepni, bez preskakanja (%{rule})
+        greedy_threshold:
+          help: Ponaša se kao standardni pohlepni, ali se projekti razmatraju samo ako zadovoljavaju definirani min_project_score_threshold.
+          label: Pohlepni, prag (%{rule})
+        unknown:
+          help: Ili informacija nije dostupna, ili je bilo više mogućnosti i nejasno je koja se primjenjuje.
+          label: Nepoznato (%{rule})
+      pabulib_vote_types:
+        approval: Odobravanje (%{type})
+        cumulative: Kumulativno (%{type})
+        ordinal: Redno (%{type})
+        scoring: Bodovanje (%{type})
+      participatory_process:
+        has_members: Ovaj prostor ima članove
+    errors:
+      models:
+        member_csv_import:
+          attributes:
+            file:
+              malformed: Neispravna datoteka za uvoz, pročitajte upute pažljivo i provjerite da je datoteka UTF-8 kodirana.
+  decidim:
+    admin:
+      actions:
+        member:
+          new: Novi član
+      admin_terms:
+        show:
+          title: Administrativni uvjeti korištenja
+      area_types:
+        index:
+          title: Vrste područja
+      areas:
+        index:
+          title: Područja
+      assemblies:
+        index:
+          access_modes:
+            open: Otvoreno
+            restricted: Ograničeno
+            transparent: Transparentno
+      attachment_collections:
+        index:
+          title: Mape privitaka
+      attachments:
+        index:
+          title: Privici
+      authorization_workflows:
+        index:
+          title: Metode provjere
+      components:
+        index:
+          title: Komponente
+      conflicts:
+        edit:
+          title: Prijenos korisnika
+        index:
+          title: Sukobi provjere
+      dashboard:
+        show:
+          title: Nadzorna ploča
+      filters:
+        members:
+          user_invitation_accepted_at_not_null:
+            label: Pozivnica prihvaćena
+            values:
+              'false': Nije prihvaćena
+              'true': Prihvaćena
+          user_invitation_sent_at_not_null:
+            label: Pozivnica poslana
+            values:
+              'false': Nije poslana
+              'true': Poslana
+        search_placeholder:
+          title_or_description_or_author_name_or_author_nickname_cont: Pretraži %{collection} po naslovu, opisu ili imenu autora
+        with_any_access_mode:
+          label: Način pristupa
+          values:
+            open: Otvoreno
+            restricted: Ograničeno
+            transparent: Transparentno
+      help_sections:
+        update:
+          title: Odjeljci pomoći
+      impersonatable_users:
+        index:
+          title: Sudionici kojima se može upravljati
+      impersonations:
+        new:
+          title: Preuzmi identitet sudionika
+      logs:
+        index:
+          title: Administrativni zapis
+      managed_users:
+        impersonation_logs:
+          index:
+            title: Preuzimanja identiteta
+        promotions:
+          new:
+            title: Novo promicanje upravljanog sudionika
+      members:
+        create:
+          error: Došlo je do problema prilikom dodavanja člana.
+          success: Pristup člana uspješno stvoren.
+        destroy:
+          error: Došlo je do problema prilikom brisanja člana.
+          success: Pristup člana uspješno izbrisan.
+        edit:
+          title: Uredi člana
+          update: Ažuriraj
+        form:
+          email: E-pošta
+          invite_explanation: Sudionik će biti pozvan da se pridruži organizaciji.
+          name_or_nickname: Ime ili nadimak
+          select_user: Odaberite člana
+        index:
+          import_via_csv: Uvezi putem CSV-a
+          publish_all: Objavi sve
+          title: Član
+          unpublish_all: Povuci objavu svih
+        new:
+          create: Stvori
+          title: Novi član
+        publish_all:
+          error: Došlo je do problema prilikom objavljivanja svih članova.
+          success: Uspješno objavljeni svi članovi
+        unpublish_all:
+          error: Došlo je do problema prilikom povlačenja objave svih članova.
+          success: Uspješno povučena objava svih članova
+        update:
+          error: Došlo je do problema prilikom ažuriranja člana.
+          success: Član uspješno ažuriran
+      members_csv_imports:
+        create:
+          invalid: Došlo je do problema prilikom čitanja CSV datoteke.
+          success: CSV datoteka uspješno učitana, šaljemo pozivnice sudionicima.
+        new:
+          csv_upload:
+            title: Učitajte svoju CSV datoteku
+          destroy:
+            button: Izbriši sve članove
+            confirm: Jeste li sigurni da želite izbrisati sve članove? Ova radnja ne može se poništiti.
+            empty: Nemate članova.
+            explanation: Imate %{count} članova.
+            title: Izbriši članove
+          example_file: 'Primjer datoteke:'
+          explanation: Učitajte svoju CSV datoteku. Mora imati dva stupca s e-poštom u prvom stupcu i imenom u zadnjem.
+          explanation_example: 'john.doe@example.org%{csv_col_sep}John Doe
+
+            jane.doe@example.org%{csv_col_sep}Jane Doe
+
+            '
+          title: Uvezi članove putem CSV-a
+          upload: Učitaj
+      menu:
+        assemblies_submenu:
+          members: Članovi
+        participatory_processes_submenu:
+          members: Članovi
+      models:
+        assembly:
+          fields:
+            access_mode: Način pristupa
+        member:
+          name: Član
+        participatory_process:
+          fields:
+            access_mode: Način pristupa
+      newsletter_templates:
+        show:
+          title: 'Pregled predloška: %{template_name}'
+      newsletters:
+        index:
+          members: 'članovi '
+        select_recipients_to_deliver:
+          members_help: Šalje bilten svim potvrđenim korisnicima dodanim u odabrane prostore kao članovi.
+        show:
+          title: Pregled
+      officializations:
+        index:
+          title: Sudionici
+        show_email:
+          title: Prikaži e-poštu
+      organization:
+        form:
+          machine_translation_display_priority:
+            options:
+              original: Sustav prikazuje informaciju na jeziku autora.
+              translation: Sustav će prikazati prijevod ako je dostupan, inače izvorni jezik.
+      organization_external_domain_allowlist:
+        edit:
+          title: Popis dopuštenih vanjskih domena
+      participatory_processes:
+        index:
+          access_modes:
+            open: Otvoreno
+            restricted: Ograničeno
+            transparent: Transparentno
+      registration_types:
+        destroy:
+          error: Došlo je do problema prilikom uklanjanja vrste registracije.
+      reminders:
+        new:
+          title: Pošalji podsjetnike
+      scope_types:
+        index:
+          title: Vrste opsega
+      scopes:
+        index:
+          title: Opsezi
+      static_page_topics:
+        index:
+          title: Teme
+      static_pages:
+        index:
+          title: Stranice
+      statistics:
+        index:
+          title: Statistika
+      taxonomies:
+        index:
+          title: Taksonomije
+      taxonomy_filters:
+        index:
+          title: Filtri taksonomije za "%{taxonomy}"
+      taxonomy_filters_selector:
+        index:
+          title: Filtri taksonomije
+        new:
+          title: Novi birač filtra taksonomije
+        show:
+          title: Birač filtra taksonomije
+      users:
+        index:
+          title: Administratori
+    admin_log:
+      component:
+        menu_hidden: '%{user_name} sakrio je komponentu %{resource_name} iz izbornika u prostoru %{space_name}'
+      member:
+        create: '%{user_name} pozvao je %{resource_name} da bude član'
+        create_via_csv: '%{user_name} pozvao je %{resource_name} putem CSV datoteke da bude član'
+        delete: '%{user_name} uklonio je sudionika %{resource_name} kao člana'
+      participatory_process_step:
+        system_activate: Faza %{resource_name} automatski je aktivirana u participativnom procesu %{space_name}.
+    amendments:
+      wizard:
+        steps:
+          '1': Stvorite svoj amandman
+          '2': Objavite svoj amandman
+    api:
+      errors:
+        invalid_locale: Naveden je nevažeći jezik
+        locale_argument_error: Došlo je do pogreške prilikom interne obrade i18n podataka
+        not_found: '%{type} nije pronađen/na'
+        permission_not_set: Dopuštenje nije postavljeno za ovaj %{type}
+        unauthorized_field: Ne možete vidjeti ni uređivati polje %{field} na %{type} jer nemate dopuštenje
+        unauthorized_mutation: Nemate dopuštenje za izvršavanje ove mutacije
+        unauthorized_object: Ne možete vidjeti ni uređivati ovaj %{type} jer nemate dopuštenja
+    assemblies:
+      admin:
+        assemblies:
+          edit:
+            title: O ovoj skupštini
+          form:
+            access:
+              label: Pristup
+              options:
+                open: Svatko može vidjeti skupštinu i sudjelovati.
+                restricted: Samo članovi i administratori mogu vidjeti i sudjelovati.
+                transparent: Svatko može vidjeti skupštinu, ali samo članovi i administratori mogu sudjelovati.
+              set_this_space_as: Postavi ovaj prostor kao
+            has_members_help: Moći ćete stvarati i objavljivati članove
+          index:
+            title: Skupštine
+          manage_trash:
+            title: Izbrisane skupštine
+          new:
+            title: Nova skupština
+        assembly_duplicates:
+          new:
+            title: Dupliciraj skupštinu
+        assembly_imports:
+          new:
+            title: Uvezi skupštinu
+        assembly_user_roles:
+          edit:
+            title: Ažuriraj administratora skupštine
+          index:
+            title: Administratori skupštine
+          new:
+            title: Novi administrator skupštine
+    blogs:
+      posts:
+        orders:
+          label: Poredaj objave po
+          most_commented: Najviše komentara
+          random: Nasumični redoslijed
+          recent: Najnovije
+    budgets:
+      admin:
+        exports:
+          formats:
+            pabulib: Pabulib
+          voting_results: Rezultati glasovanja
+        pabulib_exports:
+          create:
+            invalid: Ispravite pogreške na obrascu.
+            no_votes: Još nema glasova za izvoz.
+          show:
+            create: Izvezi
+            explanation_html: "<p>\n  Ovaj prikaz stvorit će %{format_link} izvoz rezultata glasovanja participativnog proračuna.\n</p>\n"
+            explanation_link_label_format: Pabulib format
+            export_details_data: Atributi podataka
+            export_details_general: Opći detalji
+            fields:
+              country:
+                help: Država u kojoj je glasovanje održano.
+                label: Država (%{field})
+              default_score:
+                help: 'Zadani rezultat za vrstu glasovanja bodovanjem (zadano: %{default_value}).'
+                label: Zadani rezultat (%{field})
+              description:
+                help: Opis glasovanja o tome o čemu se glasalo.
+                label: Opis (%{field})
+              district:
+                help: Glasni okrug unutar glasovanja. Na primjer, ako kvartove koristite kao podjedinice, možete ih mapirati na okruge pomoću ovog polja.
+                label: Okrug (%{field})
+              instance:
+                help: Instanca glasovanja, na primjer, za godišnja ponavljajuća glasovanja bila bi godina glasovanja.
+                label: Instanca (%{field})
+              max_length:
+                help: 'Maksimalan broj projekata za odabir (zadano: %{default_value}).'
+                label: Maksimalna duljina (%{field})
+              max_points:
+                help: 'Maksimalni bodovi dodijeljeni odabranim projektima (zadano: %{default_value}).'
+                help_default_value: za kumulativnu vrstu glasovanja vrijednost max_sum_points, za bodovanje ∞
+                label: Maksimalni bodovi (%{field})
+              max_sum_cost:
+                help: 'Maksimalni zbroj troška projekta (zadano: %{default_value}).'
+                label: Maksimalni zbroj troška (%{field})
+              max_sum_points:
+                help: Maksimalni zbroj dodijeljenih bodova za svaki projekt.
+                label: Maksimalni zbroj bodova (%{field})
+              min_length:
+                help: 'Minimalan broj projekata za odabir (zadano: %{default_value}).'
+                label: Minimalna duljina (%{field})
+              min_points:
+                help: 'Minimalni bodovi dodijeljeni odabranim projektima (zadano: %{default_value}).'
+                label: Minimalni bodovi (%{field})
+              min_sum_cost:
+                help: 'Minimalni zbroj troška projekta (zadano: %{default_value}).'
+                label: Minimalni zbroj troška (%{field})
+              min_sum_points:
+                help: 'Minimalni zbroj dodijeljenih bodova za svaki projekt (zadano: %{default_value}).'
+                label: Minimalni zbroj bodova (%{field})
+              rule:
+                help: Algoritam korišten za odabir pobjedničkih projekata na temelju glasova.
+                label: Pravilo (%{field})
+              scoring_fn:
+                help: 'Funkcija bodovanja za rednu vrstu glasovanja (zadano: %{default_value}).'
+                label: Funkcija bodovanja (%{field})
+              subunit:
+                help: Glasna podjedinica unutar glasovanja, na primjer, područje unutar grada ili općine.
+                label: Podjedinica (%{field})
+              unit:
+                help: Glasna jedinica unutar glasovanja, na primjer, naziv grada ili općine.
+                label: Jedinica (%{field})
+              vote_type:
+                help: Kako se procjenjuju rezultati glasovanja.
+                label: Vrsta glasa (%{field})
+            format_info_html: Molimo pogledajte dokumentaciju %{link} za više informacija o ovim detaljima.
+            large_dataset_warning_html: '<p>Vaš skup podataka sadrži %{amount} glasova i stoga je vrlo velik za izvoz kroz ovo korisničko sučelje.</p>
+
+              <p>Razmislite o izvozu skupa podataka iz konzole sljedećom naredbom: <code>%{command}</code></p>
+
+              '
+            title: Izvezi rezultate glasovanja za %{budget} u Pabulib format
+    collaborative_texts:
+      admin:
+        exports:
+          document_suggestions: Prijedlozi
+    components:
+      accountability:
+        actions:
+          vote_comment: Glasaj za komentar
+      blogs:
+        actions:
+          vote_comment: Glasaj za komentar
+      budgets:
+        actions:
+          vote_comment: Glasaj za komentar
+      comment:
+        load_replies: Učitaj odgovore
+        replies_count:
+          one: '%{count} odgovor'
+          other: '%{count} odgovora'
+      comments:
+        load_more_comments: Učitaj još komentara
+        no_comments_yet: Još nema komentara
+      debates:
+        actions:
+          vote_comment: Glasaj za komentar
+      meetings:
+        actions:
+          vote_comment: Glasaj za komentar
+    conferences:
+      admin:
+        conference_duplicates:
+          new:
+            title: Dupliciraj konferenciju
+        conference_invites:
+          index:
+            title: Pozivnice
+          new:
+            title: Pozovi sudionika
+        conference_registrations:
+          index:
+            title: Registracije
+        conference_speakers:
+          edit:
+            title: Ažuriraj govornika konferencije
+          index:
+            title: Govornici konferencije
+          new:
+            title: Novi govornik konferencije
+        conference_user_roles:
+          edit:
+            title: Ažuriraj administratora konferencije
+          index:
+            title: Administratori konferencije
+          new:
+            title: Novi administrator konferencije
+        conferences:
+          edit:
+            title: O ovoj konferenciji
+          index:
+            title: Konferencije
+          manage_trash:
+            title: Izbrisane konferencije
+          new:
+            title: Nova konferencija
+        media_links:
+          edit:
+            title: Ažuriraj medijsku poveznicu
+          index:
+            title: Medijske poveznice
+          new:
+            title: Nova medijska poveznica
+        partners:
+          edit:
+            title: Ažuriraj partnera
+          new:
+            title: Novi partner
+        registration_types:
+          edit:
+            title: Ažuriraj vrstu registracije
+          new:
+            title: Nova vrsta registracije
+    content_blocks:
+      announcement:
+        body: Tekst obavijesti
+    debates:
+      debates:
+        orders:
+          most_commented: Najviše komentara
+    download_your_data:
+      help:
+        participatory_space_members:
+          created_at: Datum i vrijeme kada je ovaj član stvoren
+          id: Jedinstveni identifikator ovog člana
+          participatory_space: Kojem prostoru ovaj član pripada
+          published: Je li ovaj član objavljen ili ne
+          role: Uloga koju ovaj član ima
+          updated_at: Datum i vrijeme kada je ovaj član zadnji put ažuriran
+    elections:
+      admin:
+        census:
+          edit:
+            title: Uredi izbore
+        dashboard:
+          status:
+            allow_census_check_before_start: Dopusti korisnicima provjeru mogu li glasati prije početka izbora
+        elections:
+          toggle_census_check:
+            error: Došlo je do pogreške prilikom omogućavanja provjere popisa.
+      census_checks:
+        show:
+          description: To znači da, kada izbori počnu, možete glasati.
+          exit_button: Izađi iz provjere popisa
+          title: Uspješno ste provjereni
+      elections:
+        show:
+          check_census_button: Provjeri mogu li glasati
+          check_census_explanation: Ovi izbori još nisu počeli, ali možete provjeriti jeste li na popisu.
+      votes:
+        question:
+          max_choices: 'Maks. izbora: %{count}'
+          max_choices_alert: Odabrali ste previše opcija.
+          max_choices_exceeded: Ne možete odabrati više od %{max} opcija.
+    errors:
+      files:
+        file_contains_unsafe_content: Datoteka sadrži nesiguran sadržaj
+        file_is_not_a_valid_image: Datoteka nije valjana slika
+    events:
+      participatory_space:
+        member_added:
+          published:
+            email_intro: Dodani ste kao član u participativni prostor.
+            email_outro: Ovu ste obavijest primili jer vas je administrator dodao u <a href="%{resource_url}">%{resource_title}</a>. Ako je pristup ovom prostoru ograničen, moći ćete mu pristupiti sa svojim računom.<br> Vaš profil pojavit će se na <a href="%{members_page}">popisu članova</a> prostora.
+            email_subject: Sada imate pristup sadržaju %{resource_title}.
+            notification_title: Sada imate pristup sadržaju <a href="%{resource_url}">%{resource_title}</a>.
+          unpublished:
+            email_intro: Dodani ste kao član u participativni prostor.
+            email_outro: Ovu ste obavijest primili jer vas je administrator dodao u <a href="%{resource_url}">%{resource_title}</a>. Ako je pristup ovom prostoru ograničen, moći ćete mu pristupiti sa svojim računom.
+            email_subject: Sada imate pristup sadržaju %{resource_title}.
+            notification_title: Sada imate pristup sadržaju <a href="%{resource_url}">%{resource_title}</a>.
+      proposals:
+        proposal_state_changed_for_authors:
+          affected_user:
+            email_intro: 'Prijedlog "%{resource_title}" promijenio je stanje u "%{state}". Odgovor možete pročitati na ovoj stranici:'
+            email_outro: Ovu ste obavijest primili jer ste autor sadržaja "%{resource_title}".
+            email_subject: Vaš prijedlog je promijenio stanje (%{state})
+            notification_title: Vaš prijedlog <a href="%{resource_path}">%{resource_title}</a> promijenio je stanje u "%{state}".
+    forms:
+      admin_log:
+        questionnaire:
+          delete_all_responses: '%{user_name} izbrisao je odgovore upitnika %{resource_name} u prostoru %{space_name}'
+      questionnaires:
+        response:
+          spam_detected: Došlo je do problema prilikom odgovaranja na obrazac. Možda ste bili prebrzi, možete li pokušati ponovno?
+        show:
+          questionnaire_for_members:
+            body: Obrazac je dostupan samo članovima
+            title: Obrazac zatvoren
+    initiatives:
+      admin:
+        initiatives:
+          edit:
+            title: O ovoj inicijativi
+          index:
+            title: Inicijative
+        initiatives_settings:
+          edit:
+            title: Postavke inicijativa
+        initiatives_types:
+          edit:
+            title: Uredi vrstu inicijative
+          index:
+            title: Vrste inicijativa
+    log:
+      value_types:
+        access_mode_presenter:
+          access_modes:
+            open: Otvoreno
+            restricted: Ograničeno
+            transparent: Transparentno
+          not_found: Način pristupa %{id} nije pronađen
+    map:
+      dynamic:
+        zoom_in: Povećaj
+        zoom_out: Smanji
+    meetings:
+      admin:
+        invites:
+          form:
+            email: E-pošta
+            name_or_nickname: Ime ili nadimak
+          index:
+            title: Pozovi sudionika
+        meeting_copies:
+          new:
+            title: Umnoži sastanak
+        meetings:
+          linked_spaces:
+            restricted_space_warning: Povezani prostori neće se primijeniti kada sastanak pripada ograničenom prostoru.
+        poll:
+          edit:
+            title: Uredi anketu
+        registration_form:
+          edit_questions:
+            title: Uredi pitanja
+        registrations:
+          edit:
+            title: Registracije
+      public_participants_list:
+        show_less: Prikaži manje
+        show_more: Prikaži više
+      registrations:
+        create:
+          unauthorized: Morate se prijaviti prije registracije na sastanak.
+        decline_invitation:
+          unauthorized: Morate se prijaviti prije odbijanja pozivnice.
+    open_data:
+      help:
+        assemblies:
+          access_mode: Način pristupa. Je li skupština otvorena, ograničena ili transparentna.
+          component_settings: Postavke komponenti skupštine
+        comment_votes:
+          comment: ID komentara za koji se glasalo
+          created_at: Datum kada je ovaj glas stvoren
+          id: ID glasa
+          updated_at: Datum kada je ovaj glas zadnji put ažuriran
+          weight: Težina glasa (1 za pozitivno, -1 za negativno)
+        comments:
+          alignment: Je li ovaj komentar za, protiv ili neutralan
+          author: Ime sudionika koji je napisao ovaj komentar
+          body: Sam komentar
+          commentable_id: Jedinstveni ID sadržaja na koji se komentira
+          commentable_type: Vrsta sadržaja na koji se komentira (rezultat, prijedlog itd.)
+          created_at: Datum kada je ovaj komentar stvoren
+          depth: Mjesto ovog komentara u stablu komentara (je li odgovor ili odgovor na odgovor)
+          id: ID ovog komentara
+          locale: Jezik koji je sudionik imao pri pisanju ovog komentara
+          root_commentable_url: URL resursa koji se veže na ovaj komentar
+        conference_invites:
+          accepted_at: Datum prihvaćanja pozivnice konferencije
+          conference: Konferencija na koju je pozivnica poslana
+          confirmed_at: Datum potvrde pozivnice
+          created_at: Datum stvaranja pozivnice
+          id: Jedinstveni identifikator pozivnice
+          registration_type: Vrsta registracije
+          rejected_at: Datum odbijanja pozivnice
+          sent_at: Datum slanja pozivnice
+          updated_at: Datum zadnjeg ažuriranja pozivnice
+        conference_registrations:
+          conference: Konferencija kojoj ovo pripada
+          confirmed_at: Datum potvrde registracije
+          created_at: Datum stvaranja registracije
+          id: Jedinstveni identifikator registracije
+          registration_type: Vrsta registracije
+          updated_at: Datum zadnjeg ažuriranja registracije
+        conferences:
+          component_settings: Postavke komponenti prostora konferencije
+        follows:
+          created_at: Datum i vrijeme kada je praćenje stvoreno
+          followable: Resurs ili prostor koji se prati
+          id: Jedinstveni identifikator ovog praćenja
+          updated_at: Datum i vrijeme kada je praćenje zadnji put ažurirano
+        identities:
+          created_at: Datum i vrijeme kada je identitet stvoren
+          id: Jedinstveni identifikator ovog identiteta
+          provider: Pružatelj ovog identiteta
+          uid: Jedinstveni identifikator ovog identiteta
+          updated_at: Datum i vrijeme kada je identitet zadnji put ažuriran
+          user: Korisnik kojem ovaj identitet pripada
+        invites:
+          accepted_at: Datum i vrijeme kada je ova pozivnica prihvaćena
+          created_at: Datum i vrijeme kada je ova pozivnica stvorena
+          id: Jedinstveni identifikator ove pozivnice
+          meeting: Sastanak na kojem se dogodila ova pozivnica
+          rejected_at: Datum i vrijeme kada je ova pozivnica odbijena
+          sent_at: Datum i vrijeme kada je ova pozivnica poslana
+          updated_at: Datum i vrijeme zadnjeg ažuriranja ove pozivnice
+        messaging_conversations:
+          created_at: Datum kada je ovaj razgovor stvoren
+          id: Jedinstveni identifikator za ovaj razgovor
+          messages: Poruke ovog razgovora
+          updated_at: Datum kada je ovaj razgovor zadnji put ažuriran
+        notifications:
+          created_at: Datum i vrijeme kada je obavijest stvorena
+          event_class: Klasa događaja koji je pokrenuo obavijest
+          event_name: Naziv događaja koji je pokrenuo obavijest
+          extra: Dodatne informacije ove obavijesti
+          id: Jedinstveni identifikator ove obavijesti
+          resource_type: Vrsta resursa na koji se obavijest odnosi
+          updated_at: Datum i vrijeme kada je obavijest zadnji put ažurirana
+        orders:
+          budget: Proračun na koji se narudžba odnosi
+          checked_out_at: Datum i vrijeme kada je narudžba potvrđena
+          component: Komponenta na koju se narudžba odnosi
+          created_at: Datum i vrijeme stvaranja narudžbe
+          id: Jedinstveni identifikator narudžbe
+          projects: Projekti za koje je narudžba glasala
+          updated_at: Datum i vrijeme ažuriranja narudžbe
+        participatory_processes:
+          access_mode: Način pristupa. Je li proces otvoren, ograničen ili transparentan.
+          component_settings: Postavke komponenti procesa
+        participatory_space_members:
+          created_at: Datum i vrijeme kada je ovaj član stvoren
+          id: Jedinstveni identifikator ovog člana
+          participatory_space: Kojem prostoru ovaj član pripada
+          published: Je li ovaj član objavljen ili ne
+          role: Uloga koju ovaj član ima
+          updated_at: Datum i vrijeme kada je ovaj član zadnji put ažuriran
+        participatory_space_private_users:
+          created_at: Datum i vrijeme stvaranja ovog privatnog korisnika
+          id: Jedinstveni identifikator ovog privatnog korisnika
+          privatable_to: Kojem prostoru pripada ovaj privatni korisnik
+          published: Je li ovaj privatni korisnik objavljen ili ne
+          role: Uloga koju ovaj privatni korisnik ima
+          updated_at: Datum i vrijeme zadnjeg ažuriranja ovog privatnog korisnika
+        posts:
+          reference: Jedinstvena referenca objave
+        published_survey_user_responses:
+          body: Sadržaj odgovora
+          created_at: Vremenska oznaka kada je odgovor stvoren
+          id: Jedinstveni identifikator odgovora ankete
+          ip_hash: Hashirana IP adresa ispitanika radi privatnosti
+          question: Pitanje na koje je odgovoreno
+          registered: Registrirani sudionik
+          unregistered: Neregistrirani sudionik
+          user_status: Status korisnika koji je poslao odgovor
+        registrations:
+          code: Registracijski kod
+          created_at: Datum i vrijeme stvaranja ove registracije
+          id: Jedinstveni identifikator registracije
+          meeting: Sastanak na koji se korisnik registrirao
+          public_participation: Je li ovo sudjelovanje javno prikazano
+          updated_at: Datum i vrijeme zadnjeg ažuriranja registracije
+          user: Korisnik koji je napravio registraciju
+          validated_at: Datum i vrijeme kada je ova registracija potvrđena
+        reports:
+          created_at: Datum i vrijeme kada je ova prijava stvorena
+          details: Detalji ove prijave
+          id: Jedinstveni identifikator ove prijave
+          locale: Jezik ove prijave
+          moderation: Moderacija koju ova prijava ima
+          reason: Razlog ove prijave
+          updated_at: Datum i vrijeme kada je ova prijava zadnji put ažurirana
+        responses:
+          id: Jedinstveni identifikator odgovora
+          question: Pitanje na koje je odgovoreno
+          questionnaire: Upitnik na koji je odgovoreno
+          response: Odgovor na pitanje
+          user: Korisnik koji je odgovorio na upitnik
+        users:
+          accepted_tos_version: Datum kada je korisnik prihvatio Uvjete korištenja ove platforme
+          admin: Je li ovaj korisnik administrator
+          confirmation_sent_at: Datum i vrijeme kada je potvrda poslana
+          confirmed_at: Datum i vrijeme kada je ovaj korisnik potvrđen
+          created_at: Datum i vrijeme kada je ovaj korisnik stvoren
+          current_sign_in_at: Datum i vrijeme trenutne prijave
+          current_sign_in_ip: IP adresa trenutne prijave
+          delete_reason: Razlog naveden za brisanje ovog korisnika
+          deleted_at: Datum i vrijeme kada je ovaj korisnik izbrisan
+          email: Adresa e-pošte ovog korisnika
+          followers_count: Broj sudionika koji prate ovog korisnika
+          following_count: Broj sudionika koje ovaj korisnik prati
+          invitation_accepted_at: Datum i vrijeme kada je pozivnica prihvaćena
+          invitation_created_at: Datum i vrijeme kada je ovaj korisnik pozvan
+          invitation_sent_at: Datum i vrijeme kada je pozivnica poslana
+          invitations_count: Broj pozivnica poslanih ovom korisniku
+          invited_by: Korisnik koji je pozvao ovog korisnika
+          last_sign_in_at: Datum i vrijeme prethodne prijave
+          last_sign_in_ip: IP adresa prethodne prijave
+          locale: Jezik koji je ovaj korisnik odabrao
+          managed: Je li ovim korisnikom upravlja drugi korisnik
+          newsletter_notifications_at: Datum i vrijeme kada se ovaj sudionik pretplatio na bilten
+          notification_settings: Postavke obavijesti koje je ovaj korisnik odabrao
+          notifications_sending_frequency: Učestalost obavijesti koje ovaj korisnik prima
+          officialized_as: Naziv ovjere (vijećnik, gradonačelnik itd.)
+          officialized_at: Datum i vrijeme kada je ovaj korisnik ovjeren
+          organization: Organizacija kojoj ovaj korisnik pripada
+          password_updated_at: Datum kada je njihova lozinka zadnji put promijenjena
+          personal_url: Osobni URL ovog korisnika
+          remember_created_at: Datum i vrijeme kada je korisnik odabran da bude zapamćen
+          reset_password_sent_at: Datum i vrijeme kada je ponovno postavljanje lozinke poslano
+          roles: Uloga koju ovaj korisnik ima, ako je ima
+          sign_in_count: Broj puta kada se ovaj korisnik prijavio
+          type: Vrsta koju ovaj korisnik ima
+          unconfirmed_email: Adresa e-pošte koju ovaj korisnik još nije potvrdio
+          updated_at: Datum i vrijeme kada je ovaj korisnik zadnji put ažuriran
+    pages:
+      admin:
+        pages:
+          edit:
+            add_attachments: Dodaj privitke
+            edit_attachments: Uredi privitke
+    participatory_processes:
+      admin:
+        participatory_process_duplicates:
+          new:
+            title: Dupliciraj participativni proces
+        participatory_process_groups:
+          edit:
+            title: Uredi grupu procesa
+          index:
+            title: Grupe participativnih procesa
+          new:
+            title: Nova grupa procesa
+        participatory_process_imports:
+          new:
+            title: Uvezi participativni proces
+        participatory_process_steps:
+          edit:
+            title: Uredi fazu participativnog procesa
+          index:
+            title: Faze
+          new:
+            title: Nova faza participativnog procesa
+        participatory_process_user_roles:
+          edit:
+            title: Ažuriraj administratora participativnog procesa
+          index:
+            title: Administratori participativnog procesa
+          new:
+            title: Novi administrator participativnog procesa
+        participatory_processes:
+          edit:
+            title: O ovom procesu
+          form:
+            access:
+              label: Pristup
+              options:
+                open: Svatko može vidjeti proces i sudjelovati.
+                restricted: Samo članovi i administratori mogu vidjeti i sudjelovati. Neće se pojaviti u općoj pretrazi, API-ju niti open data datotekama.
+                transparent: Svatko može vidjeti proces, ali samo članovi i administratori mogu sudjelovati.
+              set_this_space_as: Postavi ovaj prostor kao
+            has_members_help: Moći ćete stvarati i objavljivati članove
+          index:
+            title: Participativni procesi
+          manage_trash:
+            title: Izbrisani participativni procesi
+          new:
+            title: Novi participativni proces
+    participatory_space:
+      labels:
+        reference: Referenca prostora
+        restricted: Ograničeni prostor
+        transparent: Transparentni prostor
+      pages:
+        user_profile:
+          member_of:
+            member_of: Član od
+    participatory_space_members:
+      index:
+        members: Članovi
+    participatory_spaces:
+      show:
+        restricted_space: Ovo je ograničeni prostor. Samo članovi i administratori mogu ga pregledavati i sudjelovati.
+        transparent_space: Ovo je transparentni prostor. Svatko može pregledavati sadržaj, ali samo članovi i administratori mogu sudjelovati.
+    proposals:
+      admin:
+        proposals:
+          show:
+            address: Adresa
+            title: Odgovori na prijedlog
+    resources:
+      initiative:
+        actions:
+          vote_comment: Glasaj za komentar
+    shared:
+      mentions:
+        search_prompt: Utipkajte za pretragu sudionika
+    surveys:
+      admin:
+        responses:
+          actions:
+            destroy_all_responses: Izbriši sve odgovore
+            destroy_all_responses_confirm:
+              one: Jeste li sigurni da želite izbrisati %{count} odgovor? Ova radnja ne može se poništiti.
+              other: Jeste li sigurni da želite izbrisati svih %{count} odgovora? Ova radnja ne može se poništiti.
+          destroy_all:
+            invalid: Došlo je do problema prilikom brisanja svih odgovora.
+            success: Svi odgovori uspješno su izbrisani.
+    system:
+      oauth_applications:
+        form:
+          scopes_explanation:
+            admin:read: Omogućuje korisniku izvršavanje administratorskih upita kroz GraphQL API.
+            admin:write: Omogućuje korisniku izvršavanje administratorskih mutacija kroz GraphQL API.
+    verifications:
+      csv_census:
+        admin:
+          census:
+            index:
+              title: Trenutni podaci popisa
+            instructions:
+              body: Za ovo morate ući u administraciju sustava i dodati csv_census autorizacije organizaciji
+              title: Morate aktivirati CSV popis za ovu organizaciju
+        authorizations:
+          new:
+            locked: Previše neuspjelih pokušaja. Pokušajte ponovno kasnije.
+      id_documents:
+        admin:
+          confirmations:
+            create:
+              locked: Previše neuspjelih pokušaja. Pokušajte ponovno kasnije.
+            new:
+              title: Unesite podatke sa slike
+          offline_confirmations:
+            new:
+              title: Unesite e-poštu sudionika i podatke dokumenta
+      postal_letter:
+        authorizations:
+          update:
+            locked: Previše neuspjelih pokušaja. Pokušajte ponovno kasnije.
+      sms:
+        authorizations:
+          update:
+            expired: Kod za provjeru je istekao. Zatražite novi.
+            locked: Previše neuspjelih pokušaja. Pokušajte ponovno kasnije ili zatražite novi kod.
+  devise:
+    mailer:
+      invitation_instructions:
+        invited_you_as_member: '%{invited_by} vas je pozvao kao člana %{application}. Možete prihvatiti putem poveznice u nastavku.'
+        someone_invited_you_as_member: Netko vas je pozvao kao člana %{application}, možete prihvatiti putem poveznice u nastavku.
+      invite_member:
+        subject: Pozvani ste u privatni participativni proces na %{organization}
